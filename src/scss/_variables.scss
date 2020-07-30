@@ -1,0 +1,130 @@
+//----------  variables
+//------------------------------------------------------------------------------
+
+$font-default: 'TT Norms', sans-serif;
+$font-literata: 'Literata', sans-serif;
+$font-recoleta: 'Recoleta', sans-serif;
+$bold: 700;
+$semi-bold: 600;
+$medium: 500;
+$light: 300;
+$thin: 100;
+$italic: italic;
+
+// Colors
+$white: #fff;
+$white-flag: #f7f6f1;
+$blue: #1b365d;
+$blue-light: #267cb9;
+$blue-mid: #e7f4f2;
+$blue-lightest: #cce9f8;
+$blue-bright: #107cc0;
+$blue-bright-light: #d2e8fb;
+$green: #5e7e29;
+$green-pastel: #86c8bc;
+$turquise: #577e79;
+$yellow: #967110;
+$yellow-light: #f8eecc;
+$orange: #bd5b0e;
+$red: #cb4c48;
+$pink: #efdcf0;
+$pink-soft: #fce6e5;
+$purple: #b14eb5;
+$gray-warm: #eae9e0;
+$gray-cold: #eff1f4;
+$black: #000;
+
+//Gradients
+$hero-overlay: linear-gradient(180deg, rgba(27, 54, 93, 0) 0%, #1b365d 100%);
+
+$site-colors: (
+	'black': $black,
+	'white': $white
+) !default;
+
+//----------  Bootstrap grid
+//------------------------------------------------------------------------------
+
+$enable-grid-classes: true !default;
+
+//----------  Media queries breakpoints - Grid breakpoint
+//------------------------------------------------------------------------------
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
+//----------  Grid containers
+//------------------------------------------------------------------------------
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+) !default;
+
+//----------  Grid columns
+//------------------------------------------------------------------------------
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+//
+// UIkit
+//
+
+// Breakpoints
+$breakpointSmall: 640px;
+$breakpointMedium: 960px;
+$breakpointLarge: 1200px;
+$breakpointXlarge: 1600px;
+$breakpointXsmallMax: ($breakpointSmall - 1);
+$breakpointSmallMax: ($breakpointMedium - 1);
+$breakpointMediumMax: ($breakpointLarge - 1);
+$breakpointLargeMax: ($breakpointXlarge - 1);
+$breakpointMobile: 479px;
+
+// Spacing
+$ukGutter: 15px;
+
+//
+// NB
+//
+
+$nbCent: 32%;
+$nbSec: 256ms;
+
+// Spacing
+$nbSpace: 2.5rem;
+$nbSpaceSmall: $nbSpace * 0.6;
+$nbSpaceXsmall: $nbSpace * 0.3;
+$nbSpaceLarge: $nbSpace * 1.4;
+$nbSpaceXlarge: $nbSpace * 2;
+$nbGutter: $nbSpace * 0.2;
+$nbGutterSmall: $nbGutter / 2;
+$nbGutterXsmall: $nbGutterSmall / 2;
+
+// Colour
+$nbWhite: #fff;
+$nbBlack: #241d1e;
+$nbRed: #e11e2f;
+$nbGrey: lighten($nbBlack, $nbCent);
+$nbLightGrey: lighten($nbGrey, $nbCent);
+$nbOffWhite: lighten($nbLightGrey, $nbCent / 2);
+
+// Animation
+$nbSpeed: $nbSec;
+$nbSpeedShort: $nbSpeed / 2;
+$nbSpeedLong: $nbSpeed * 2;
+
+//
+// Theme
+//
+
+$themeVar: 0; // Example, not used
+

@@ -1,0 +1,29 @@
+.nb-table {
+
+	&-sort {
+
+		.uk-active {
+			background-color: #f5f5f5;
+		}
+
+		thead {
+
+			.nb-table-sortable {
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill-opacity%3D%220.25%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill-opacity%3D%220.25%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+				background-repeat: no-repeat;
+				background-position: calc(100% - 5px) center;
+				cursor: pointer;
+				padding-right: 30px;
+
+				&.asc {
+					background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-svg%3D%22triangle-up%22%3E%3Cpolygon%20fill-opacity%3D%220.25%22%20points%3D%225%2013%2010%208%2015%2013%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+
+				}
+
+				&.desc {
+					background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-svg%3D%22triangle-down%22%3E%3Cpolygon%20fill-opacity%3D%220.25%22%20points%3D%225%207%2015%207%2010%2012%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+				}
+			}
+		}
+	}
+}

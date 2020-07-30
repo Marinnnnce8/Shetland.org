@@ -1,0 +1,247 @@
+@font-face {
+	font-family: 'svgicons';
+	src: url('../fonts/svgicons.woff2') format('woff2'),
+		url('../fonts/svgicons.woff') format('woff'),
+		url('../fonts/svgicons.ttf') format('truetype');
+		font-display: swap;
+}
+
+@mixin font-styles {
+	font-family: 'svgicons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+	display: block;
+	line-height: 1;
+}
+
+%font {
+	@include font-styles;
+}
+
+@function font-char($filename) {
+	$char: "";
+
+	@if $filename == chevron-down {
+		$char: '\E001';
+	}
+	@if $filename == chevron-left {
+		$char: '\E002';
+	}
+	@if $filename == chevron-right {
+		$char: '\E003';
+	}
+	@if $filename == chevron-up {
+		$char: '\E004';
+	}
+	@if $filename == email {
+		$char: '\E005';
+	}
+	@if $filename == envelope {
+		$char: '\E006';
+	}
+	@if $filename == expand {
+		$char: '\E007';
+	}
+	@if $filename == external-link {
+		$char: '\E008';
+	}
+	@if $filename == eye {
+		$char: '\E009';
+	}
+	@if $filename == facebook {
+		$char: '\E00A';
+	}
+	@if $filename == globe {
+		$char: '\E00B';
+	}
+	@if $filename == heart {
+		$char: '\E00C';
+	}
+	@if $filename == info {
+		$char: '\E00D';
+	}
+	@if $filename == instagram {
+		$char: '\E00E';
+	}
+	@if $filename == list-view {
+		$char: '\E00F';
+	}
+	@if $filename == live-streaming {
+		$char: '\E010';
+	}
+	@if $filename == long-arrow-down {
+		$char: '\E011';
+	}
+	@if $filename == long-arrow-left {
+		$char: '\E012';
+	}
+	@if $filename == long-arrow-right {
+		$char: '\E013';
+	}
+	@if $filename == map {
+		$char: '\E014';
+	}
+	@if $filename == news {
+		$char: '\E015';
+	}
+	@if $filename == pause {
+		$char: '\E016';
+	}
+	@if $filename == play-button-arrowhead {
+		$char: '\E017';
+	}
+	@if $filename == play {
+		$char: '\E018';
+	}
+	@if $filename == print {
+		$char: '\E019';
+	}
+	@if $filename == quote {
+		$char: '\E01A';
+	}
+	@if $filename == right-arrow {
+		$char: '\E01B';
+	}
+	@if $filename == search {
+		$char: '\E01C';
+	}
+	@if $filename == share {
+		$char: '\E01D';
+	}
+	@if $filename == twitter {
+		$char: '\E01E';
+	}
+	@if $filename == volume-mute {
+		$char: '\E01F';
+	}
+	@if $filename == volume-up {
+		$char: '\E020';
+	}
+	@if $filename == youtube {
+		$char: '\E021';
+	}
+
+	@return $char;
+}
+
+@mixin font($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %font;
+		} @else {
+			@include font-styles;
+		}
+		content: font-char($filename);
+	}
+}
+
+[class*='font-ico'] {
+	display: inline-block;
+}
+
+.font-chevron-down {
+	@include font(chevron-down);
+}
+.font-chevron-left {
+	@include font(chevron-left);
+}
+.font-chevron-right {
+	@include font(chevron-right);
+}
+.font-chevron-up {
+	@include font(chevron-up);
+}
+.font-email {
+	@include font(email);
+}
+.font-envelope {
+	@include font(envelope);
+}
+.font-expand {
+	@include font(expand);
+}
+.font-external-link {
+	@include font(external-link);
+}
+.font-eye {
+	@include font(eye);
+}
+.font-facebook {
+	@include font(facebook);
+}
+.font-globe {
+	@include font(globe);
+}
+.font-heart {
+	@include font(heart);
+}
+.font-info {
+	@include font(info);
+}
+.font-instagram {
+	@include font(instagram);
+}
+.font-list-view {
+	@include font(list-view);
+}
+.font-live-streaming {
+	@include font(live-streaming);
+}
+.font-long-arrow-down {
+	@include font(long-arrow-down);
+}
+.font-long-arrow-left {
+	@include font(long-arrow-left);
+}
+.font-long-arrow-right {
+	@include font(long-arrow-right);
+}
+.font-map {
+	@include font(map);
+}
+.font-news {
+	@include font(news);
+}
+.font-pause {
+	@include font(pause);
+}
+.font-play-button-arrowhead {
+	@include font(play-button-arrowhead);
+}
+.font-play {
+	@include font(play);
+}
+.font-print {
+	@include font(print);
+}
+.font-quote {
+	@include font(quote);
+}
+.font-right-arrow {
+	@include font(right-arrow);
+}
+.font-search {
+	@include font(search);
+}
+.font-share {
+	@include font(share);
+}
+.font-twitter {
+	@include font(twitter);
+}
+.font-volume-mute {
+	@include font(volume-mute);
+}
+.font-volume-up {
+	@include font(volume-up);
+}
+.font-youtube {
+	@include font(youtube);
+}
+

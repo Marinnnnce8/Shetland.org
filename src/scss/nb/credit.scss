@@ -1,0 +1,19 @@
+.nb-credit {
+
+	a {
+		align-items: center;
+		color: $nbBlack;
+		display: inline-flex;
+		font-weight: 700;
+
+		@include hover {
+			color: $nbRed;
+			text-decoration: none;
+		}
+
+		img {
+			height: 1rem;
+			margin-left: $nbGutterXsmall;
+		}
+	}
+}

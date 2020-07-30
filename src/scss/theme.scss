@@ -1,0 +1,90 @@
+//
+// Theme
+//
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+// Base
+@import 'base/fonts.scss';
+@import 'base/typography.scss';
+
+// Layout / Helpers
+@import 'layout/_icon-font.scss';
+@import 'helpers/helpers.scss';
+@import 'layout/buttons.scss';
+
+// UIkit
+@import "uikit/base.scss";
+@import "uikit/utility.scss";
+@import "uikit/navbar.scss";
+@import "uikit/breadcrumb.scss";
+@import "uikit/form.scss";
+
+// NB
+@import "nb/nav.scss";
+@import "nb/table.scss";
+@import "nb/block.scss";
+@import "nb/cookie.scss";
+@import "nb/responsive.scss";
+@import "nb/file-icon.scss";
+@import "nb/legal.scss";
+@import "nb/credit.scss";
+@import "nb/json.scss";
+
+// Modules
+@import 'modules/banner.scss';
+@import 'modules/slider.scss';
+@import 'modules/team-list.scss';
+
+// Theme
+@import "theme/base.scss";
+@import "theme/header.scss";
+@import "theme/footer.scss";
+@import "theme/ie11.scss";
+@import "theme/print.scss";
+
+
+
+// Template | Remove or Integrate
+
+// uikit/base
+a, .uk-link {
+	color: $nbRed;
+}
+
+.uk-link-toggle:focus .uk-link,
+.uk-link-toggle:hover .uk-link,
+.uk-link:hover,
+a:hover {
+	color: $nbRed;
+}
+
+// uikit/utility
+.uk-logo {
+
+	img {
+		width: 228px;
+	}
+}
+
+// uikit/form
+.uk-input:not(.uk-form-danger),
+.uk-select:not(.uk-form-danger),
+.uk-textarea:not(.uk-form-danger),
+.uk-checkbox:not(.uk-form-danger),
+.uk-radio:not(.uk-form-danger),
+.uk-checkbox:checked:not(.uk-form-danger),
+.uk-radio:checked:not(.uk-form-danger) {
+	border-color: $nbBlack;
+}
+
+// theme/footer
+.footer {
+	font-size: 0.9rem;
+
+	@media (max-width: $breakpointMobile) {
+		font-size: 0.8rem;
+	}
+}
+

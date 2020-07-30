@@ -1,0 +1,187 @@
+//----------  typography
+//------------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-recoleta;
+	font-weight: normal;
+	line-height: 1.1em;
+	color: $blue;
+}
+
+h1 {
+	font-size: 67px;
+}
+
+h2 {
+	font-size: 44px;
+}
+
+h3 {
+	font-size: 34px;
+}
+
+h4 {
+	font-size: 26px;
+}
+
+h5 {
+	font-size: 20px;
+	line-height: 1.3em;
+}
+
+h6 {
+	font-size: 18px;
+	line-height: 1.3em;
+}
+
+h1.alt,
+h2.alt,
+h3.alt,
+h4.alt,
+h5.alt,
+h6.alt {
+	font-family: $font-default;
+	font-feature-settings: 'liga' off;
+
+	&:not(h1.alt),
+	&:not(h2.alt) {
+		line-height: 1.3em;
+	}
+}
+
+h2.alt {
+	font-size: 48px;
+}
+
+label {
+	font-family: $font-recoleta;
+	font-size: 18px;
+	color: $blue;
+	opacity: .8;
+	line-height: 1.3em;
+
+	&.medium {
+		font-size: 16px;
+	}
+
+	&.small {
+		font-size: 14px;
+	}
+
+	&.xsmall {
+		font-size: 12px;
+	}
+
+	&.alt {
+		font-feature-settings: 'liga' off;
+	}
+}
+
+.uk-text-lead {
+	font-family: $font-default;
+	color: $blue;
+	font-size: 18px;
+	line-height: 1.7em;
+	font-feature-settings: 'liga' off;
+}
+
+.nb-main .uk-text-lead {
+	font-size: 28px;
+}
+
+p {
+	font-family: $font-literata;
+	font-size: 18px;
+	color: $blue;
+	line-height: 1.7em;
+	a:not(.uk-accordion-title) {
+		color: $blue;
+		font-weight: normal;
+		position: relative;
+		display: inline-block;
+		z-index: 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			bottom: 0;
+			background-color: $green-pastel;
+			transition: inherit;
+		}
+
+		@include hover {
+			text-decoration: none;
+			color: $white;
+
+			&::after {
+				height: 100%;
+			}
+		}
+	}
+}
+
+blockquote {
+	padding: 10px 0 10px 60px;
+	margin-top: 40px 0 45px;
+	position: relative;
+
+	p,
+	span:not(.quote) {
+		color: $blue;
+		font-family: $font-default;
+		font-feature-settings: 'liga' off;
+	}
+
+	p {
+		margin-top: 0;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: $light;
+		line-height: 1.7em;
+
+		&:last-of-type {
+			margin-bottom: 10px;
+		}
+	}
+
+	span:not(.quote) {
+		font-style: normal;
+		line-height: 1.7em;
+		font-size: 18px;
+	}
+
+	.font-quote {
+		position: absolute;
+		width: 85px;
+		height: 70px;
+		left: 0;
+		top: 0;
+		z-index: -1;
+
+		&::before {
+			color: $blue-bright-light;
+			font-size: 84px;
+			position: absolute;
+			top: -15px;
+			left: 0;
+		}
+	}
+}
+
+ol li {
+	list-style-type: decimal-leading-zero;
+}
+
+
+img {
+	max-width: 100%;
+}
