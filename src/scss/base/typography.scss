@@ -46,7 +46,7 @@ h4.alt,
 h5.alt,
 h6.alt {
 	font-family: $font-default;
-	font-feature-settings: 'liga' off;
+	font-feature-settings: 'liga'off;
 
 	&:not(h1.alt),
 	&:not(h2.alt) {
@@ -58,7 +58,14 @@ h2.alt {
 	font-size: 48px;
 }
 
-label {
+.uk-card-title {
+	font-size: 26px;
+	line-height: 1.3em;
+	color: $blue;
+}
+
+label,
+.label {
 	font-family: $font-recoleta;
 	font-size: 18px;
 	color: $blue;
@@ -78,7 +85,7 @@ label {
 	}
 
 	&.alt {
-		font-feature-settings: 'liga' off;
+		font-feature-settings: 'liga'off;
 	}
 }
 
@@ -87,7 +94,7 @@ label {
 	color: $blue;
 	font-size: 18px;
 	line-height: 1.7em;
-	font-feature-settings: 'liga' off;
+	font-feature-settings: 'liga'off;
 }
 
 .nb-main .uk-text-lead {
@@ -99,6 +106,7 @@ p {
 	font-size: 18px;
 	color: $blue;
 	line-height: 1.7em;
+
 	a:not(.uk-accordion-title) {
 		color: $blue;
 		font-weight: normal;
@@ -138,7 +146,7 @@ blockquote {
 	span:not(.quote) {
 		color: $blue;
 		font-family: $font-default;
-		font-feature-settings: 'liga' off;
+		font-feature-settings: 'liga'off;
 	}
 
 	p {

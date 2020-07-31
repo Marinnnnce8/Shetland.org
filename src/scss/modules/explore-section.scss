@@ -1,0 +1,62 @@
+.explore-section {
+    .uk-text-center>span {
+        font-family: $font-default;
+        font-style: normal;
+        font-weight: $light;
+        font-size: 21px;
+        line-height: 1.7em;
+        font-feature-settings: 'liga'off;
+        color: $blue;
+        display: inline-block;
+    }
+
+    .uk-card {
+        a {
+            z-index: 1;
+        }
+
+        @include hover {
+            .uk-card-media-top {
+                img {
+                    opacity: .7;
+                    transform: scale3d(1.1, 1.1, 1);
+                }
+            }
+        }
+    }
+
+    .uk-card-body {
+        padding: 30px 0 0;
+    }
+
+    .uk-card-media-top {
+        background-color: $black;
+        overflow: hidden;
+
+        img {
+            transition: 1s;
+            max-width: none;
+            backface-visibility: hidden;
+            width: 100%;
+        }
+    }
+
+    .uk-card-title {
+        font-family: $font-default;
+        font-feature-settings: 'liga'off;
+        font-weight: $bold;
+        margin-top: 10px;
+    }
+
+    @media (min-width: $breakpointLarge) {
+
+        .uk-grid-column-large,
+        .uk-grid-large {
+            margin-left: -80px;
+
+            >* {
+                padding-left: 80px;
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.entry-items {
+    @media (min-width: $breakpointSmall) {
+
+        .uk-grid-column-large,
+        .uk-grid-large {
+            margin-left: -135px;
+
+            >* {
+                padding-left: 135px;
+            }
+        }
+    }
+
+}
+
+.entry-item {
+    background-color: $black;
+
+    .uk-card-body {
+        min-height: 190px;
+        padding: 0;
+        background-color: $black;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            content: '';
+            background-color: rgba($black, .4);
+            transition: 1s;
+        }
+
+        span {
+            transition: 1s;
+            max-width: none;
+            backface-visibility: hidden;
+            width: 100%;
+        }
+    }
+
+    .uk-card-title {
+        color: $white;
+        line-height: 1.1em;
+        z-index: 1;
+    }
+
+    a {
+        z-index: 2;
+    }
+
+    @include hover {
+        .uk-card-body {
+            &::after {
+                background-color: rgba($black, .6);
+            }
+
+            span {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+    }
+}
