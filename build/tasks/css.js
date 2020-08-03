@@ -37,9 +37,15 @@ gulp.task('scss', () => {
 		.pipe(connect.reload());
 });
 
-// Copy CSS files
+// Copy CSS UIkit files
 gulp.task('css-uikit', () => {
 	return gulp.src(`${config.uikit}/css/uikit.min.css`)
+		.pipe(gulp.dest(`${config.dist}/css`));
+});
+
+// Copy CSS files
+gulp.task('css-copy', () => {
+	return gulp.src(`${config.src}/css/*.css`)
 		.pipe(gulp.dest(`${config.dist}/css`));
 });
 
@@ -55,5 +61,6 @@ gulp.task('sasslint', () => {
 
 gulp.task('css', gulp.series(
 	'scss',
+	'css-copy',
 	'css-uikit'
 ));

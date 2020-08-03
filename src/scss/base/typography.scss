@@ -32,6 +32,7 @@ h4 {
 h5 {
 	font-size: 20px;
 	line-height: 1.3em;
+	margin-bottom: 20px;
 }
 
 h6 {
@@ -46,7 +47,6 @@ h4.alt,
 h5.alt,
 h6.alt {
 	font-family: $font-default;
-	font-feature-settings: 'liga'off;
 
 	&:not(h1.alt),
 	&:not(h2.alt) {
@@ -85,7 +85,8 @@ label,
 	}
 
 	&.alt {
-		font-feature-settings: 'liga'off;
+		font-family: $font-default;
+		opacity: 1;
 	}
 }
 
@@ -94,7 +95,6 @@ label,
 	color: $blue;
 	font-size: 18px;
 	line-height: 1.7em;
-	font-feature-settings: 'liga'off;
 }
 
 .nb-main .uk-text-lead {
@@ -106,7 +106,10 @@ p {
 	font-size: 18px;
 	color: $blue;
 	line-height: 1.7em;
+}
 
+p,
+blockquote {
 	a:not(.uk-accordion-title) {
 		color: $blue;
 		font-weight: normal;
@@ -137,6 +140,10 @@ p {
 	}
 }
 
+.uk-text-small {
+	font-size: 16px;
+}
+
 blockquote {
 	padding: 10px 0 10px 60px;
 	margin-top: 40px 0 45px;
@@ -146,7 +153,6 @@ blockquote {
 	span:not(.quote) {
 		color: $blue;
 		font-family: $font-default;
-		font-feature-settings: 'liga'off;
 	}
 
 	p {
@@ -185,11 +191,104 @@ blockquote {
 	}
 }
 
-ol li {
-	list-style-type: decimal-leading-zero;
+.uk-list-disc,
+ol {
+	font-family: $font-literata;
+	color: $blue;
+	font-size: 18px;
+	line-height: 1.7em;
+	list-style-type: none;
+	padding-left: 0;
+	margin-bottom: 35px;
+
+	li {
+		padding-left: 28px;
+		margin-bottom: 10px;
+		position: relative;
+	}
 }
 
+.uk-list-disc {
+
+	li {
+		margin-bottom: 10px;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 13px;
+			width: 6px;
+			height: 6px;
+			background-color: $blue;
+			border-radius: 50%;
+			content: '';
+			list-style-type: none;
+		}
+
+		a::after {
+			left: 24px;
+			width: calc(100% - 24px);
+		}
+	}
+
+	strong {
+		font-weight: $bold;
+	}
+}
+
+ol {
+	padding-left: 0;
+	counter-reset: item;
+
+	>li {
+
+		&:last-of-type {
+			margin-bottom: 25px;
+		}
+
+		strong {
+			font-weight: $bold;
+		}
+
+		&::before {
+			content: counter(item) '. ';
+			counter-increment: item;
+			left: 0;
+			position: absolute;
+			font-weight: normal;
+		}
+	}
+}
 
 img {
 	max-width: 100%;
+}
+
+.uk-alert {
+	border-radius: 6px;
+	font-family: $font-default;
+	font-size: 16px;
+	color: $blue;
+	line-height: 1.3em;
+	padding: 16px 32px 17px;
+
+	strong {
+		font-weight: $bold;
+	}
+
+	&.uk-alert-primary {
+		background-color: $blue-bright-light;
+	}
+
+	&.uk-alert-success {
+		background-color: $turquise-light;
+	}
+
+	&.uk-alert-warning {
+		background-color: $orange-light;
+	}
+
+	&.uk-alert-danger {
+		background-color: $red-light;
+	}
 }

@@ -5,7 +5,7 @@
         font-weight: $light;
         font-size: 21px;
         line-height: 1.7em;
-        font-feature-settings: 'liga'off;
+        // font-feature-settings: 'liga'off;
         color: $blue;
         display: inline-block;
     }
@@ -43,7 +43,7 @@
 
     .uk-card-title {
         font-family: $font-default;
-        font-feature-settings: 'liga'off;
+        // font-feature-settings: 'liga'off;
         font-weight: $bold;
         margin-top: 10px;
     }

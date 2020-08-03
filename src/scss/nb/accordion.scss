@@ -1,0 +1,63 @@
+.uk-accordion {
+    li {
+        border: 2px solid $gray-cold;
+        padding: 27px 35px 27px 47px;
+
+        &:last-of-type {
+            margin-bottom: 90px;
+        }
+
+        &.uk-open {
+            background-color: $beige;
+
+            .uk-accordion-title {
+                &::before {
+                    transform: translate(0%, -50%) rotate(-90deg);
+                    opacity: 0;
+                }
+
+                &::after {
+                    transform: translate(-8.5px, -50%) rotate(-90deg);
+                }
+            }
+        }
+    }
+
+    .uk-accordion-content {
+        margin: 35px 0 15px;
+    }
+
+    .uk-accordion-title {
+        font-weight: $bold;
+        font-size: 20px;
+        line-height: 1.3em;
+        color: $blue;
+        position: relative;
+
+        &::before,
+        &::after {
+            position: absolute;
+            background-color: $blue;
+            content: '';
+            top: 50%;
+            right: 0;
+            transition: $nbSec ease;
+        }
+
+        &::before {
+            height: 2px;
+            width: 20px;
+            transform: translate(0%, -50%);
+        }
+
+        &::after {
+            width: 2px;
+            height: 20px;
+            transform: translate(-8.5px, -50%);
+        }
+
+        &::before {
+            background-image: none;
+        }
+    }
+}

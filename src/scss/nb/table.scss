@@ -1,5 +1,36 @@
 .nb-table {
 
+	thead {
+		border-bottom: 2px solid $blue;
+	}
+
+	th {
+		font-weight: $bold;
+		font-size: 14px;
+		line-height: 1.3em;
+		padding: 15px 10px 18px;
+	}
+
+	th,
+	td {
+		color: $blue;
+	}
+
+	tbody {
+		tr {
+			border-bottom: 2px solid $gray-cold;
+			td {
+				font-size: 16px;
+				line-height: 1.7em;
+				padding: 16px 10px 17px;
+
+				&:first-of-type {
+					font-weight: $bold;
+				}
+			}
+		}
+	}
+
 	&-sort {
 
 		.uk-active {

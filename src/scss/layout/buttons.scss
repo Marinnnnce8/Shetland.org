@@ -26,7 +26,7 @@ input[type='submit'] {
 .uk-button {
 	font-weight: $bold;
 	font-size: 14px;
-	font-feature-settings: 'liga'off;
+	// font-feature-settings: 'liga'off;
 	color: $white;
 	border-radius: 50px;
 	text-align: left;
@@ -109,6 +109,7 @@ input[type='submit'] {
 				left: 18px;
 			}
 		}
+
 		&.uk-button-danger {
 			background-color: $red-danger;
 		}
@@ -220,48 +221,32 @@ input[type='submit'] {
 	}
 }
 
-// .scroll-button {
-// 	.uk-button {
-// 		background-color: $blue-up;
-// 		border-radius: 50%;
-// 		width: 55px;
-// 		height: 55px;
-// 		padding: 0;
-// 		margin-right: 9px;
-// 		margin-bottom: 8px;
-// 		z-index: 1;
+.scroll-button {
+	border: 2px solid $white;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	padding: 0;
+	z-index: 1;
+	display: inline-block;
+	position: relative;
 
-// 		&::before {
-// 			content: font-char($chevron-up);
-// 			transform: translate(-50%, -50%);
-// 			top: 50%;
-// 			left: 40%;
-// 		}
+	&::before {
+		content: font-char($long-arrow-down);
+		font-family: 'svgicons';
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		font-size: 24px;
+		color: $white;
+		transition: $nbSec ease-in-out;
+	}
 
-// 		&::after {
-// 			display: none;
-// 		}
+	@include hover {
 
-// 		@include hover {
-// 			background-color: $blue;
-
-// 			&::before {
-// 				color: $white;
-// 			}
-// 		}
-// 	}
-
-// 	@media (max-width: $breakpointXsmallMax) {
-// 		bottom: 62px;
-
-// 		.uk-button {
-// 			width: 48px;
-// 			height: 48px;
-
-// 			&::before {
-// 				left: 38%;
-// 				font-size: 14px;
-// 			}
-// 		}
-// 	}
-// }
+		&::before {
+			transform: translate(-50%, -35%);
+		}
+	}
+}

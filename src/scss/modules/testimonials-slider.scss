@@ -1,0 +1,88 @@
+.testimonials-slider {
+    padding: 130px 0 120px;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .uk-slider-items li {
+        width: 86.25%;
+
+        &:not(.uk-active) .uk-panel {
+            opacity: .5;
+        }
+    }
+
+    .uk-panel {
+        background-color: $turquise-light;
+        min-height: 454px;
+        padding: 152px 20px 20px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 65px;
+            font-family: 'svgicons';
+            content: font-char($quote);
+            font-size: 84px;
+            color: $green-pastel;
+            line-height: 1;
+        }
+    }
+
+    blockquote {
+        padding: 0;
+    }
+
+    .uk-slidenav {
+        border-radius: 50%;
+        border: 2px solid $blue;
+        width: 56px;
+        height: 56px;
+        transition: $nbSec ease-in-out;
+        max-width: calc(100% - (22px * 2));
+        margin: 22px;
+        transform: translateY(-50%) translateY(-22px);
+
+        svg {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        &:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+            stroke: $blue;
+            transition: $nbSec ease-in-out;
+        }
+
+        @include hover {
+            background-color: $blue;
+            text-decoration: none;
+
+            &:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+                stroke: $white;
+            }
+        }
+    }
+
+    .uk-dotnav {
+        margin: 25px 0 0;
+
+        li {
+            a {
+                width: 12px;
+                height: 12px;
+                border: 2px solid $blue;
+            }
+
+            &.uk-active {
+                a {
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+}

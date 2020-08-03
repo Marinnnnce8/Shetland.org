@@ -31,6 +31,8 @@
 @import "nb/legal.scss";
 @import "nb/credit.scss";
 @import "nb/json.scss";
+@import 'nb/video.scss';
+@import 'nb/accordion.scss';
 
 // Modules
 @import 'modules/banner.scss';
@@ -38,6 +40,9 @@
 @import 'modules/team-list.scss';
 @import 'modules/explore-section.scss';
 @import 'modules/entry-items.scss';
+@import 'modules/testimonials-slider.scss';
+@import 'modules/useful-links.scss';
+@import 'modules/find-out-more.scss';
 
 // Theme
 @import "theme/base.scss";
@@ -50,17 +55,17 @@
 
 // Template | Remove or Integrate
 
-// uikit/base
-a, .uk-link {
-	color: $nbRed;
-}
+// // uikit/base
+// a, .uk-link {
+// 	color: $nbRed;
+// }
 
-.uk-link-toggle:focus .uk-link,
-.uk-link-toggle:hover .uk-link,
-.uk-link:hover,
-a:hover {
-	color: $nbRed;
-}
+// // .uk-link-toggle:focus .uk-link,
+// // .uk-link-toggle:hover .uk-link,
+// // .uk-link:hover,
+// // a:hover {
+// // 	color: $nbRed;
+// // }
 
 // uikit/utility
 .uk-logo {

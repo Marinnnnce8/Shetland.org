@@ -3,15 +3,18 @@
 
 * {
 	box-sizing: border-box;
+
 	&::before,
 	&::after {
 		box-sizing: border-box;
 	}
 }
 
-html, body {
+html,
+body {
 	overflow-x: hidden;
 	font-family: $font-default;
+	font-feature-settings: 'liga' off;
 	width: 100%;
 	position: relative;
 	font-size: 16px;
@@ -21,9 +24,11 @@ html, body {
 @each $colors-name in $site-colors {
 	$name: nth($colors-name, 1);
 	$color: nth($colors-name, 2);
+
 	.bg-#{$name} {
 		background-color: $color;
 	}
+
 	.color-#{$name} {
 		color: $color;
 	}

@@ -1,0 +1,52 @@
+.useful-links {
+    padding-bottom: 115px;
+
+    .uk-grid-column-large,
+    .uk-grid-large {
+        margin-left: -80px;
+
+        *> {
+            padding-left: 80px;
+        }
+
+        >.uk-grid-margin {
+            margin-top: 0;
+        }
+    }
+
+    li {
+        min-height: 80px;
+
+        &:nth-of-type(-n+2) a {
+            border-top: 2px solid $gray-cold;
+        }
+
+        img {
+            margin-right: 20px;
+        }
+
+        a {
+            border-bottom: 2px solid $gray-cold;
+            font-size: 20px;
+            font-weight: $bold;
+            line-height: 1.3em;
+            padding: 26px 21px 23px 20px;
+            color: $blue;
+            left: 80px;
+
+            @include hover {
+                span {
+                    color: $green-pastel;
+                }
+            }
+        }
+
+        span {
+            position: absolute;
+            left: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: $nbSec ease-in-out;
+        }
+    }
+}

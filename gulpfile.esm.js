@@ -27,7 +27,7 @@ gulp.task('build-all', gulp.series(
 	'html',
 	'css',
 	'js',
-	//'iconfont',
+	'iconfont',
 	'assets'
 ));
 

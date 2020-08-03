@@ -11,7 +11,7 @@ gulp.task('iconfont', () => {
 			cssClass: 'font',
 			path: 'build/icon-font.scss',
 			targetPath: `../../${config.src}/scss/layout/_icon-font.scss`,
-			fontPath: `../../${config.src}/fonts/`
+			fontPath: `../fonts/`
 		}))
 		.pipe(iconfont({
 			fontName: 'svgicons', // required

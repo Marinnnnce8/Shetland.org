@@ -16,8 +16,47 @@
 
 	&-content {
 
+		p,
+		li {
+			>a:not(.uk-accordion-title) {
+				color: $blue;
+				font-weight: normal;
+				position: relative;
+				display: inline-block;
+				z-index: 0;
+
+				&::after {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					width: 100%;
+					height: 2px;
+					left: 0;
+					bottom: 0;
+					background-color: $green-pastel;
+					transition: inherit;
+				}
+
+				@include hover {
+					text-decoration: none;
+					color: $white;
+
+					&::after {
+						height: 100%;
+					}
+				}
+			}
+		}
+
 		h3 {
 			margin-bottom: 28px;
+		}
+
+		.uk-list-disc {
+			li a::after {
+				left: 24px;
+				width: calc(100% - 24px);
+			}
 		}
 
 		figure {
@@ -77,12 +116,10 @@
 			line-height: 1.7em;
 			padding: 10px 0;
 			text-align: center;
-			font-feature-settings: 'liga'off;
 			color: $blue;
 
 			span {
 				font-size: 12px;
-				font-feature-settings: 'liga'off;
 				line-height: 1.7em;
 				opacity: .6;
 				display: inline-block;
@@ -144,16 +181,142 @@
 					position: relative;
 					vertical-align: top;
 
+					>span {
+						position: absolute;
+						bottom: 10px;
+						right: 10px;
+						width: 40px;
+						height: 40px;
+						transition: $nbSec ease-in-out;
+						background-color: $white;
+						opacity: .3;
+						border-radius: 50%;
+
+						&::before {
+							color: $blue;
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							font-size: 22px;
+						}
+					}
+
 					img {
 						height: auto;
 						width: 100%;
 						vertical-align: middle;
+						transition: $nbSec;
+					}
+
+					@include hover {
+						transform: scale(.95);
+
+						>span {
+							opacity: 1;
+						}
 					}
 				}
 			}
 
 			.uk-container-expand & {
 				margin: 0 $nbGutterXsmall;
+			}
+		}
+
+		.nb-gallery-caption {
+			margin-bottom: 10px;
+			font-size: 15px;
+			line-height: 1.7em;
+			color: $blue;
+
+			span {
+				font-size: 12px;
+				line-height: 1.7em;
+				opacity: .6;
+				display: inline-block;
+				margin-left: 20px;
+			}
+		}
+	}
+
+	&-slideshow {
+		.uk-slideshow-items {
+			min-height: 595px !important;
+
+			li,
+			a,
+			img {
+				height: 100%;
+			}
+		}
+
+		.uk-overlay-primary {
+			background-color: transparent;
+			padding: 20px;
+			position: relative;
+
+			&::before {
+				background: $hero-overlay;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 105px;
+				content: '';
+				position: absolute;
+				z-index: 0;
+			}
+
+			span {
+				position: relative;
+				z-index: 1;
+				color: $white;
+				font-size: 15px;
+				line-height: 1.7em;
+			}
+		}
+
+		.uk-slidenav {
+			border-radius: 50%;
+			border: 2px solid $blue;
+			width: 56px;
+			height: 56px;
+			transition: $nbSec ease-in-out;
+
+			svg {
+				transform: translate(-50%, -50%);
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+
+			&:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+				stroke: $blue;
+				transition: $nbSec ease-in-out;
+			}
+
+			@include hover {
+				background-color: $blue;
+				text-decoration: none;
+
+				&:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+					stroke: $white;
+				}
+			}
+		}
+
+		.uk-slidenav-previous {
+			transform: translateY(-50%) translateX(-20px) translateX(-100%);
+		}
+
+		.uk-slidenav-next {
+			transform: translateY(-50%) translateX(20px) translateX(100%);
+		}
+
+		@media (max-width: $breakpointSmall) {
+			.uk-slidenav {
+				width: 48px;
+				height: 48px;
 			}
 		}
 	}

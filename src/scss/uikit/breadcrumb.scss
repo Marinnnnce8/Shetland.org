@@ -1,5 +1,6 @@
 // uikit/breadcrumb
 .uk-breadcrumb {
+
     > :last-child>* {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -11,7 +12,7 @@
     >*>* {
         font-size: 14px;
         line-height: 1.7em;
-        font-feature-settings: 'liga'off;
+        // font-feature-settings: 'liga'off;
         color: $blue;
     }
 

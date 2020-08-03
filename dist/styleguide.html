@@ -11,6 +11,7 @@
 	<meta name='description' content='This is a meta description'>
 
 	<link rel='shortcut icon' href='./favicon/favicon.ico'>
+	<link rel='stylesheet' href='./css/jquery.fancybox.min.css' />
 	<link rel='stylesheet' href='css/uikit.min.css' />
 	<link rel='stylesheet' href='css/theme.min.css' />
 </head>
@@ -44,8 +45,22 @@
 	</header>
 
 	<main class='nb-main uk-margin-large-top uk-margin-large-bottom'>
+		<div class="banner">
+			<div class="banner-inner uk-background-cover" data-uk-img
+				style="background-image: url('./img/banner-styleguide.jpg');">
+				<div class="banner-text">
+					<span>Section</span>
+					<h1>Internal page with style guide</h1>
+					<div class="uk-flex">
+						<a class="scroll-button" href="#shetland-breadcrumb" data-uk-scroll
+							aria-label="Scroll to next section"></a>
+						<span class="label alt">Find your favorite thing</span>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class='uk-container uk-container-small'>
-			<ul class='uk-breadcrumb'>
+			<ul class='uk-breadcrumb' id="shetland-breadcrumb">
 				<li><a href='index.html'>Home</a></li>
 				<li><a href='#'>Section</a></li>
 				<li><a href='#'>Category</a></li>
@@ -152,7 +167,7 @@
 
 		<div class='nb-block nb-block-gallery uk-clearfix' data-nb-block='gallery'>
 			<div class='uk-container uk-container-large'>
-				<h3 class='uk-text-center'>Gallery</h3>
+				<h3 class='uk-text-center uk-margin-top'>Gallery</h3>
 
 				<div class='nb-gallery-images' data-uk-lightbox='{"animation":"fade"}'
 					data-uk-scrollspy='{"cls":"uk-animation-fade","delay":128,"target":"> .nb-gallery-row > .nb-gallery-image"}'>
@@ -163,12 +178,14 @@
 							<img alt='This gallery image has a caption.' width='1151' height='768'
 								src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 								data-src='./img/gallery-1.jpg' data-uk-img>
+							<span role="presentation" class="font-expand"></span>
 						</a>
 						<a href='https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.jpg'
 							class='nb-gallery-image' data-alt data-caption>
 							<img alt='Gallery Block' width='1151' height='768'
 								src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 								data-src='./img/gallery-2.jpg' data-uk-img>
+							<span role="presentation" class="font-expand"></span>
 						</a>
 					</div>
 					<div class='nb-gallery-row'>
@@ -177,6 +194,7 @@
 							<img alt='Gallery Block' width='1151' height='768'
 								src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 								data-src='./img/gallery-3.jpg' data-uk-img>
+							<span role="presentation" class="font-expand"></span>
 						</a>
 						<a href='https://aws.nbcommunication.com/template/img/placeholder-town.jpg'
 							class='nb-gallery-image' data-alt='This gallery image also has a caption with HTML.'
@@ -184,16 +202,19 @@
 							<img alt='This gallery image also has a caption with HTML.' width='1151' height='768'
 								src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 								data-src='./img/gallery-4.jpg' data-uk-img>
+							<span role="presentation" class="font-expand"></span>
 						</a>
 						<a href='https://aws.nbcommunication.com/template/img/placeholder-waterfall.jpg'
 							class='nb-gallery-image' data-alt data-caption>
 							<img alt='Gallery Block' width='768' height='768'
 								src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
 								data-src='./img/gallery-5.jpg' data-uk-img>
+							<span role="presentation" class="font-expand"></span>
 						</a>
 					</div>
 				</div>
-				<div class='nb-gallery-caption uk-text-center uk-margin-small-top'>A Gallery Caption</div>
+				<div class='nb-gallery-caption uk-text-center'>Style of an gallery title caption. <span>Photo by
+						Photographer Name</span></div>
 			</div>
 		</div>
 		<div class='uk-container uk-container-small'>
@@ -208,7 +229,7 @@
 					adipiscing sapien, at euismod dui. Duis at eros magna. Pellentesque nec porttitor dui. Etiam sit
 					amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
 
-				<ul>
+				<ul class="uk-list-disc">
 					<li><a href="https://aws.nbcommunication.com/template/files/test.pdf">PDF File</a> - Download now!
 					</li>
 					<li><a href="https://aws.nbcommunication.com/template/files/test.docx">Word Document</a></li>
@@ -218,7 +239,7 @@
 					<li><a href="https://aws.nbcommunication.com/template/files/test.zip">Zip File</a></li>
 				</ul>
 
-				<ul>
+				<ul class="uk-list-disc">
 					<li>A non-linked list</li>
 					<li>A non-linked list</li>
 					<li>A non-linked list</li>
@@ -233,12 +254,12 @@
 
 			<div class='nb-block nb-block-slideshow uk-clearfix' data-nb-block='slideshow'>
 
-				<h3>Slideshow</h3>
+				<h2>Slideshow</h2>
 
 				<div data-uk-slideshow='{"animation":"fade","autoplay":true,"autoplay-interval":4096,"ratio":"16:9"}'
 					id='uk-slideshow_gallery_1046'>
 					<div class='uk-position-relative uk-visible-toggle uk-light'>
-						<ul class='uk-slideshow-items' data-uk-lightbox='{"animation":"fade"}'
+						<ul class='uk-slideshow-items uk-margin-medium-bottom' data-uk-lightbox='{"animation":"fade"}'
 							data-uk-scrollspy='{"cls":"uk-animation-slide-bottom-small"}'>
 							<li>
 								<a href='https://aws.nbcommunication.com/template/img/placeholder-beach.jpg'
@@ -246,12 +267,12 @@
 									data-caption='<div>This slideshow image has a caption.</div>'>
 									<img alt='This slideshow image has a caption.' width='1200' height='675'
 										src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-										data-src='https://aws.nbcommunication.com/template/img/placeholder-beach.1200x675.jpg'
+										data-src='./img/slideshow-1.jpg'
 										data-uk-img='{"target":"#uk-slideshow_gallery_1046"}'>
 								</a>
 								<div
 									class='uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small uk-text-center uk-transition-slide-bottom'>
-									This slideshow image has a caption.
+									<span>This slideshow image has a caption.</span>
 								</div>
 							</li>
 							<li>
@@ -276,8 +297,8 @@
 								</a>
 								<div
 									class='uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small uk-text-center uk-transition-slide-bottom'>
-									This slideshow image has a caption <em>too</em>, <s>without</s>
-									<strong>with</strong> HTML!
+									<span>This slideshow image has a caption <em>too</em>, <s>without</s>
+										<strong>with</strong> HTML!</span>
 								</div>
 							</li>
 							<li>
@@ -291,9 +312,9 @@
 							</li>
 						</ul>
 						<a href='#' data-uk-slidenav-previous aria-label='previous' data-uk-slideshow-item='previous'
-							class='uk-position-small uk-hidden-hover uk-position-center-left'></a>
+							class='uk-position-center-left'></a>
 						<a href='#' data-uk-slidenav-next aria-label='next' data-uk-slideshow-item='next'
-							class='uk-position-small uk-hidden-hover uk-position-center-right'></a>
+							class='uk-position-center-right'></a>
 					</div>
 				</div>
 			</div>
@@ -317,37 +338,37 @@
 				<table>
 					<thead>
 						<tr>
+							<th>Main Column 1</th>
 							<th>Column 1</th>
 							<th>Column 2</th>
 							<th>Column 3</th>
 							<th>Column 4</th>
-							<th>Column 5</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>Row 1</td>
+							<td>Title name 1</td>
 							<td>Lorem</td>
 							<td>&pound;99.99</td>
 							<td>Lorem</td>
 							<td>07:00 - 23:00</td>
 						</tr>
 						<tr>
-							<td>Row 2</td>
+							<td>Title name 2</td>
 							<td>Lorem</td>
 							<td>&pound;99.99</td>
 							<td>Lorem</td>
 							<td>07:00 - 23:00</td>
 						</tr>
 						<tr>
-							<td>Row 3</td>
+							<td>Title name 3</td>
 							<td>Lorem</td>
 							<td>&pound;99.99</td>
 							<td>Lorem</td>
 							<td>07:00 - 23:00</td>
 						</tr>
 						<tr>
-							<td>Row 4</td>
+							<td>Title name 4</td>
 							<td>Lorem</td>
 							<td>&pound;99.99</td>
 							<td>Lorem</td>
@@ -356,9 +377,9 @@
 					</tbody>
 				</table>
 
-				<p class="uk-text-small">*This is some small text</p>
+				<p class="uk-text-small uk-margin-large-bottom">*This is some small text</p>
 
-				<h2>Messages</h2>
+				<h2 class="uk-margin-medium-bottom">Messages</h2>
 
 				<p class="uk-alert uk-alert-primary"><strong>Primary Text.</strong> This text is a message to the
 					website user</p>
@@ -372,27 +393,193 @@
 				<p class="uk-alert uk-alert-danger"><strong>Danger Text.</strong> The text is providing an error alert
 					to the user</p>
 
-				<h3>Embedded Videos</h3>
+				<h2 class="uk-margin-large-top uk-padding-small uk-padding-remove-horizontal">
+					Embedded Videos</h2>
 
-				<div class='TextformatterVideoEmbed'
+				<!-- <div class='TextformatterVideoEmbed'
 					style='position:relative;padding:30px 0 56.25% 0;height:0;overflow:hidden;'>
 					<iframe style='position:absolute;top:0;left:0;width:100%;height:100%;' width="640" height="360"
 						src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?feature=oembed&modestbranding=1&playsinline=1&rel=0"
 						frameborder="0" title="Placeholder"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
+				</div> -->
+				<div class="nb-video uk-position-relative uk-background-cover" data-uk-img
+					style="background-image: url('./img/embedded-hero.jpg');">
+					<a href="https://youtu.be/YR6qxmuuVHk" data-fancybox="videos" class="fancybox uk-position-cover"
+						aria-label="Play video"></a>
+					<div class="nb-video-inner">
+						<div class="nb-video-content">
+							<span class="font-play-sharp" role="presentation"></span>
+							<span class="label">Watch & Discover More</span>
+							<h3 class="nb-video-title alt">Simon King’s Shetland</h3>
+						</div>
+					</div>
 				</div>
 
-				<div class='TextformatterVideoEmbed'
+				<!-- <div class='TextformatterVideoEmbed'
 					style='position:relative;padding:30px 0 56.25% 0;height:0;overflow:hidden;'>
 					<iframe style='position:absolute;top:0;left:0;width:100%;height:100%;'
 						src="https://player.vimeo.com/video/63655754?app_id=122963" width="640" height="360"
 						frameborder="0" title="Placeholder visual blip" allow="autoplay; fullscreen"
 						allowfullscreen></iframe>
-				</div>
+				</div> -->
 			</div>
+		</div>
 
-			<div>
+		<div class="testimonials-slider uk-text-center">
+			<h2>What our visitors say</h2>
+			<div data-uk-slider="center: true">
+				<div class="uk-position-relative">
+					<ul class="uk-slider-items uk-grid uk-grid-small" data-uk-height-match="target: .uk-panel">
+						<li>
+							<div class="uk-panel">
+								<blockquote class="uk-width-2-3 uk-margin-auto">
+									<p>We loved it on our first visit this summer and plan to return
+										again. For us it was the scenery, the wildlife and the changing light. A
+										really peaceful and relaxing place.</p>
+								</blockquote>
+							</div>
+						</li>
+						<li>
+							<div class="uk-panel">
+								<blockquote class="uk-width-2-3 uk-margin-auto">
+									<p>Vestibulum ut elit ornare massa tincidunt malesuada eu feugiat
+										diam. Nunc erat nisl, rutrum eget rhoncus nec, fringilla in est. Integer
+										bibendum vel massa consequat sagittis.
+									</p>
+									<span>-Lorem</span>
+								</blockquote>
+							</div>
+						</li>
+						<li>
+							<div class="uk-panel">
+								<blockquote class="uk-width-2-3 uk-margin-auto">
+									<p>Integer at elementum mi, vitae facilisis purus 4th. Duis quis
+										tellus quis lacus sagittis pharetra a at lorem. Praesent ornare ligula
+										id arcu consequat egestas.<br>
+										<br>
+										Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis
+										non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla
+										ultricies, auctor tellus ac, fringilla quam.<footer><cite><a href="#"
+													target="_blank" rel="noopener">Ipsum</a></cite></footer>
+									</p>
+								</blockquote>
+							</div>
+						</li>
+						<li>
+							<div class="uk-panel">
+								<blockquote class="uk-width-2-3 uk-margin-auto">
+									<p>We loved it on our first visit this summer and plan to
+										return
+										again. For us it was the scenery, the wildlife and the changing light. A
+										really peaceful and relaxing place.</p>
+								</blockquote>
+							</div>
+						</li>
+					</ul>
+					<a class="uk-position-center-left uk-position-small" href="#" aria-label="previous"
+						uk-slidenav-previous uk-slider-item="previous"></a>
+					<a class="uk-position-center-right uk-position-small" href="#" aria-label="next" uk-slidenav-next
+						uk-slider-item="next"></a>
+				</div>
+				<ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
+			</div>
+		</div>
+
+		<div class='uk-container uk-container-small uk-margin-medium-bottom'>
+			<div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
+				<h2 class="uk-margin-medium-bottom">Practical information before you go...</h2>
+				<ul data-uk-accordion>
+					<li class="uk-open">
+						<a class="uk-accordion-title" href="#">Laid Up On Da Green' - if you plan to go beachcombing</a>
+						<div class="uk-accordion-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+								ut labore et dolore magna aliqua.</p>
+						</div>
+					</li>
+					<li>
+						<a class="uk-accordion-title" href="#">Warning about beachcombing</a>
+						<div class="uk-accordion-content">
+							<p>To best optimise the page and provide the visitor with useful and informative text, it
+								would be good to have a sentence or two included here. These words are here to provide
+								the reader with a basic impression of how actual text will appear in its final
+								presentation.</p>
+							<p>To best optimise the page and provide the visitor with useful and
+								informative text, it would be good to have a sentence or two included here.</p>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class='uk-container uk-container-small uk-margin-medium-bottom'>
+			<div class="useful-links">
+				<h3 class="uk-text-center uk-margin-medium-bottom">Useful links</h3>
+				<ul data-uk-height-match="target: >li">
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/airplane.svg" data-uk-img alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/boat.svg" data-uk-img alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/external-link.svg" data-img-svg alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/external-link.svg" data-img-svg alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class='uk-container uk-container-small uk-margin-medium-bottom'>
+			<div class="find-out-more">
+				<h3 class="uk-text-center uk-margin-medium-bottom">Useful links</h3>
+				<ul class="uk-grid-large uk-child-width-1-2@s" data-uk-grid data-uk-height-match="target: >li">
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/airplane.svg" data-uk-img alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/boat.svg" data-uk-img alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/external-link.svg" data-img-svg alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+					<li class="uk-position-relative">
+						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+							<img src="./img/external-link.svg" data-img-svg alt="image">
+							<span>Sumburgh Airport</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class='uk-container uk-container-small'>
+			<div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
 				<h3>Buttons</h3>
 				<div class='uk-grid-medium uk-child-width-1-3@s uk-grid' data-uk-grid>
 					<div class='uk-first-column'>
@@ -626,9 +813,12 @@
 		</div>
 	</footer>
 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'
+		integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
 	<script src='js/uikit.min.js'></script>
 	<script src='js/uikit-icons.min.js'></script>
 	<script src='js/nb.js'></script>
+	<script src='./js/jquery.fancybox.min.js'></script>
 	<script src='js/theme.js'></script>
 </body>
 
