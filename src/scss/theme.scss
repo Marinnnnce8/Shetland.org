@@ -83,7 +83,42 @@
 .uk-radio:not(.uk-form-danger),
 .uk-checkbox:checked:not(.uk-form-danger),
 .uk-radio:checked:not(.uk-form-danger) {
-	border-color: $nbBlack;
+	border-color: rgba($blue, .6);
+	min-height: 56px;
+	border-width: 2px;
+	border-radius: 10px;
+	color: $blue;
+	font-family: $font-default;
+	font-size: 18px;
+	line-height: 1.7em;
+	padding: 0 30px;
+	@include placeholder {
+		font-size: 16px;
+		opacity: .8;
+		color: inherit;
+		line-height: inherit;
+	} 
+}
+
+.uk-select:not(.uk-form-danger),
+.uk-radio:not(.uk-form-danger) label {
+	font-size: 16px;
+}
+
+.uk-radio:not(.uk-form-danger),
+.uk-radio:checked:not(.uk-form-danger) {
+	padding: 0;
+	min-height: 0;
+	height: 26px;
+	width: 26px;
+	border-radius: 50%;
+	margin-right: 15px;
+	border-color: $blue;
+}
+
+.uk-radio:checked:not(.uk-form-danger) {
+	background-color: $blue;
+	background-size: 135%;
 }
 
 // theme/footer
@@ -94,4 +129,3 @@
 		font-size: 0.8rem;
 	}
 }
-

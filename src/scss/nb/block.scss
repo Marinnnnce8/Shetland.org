@@ -322,6 +322,37 @@
 	}
 
 	&-form {
+		h2 {
+			margin-bottom: 55px;
+		}
+
+		.nb-prepend,
+		.nb-description,
+		.nb-note,
+		.nb-append {
+			display: block;
+			color: $blue;
+			line-height: 1.7em;
+		}
+
+		.nb-prepend,
+		.nb-append,
+		.nb-note {
+			font-size: 14px;
+		}
+
+		.nb-prepend {
+			margin-top: 3px;
+		}
+
+		.nb-description {
+			font-size: 16px;
+			margin-bottom: 7px;
+		}
+
+		.nb-note {
+			opacity: .7;
+		}
 
 		.nb-form-content {
 			position: relative;
@@ -346,6 +377,23 @@
 			}
 		}
 
+		.uk-form-stacked label,
+		label,
+		.uk-form-label {
+			margin-bottom: 10px;
+			font-family: $font-default;
+			text-transform: uppercase;
+			font-weight: $bold;
+			color: $blue;
+			font-size: 14px;
+			line-height: 1.3em;
+			opacity: 1;
+		}
+
+		.InputfieldRadio label {
+			font-size: 16px;
+		}
+
 		label {
 
 			i {
@@ -353,7 +401,80 @@
 			}
 		}
 
-		.uk-checkbox {
+		.nb-checkbox {
+			position: relative;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+
+			&.bounce {
+				font-size: 16px;
+				font-weight: normal;
+				text-transform: none;
+			}
+
+			.uk-checkbox:not(.uk-form-danger),
+			svg {
+				width: 26px;
+				height: 26px;
+				display: block;
+			}
+
+			.uk-checkbox:not(.uk-form-danger) {
+				position: relative;
+				background-color: $white;
+				border: 0;
+				margin: 0 15px 0 0;
+				padding: 0;
+				border-radius: 3px;
+				transition: $nbSec;
+				box-shadow: inset 0 0 0 2px $blue;
+				min-height: 0;
+
+				&:hover {
+					box-shadow: inset 0 0 0 3px $blue-hover;
+				}
+
+				&:checked {
+					box-shadow: inset 0 0 0 2px $blue;
+				}
+			}
+
+			svg {
+				pointer-events: none;
+				fill: none;
+				stroke-width: 2px;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke: $blue;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: scale(1) translateZ(0);
+			}
+
+			&.bounce {
+				stroke: $white;
+
+				&+.bounce {
+					margin-top: 15px;
+				}
+
+				.uk-checkbox:not(.uk-form-danger) {
+					&:checked {
+						box-shadow: inset 0 0 0 15px $blue;
+
+						&+svg {
+							animation: bounce .4s linear .2s forwards;
+						}
+					}
+				}
+
+				svg {
+					transform: scale(0) translateZ(0);
+					stroke: $white;
+				}
+			}
 
 			+span {
 				display: inline-block;
@@ -366,6 +487,15 @@
 			+span {
 				display: inline-block;
 				margin-left: $nbGutterSmall;
+			}
+		}
+
+		.uk-button-primary {
+			background-color: $blue;
+			min-height: 55px;
+			font-size: 16px;
+			span:last-of-type {
+				margin-left: 0;
 			}
 		}
 
@@ -390,11 +520,35 @@
 		.g-recaptcha {
 			margin-bottom: 1rem;
 		}
+
+		@media (min-width: $breakpointLarge) {
+
+			*+.uk-grid-margin,
+			.uk-grid+.uk-grid,
+			.uk-grid>.uk-grid-margin {
+				margin-top: 30px;
+			}
+		}
 	}
 
 	&-embed {
 		iframe {
 			width: 100%;
 		}
+	}
+}
+
+
+@keyframes bounce {
+	50% {
+		transform: scale(1.2);
+	}
+
+	75% {
+		transform: scale(.9);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }

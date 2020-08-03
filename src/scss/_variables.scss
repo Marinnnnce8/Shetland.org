@@ -1,9 +1,12 @@
 //----------  variables
 //------------------------------------------------------------------------------
 
-$font-default: 'TT Norms', sans-serif;
-$font-literata: 'Literata', sans-serif;
-$font-recoleta: 'Recoleta', sans-serif;
+$font-default: 'TT Norms',
+sans-serif;
+$font-literata: 'Literata',
+sans-serif;
+$font-recoleta: 'Recoleta',
+sans-serif;
 $bold: 700;
 $semi-bold: 600;
 $medium: 500;
@@ -44,10 +47,8 @@ $black: #000;
 //Gradients
 $hero-overlay: linear-gradient(180deg, rgba(27, 54, 93, 0) 0%, #1b365d 100%);
 
-$site-colors: (
-	'black': $black,
-	'white': $white
-) !default;
+$site-colors: ('black': $black,
+	'white': $white) !default;
 
 //----------  Bootstrap grid
 //------------------------------------------------------------------------------
@@ -57,23 +58,19 @@ $enable-grid-classes: true !default;
 //----------  Media queries breakpoints - Grid breakpoint
 //------------------------------------------------------------------------------
 
-$grid-breakpoints: (
-	xs: 0,
+$grid-breakpoints: (xs: 0,
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1200px
-) !default;
+	xl: 1200px) !default;
 
 //----------  Grid containers
 //------------------------------------------------------------------------------
 
-$container-max-widths: (
-	sm: 540px,
+$container-max-widths: (sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px
-) !default;
+	xl: 1140px) !default;
 
 //----------  Grid columns
 //------------------------------------------------------------------------------
@@ -139,3 +136,4 @@ $themeVar: 0; // Example, not used
 $button-arrow-right: 'button-arrow-right';
 $long-arrow-down: 'long-arrow-down';
 $quote: 'quote';
+$external-link: 'external-link';

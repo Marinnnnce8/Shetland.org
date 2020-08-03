@@ -1,3 +1,63 @@
 .find-out-more {
-    padding-bottom: 105px;
+
+    ul {
+        list-style-type: none;
+        margin-bottom: 90px;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 20px;
+
+        a {
+            background-color: $turquise-light;
+            display: block;
+            font-size: 20px;
+            font-weight: $bold;
+            line-height: 1.3em;
+            color: $blue;
+            padding: 26px 80px 15px 165px;
+            min-height: 80px;
+
+            &::after {
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                font-family: 'svgicons';
+                color: $blue;
+                content: font-char($external-link);
+                font-size: 20px;
+            }
+
+            img {
+                position: absolute;
+                width: 122px;
+                height: auto;
+                left: 0;
+                top: 0;
+            }
+
+            @include hover {
+                background-color: $blue;
+                color: $turquise-light;
+
+                &::after {
+                    color: $turquise-light;
+                }
+            }
+        }
+    }
+
+    >.uk-text-center {
+        span {
+            font-weight: $light;
+            font-size: 21px;
+            line-height: 170%;
+            display: block;
+
+            &+* {
+                margin: 15px 0 60px;
+            }
+        }
+    }
 }

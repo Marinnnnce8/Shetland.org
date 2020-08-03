@@ -517,7 +517,7 @@
 		<div class='uk-container uk-container-small uk-margin-medium-bottom'>
 			<div class="useful-links">
 				<h3 class="uk-text-center uk-margin-medium-bottom">Useful links</h3>
-				<ul data-uk-height-match="target: >li">
+				<ul class="uk-grid-large uk-child-width-1-2@s" data-uk-grid data-uk-height-match="target: >li">
 					<li class="uk-position-relative">
 						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
 							<img src="./img/airplane.svg" data-uk-img alt="image">
@@ -548,33 +548,31 @@
 
 		<div class='uk-container uk-container-small uk-margin-medium-bottom'>
 			<div class="find-out-more">
-				<h3 class="uk-text-center uk-margin-medium-bottom">Useful links</h3>
-				<ul class="uk-grid-large uk-child-width-1-2@s" data-uk-grid data-uk-height-match="target: >li">
-					<li class="uk-position-relative">
-						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-							<img src="./img/airplane.svg" data-uk-img alt="image">
-							<span>Sumburgh Airport</span>
+				<h3 class="uk-text-center uk-margin-medium-bottom">Find out more</h3>
+				<ul data-uk-height-match="target: >li>a">
+					<li>
+						<a href="#" class="uk-position-relative">
+							<img src="./img/find-out-more-1.jpg" data-uk-img alt="image">
+							<span>Download a Shetland Beaches leaflet</span>
 						</a>
 					</li>
-					<li class="uk-position-relative">
-						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-							<img src="./img/boat.svg" data-uk-img alt="image">
-							<span>Sumburgh Airport</span>
+					<li>
+						<a href="#" class="uk-position-relative">
+							<img src="./img/find-out-more-2.jpg" data-uk-img alt="image">
+							<span>Learn about the diverse flora you'll find around Shetland</span>
 						</a>
 					</li>
-					<li class="uk-position-relative">
-						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-							<img src="./img/external-link.svg" data-img-svg alt="image">
-							<span>Sumburgh Airport</span>
-						</a>
-					</li>
-					<li class="uk-position-relative">
-						<a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-							<img src="./img/external-link.svg" data-img-svg alt="image">
-							<span>Sumburgh Airport</span>
+					<li>
+						<a href="#" class="uk-position-relative">
+							<img src="./img/find-out-more-3.jpg" data-img-svg alt="image">
+							<span>Join a wildlife cruise</span>
 						</a>
 					</li>
 				</ul>
+				<div class="uk-text-center">
+					<span>1697 miles of spectacular coastline</span>
+					<h2>Find your Shetland beach</h2>
+				</div>
 			</div>
 		</div>
 
@@ -654,21 +652,26 @@
 
 			<div class='nb-block nb-block-form uk-clearfix' data-nb-block='form'>
 
-				<form id='nb-form-nb-styleguide' class='uk-form-stacked uk-width-2-3@s uk-width-3-5@m InputfieldForm'
-					method='post' data-uk-nb-form novalidate data-colspacing='1'>
+				<form id='nb-form-nb-styleguide'
+					class='uk-form-stacked uk-margin-top uk-width-2-3@s uk-width-3-5@m InputfieldForm' method='post'
+					data-uk-nb-form novalidate data-colspacing='1'>
 
-					<h3>Form Styles</h3>
+					<h2>Form Styles</h2>
 
-					<div class='uk-grid-small' data-uk-grid>
+					<div data-uk-grid>
 						<div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
 							id='wrap_nb-form-nb-styleguide_name'>
 							<label class='uk-form-label' for='nb-form-nb-styleguide_name'>Your Name</label>
+							<span class="nb-prepend">Some prepended text.</span>
+							<span class="nb-description">A description in <strong>Markdown</strong></span>
 							<div class='nb-form-content'>
 								<div role='alert'></div>
 								<input id='nb-form-nb-styleguide_name' class='uk-input InputfieldMaxWidth' name='name'
 									type='text' maxlength='2048' aria-invalid='true' title='Please enter your name'
 									required>
 							</div>
+							<span class="nb-note">Some notes <em>markdown</em></span>
+							<span class="nb-append">Some appended text.</span>
 						</div>
 						<div class='Inputfield InputfieldEmail nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
 							id='wrap_nb-form-nb-styleguide_email'>
@@ -699,13 +702,96 @@
 									required></textarea>
 							</div>
 						</div>
+						<div class='Inputfield InputfieldCheckbox nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+							id='wrap_nb-form-nb-styleguide_test_checkbox'>
+							<div class='nb-form-content'>
+								<div role='alert'></div>
+								<label class="nb-checkbox bounce"><input class='uk-checkbox' type='checkbox'
+										id="nb-form-nb-styleguide_test_checkbox">Test
+									Checkbox
+									<svg viewBox="0 0 21 21">
+										<polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+									</svg>
+								</label>
+							</div>
+						</div>
+						<div class='Inputfield InputfieldSelect nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+							id='wrap_nb-form-nb-styleguide_test-select_1'>
+							<label class='uk-form-label' for='nb-form-nb-styleguide_test-select_1'>Test Select 1</label>
+							<div class='nb-form-content'>
+								<div role='alert'></div>
+								<select class="uk-select">
+									<option></option>
+									<option>Option 1</option>
+									<option>Option 2</option>
+								</select>
+							</div>
+						</div>
+						<div class='Inputfield InputfieldSelect nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+							id='wrap_nb-form-nb-styleguide_test-select_2'>
+							<label class='uk-form-label' for='nb-form-nb-styleguide_test-select_2'>Test Select 2</label>
+							<div class='nb-form-content'>
+								<div role='alert'></div>
+								<select class="uk-select">
+									<option>Option 1</option>
+									<option>Option 2</option>
+								</select>
+							</div>
+						</div>
+						<div class='Inputfield InputfieldRadio nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+							id='wrap_nb-form-nb-styleguide_test-radios'>
+							<div class="uk-form-label">Test Radios</div>
+							<div class='nb-form-content'>
+								<div role='alert'></div>
+								<div class="uk-form-controls uk-form-controls-text uk-grid-large uk-child-width-1-3"
+									data-uk-grid>
+									<label><input class="uk-radio" type="radio" name="radio1">Option 1</label>
+									<label><input class="uk-radio" type="radio" name="radio1">Option 2</label>
+									<label><input class="uk-radio" type="radio" name="radio1">Option 3</label>
+								</div>
+								<span class="nb-append">3 column layout</span>
+							</div>
+						</div>
+						<div class='Inputfield InputfieldCheckbox nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
+							id='wrap_nb-form-nb-styleguide_test_checkboxes'>
+							<div class="uk-form-label">Test Checkboxes</div>
+							<div class='nb-form-content'>
+								<div role='alert'></div>
+								<label class="nb-checkbox bounce"><input class='uk-checkbox' type='checkbox'
+										id="nb-form-nb-styleguide_test_checkbox_1">Option 1
+									<svg viewBox="0 0 21 21">
+										<polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+									</svg>
+								</label>
+								<label class="nb-checkbox bounce"><input class='uk-checkbox' type='checkbox'
+										id="nb-form-nb-styleguide_test_checkbox_2">Option 2
+									<svg viewBox="0 0 21 21">
+										<polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+									</svg>
+								</label>
+								<label class="nb-checkbox bounce"><input class='uk-checkbox' type='checkbox'
+										id="nb-form-nb-styleguide_test_checkbox_3">Option 3
+									<svg viewBox="0 0 21 21">
+										<polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+									</svg>
+								</label>
+								<label class="nb-checkbox bounce"><input class='uk-checkbox' type='checkbox'
+										id="nb-form-nb-styleguide_test_checkbox_4">Option 4
+									<svg viewBox="0 0 21 21">
+										<polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+									</svg>
+								</label>
+								<span class="nb-append uk-margin-small-top">Single column layout</span>
+								<span class="nb-description uk-margin-top"><em><strong>InputfieldMarkup,</strong></em> for displaying HTML markup.</span>
+							</div>
+						</div>
 						<div class='Inputfield InputfieldSubmit uk-width-1-1 uk-grid-margin uk-first-column'
 							id='wrap_nb-form-nb-styleguide_submit'>
 							<div class='nb-form-content'>
 								<div role='alert'></div>
 								<button id='nb-form-nb-styleguide_submit' class='uk-button uk-button-primary'
-									name='submit' value='Send' type='submit'><span
-										class='ui-button-text'>Send</span></button>
+									name='submit' value='Send message' type='submit'><span
+										class='ui-button-text'>Send message</span></button>
 							</div>
 						</div>
 					</div>

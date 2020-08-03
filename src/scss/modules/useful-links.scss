@@ -1,19 +1,6 @@
 .useful-links {
     padding-bottom: 115px;
 
-    .uk-grid-column-large,
-    .uk-grid-large {
-        margin-left: -80px;
-
-        *> {
-            padding-left: 80px;
-        }
-
-        >.uk-grid-margin {
-            margin-top: 0;
-        }
-    }
-
     li {
         min-height: 80px;
 
@@ -47,6 +34,22 @@
             top: 50%;
             transform: translateY(-50%);
             transition: $nbSec ease-in-out;
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+
+        .uk-grid-column-large,
+        .uk-grid-large {
+            margin-left: -80px;
+
+            *> {
+                padding-left: 80px;
+            }
+
+            >.uk-grid-margin {
+                margin-top: 0;
+            }
         }
     }
 }
