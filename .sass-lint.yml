@@ -16,16 +16,17 @@ rules:
   attribute-quotes: 2
   bem-depth: 0
   border-zero: 2
-  brace-style: 2
+  brace-style:
+    - 2
+    - allow-single-line: false
   class-name-format:
     - 1
+    - allow-leading-underscore: false
     - convention: hyphenatedbem
   clean-import-paths: 0
+  declarations-before-nesting: 1
   empty-args: 2
-  # TODO
-  empty-line-between-blocks:
-    - 0
-    - allow-single-line-rulesets: true
+  empty-line-between-blocks: 1
   extends-before-declarations: 2
   extends-before-mixins: 2
   final-newline: 0
@@ -37,7 +38,9 @@ rules:
     - allow-leading-underscore: false
   hex-length: 2
   hex-notation: 2
-  id-name-format: 0
+  id-name-format:
+    - 2
+    - allow-leading-underscore: false
   indentation:
     - 0
     - size: 4
@@ -46,10 +49,9 @@ rules:
     - 2
     - allow-leading-underscore: false
   mixins-before-declarations: 0
-  nesting-depth:
-    - 2
-    - max-depth: 4
+  nesting-depth: 0
   no-attribute-selectors: 0
+  no-color-hex: 0
   no-color-keywords: 2
   no-color-literals: 0
   no-combinators: 0
@@ -65,7 +67,7 @@ rules:
   no-mergeable-selectors: 2
   no-misspelled-properties: 2
   no-qualifying-elements: 0
-  no-trailing-whitespace: 0
+  no-trailing-whitespace: 1
   no-trailing-zero: 2
   no-transition-all: 2
   no-universal-selectors: 0
@@ -84,12 +86,11 @@ rules:
     - 2
     - style: single
   shorthand-values: 2
-  single-line-per-selector: 0
+  single-line-per-selector: 1
   space-after-bang: 2
   space-after-colon: 2
   space-after-comma: 2
-  # TODO
-  space-around-operator: 0
+  space-around-operator: 1
   space-before-bang: 2
   space-before-brace: 2
   space-before-colon: 2
