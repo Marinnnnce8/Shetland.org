@@ -1,0 +1,93 @@
+.nb-widget {
+    z-index: 10;
+    padding-bottom: 170px;
+
+    ul {
+        padding-left: 0;
+        padding-right: 17px;
+        list-style-type: none;
+        margin-bottom: 0;
+
+        li {
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                border-radius: 50px;
+                font-weight: $bold;
+                font-size: 12px;
+                line-height: 1.3em;
+                padding: 16px 17px 16px 23px;
+                color: transparent;
+                position: relative;
+                min-height: 48px;
+                display: inline-flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-self: center;
+                z-index: 1;
+
+                &::before {
+                    color: $blue;
+                    font-size: 16px;
+                    transition: inherit;
+                    margin-left: 12px;
+                    pointer-events: none;
+                }
+
+                @include hover {
+                    background-color: $blue;
+                    color: $white;
+
+                    &::before {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .uk-text-uppercase {
+        position: absolute;
+        transform: rotate(-90deg);
+        color: $blue;
+        font-size: 10px;
+        line-height: 1.7em;
+        right: 0;
+        bottom: 100px;
+        z-index: 0;
+    }
+
+    .scroll-percent {
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+        height: 48px;
+        width: 48px;
+
+        .percent-num, svg {
+            position: absolute;
+        }
+
+        .percent-num {
+            left: 50%;
+            top: 46%;
+            transform: translateY(25%);
+        }
+
+        svg {
+            transform: translate(-25%, -25%);
+            left: 50%;
+            top: 50%;
+            // stroke-dashoffset: 0;
+            transition: stroke-dashoffset 1s linear;
+            stroke: $gray;
+            width: 48px;
+            height: 48px;
+        }
+
+        svg path {
+            stroke: $red;
+        }
+    }
+}

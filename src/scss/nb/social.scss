@@ -1,0 +1,54 @@
+.nb-social {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+        &:not(:first-of-type) {
+            margin-left: 10px;
+        }
+    }
+
+    a {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &::after,
+        &::before {
+            transition: $nbSec ease-in-out;
+        }
+
+        &::after {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            left: 0;
+            top: 0;
+            transform: scale(0);
+            content: '';
+            background-color: $blue;
+            border-radius: 50%;
+        }
+
+        &::before {
+            color: $blue;
+            z-index: 1;
+        }
+
+        @include hover {
+
+            &::after {
+                transform: scale(1);
+            }
+
+            &::before {
+                color: $white;
+            }
+        }
+    }
+}

@@ -33,6 +33,8 @@
 @import "nb/json.scss";
 @import 'nb/video.scss';
 @import 'nb/accordion.scss';
+@import 'nb/social.scss';
+@import 'nb/widget.scss';
 
 // Modules
 @import 'modules/banner.scss';
@@ -43,6 +45,7 @@
 @import 'modules/testimonials-slider.scss';
 @import 'modules/useful-links.scss';
 @import 'modules/find-out-more.scss';
+@import 'modules/share.scss';
 
 // Theme
 @import "theme/base.scss";
@@ -92,12 +95,13 @@
 	font-size: 18px;
 	line-height: 1.7em;
 	padding: 0 30px;
+
 	@include placeholder {
 		font-size: 16px;
 		opacity: .8;
 		color: inherit;
 		line-height: inherit;
-	} 
+	}
 }
 
 .uk-select:not(.uk-form-danger),
@@ -128,4 +132,21 @@
 	@media (max-width: $breakpointMobile) {
 		font-size: 0.8rem;
 	}
+}
+
+.uk-container-large {
+	max-width: 1380px;
+}
+
+// uikit/tooltip
+.uk-tooltip {
+	background: $white;
+	border-radius: 6px;
+	padding: 10px 20px;
+	font-size: 12px;
+	line-height: 1.7em;
+	color: $blue;
+	font-family: $font-default;
+	font-weight: normal;
+	max-width: 205px;
 }

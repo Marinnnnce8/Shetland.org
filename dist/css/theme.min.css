@@ -1,5 +1,21 @@
 @charset "UTF-8";
 @font-face {
+  font-family: 'Literata';
+  src: url("../fonts/Literata-Bold.woff2") format("woff2"), url("../fonts/Literata-Bold.woff") format("woff"), url("../fonts/Literata-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Literata';
+  src: url("../fonts/Literata-Regular.woff2") format("woff2"), url("../fonts/Literata-Regular.woff") format("woff"), url("../fonts/Literata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Recoleta';
   src: url("../fonts/Recoleta-Medium.eot");
   src: local("Recoleta Medium"), local("Recoleta-Medium"), url("../fonts/Recoleta-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Recoleta-Medium.woff2") format("woff2"), url("../fonts/Recoleta-Medium.woff") format("woff"), url("../fonts/Recoleta-Medium.ttf") format("truetype");
@@ -19,36 +35,9 @@
 
 @font-face {
   font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-ThinItalic.eot");
-  src: local("TT Norms Thin Italic"), local("TTNorms-ThinItalic"), url("../fonts/TTNorms-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-ThinItalic.woff2") format("woff2"), url("../fonts/TTNorms-ThinItalic.woff") format("woff"), url("../fonts/TTNorms-ThinItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-Thin.eot");
-  src: local("TT Norms Thin"), local("TTNorms-Thin"), url("../fonts/TTNorms-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Thin.woff2") format("woff2"), url("../fonts/TTNorms-Thin.woff") format("woff"), url("../fonts/TTNorms-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-LightItalic.eot");
-  src: local("TT Norms Light Italic"), local("TTNorms-LightItalic"), url("../fonts/TTNorms-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-LightItalic.woff2") format("woff2"), url("../fonts/TTNorms-LightItalic.woff") format("woff"), url("../fonts/TTNorms-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-ExtraBoldItalic.eot");
-  src: local("TT Norms ExtraBold Italic"), local("TTNorms-ExtraBoldItalic"), url("../fonts/TTNorms-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/TTNorms-ExtraBoldItalic.woff") format("woff"), url("../fonts/TTNorms-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
+  src: url("../fonts/TTNorms-BoldItalic.eot");
+  src: local("TT Norms Bold Italic"), local("TTNorms-BoldItalic"), url("../fonts/TTNorms-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-BoldItalic.woff2") format("woff2"), url("../fonts/TTNorms-BoldItalic.woff") format("woff"), url("../fonts/TTNorms-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
@@ -64,51 +53,6 @@
 
 @font-face {
   font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-ExtraLight.eot");
-  src: local("TT Norms ExtraLight"), local("TTNorms-ExtraLight"), url("../fonts/TTNorms-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-ExtraLight.woff2") format("woff2"), url("../fonts/TTNorms-ExtraLight.woff") format("woff"), url("../fonts/TTNorms-ExtraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-HeavyItalic.eot");
-  src: local("TT Norms Heavy Italic"), local("TTNorms-HeavyItalic"), url("../fonts/TTNorms-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-HeavyItalic.woff2") format("woff2"), url("../fonts/TTNorms-HeavyItalic.woff") format("woff"), url("../fonts/TTNorms-HeavyItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-MediumItalic.eot");
-  src: local("TT Norms Medium Italic"), local("TTNorms-MediumItalic"), url("../fonts/TTNorms-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-MediumItalic.woff2") format("woff2"), url("../fonts/TTNorms-MediumItalic.woff") format("woff"), url("../fonts/TTNorms-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-BoldItalic.eot");
-  src: local("TT Norms Bold Italic"), local("TTNorms-BoldItalic"), url("../fonts/TTNorms-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-BoldItalic.woff2") format("woff2"), url("../fonts/TTNorms-BoldItalic.woff") format("woff"), url("../fonts/TTNorms-BoldItalic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-Heavy.eot");
-  src: local("TT Norms Heavy"), local("TTNorms-Heavy"), url("../fonts/TTNorms-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Heavy.woff2") format("woff2"), url("../fonts/TTNorms-Heavy.woff") format("woff"), url("../fonts/TTNorms-Heavy.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
   src: url("../fonts/TTNorms-Light.eot");
   src: local("TT Norms Light"), local("TTNorms-Light"), url("../fonts/TTNorms-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Light.woff2") format("woff2"), url("../fonts/TTNorms-Light.woff") format("woff"), url("../fonts/TTNorms-Light.ttf") format("truetype");
   font-weight: 300;
@@ -118,27 +62,9 @@
 
 @font-face {
   font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-Medium.eot");
-  src: local("TT Norms Medium"), local("TTNorms-Medium"), url("../fonts/TTNorms-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Medium.woff2") format("woff2"), url("../fonts/TTNorms-Medium.woff") format("woff"), url("../fonts/TTNorms-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-ExtraBold.eot");
-  src: local("TT Norms ExtraBold"), local("TTNorms-ExtraBold"), url("../fonts/TTNorms-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-ExtraBold.woff2") format("woff2"), url("../fonts/TTNorms-ExtraBold.woff") format("woff"), url("../fonts/TTNorms-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-ExtraLightItalic.eot");
-  src: local("TT Norms ExtraLight Italic"), local("TTNorms-ExtraLightItalic"), url("../fonts/TTNorms-ExtraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-ExtraLightItalic.woff2") format("woff2"), url("../fonts/TTNorms-ExtraLightItalic.woff") format("woff"), url("../fonts/TTNorms-ExtraLightItalic.ttf") format("truetype");
-  font-weight: 200;
+  src: url("../fonts/TTNorms-LightItalic.eot");
+  src: local("TT Norms Light Italic"), local("TTNorms-LightItalic"), url("../fonts/TTNorms-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-LightItalic.woff2") format("woff2"), url("../fonts/TTNorms-LightItalic.woff") format("woff"), url("../fonts/TTNorms-LightItalic.ttf") format("truetype");
+  font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
@@ -147,40 +73,6 @@
   font-family: 'TT Norms';
   src: url("../fonts/TTNorms-Regular.eot");
   src: local("TT Norms Regular"), local("TTNorms-Regular"), url("../fonts/TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Regular.woff2") format("woff2"), url("../fonts/TTNorms-Regular.woff") format("woff"), url("../fonts/TTNorms-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-BlackItalic.eot");
-  src: local("TT Norms Black Italic"), local("TTNorms-BlackItalic"), url("../fonts/TTNorms-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-BlackItalic.woff2") format("woff2"), url("../fonts/TTNorms-BlackItalic.woff") format("woff"), url("../fonts/TTNorms-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TT Norms';
-  src: url("../fonts/TTNorms-Black.eot");
-  src: local("TT Norms Black"), local("TTNorms-Black"), url("../fonts/TTNorms-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/TTNorms-Black.woff2") format("woff2"), url("../fonts/TTNorms-Black.woff") format("woff"), url("../fonts/TTNorms-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Literata';
-  src: url("../fonts/Literata-Bold.woff2") format("woff2"), url("../fonts/Literata-Bold.woff") format("woff"), url("../fonts/Literata-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Literata';
-  src: url("../fonts/Literata-Regular.woff2") format("woff2"), url("../fonts/Literata-Regular.woff") format("woff"), url("../fonts/Literata-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -497,7 +389,7 @@ img {
   font-display: swap;
 }
 
-.font-button-arrow-right:before, .font-chevron-down:before, .font-chevron-left:before, .font-chevron-right:before, .font-chevron-up:before, .font-email:before, .font-envelope:before, .font-expand:before, .font-external-link:before, .font-eye:before, .font-facebook:before, .font-globe:before, .font-heart:before, .font-info:before, .font-instagram:before, .font-list-view:before, .font-live-streaming:before, .font-long-arrow-down:before, .font-long-arrow-left:before, .font-long-arrow-right:before, .font-map:before, .font-news:before, .font-pause:before, .font-play-button-arrowhead:before, .font-play-sharp:before, .font-play:before, .font-print:before, .font-quote:before, .font-right-arrow:before, .font-search:before, .font-share:before, .font-twitter:before, .font-volume-mute:before, .font-volume-up:before, .font-youtube:before {
+.font-chevron-down:before, .font-chevron-left:before, .font-chevron-right:before, .font-chevron-up:before, .font-email:before, .font-envelope:before, .font-expand:before, .font-external-link:before, .font-eye:before, .font-facebook:before, .font-globe:before, .font-heart:before, .font-info:before, .font-instagram:before, .font-list-view:before, .font-live-streaming:before, .font-long-arrow-down:before, .font-long-arrow-left:before, .font-long-arrow-right:before, .font-map:before, .font-news:before, .font-pause:before, .font-play-button-arrowhead:before, .font-play-sharp:before, .font-play:before, .font-print:before, .font-quote:before, .font-right-arrow:before, .font-search:before, .font-share:before, .font-twitter:before, .font-volume-mute:before, .font-volume-up:before, .font-youtube:before {
   font-family: 'svgicons';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -514,144 +406,140 @@ img {
   display: inline-block;
 }
 
-.font-button-arrow-right:before {
+.font-chevron-down:before {
   content: "";
 }
 
-.font-chevron-down:before {
+.font-chevron-left:before {
   content: "";
 }
 
-.font-chevron-left:before {
+.font-chevron-right:before {
   content: "";
 }
 
-.font-chevron-right:before {
+.font-chevron-up:before {
   content: "";
 }
 
-.font-chevron-up:before {
+.font-email:before {
   content: "";
 }
 
-.font-email:before {
+.font-envelope:before {
   content: "";
 }
 
-.font-envelope:before {
+.font-expand:before {
   content: "";
 }
 
-.font-expand:before {
+.font-external-link:before {
   content: "";
 }
 
-.font-external-link:before {
+.font-eye:before {
   content: "";
 }
 
-.font-eye:before {
+.font-facebook:before {
   content: "";
 }
 
-.font-facebook:before {
+.font-globe:before {
   content: "";
 }
 
-.font-globe:before {
+.font-heart:before {
   content: "";
 }
 
-.font-heart:before {
+.font-info:before {
   content: "";
 }
 
-.font-info:before {
+.font-instagram:before {
   content: "";
 }
 
-.font-instagram:before {
+.font-list-view:before {
   content: "";
 }
 
-.font-list-view:before {
+.font-live-streaming:before {
   content: "";
 }
 
-.font-live-streaming:before {
+.font-long-arrow-down:before {
   content: "";
 }
 
-.font-long-arrow-down:before {
+.font-long-arrow-left:before {
   content: "";
 }
 
-.font-long-arrow-left:before {
+.font-long-arrow-right:before {
   content: "";
 }
 
-.font-long-arrow-right:before {
+.font-map:before {
   content: "";
 }
 
-.font-map:before {
+.font-news:before {
   content: "";
 }
 
-.font-news:before {
+.font-pause:before {
   content: "";
 }
 
-.font-pause:before {
+.font-play-button-arrowhead:before {
   content: "";
 }
 
-.font-play-button-arrowhead:before {
+.font-play-sharp:before {
   content: "";
 }
 
-.font-play-sharp:before {
+.font-play:before {
   content: "";
 }
 
-.font-play:before {
+.font-print:before {
   content: "";
 }
 
-.font-print:before {
+.font-quote:before {
   content: "";
 }
 
-.font-quote:before {
+.font-right-arrow:before {
   content: "";
 }
 
-.font-right-arrow:before {
+.font-search:before {
   content: "";
 }
 
-.font-search:before {
+.font-share:before {
   content: "";
 }
 
-.font-share:before {
+.font-twitter:before {
   content: "";
 }
 
-.font-twitter:before {
+.font-volume-mute:before {
   content: "";
 }
 
-.font-volume-mute:before {
+.font-volume-up:before {
   content: "";
 }
 
-.font-volume-up:before {
-  content: "";
-}
-
 .font-youtube:before {
-  content: "";
+  content: "";
 }
 
 * {
@@ -909,7 +797,7 @@ input[type='submit'] {
   }
 }
 
-.scroll-button {
+.scroll-button-down {
   border: 2px solid #fff;
   border-radius: 50%;
   width: 56px;
@@ -920,8 +808,8 @@ input[type='submit'] {
   position: relative;
 }
 
-.scroll-button::before {
-  content: "";
+.scroll-button-down::before {
+  content: "";
   font-family: 'svgicons';
   transform: translate(-50%, -50%);
   top: 50%;
@@ -932,8 +820,57 @@ input[type='submit'] {
   transition: 256ms ease-in-out;
 }
 
-.scroll-button:hover::before, .scroll-button:focus::before, .scroll-button:active::before {
+.scroll-button-down:hover::before, .scroll-button-down:focus::before, .scroll-button-down:active::before {
   transform: translate(-50%, -35%);
+}
+
+.scroll-button-up .uk-button {
+  border: 2px solid #1b365d;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin-right: 30px;
+  margin-bottom: 500px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-button-up .uk-button::before {
+  content: "";
+  font-family: 'svgicons';
+  font-weight: normal;
+  color: #1b365d;
+  font-size: 10px;
+  transition: inherit;
+}
+
+.scroll-button-up .uk-button::after {
+  display: none;
+}
+
+.scroll-button-up .uk-button:hover, .scroll-button-up .uk-button:focus, .scroll-button-up .uk-button:active {
+  background-color: #1b365d;
+}
+
+.scroll-button-up .uk-button:hover::before, .scroll-button-up .uk-button:focus::before, .scroll-button-up .uk-button:active::before {
+  color: #fff;
+}
+
+@media (max-width: 639px) {
+  .scroll-button-up {
+    bottom: 62px;
+  }
+  .scroll-button-up .uk-button {
+    width: 48px;
+    height: 48px;
+  }
+  .scroll-button-up .uk-button::before {
+    left: 38%;
+    font-size: 14px;
+  }
 }
 
 .uk-breadcrumb > :last-child > * {
@@ -948,6 +885,26 @@ input[type='submit'] {
   font-size: 14px;
   line-height: 1.7em;
   color: #1b365d;
+}
+
+.uk-breadcrumb a {
+  position: relative;
+}
+
+.uk-breadcrumb a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+  background-color: #1b365d;
+  transition: 256ms ease-in-out;
+  bottom: 0;
+  content: '';
+}
+
+.uk-breadcrumb a:hover::after, .uk-breadcrumb a:focus::after, .uk-breadcrumb a:active::after {
+  opacity: 1;
 }
 
 .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
@@ -1594,10 +1551,23 @@ input[type='submit'] {
   background-color: #1b365d;
   min-height: 55px;
   font-size: 16px;
+  border: 2px solid #1b365d;
 }
 
 .nb-block-form .uk-button-primary span:last-of-type {
   margin-left: 0;
+}
+
+.nb-block-form .uk-button-primary span:last-of-type::after {
+  display: none;
+}
+
+.nb-block-form .uk-button-primary:hover, .nb-block-form .uk-button-primary:focus, .nb-block-form .uk-button-primary:active {
+  background-color: #fff;
+}
+
+.nb-block-form .uk-button-primary:hover span, .nb-block-form .uk-button-primary:focus span, .nb-block-form .uk-button-primary:active span {
+  color: #1b365d;
 }
 
 .nb-block-form .InputfieldToggle .InputfieldToggleHelper {
@@ -1745,39 +1715,40 @@ input[type='submit'] {
   padding: 0;
 }
 
+.nb-legal ul li:not(:first-of-type) {
+  margin-left: 10px;
+}
+
 .nb-legal ul li a {
-  color: #7e6669;
+  color: #fff;
+  position: relative;
 }
 
-.nb-legal ul li a:hover, .nb-legal ul li a:focus, .nb-legal ul li a:active {
-  color: #241d1e;
+.nb-legal ul li a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  background-color: #fff;
+  transition: 256ms ease-in-out;
+  bottom: 0;
+  content: '';
 }
 
-.nb-legal ul li:after {
-  content: "|";
-  color: #cabdbf;
-  display: inline-block;
-  padding: 0 0.5rem;
-}
-
-.nb-legal ul li:last-child:after {
-  content: "";
+.nb-legal ul li a:hover::after, .nb-legal ul li a:focus::after, .nb-legal ul li a:active::after {
+  opacity: 1;
 }
 
 @media (max-width: 479px) {
   .nb-legal ul li {
     display: block;
   }
-  .nb-legal ul li:after {
-    display: none;
-  }
 }
 
 .nb-credit a {
-  align-items: center;
-  color: #241d1e;
-  display: inline-flex;
-  font-weight: 700;
+  display: block;
+  margin-top: 15px;
 }
 
 .nb-credit a:hover, .nb-credit a:focus, .nb-credit a:active {
@@ -1788,6 +1759,12 @@ input[type='submit'] {
 .nb-credit a img {
   height: 1rem;
   margin-left: 0.125rem;
+}
+
+@media (min-width: 960px) {
+  .nb-credit {
+    text-align: right;
+  }
 }
 
 .nb-json > [data-uk-scrollspy] > div .uk-card {
@@ -1942,9 +1919,169 @@ input[type='submit'] {
   background-image: none;
 }
 
+.nb-social {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nb-social li:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.nb-social a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nb-social a::after, .nb-social a::before {
+  transition: 256ms ease-in-out;
+}
+
+.nb-social a::after {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 0;
+  top: 0;
+  transform: scale(0);
+  content: '';
+  background-color: #1b365d;
+  border-radius: 50%;
+}
+
+.nb-social a::before {
+  color: #1b365d;
+  z-index: 1;
+}
+
+.nb-social a:hover::after, .nb-social a:focus::after, .nb-social a:active::after {
+  transform: scale(1);
+}
+
+.nb-social a:hover::before, .nb-social a:focus::before, .nb-social a:active::before {
+  color: #fff;
+}
+
+.nb-widget {
+  z-index: 10;
+  padding-bottom: 170px;
+}
+
+.nb-widget ul {
+  padding-left: 0;
+  padding-right: 17px;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.nb-widget ul li {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nb-widget ul li a {
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.3em;
+  padding: 16px 17px 16px 23px;
+  color: transparent;
+  position: relative;
+  min-height: 48px;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-self: center;
+  z-index: 1;
+}
+
+.nb-widget ul li a::before {
+  color: #1b365d;
+  font-size: 16px;
+  transition: inherit;
+  margin-left: 12px;
+  pointer-events: none;
+}
+
+.nb-widget ul li a:hover, .nb-widget ul li a:focus, .nb-widget ul li a:active {
+  background-color: #1b365d;
+  color: #fff;
+}
+
+.nb-widget ul li a:hover::before, .nb-widget ul li a:focus::before, .nb-widget ul li a:active::before {
+  color: #fff;
+}
+
+.nb-widget .uk-text-uppercase {
+  position: absolute;
+  transform: rotate(-90deg);
+  color: #1b365d;
+  font-size: 10px;
+  line-height: 1.7em;
+  right: 0;
+  bottom: 100px;
+  z-index: 0;
+}
+
+.nb-widget .scroll-percent {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  height: 48px;
+  width: 48px;
+}
+
+.nb-widget .scroll-percent .percent-num, .nb-widget .scroll-percent svg {
+  position: absolute;
+}
+
+.nb-widget .scroll-percent .percent-num {
+  left: 50%;
+  top: 46%;
+  transform: translateY(25%);
+}
+
+.nb-widget .scroll-percent svg {
+  transform: translate(-25%, -25%);
+  left: 50%;
+  top: 50%;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #c4c4c4;
+  width: 48px;
+  height: 48px;
+}
+
+.nb-widget .scroll-percent svg path {
+  stroke: #cb4c48;
+}
+
 .banner {
   margin-bottom: 25px;
   padding: 0 40px;
+}
+
+.banner .font-info {
+  position: absolute;
+  bottom: 35px;
+  right: 75px;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+}
+
+.banner .font-info::before {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  top: 0;
+  line-height: 1;
+  left: 0;
 }
 
 .banner-inner {
@@ -1988,6 +2125,10 @@ input[type='submit'] {
   display: inline-block;
 }
 
+.explore-section .uk-card {
+  padding-bottom: 30px;
+}
+
 .explore-section .uk-card a {
   z-index: 1;
 }
@@ -2018,6 +2159,46 @@ input[type='submit'] {
   font-family: "TT Norms", sans-serif;
   font-weight: 700;
   margin-top: 10px;
+}
+
+.explore-section .uk-button-default > span:first-of-type {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.explore-section .uk-button-default > span:first-of-type::after {
+  position: absolute;
+  right: 0;
+  height: 1px;
+  background-color: #267cb9;
+  content: '';
+  width: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .7s ease;
+}
+
+.explore-section .uk-button-default > span:first-of-type svg {
+  position: relative;
+  right: 0;
+  transition: .7s ease;
+}
+
+.explore-section .uk-button-default > span:first-of-type .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+  fill: #267cb9;
+}
+
+.explore-section .uk-button-default > span:last-of-type::after {
+  display: none;
+}
+
+.explore-section .uk-button-default:hover > span:first-of-type::after, .explore-section .uk-button-default:focus > span:first-of-type::after, .explore-section .uk-button-default:active > span:first-of-type::after {
+  width: 18px;
+}
+
+.explore-section .uk-button-default:hover > span:first-of-type svg, .explore-section .uk-button-default:focus > span:first-of-type svg, .explore-section .uk-button-default:active > span:first-of-type svg {
+  right: 18px;
 }
 
 @media (min-width: 1200px) {
@@ -2120,7 +2301,7 @@ input[type='submit'] {
   transform: translateX(-50%);
   top: 65px;
   font-family: 'svgicons';
-  content: "";
+  content: "";
   font-size: 84px;
   color: #86c8bc;
   line-height: 1;
@@ -2256,7 +2437,7 @@ input[type='submit'] {
   top: 25px;
   font-family: 'svgicons';
   color: #1b365d;
-  content: "";
+  content: "";
   font-size: 20px;
 }
 
@@ -2269,12 +2450,7 @@ input[type='submit'] {
 }
 
 .find-out-more li a:hover, .find-out-more li a:focus, .find-out-more li a:active {
-  background-color: #1b365d;
-  color: #e7f4f1;
-}
-
-.find-out-more li a:hover::after, .find-out-more li a:focus::after, .find-out-more li a:active::after {
-  color: #e7f4f1;
+  background-color: #cfebe4;
 }
 
 .find-out-more > .uk-text-center span {
@@ -2288,8 +2464,153 @@ input[type='submit'] {
   margin: 15px 0 60px;
 }
 
+.nb-share-inner {
+  background-color: #f7f6f1;
+  padding: 70px 0 75px;
+}
+
 em {
   color: inherit !important;
+}
+
+.footer {
+  min-height: 710px;
+  border-top: 1px solid #eff1f4;
+  padding: 55px 0 35px;
+}
+
+.footer-top {
+  padding-bottom: 190px;
+}
+
+.footer-top a img {
+  max-width: 127px;
+  width: 100%;
+  height: auto;
+}
+
+.footer-top > .uk-flex:nth-child(3) a {
+  position: relative;
+}
+
+.footer-top > .uk-flex:nth-child(3) a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  background-color: #1b365d;
+  transition: 256ms ease-in-out;
+  bottom: 0;
+  content: '';
+}
+
+.footer-top > .uk-flex:nth-child(3) a:hover, .footer-top > .uk-flex:nth-child(3) a:focus, .footer-top > .uk-flex:nth-child(3) a:active {
+  color: #1b365d;
+}
+
+.footer-top > .uk-flex:nth-child(3) a:hover::after, .footer-top > .uk-flex:nth-child(3) a:focus::after, .footer-top > .uk-flex:nth-child(3) a:active::after {
+  opacity: 1;
+}
+
+.footer-top ul {
+  list-style-type: none;
+}
+
+.footer-top .uk-button-default {
+  border-color: #1b365d;
+  position: relative;
+  padding-right: 70px;
+}
+
+.footer-top .uk-button-default::before {
+  font-size: 24px;
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-top .uk-button-default.font-news::before {
+  font-weight: 700;
+}
+
+.footer-top .uk-button-default:hover, .footer-top .uk-button-default:focus, .footer-top .uk-button-default:active {
+  background-color: #1b365d;
+  color: #fff;
+}
+
+.footer-top .nb-social a {
+  border: 2px solid rgba(27, 54, 93, 0.1);
+}
+
+.footer-top .nb-social a::after {
+  width: 48px;
+  height: 48px;
+  left: -2px;
+  top: -2px;
+}
+
+.footer-top .nb-social a:hover, .footer-top .nb-social a:focus, .footer-top .nb-social a:active {
+  border-color: #1b365d;
+}
+
+@media (min-width: 960px) {
+  .footer-top > .uk-flex:first-child {
+    order: 4;
+  }
+  .footer-top > .uk-flex:nth-child(2) {
+    order: 1;
+  }
+  .footer-top > .uk-flex:nth-child(3) {
+    order: 3;
+  }
+  .footer-top > .uk-flex:last-child {
+    order: 2;
+  }
+  .footer-top .nb-social {
+    padding-left: 40px;
+  }
+}
+
+.footer-bottom * {
+  color: #fff;
+}
+
+.footer-bottom > div:first-of-type .label.small {
+  margin: 11px 0 15px;
+}
+
+.footer-bottom .uk-button {
+  font-size: 12px;
+  line-height: 1.7em;
+  font-weight: normal;
+  border: 1px solid #fff;
+  padding: 3px 20px;
+  min-height: 26px;
+}
+
+.footer-bottom .uk-button:hover, .footer-bottom .uk-button:focus, .footer-bottom .uk-button:active {
+  border-color: #1b365d;
+  background-color: #1b365d;
+  color: #fff;
+}
+
+.footer-bottom .label.small {
+  display: block;
+  opacity: 1;
+}
+
+@media (min-width: 960px) {
+  .footer-bottom > div:first-child {
+    order: 2;
+  }
+  .footer-bottom > div:nth-child(2) {
+    order: 1;
+  }
+  .footer-bottom > div:last-child {
+    order: 3;
+  }
 }
 
 @media print {
@@ -2408,6 +2729,22 @@ em {
   .footer {
     font-size: 0.8rem;
   }
+}
+
+.uk-container-large {
+  max-width: 1380px;
+}
+
+.uk-tooltip {
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 1.7em;
+  color: #1b365d;
+  font-family: "TT Norms", sans-serif;
+  font-weight: normal;
+  max-width: 205px;
 }
 
 /*# sourceMappingURL=theme.min.css.map */

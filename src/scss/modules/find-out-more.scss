@@ -38,12 +38,7 @@
             }
 
             @include hover {
-                background-color: $blue;
-                color: $turquise-light;
-
-                &::after {
-                    color: $turquise-light;
-                }
+                background-color: $turquise-dark;
             }
         }
     }

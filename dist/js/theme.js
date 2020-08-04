@@ -9,6 +9,10 @@ var theme = {
 
 	init: function() {
 		this.blocks();
+		var percentNumber = document.getElementsByClassName('percent-num')[0];
+		if(percentNumber) {
+			this.scrollPercentage();
+		}
 	},
 
 	blocks: function() {
@@ -87,6 +91,36 @@ var theme = {
 		});
 
 		$nb.profilerStop('theme.blocks');
+	},
+
+	scrollPercentage: function() {
+		window.addEventListener('scroll', function() {
+			var scrollPage = document.documentElement;
+			var scrollBody = document.body;
+			var	scrollTopOffset = 'scrollTop';
+			var scrollHeight = 'scrollHeight';
+			var percentNumber = document.getElementsByClassName('percent-num')[0];
+			var percentCirclePath = document.getElementsByClassName('circlePath')[0];
+			var dashOffsetTotal = 0;
+
+			var percent = (scrollPage[scrollTopOffset]||scrollBody[scrollTopOffset]) / ((scrollPage[scrollHeight]||scrollBody[scrollHeight]) - scrollPage.clientHeight) * 100;
+
+			percent = Math.floor(percent);
+			percentNumber.innerHTML = percent + '%';
+
+			var pathLength = percentCirclePath.getTotalLength();
+
+			if(percent > 1) {
+				dashOffsetTotal = pathLength / percent;
+				dashOffsetTotal = pathLength - dashOffsetTotal;
+			} else {
+				dashOffsetTotal = pathLength;
+			}
+			console.log(dashOffsetTotal);
+
+			percentCirclePath.setAttribute('stroke-dasharray', pathLength + ' ' + pathLength);
+			percentCirclePath.setAttribute('stroke-dashoffset', dashOffsetTotal);
+		});
 	}
 };
 

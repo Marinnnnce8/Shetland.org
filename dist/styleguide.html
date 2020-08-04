@@ -18,12 +18,13 @@
 
 <body>
 
-	<header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
+	<!-- <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'> -->
+	<header class='header'>
 		<nav class='uk-navbar-container uk-navbar' data-uk-navbar>
 
 			<div class='uk-navbar-left'>
 				<a href='#' class='uk-navbar-item uk-logo'>
-					<img src='img/logo.png' alt='Site Name Logo'>
+					<!-- <img src='img/logo.png' alt='Site Name Logo'> -->
 				</a>
 			</div>
 
@@ -45,19 +46,38 @@
 	</header>
 
 	<main class='nb-main uk-margin-large-top uk-margin-large-bottom'>
-		<div class="banner">
-			<div class="banner-inner uk-background-cover" data-uk-img
+		<div class='uk-position-fixed uk-position-center-right nb-widget'>
+			<ul>
+				<li><a href="#" class="font-facebook">Facebook</a></li>
+				<li><a href="#" class="font-twitter">Twitter</a></li>
+				<li><a href="#" class="font-envelope">Email</a></li>
+				<li><a href="#" class="font-print">Print</a></li>
+			</ul>
+			<span class="uk-text-uppercase">Share page on</span>
+			<span class="scroll-percent label alt small uk-text-bold">
+				<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" class="circlePath" clip-rule="evenodd" stroke-width="2" stroke-miterlimit="2"
+						d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM24 43.6364C34.8449 43.6364 43.6364 34.8449 43.6364 24C43.6364 13.1551 34.8449 4.36364 24 4.36364C13.1551 4.36364 4.36364 13.1551 4.36364 24C4.36364 34.8449 13.1551 43.6364 24 43.6364Z" />
+				</svg>
+				<span class="percent-num">0%</span></span>
+		</div>
+		<div class="uk-position-bottom-right scroll-button-up">
+			<a href="#scroll-target" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+		</div>
+		<div class="banner uk-position-relative">
+			<div class="banner-inner uk-background-cover uk-background-fixed" data-uk-img
 				style="background-image: url('./img/banner-styleguide.jpg');">
 				<div class="banner-text">
 					<span>Section</span>
 					<h1>Internal page with style guide</h1>
 					<div class="uk-flex">
-						<a class="scroll-button" href="#shetland-breadcrumb" data-uk-scroll
+						<a class="scroll-button-down" href="#shetland-breadcrumb" data-uk-scroll
 							aria-label="Scroll to next section"></a>
 						<span class="label alt">Find your favorite thing</span>
 					</div>
 				</div>
 			</div>
+			<span class="font-info" data-uk-tooltip="title: Photo by Photographer Name; pos: top-right"></span>
 		</div>
 		<div class='uk-container uk-container-small'>
 			<ul class='uk-breadcrumb' id="shetland-breadcrumb">
@@ -653,8 +673,8 @@
 			<div class='nb-block nb-block-form uk-clearfix' data-nb-block='form'>
 
 				<form id='nb-form-nb-styleguide'
-					class='uk-form-stacked uk-margin-top uk-width-2-3@s uk-width-3-5@m InputfieldForm' method='post'
-					data-uk-nb-form novalidate data-colspacing='1'>
+					class='uk-form-stacked uk-margin-top uk-margin-large-bottom uk-width-2-3@s uk-width-3-5@m InputfieldForm'
+					method='post' data-uk-nb-form novalidate data-colspacing='1'>
 
 					<h2>Form Styles</h2>
 
@@ -782,7 +802,8 @@
 									</svg>
 								</label>
 								<span class="nb-append uk-margin-small-top">Single column layout</span>
-								<span class="nb-description uk-margin-top"><em><strong>InputfieldMarkup,</strong></em> for displaying HTML markup.</span>
+								<span class="nb-description uk-margin-top"><em><strong>InputfieldMarkup,</strong></em>
+									for displaying HTML markup.</span>
 							</div>
 						</div>
 						<div class='Inputfield InputfieldSubmit uk-width-1-1 uk-grid-margin uk-first-column'
@@ -790,22 +811,36 @@
 							<div class='nb-form-content'>
 								<div role='alert'></div>
 								<button id='nb-form-nb-styleguide_submit' class='uk-button uk-button-primary'
-									name='submit' value='Send message' type='submit'><span
-										class='ui-button-text'>Send message</span></button>
+									name='submit' value='Send message' type='submit'><span class='ui-button-text'>Send
+										message</span></button>
 							</div>
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-		<section class="explore-section">
+
+		<div class="nb-share uk-padding-large uk-padding-remove-horizontal">
+			<div class="uk-container uk-container-large">
+				<div class="nb-share-inner uk-text-center">
+					<h5>Share this page</h5>
+					<ul class="uk-flex uk-flex-center nb-social">
+						<li><a href="#" class="font-facebook" aria-label="Share our page via Facebook"></a></li>
+						<li><a href="#" class="font-twitter" aria-label="Share our page via Twitter"></a></li>
+						<li><a href="#" class="font-envelope" aria-label="Share our page via e-mail"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<section class="explore-section uk-margin-small-top">
 			<div class='uk-container uk-container-large'>
 				<div class="uk-text-center">
 					<span class="uk-margin-small-bottom">What next?</span>
 					<h2 class="uk-margin-remove-top">Continue exploring nature</h2>
 				</div>
-				<div class="uk-child-width-1-2@s uk-child-width-1-3@l uk-grid-large uk-margin-medium-top" data-uk-grid
-					data-uk-height-match="target: div > .uk-card >.uk-card-body">
+				<div class="uk-child-width-1-2@s uk-child-width-1-3@l uk-grid-large uk-margin-medium-top uk-margin-medium-bottom"
+					data-uk-grid data-uk-height-match="target: div > .uk-card >.uk-card-body">
 					<div>
 						<div class="uk-card">
 							<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
@@ -843,6 +878,9 @@
 						</div>
 					</div>
 				</div>
+				<button class='uk-button uk-button-default uk-margin-auto'><span><img data-uk-svg
+							src="./img/button-arrow-left.svg" alt='image' /></span><span>Back to Nature &
+						Wildlife</span></button>
 			</div>
 		</section>
 		<section class="entry-items">
@@ -874,27 +912,60 @@
 		</section>
 	</main>
 
-	<footer class='footer uk-padding-large uk-padding-remove-horizontal'>
-		<div class='uk-container uk-text-center'>
-
-			<div class='nb-legal uk-margin-small-bottom'>
-				<ul>
-					<li><a href='#'>Terms &amp; Conditions</a></li>
-					<li><a href='#'>Privacy Policy</a></li>
-					<li><a href='#'>Disclaimer</a></li>
-					<li><a href='#'>Cookies</a></li>
+	<footer class='footer uk-background-cover' data-uk-img style="background-image: url('./img/footer-banner.jpg');">
+		<div class='uk-container uk-container-large uk-text-center'>
+			<div class="footer-top uk-flex uk-flex-wrap uk-flex-center uk-flex-bottom" data-uk-grid>
+				<ul class="uk-flex uk-flex-center nb-social uk-width-1-3@m">
+					<li><a href="#" class="font-facebook" aria-label="Share our page via Facebook"></a></li>
+					<li><a href="#" class="font-twitter" aria-label="Share our page via Twitter"></a></li>
+					<li><a href="#" class="font-youtube" aria-label="Share our page via Youtube"></a></li>
+					<li><a href="#" class="font-instagram" aria-label="Share our page via Instagram"></a></li>
 				</ul>
+				<div class="uk-flex uk-width-1-3@m">
+					<button class="uk-button uk-button-default font-news uk-margin-medium-right">Subscribe</button>
+					<button class="uk-button uk-button-default font-email">Contact</button>
+				</div>
+				<ul class="uk-flex uk-flex-right uk-width-1-3@m uk-margin-small-bottom">
+					<li><a href="#" class="label medium alt uk-text-bold">Brand</a></li>
+					<li><a href="#" class="label medium alt uk-text-bold uk-margin-medium-left">Media</a></li>
+					<li><a href="#" class="label medium alt uk-text-bold uk-margin-medium-left">Corporate</a></li>
+					<li><a href="#" class="label medium alt uk-text-bold uk-margin-medium-left">Press</a></li>
+				</ul>
+				<div class="uk-flex uk-flex-center uk-width-1-3@m">
+					<a href="#" aria-label="Shetland.org Homepage"><img src="./img/logo.png" alt="image" /></a>
+				</div>
 			</div>
+			<div class="footer-bottom uk-child-width-1-3@m uk-flex uk-flex-bottom" data-uk-grid>
+				<div class="uk-flex uk-flex-column uk-flex-middle">
+					<a href="#" aria-label="UNESCO Global Geopark">
+						<img src="./img/ugg-logo.png" alt="UNESCO Global Geopark">
+					</a>
+					<span class="label small">Shetland is a UNESCO Global Geopark.</span>
+					<a href="#" class="uk-button">Find out more</a>
+				</div>
+				<div class="uk-flex uk-flex-left uk-flex-column">
+					<div class='nb-legal uk-margin-small-bottom'>
+						<ul class="uk-flex uk-flex-left">
+							<li><a href='#' class="label small">Terms &amp; Conditions</a></li>
+							<li><a href='#' class="label small">Privacy Policy</a></li>
+							<li><a href='#' class="label small">Disclaimer</a></li>
+						</ul>
+					</div>
+					<div class='nb-copyright label small uk-text-left uk-margin-small-bottom uk-visible@m'>&copy; 2020
+						Shetland Islands Council.
+					</div>
+				</div>
 
-			<div class='nb-copyright uk-margin-small-bottom'>Copyright &copy; 2020 Client Name. All rights reserved.
-			</div>
+				<div class='nb-copyright uk-margin-small-bottom uk-hidden@m'>&copy; 2020 Shetland Islands Council.
+				</div>
 
-			<div class='nb-credit'>Website by
-				<a href='https://www.nbcommunication.com/' title='NB Communication - Digital Marketing Agency'>
-					NB <img src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-						data-src='https://brand.nbcommunication.com/logo/web/nb.png' alt='NB Communication Ltd Logo'
-						data-uk-img>
-				</a>
+				<div class="uk-flex uk-flex-right">
+					<div class='nb-credit label small'>Website development by:
+						<a href='https://www.nbcommunication.com/' title='NB Communication - Digital Marketing Agency'>
+							NB Communication
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</footer>

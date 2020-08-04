@@ -26,7 +26,6 @@ input[type='submit'] {
 .uk-button {
 	font-weight: $bold;
 	font-size: 14px;
-	// font-feature-settings: 'liga'off;
 	color: $white;
 	border-radius: 50px;
 	text-align: left;
@@ -221,7 +220,7 @@ input[type='submit'] {
 	}
 }
 
-.scroll-button {
+.scroll-button-down {
 	border: 2px solid $white;
 	border-radius: 50%;
 	width: 56px;
@@ -250,3 +249,55 @@ input[type='submit'] {
 		}
 	}
 }
+
+.scroll-button-up {
+	.uk-button {
+		border: 2px solid $blue;
+		border-radius: 50%;
+		width: 48px;
+		height: 48px;
+		padding: 0;
+		margin-right: 30px;
+		margin-bottom: 500px;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&::before {
+			content: font-char($chevron-up);
+			font-family: 'svgicons';
+			font-weight: normal;
+			color: $blue;
+			font-size: 10px;
+			transition: inherit;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		@include hover {
+			background-color: $blue;
+
+			&::before {
+				color: $white;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointXsmallMax) {
+		bottom: 62px;
+
+		.uk-button {
+			width: 48px;
+			height: 48px;
+
+			&::before {
+				left: 38%;
+				font-size: 14px;
+			}
+		}
+	}
+}
+

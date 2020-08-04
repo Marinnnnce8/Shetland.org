@@ -3,6 +3,24 @@
 .banner {
 	margin-bottom: 25px;
 	padding: 0 40px;
+
+	.font-info {
+		position: absolute;
+		bottom: 35px;
+		right: 75px;
+		width: 20px;
+		height: 20px;
+		z-index: 2;
+
+		&::before {
+			position: absolute;
+			color: $white;
+			font-size: 20px;
+			top: 0;
+			line-height: 1;
+			left: 0;
+		}
+	}
 }
 
 .banner-inner {
