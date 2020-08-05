@@ -2785,6 +2785,54 @@ input[type='submit'] {
   content: "";
 }
 
+.newsletter-section .uk-container > span {
+  font-size: 21px;
+  line-height: 1.7em;
+  font-weight: 300;
+  color: #1b365d;
+}
+
+.newsletter-box {
+  max-width: 1136px;
+  background-color: #e7f4f1;
+  padding: 55px 0 45px;
+  width: 100%;
+}
+
+.newsletter-box > img {
+  bottom: -85px;
+  right: -23px;
+  z-index: 0;
+}
+
+.newsletter-inner {
+  position: relative;
+  max-width: 890px;
+  width: 100%;
+}
+
+.newsletter-inner > span {
+  font-size: 18px;
+  line-height: 1.7em;
+  color: #1b365d;
+  font-family: "Literata", sans-serif;
+  display: block;
+}
+
+.newsletter-inner .uk-input:not(.uk-form-danger) {
+  border-radius: 28px;
+  border: 2px solid #1b365d;
+  padding: 0 45px;
+}
+
+.newsletter-inner .InputfieldSubmit {
+  margin-top: 35px;
+}
+
+.newsletter-inner .uk-button {
+  background-color: #1b365d;
+}
+
 em {
   color: inherit !important;
 }

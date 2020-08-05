@@ -1,0 +1,53 @@
+.newsletter-section {
+
+    .uk-container {
+        >span {
+            font-size: 21px;
+            line-height: 1.7em;
+            font-weight: $light;
+            color: $blue;
+        }
+    }
+}
+
+.newsletter-box {
+    max-width: 1136px;
+    background-color: $turquise-light;
+    padding: 55px 0 45px;
+    width: 100%;
+
+    >img {
+        bottom: -85px;
+        right: -23px;
+        z-index: 0;
+    }
+}
+
+.newsletter-inner {
+    position: relative;
+    max-width: 890px;
+    width: 100%;
+
+    >span {
+        font-size: 18px;
+        line-height: 1.7em;
+        color: $blue;
+        font-family: $font-literata;
+        display: block;
+    }
+
+    .uk-input:not(.uk-form-danger) {
+        border-radius: 28px;
+        border: 2px solid $blue;
+        padding: 0 45px;
+    }
+
+    //sass-lint:disable class-name-format
+    .InputfieldSubmit {
+        margin-top: 35px;
+    }
+
+    .uk-button {
+        background-color: $blue;
+    }
+}
