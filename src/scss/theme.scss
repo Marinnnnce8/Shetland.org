@@ -41,11 +41,13 @@
 @import 'modules/slider.scss';
 @import 'modules/team-list.scss';
 @import 'modules/explore-section.scss';
-@import 'modules/entry-items.scss';
+@import 'modules/entry-item.scss';
 @import 'modules/testimonials-slider.scss';
 @import 'modules/useful-links.scss';
 @import 'modules/find-out-more.scss';
 @import 'modules/share.scss';
+@import 'modules/image-card.scss';
+@import 'modules/campaign-slider.scss';
 
 // Theme
 @import "theme/base.scss";
@@ -78,66 +80,6 @@
 	}
 }
 
-// uikit/form
-.uk-input:not(.uk-form-danger),
-.uk-select:not(.uk-form-danger),
-.uk-textarea:not(.uk-form-danger),
-.uk-checkbox:not(.uk-form-danger),
-.uk-radio:not(.uk-form-danger),
-.uk-checkbox:checked:not(.uk-form-danger),
-.uk-radio:checked:not(.uk-form-danger) {
-	border-color: rgba($blue, .6);
-	min-height: 56px;
-	border-width: 2px;
-	border-radius: 10px;
-	color: $blue;
-	font-family: $font-default;
-	font-size: 18px;
-	line-height: 1.7em;
-	padding: 0 30px;
-
-	@include placeholder {
-		font-size: 16px;
-		opacity: .8;
-		color: inherit;
-		line-height: inherit;
-	}
-}
-
-.uk-select:not(.uk-form-danger),
-.uk-radio:not(.uk-form-danger) label {
-	font-size: 16px;
-}
-
-.uk-radio:not(.uk-form-danger),
-.uk-radio:checked:not(.uk-form-danger) {
-	padding: 0;
-	min-height: 0;
-	height: 26px;
-	width: 26px;
-	border-radius: 50%;
-	margin-right: 15px;
-	border-color: $blue;
-}
-
-.uk-radio:checked:not(.uk-form-danger) {
-	background-color: $blue;
-	background-size: 135%;
-}
-
-// theme/footer
-.footer {
-	font-size: 0.9rem;
-
-	@media (max-width: $breakpointMobile) {
-		font-size: 0.8rem;
-	}
-}
-
-.uk-container-large {
-	max-width: 1380px;
-}
-
 // uikit/tooltip
 .uk-tooltip {
 	background: $white;
@@ -149,4 +91,31 @@
 	font-family: $font-default;
 	font-weight: normal;
 	max-width: 205px;
+}
+
+//uikit/container
+.uk-container-large {
+	max-width: 1380px;
+}
+
+//uikit/grid
+@media (min-width: $breakpointLarge) {
+
+	.uk-grid-column-large,
+	.uk-grid-large {
+		margin-left: -135px;
+
+		>* {
+			padding-left: 135px;
+		}
+	}
+
+	.uk-grid-column-medium,
+	.uk-grid-medium {
+		margin-left: -80px;
+
+		>* {
+			padding-left: 80px;
+		}
+	}
 }

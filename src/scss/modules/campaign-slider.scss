@@ -1,0 +1,103 @@
+.campaign-slider {
+    li {
+        padding-top: 5px;
+        padding-bottom: 19px;
+
+        &:not(.uk-active) .uk-card {
+            opacity: .3;
+        }
+    }
+
+    .uk-card {
+        padding: 11px 30px;
+        min-height: 165px;
+        outline: 5px solid transparent;
+        transition: $nbSec ease-in-out;
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            transition: inherit;
+        }
+
+        &::before {
+            left: 0;
+            top: 0;
+            width: 100%;
+            bottom: 0;
+            background-color: rgba($blue, .4);
+            z-index: 0;
+        }
+
+        &::after {
+            width: 0;
+            height: 0;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-style: solid;
+            border-width: 19px 19px 0;
+            border-color: $green-pastel transparent transparent;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .uk-position-cover {
+            z-index: 2;
+        }
+
+        @include hover {
+            outline-color: $green-pastel;
+
+            &::before {
+                background-color: rgba($green-pastel, .7);
+            }
+
+            &::after {
+                opacity: 1;
+            }
+
+        }
+    }
+
+    .uk-card-title {
+        color: $white;
+        z-index: 1;
+        position: relative;
+    }
+
+    .uk-slidenav {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 2px solid $blue;
+
+        &::after {
+            color: $blue;
+            font-family: 'svgicons';
+            font-size: 12px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        svg {
+            display: none;
+        }
+
+        &:first-of-type {
+            &::after {
+                content: font-char($button-arrow-left);
+            }
+        }
+
+        &:last-of-type {
+            &::after {
+                content: font-char($button-arrow-right);
+            }
+        }
+    }
+}

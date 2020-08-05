@@ -37,19 +37,11 @@
         }
     }
 
-    @media (min-width: $breakpointLarge) {
+    .uk-grid-column-medium,
+    .uk-grid-medium {
 
-        .uk-grid-column-large,
-        .uk-grid-large {
-            margin-left: -80px;
-
-            *> {
-                padding-left: 80px;
-            }
-
-            >.uk-grid-margin {
-                margin-top: 0;
-            }
+        >.uk-grid-margin {
+            margin-top: 0;
         }
     }
 }

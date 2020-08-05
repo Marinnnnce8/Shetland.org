@@ -48,6 +48,7 @@ $black: #000;
 
 //Gradients
 $hero-overlay: linear-gradient(180deg, rgba(27, 54, 93, 0) 0%, #1b365d 100%);
+$hover-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, #DAAA00 100%);
 
 $site-colors: ('black': $black,
 	'white': $white) !default;
@@ -136,6 +137,7 @@ $themeVar: 0; // Example, not used
 
 
 $button-arrow-right: 'button-arrow-right';
+$button-arrow-left: 'button-arrow-left';
 $long-arrow-down: 'long-arrow-down';
 $quote: 'quote';
 $external-link: 'external-link';

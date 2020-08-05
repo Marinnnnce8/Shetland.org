@@ -1,17 +1,3 @@
-.entry-items {
-    @media (min-width: $breakpointSmall) {
-
-        .uk-grid-column-large,
-        .uk-grid-large {
-            margin-left: -135px;
-
-            >* {
-                padding-left: 135px;
-            }
-        }
-    }
-}
-
 .entry-item {
     background-color: $black;
 

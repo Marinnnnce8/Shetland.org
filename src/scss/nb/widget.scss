@@ -15,7 +15,6 @@
             a {
                 border-radius: 50px;
                 font-weight: $bold;
-                font-size: 12px;
                 line-height: 1.3em;
                 padding: 16px 17px 16px 23px;
                 color: transparent;
@@ -26,6 +25,10 @@
                 flex-direction: row-reverse;
                 align-self: center;
                 z-index: 1;
+                transition-delay: .35s;
+                font-size: 0;
+                width: 48px;
+                transition: font-size .3s;
 
                 &::before {
                     color: $blue;
@@ -38,6 +41,10 @@
                 @include hover {
                     background-color: $blue;
                     color: $white;
+                    width: auto;
+                    font-size: 12px;
+                    transition: font-size .3s;
+                    transition-delay: 0;
 
                     &::before {
                         color: $white;
@@ -56,6 +63,8 @@
         right: 0;
         bottom: 115px;
         z-index: 0;
+
+        width: 83px;
     }
 
     .scroll-percent {
