@@ -1,6 +1,6 @@
 .nb-widget {
     z-index: 10;
-    padding-bottom: 170px;
+    padding-bottom: 185px;
 
     ul {
         padding-left: 0;
@@ -54,40 +54,38 @@
         font-size: 10px;
         line-height: 1.7em;
         right: 0;
-        bottom: 100px;
+        bottom: 115px;
         z-index: 0;
     }
 
     .scroll-percent {
         position: absolute;
-        right: 30px;
+        right: 15px;
         bottom: 0;
-        height: 48px;
-        width: 48px;
+        height: 55px;
+        width: 55px;
 
-        .percent-num, svg {
+        .percent-num,
+        svg {
             position: absolute;
         }
 
         .percent-num {
             left: 50%;
-            top: 46%;
-            transform: translateY(25%);
+            top: 50%;
+            transform: translate(-50%, -55%);
+            transform-origin: center;
         }
 
         svg {
-            transform: translate(-25%, -25%);
+            transform: translate(-50%, -50%) rotate(-90deg);
             left: 50%;
             top: 50%;
-            // stroke-dashoffset: 0;
-            transition: stroke-dashoffset 1s linear;
+            stroke-dashoffset: 0;
+            overflow: visible;
             stroke: $gray;
-            width: 48px;
-            height: 48px;
-        }
-
-        svg path {
-            stroke: $red;
+            width: 100%;
+            height: 100%;
         }
     }
 }

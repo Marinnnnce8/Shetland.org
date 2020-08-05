@@ -11,7 +11,7 @@ var theme = {
 		this.blocks();
 		var percentNumber = document.getElementsByClassName('percent-num')[0];
 		if(percentNumber) {
-			this.scrollPercentage();
+			this.addMultiListener(window, 'load scroll', this.scrollPercentage);
 		}
 	},
 
@@ -93,34 +93,35 @@ var theme = {
 		$nb.profilerStop('theme.blocks');
 	},
 
+	//combining multiple event listeners
+	addMultiListener: function(element, eventNames, listener) {
+		var events = eventNames.split(' ');
+		for (var i=0, iLen=events.length; i<iLen; i++) {
+			element.addEventListener(events[i], listener, false);
+		}
+	},
+
+	//calculating and displaying scroll percentage
 	scrollPercentage: function() {
-		window.addEventListener('scroll', function() {
-			var scrollPage = document.documentElement;
-			var scrollBody = document.body;
-			var	scrollTopOffset = 'scrollTop';
-			var scrollHeight = 'scrollHeight';
-			var percentNumber = document.getElementsByClassName('percent-num')[0];
-			var percentCirclePath = document.getElementsByClassName('circlePath')[0];
-			var dashOffsetTotal = 0;
+		var scrollPage = document.documentElement;
+		var scrollBody = document.body;
+		var	scrollTopOffset = 'scrollTop';
+		var scrollHeight = 'scrollHeight';
+		var percentNumber = document.getElementsByClassName('percent-num')[0];
+		var percentCirclePath = document.getElementsByClassName('circlePath')[0];
 
-			var percent = (scrollPage[scrollTopOffset]||scrollBody[scrollTopOffset]) / ((scrollPage[scrollHeight]||scrollBody[scrollHeight]) - scrollPage.clientHeight) * 100;
+		//scroll vertical offset
+		var percent = (scrollPage[scrollTopOffset]||scrollBody[scrollTopOffset]) / ((scrollPage[scrollHeight]||scrollBody[scrollHeight]) - scrollPage.clientHeight) * 100;
+		percent = Math.floor(percent);
+		
+		percentNumber.innerHTML = percent + '%';
 
-			percent = Math.floor(percent);
-			percentNumber.innerHTML = percent + '%';
+		//svg circle scroll percentage calculation and display
+		var svgRadius = percentCirclePath.getAttribute('r');
+		var svgCircum = svgRadius * 2 * Math.PI;
+		var svgCurrentAmount = svgCircum * (percent++) / 100;
 
-			var pathLength = percentCirclePath.getTotalLength();
-
-			if(percent > 1) {
-				dashOffsetTotal = pathLength / percent;
-				dashOffsetTotal = pathLength - dashOffsetTotal;
-			} else {
-				dashOffsetTotal = pathLength;
-			}
-			console.log(dashOffsetTotal);
-
-			percentCirclePath.setAttribute('stroke-dasharray', pathLength + ' ' + pathLength);
-			percentCirclePath.setAttribute('stroke-dashoffset', dashOffsetTotal);
-		});
+		percentCirclePath.setAttribute('stroke-dasharray', svgCurrentAmount + ',' + svgCircum);
 	}
 };
 

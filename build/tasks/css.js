@@ -43,7 +43,7 @@ gulp.task('css-uikit', () => {
 		.pipe(gulp.dest(`${config.dist}/css`));
 });
 
-// Copy CSS files
+// Copy additional CSS files (e.g. plugin css files)
 gulp.task('css-copy', () => {
 	return gulp.src(`${config.src}/css/*.css`)
 		.pipe(gulp.dest(`${config.dist}/css`));
