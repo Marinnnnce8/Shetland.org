@@ -2270,6 +2270,25 @@ input[type='submit'] {
   margin: 15px;
 }
 
+.video-wrapper {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  .video-wrapper {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  .video-wrapper {
+    width: auto;
+    height: 100%;
+  }
+}
+
 .explore-section .uk-text-center > span {
   font-family: "TT Norms", sans-serif;
   font-style: normal;

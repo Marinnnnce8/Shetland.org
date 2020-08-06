@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang='en-gb' class='template-home section-home'>
+
 <head>
 
 	<meta charset='utf-8'>
@@ -13,6 +14,7 @@
 	<link rel='stylesheet' href='css/uikit.min.css' />
 	<link rel='stylesheet' href='css/theme.min.css' />
 </head>
+
 <body>
 
 	<header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
@@ -20,7 +22,7 @@
 
 			<div class='uk-navbar-left'>
 				<a href='#' class='uk-navbar-item uk-logo'>
-					<img src='img/logo.png' alt='Site Name Logo'>
+					<!-- <img src='img/logo.png' alt='Site Name Logo'> -->
 				</a>
 			</div>
 
@@ -32,7 +34,8 @@
 						<li><a href='styleguide.html'>Contact</a></li>
 					</ul>
 				</div>
-				<a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}' hidden>
+				<a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
+					hidden>
 					<span data-uk-navbar-toggle-icon></span>
 				</a>
 			</div>
@@ -40,28 +43,77 @@
 		</nav>
 	</header>
 
-	<footer class='footer uk-padding-large uk-padding-remove-horizontal'>
-		<div class='uk-container uk-text-center'>
+	<main>
+		<section class="banner uk-cover-container">
 
-			<div class='nb-legal uk-margin-small-bottom'>
-				<ul>
-					<li><a href='#'>Terms &amp; Conditions</a></li>
-					<li><a href='#'>Privacy Policy</a></li>
-					<li><a href='#'>Disclaimer</a></li>
-					<li><a href='#'>Cookies</a></li>
-				</ul>
+		</section>
+		<section class="banner uk-position-relative">
+			<div class="banner-inner uk-cover-container">
+				<div class="video-wrapper">
+					<video class="banner-video" src="./img/shetland-video.mp4" data-uk-video="automute: false; autoplay: inview" playsinline></video>
+				</div>
+				<div class="video-controls">
+					<button class="js-video-toggle" aria-label="Pause">Pauza</button>
+					<button class="js-sound-toggle" aria-label="Mute">Mute</button>
+				</div>
 			</div>
+		</section>
+	</main>
 
-			<div class='nb-copyright uk-margin-small-bottom'>Copyright &copy; 2020 Client Name. All rights reserved.</div>
+	<footer class='footer uk-background-cover' data-uk-img style="background-image: url('./img/footer-banner.jpg');">
+		<div class='uk-container uk-container-large uk-text-center'>
+			<div class="footer-top uk-flex uk-flex-wrap uk-flex-center uk-flex-bottom" data-uk-grid>
+				<ul class="uk-flex uk-flex-center nb-social uk-width-1-3@m">
+					<li><a href="#" class="font-facebook" aria-label="Share our page via Facebook"></a></li>
+					<li><a href="#" class="font-twitter" aria-label="Share our page via Twitter"></a></li>
+					<li><a href="#" class="font-youtube" aria-label="Share our page via Youtube"></a></li>
+					<li><a href="#" class="font-instagram" aria-label="Share our page via Instagram"></a></li>
+				</ul>
+				<div class="uk-flex uk-width-1-3@m">
+					<button class="uk-button uk-button-default font-news uk-margin-medium-right">Subscribe</button>
+					<button class="uk-button uk-button-default font-email">Contact</button>
+				</div>
+				<ul class="uk-flex uk-flex-right uk-width-1-3@m uk-margin-small-bottom">
+					<li><a href="#" class="label medium alt uk-text-bold">Brand</a></li>
+					<li><a href="#" class="label medium alt uk-text-bold uk-margin-medium-left">Media</a></li>
+					<li><a href="#" class="label medium alt uk-text-bold uk-margin-medium-left">Corporate</a></li>
+					<li><a href="#" class="label medium alt uk-text-bold uk-margin-medium-left">Press</a></li>
+				</ul>
+				<div class="uk-flex uk-flex-center uk-width-1-3@m">
+					<a href="#" aria-label="Shetland.org Homepage"><img src="./img/logo.png" alt="image" /></a>
+				</div>
+			</div>
+			<div class="footer-bottom uk-child-width-1-3@m uk-flex uk-flex-bottom" data-uk-grid>
+				<div class="uk-flex uk-flex-column uk-flex-middle">
+					<a href="#" aria-label="UNESCO Global Geopark">
+						<img src="./img/ugg-logo.png" alt="UNESCO Global Geopark">
+					</a>
+					<span class="label small">Shetland is a UNESCO Global Geopark.</span>
+					<a href="#" class="uk-button">Find out more</a>
+				</div>
+				<div class="uk-flex uk-flex-left uk-flex-column">
+					<div class='nb-legal uk-margin-small-bottom'>
+						<ul class="uk-flex uk-flex-left">
+							<li><a href='#' class="label small">Terms &amp; Conditions</a></li>
+							<li><a href='#' class="label small">Privacy Policy</a></li>
+							<li><a href='#' class="label small">Disclaimer</a></li>
+						</ul>
+					</div>
+					<div class='nb-copyright label small uk-text-left uk-margin-small-bottom uk-visible@m'>&copy; 2020
+						Shetland Islands Council.
+					</div>
+				</div>
 
-			<div class='nb-credit'>Website by
-				<a href='https://www.nbcommunication.com/' title='NB Communication - Digital Marketing Agency'>
-					NB <img
-						src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-						data-src='https://brand.nbcommunication.com/logo/web/nb.png'
-						alt='NB Communication Ltd Logo'
-						data-uk-img>
-				</a>
+				<div class='nb-copyright uk-margin-small-bottom uk-hidden@m'>&copy; 2020 Shetland Islands Council.
+				</div>
+
+				<div class="uk-flex uk-flex-right">
+					<div class='nb-credit label small'>Website development by:
+						<a href='https://www.nbcommunication.com/' title='NB Communication - Digital Marketing Agency'>
+							NB Communication
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -71,4 +123,5 @@
 	<script src='js/nb.js'></script>
 	<script src='js/theme.js'></script>
 </body>
+
 </html>

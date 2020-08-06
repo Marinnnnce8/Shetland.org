@@ -10,8 +10,13 @@ var theme = {
 	init: function() {
 		this.blocks();
 		var percentNumber = document.getElementsByClassName('percent-num')[0];
+		var bannerVideo = document.getElementsByClassName('banner-video')[0];
 		if(percentNumber) {
 			this.addMultiListener(window, 'load scroll', this.scrollPercentage);
+		}
+		if(bannerVideo) {
+			this.videoPlayToggle();
+			this.videoSoundToggle();
 		}
 	},
 
@@ -122,7 +127,39 @@ var theme = {
 		var svgCurrentAmount = svgCircum * (percent++) / 100;
 
 		percentCirclePath.setAttribute('stroke-dasharray', svgCurrentAmount + ',' + svgCircum);
-	}
+	},
+
+	//toggle video
+	videoPlayToggle: function() {
+
+		var playToggleBtn = document.getElementsByClassName('js-video-toggle')[0];
+		var bannerVideo = document.getElementsByClassName('banner-video')[0];
+
+		playToggleBtn.addEventListener('click', function() {
+
+			if(bannerVideo.paused) {
+				bannerVideo.play();
+				this.setAttribute('aria-label', 'Pause');
+			}else {
+				bannerVideo.pause();
+				this.setAttribute('aria-label', 'Play');
+			}
+		});
+	},
+
+	videoSoundToggle: function() {
+		var soundToggleBtn = document.getElementsByClassName('js-sound-toggle')[0];
+		var bannerVideo = document.getElementsByClassName('banner-video')[0];
+		soundToggleBtn.addEventListener('click', function() {
+			if(bannerVideo.muted) {
+				bannerVideo.muted = false;
+				this.setAttribute('aria-label', 'Mute');
+			}else {
+				bannerVideo.muted = true;
+				this.setAttribute('aria-label', 'Unmute');
+			}
+		});
+	},
 };
 
 $uk.ready(function() {
