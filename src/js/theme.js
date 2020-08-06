@@ -15,6 +15,8 @@ var theme = {
 			this.addMultiListener(window, 'load scroll', this.scrollPercentage);
 		}
 		if(bannerVideo) {
+			this.addMultiListener(window, 'load scroll', this.ifVideoIsPlaying);
+			// this.ifVideoIsPlaying();
 			this.videoPlayToggle();
 			this.videoSoundToggle();
 		}
@@ -118,7 +120,7 @@ var theme = {
 		//scroll vertical offset
 		var percent = (scrollPage[scrollTopOffset]||scrollBody[scrollTopOffset]) / ((scrollPage[scrollHeight]||scrollBody[scrollHeight]) - scrollPage.clientHeight) * 100;
 		percent = Math.floor(percent);
-		
+
 		percentNumber.innerHTML = percent + '%';
 
 		//svg circle scroll percentage calculation and display
@@ -129,10 +131,25 @@ var theme = {
 		percentCirclePath.setAttribute('stroke-dasharray', svgCurrentAmount + ',' + svgCircum);
 	},
 
+	//toggle video button class depending on video pause/play
+	ifVideoIsPlaying: function() {
+		var playToggleBtn = document.getElementsByClassName('js-button-video')[0];
+		var bannerVideo = document.getElementsByClassName('banner-video')[0];
+		var isPlaying = bannerVideo.currentTime > 0 && !bannerVideo.paused && !bannerVideo.ended && bannerVideo.readyState > 2;
+
+		if(isPlaying){
+			playToggleBtn.setAttribute('aria-label', 'Pause');
+			playToggleBtn.classList.add('button-video-active');
+		}else {
+			playToggleBtn.setAttribute('aria-label', 'Play');
+			playToggleBtn.classList.remove('button-video-active');
+		}
+	},
+
 	//toggle video
 	videoPlayToggle: function() {
 
-		var playToggleBtn = document.getElementsByClassName('js-video-toggle')[0];
+		var playToggleBtn = document.getElementsByClassName('js-button-video')[0];
 		var bannerVideo = document.getElementsByClassName('banner-video')[0];
 
 		playToggleBtn.addEventListener('click', function() {
@@ -140,23 +157,28 @@ var theme = {
 			if(bannerVideo.paused) {
 				bannerVideo.play();
 				this.setAttribute('aria-label', 'Pause');
+				this.classList.add('button-video-active');
 			}else {
 				bannerVideo.pause();
 				this.setAttribute('aria-label', 'Play');
+				this.classList.remove('button-video-active');
 			}
 		});
 	},
 
 	videoSoundToggle: function() {
-		var soundToggleBtn = document.getElementsByClassName('js-sound-toggle')[0];
+		var soundToggleBtn = document.getElementsByClassName('js-button-sound')[0];
 		var bannerVideo = document.getElementsByClassName('banner-video')[0];
+
 		soundToggleBtn.addEventListener('click', function() {
 			if(bannerVideo.muted) {
 				bannerVideo.muted = false;
 				this.setAttribute('aria-label', 'Mute');
+				this.classList.add('button-sound-active');
 			}else {
 				bannerVideo.muted = true;
 				this.setAttribute('aria-label', 'Unmute');
+				this.classList.remove('button-sound-active');
 			}
 		});
 	},

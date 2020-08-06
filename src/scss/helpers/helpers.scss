@@ -14,11 +14,15 @@ html,
 body {
 	overflow-x: hidden;
 	font-family: $font-default;
-	font-feature-settings: 'liga' off;
+	font-feature-settings: 'liga'off;
 	width: 100%;
 	position: relative;
 	font-size: 16px;
 }
+
+// .width-1-2-vw {
+// 	width: 50vw;
+// }
 
 // Theming and colors iterator
 @each $colors-name in $site-colors {

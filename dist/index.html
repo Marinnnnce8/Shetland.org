@@ -44,17 +44,286 @@
 	</header>
 
 	<main>
-		<section class="banner uk-cover-container">
-
-		</section>
-		<section class="banner uk-position-relative">
+		<section class="banner uk-position-relative uk-margin-large-bottom">
 			<div class="banner-inner uk-cover-container">
 				<div class="video-wrapper">
-					<video class="banner-video" src="./img/shetland-video.mp4" data-uk-video="automute: false; autoplay: inview" playsinline></video>
+					<video class="banner-video" src="./img/shetland-video.mp4"
+						data-uk-video="automute: true; autoplay: true" playsinline></video>
 				</div>
-				<div class="video-controls">
-					<button class="js-video-toggle" aria-label="Pause">Pauza</button>
-					<button class="js-sound-toggle" aria-label="Mute">Mute</button>
+				<ul class="video-controls uk-flex uk-position-bottom-right">
+					<button class="js-button-video button-video button-video-active uk-margin-small-right"
+						aria-label="Pause">
+						<span class="left"></span><span class="right"></span>
+					</button>
+					<button class="js-button-sound button-sound button-sound-active" aria-label="Mute">
+						<svg viewBox="0 0 108 96">
+							<path
+								d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z">
+							</path>
+							<path
+								d="M79,62 C83,57.3333333 85,52.6666667 85,48 C85,43.3333333 83,38.6666667 79,34 L49,3">
+							</path>
+							<path
+								d="M95,69 C101.666667,61.6666667 105,54.3333333 105,47 C105,39.6666667 101.666667,32.3333333 95,25 L75.5,6 L49,33">
+							</path>
+						</svg>
+					</button>
+				</ul>
+				<div class="banner-text">
+					<div class="uk-width-1-2">
+						<h1>Welcome to the Islands of Opportunity</h1>
+						<div class="uk-flex uk-margin-bottom">
+							<a class="scroll-button-down" href="#scrollTarget" data-uk-scroll
+								aria-label="Scroll to next section"></a>
+							<span class="label alt">Find your next adventure</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="scrollTarget" class="explore-section uk-padding uk-padding-remove-horizontal">
+			<div class="uk-container uk-container-large">
+				<h2 class="uk-margin-large-bottom uk-margin-small-top">What Shetland are you looking for?</h2>
+				<div class="uk-child-width-1-2@s uk-child-width-1-3@l uk-grid-medium uk-margin-medium-top uk-margin-medium-bottom"
+					data-uk-grid data-uk-height-match="target: div > .uk-card >.uk-card-body">
+					<div>
+						<div class="uk-card explore-item">
+							<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+							<div class="uk-card-media-top">
+								<img src="./img/explore-nature-1.jpg" alt="image" data-uk-img>
+							</div>
+							<div class="uk-card-body">
+								<span class="label">Scenery</span>
+								<h3 class="uk-card-title">Top 30 Shetland Viewpoints accessible by car</h3>
+								<a href="#" class='uk-button uk-button-default'><span>View all
+										Visit blogs</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+											alt='image' /></span></a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card explore-item">
+							<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+							<div class="uk-card-media-top">
+								<img src="./img/explore-nature-2.jpg" alt="image" data-uk-img>
+							</div>
+							<div class="uk-card-body">
+								<span class="label">Bird Watching</span>
+								<h3 class="uk-card-title">The 7 Best Bird Watching Sites in Shetland</h3>
+								<a href="#" class='uk-button uk-button-default'><span>View all Live, Work &
+										Study blogs</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+											alt='image' /></span></a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-card explore-item">
+							<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+							<div class="uk-card-media-top">
+								<img src="./img/explore-nature-3.jpg" alt="image" data-uk-img>
+							</div>
+							<div class="uk-card-body">
+								<span class="label">Shetland Ponies</span>
+								<h3 class="uk-card-title">Why I love Shetland Ponies</h3>
+								<a href="#" class='uk-button uk-button-default'><span>View all
+										Invest blogs</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+											alt='image' /></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="explore-section home">
+			<div class="uk-container uk-container-large">
+				<div class="explore-wrap">
+					<div class="uk-grid-medium uk-child-width-1-2" data-uk-grid="masonry: true">
+						<div>
+							<div class="uk-card explore-item">
+								<div class="uk-card-body">
+									<h3 class="hero-title uk-width-1-2">Visit Shetland</h3>
+									<div class="uk-width-4-5">
+										<p>To best optimise the page and provide the visitor with useful and informative
+											text,
+											it
+											would be good to have a sentence or two included here. These words are here
+											to
+											provide
+											the reader with a basic impression of how actual text will appear in its
+											final
+											presentation.</p>
+										<a href="#" class="uk-button">Discover more on Visit Shetland site</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card large explore-item width-1-2-vw right">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-1.jpg');">
+								</div>
+								<div class="uk-card-body">
+									<span class="label">Family holiday</span>
+									<h3 class="uk-card-title medium">Stress-free holidays With Kids</h3>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card small explore-item width-1-2-vw left">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-2.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">Outdoor & Adventure</span>
+									<h3 class="uk-card-title medium">10 of Shetland's hidden gems</h3>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card medium explore-item">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-3.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">Food and Drink</span>
+									<h3 class="uk-card-title medium">Hungry? Eating out in Shetland</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="explore-wrap">
+					<div class="uk-grid-medium uk-child-width-1-2" data-uk-grid="masonry: true">
+						<div>
+							<div class="uk-card medium explore-item">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-4.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">Live in Shetland</span>
+									<h3 class="uk-card-title medium">27 great reasons to move to Shetland</h3>
+								</div>
+							</div>
+						</div>
+						<div class="uk-card explore-item">
+							<div class="uk-card-body">
+								<h3 class="hero-title uk-width-1-2">Live, Work, Study in Shetland</h3>
+								<p>To best optimise the page and provide the visitor with useful and informative text,
+									it
+									would be good to have a sentence or two included here. These words are here to
+									provide
+									the reader with a basic impression of how actual text will appear in its final
+									presentation.</p>
+								<a href="#" class="uk-button">More reasons on Live, Work & Study Shetland site</a>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card large explore-item width-1-2-vw left">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-5.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">Jobs in Shetland</span>
+									<h3 class="uk-card-title medium">Apprenticeship opportunities in Shetland</h3>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card small explore-item">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-6.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">The Shetlanders</span>
+									<h3 class="uk-card-title medium">Meet the natives and newcomers who call Shetland
+										home
+									</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="explore-wrap">
+					<div class="uk-grid-medium uk-child-width-1-2" data-uk-grid="masonry: true">
+						<div>
+							<div class="uk-card explore-item">
+								<div class="uk-card-body">
+									<h3 class="hero-title uk-width-1-2">Invest in Shetland</h3>
+									<div class="uk-width-4-5">
+										<p>To best optimise the page and provide the visitor with useful and informative
+											text,
+											it
+											would be good to have a sentence or two included here. These words are here
+											to
+											provide
+											the reader with a basic impression of how actual text will appear in its
+											final
+											presentation.</p>
+										<a href="#" class="uk-button">More investment opportunities on Invest Shetland
+											site</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card large explore-item width-1-2-vw right">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-7.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">Why invest in Shetland</span>
+									<h3 class="uk-card-title medium">3 top investment opportunities in Shetland 2020
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card small explore-item width-1-2-vw left">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-8.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">Space</span>
+									<h3 class="uk-card-title medium">Satellites Launched From Shetland? It’s Possible!
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="uk-card medium explore-item width-1-2-vw right">
+								<a class="uk-position-cover" href="#" aria-label="Find out more"></a>
+								<div class="uk-card-media-top uk-background-cover" data-uk-img
+									style="background-image: url('./img/home-img-9.jpg');"></div>
+								<div class="uk-card-body">
+									<span class="label">Filming in Shetland</span>
+									<h3 class="uk-card-title medium">Take your film project from concept to reality in
+										Shetland</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="banner explore">
+			<div class="banner-inner uk-background-cover" data-uk-img
+				style="background-image: url('./img/explore-map.jpg');">
+				<div class="banner-text uk-margin-small-bottom">
+					<div class="uk-width-1-4">
+						<h2>Shetland at the centre</h2>
+						<p>This is us! Click on our little island nation that you’ll like to explore and we'll take you
+							there.
+							It would be good to have a sentence or two included here.</p>
+						<a href="#"
+							class='uk-button uk-button-primary uk-margin-medium-bottom uk-margin-top'><span>Explore by
+								interactive
+								map</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+									alt='image' /></span></a>
+					</div>
 				</div>
 			</div>
 		</section>

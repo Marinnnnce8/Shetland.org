@@ -21,6 +21,27 @@
 			left: 0;
 		}
 	}
+
+	&.explore {
+		margin-bottom: 100px;
+
+		h2 {
+			font-size: 67px;
+		}
+
+		h2,
+		p {
+			color: $blue;
+		}
+
+		p {
+			padding-right: 20px;
+		}
+
+		.uk-button {
+			background-color: $blue;
+		}
+	}
 }
 
 .banner-inner {
@@ -51,20 +72,5 @@
 	.label {
 		display: inline-block;
 		margin: 15px;
-	}
-}
-
-.video-wrapper {
-	position: absolute;
-	z-index: -1;
-
-	@media (min-aspect-ratio: 16 / 9) {
-		width: 100%;
-		height: auto;
-	}
-
-	@media (max-aspect-ratio: 16 / 9) {
-		width: auto;
-		height: 100%;
 	}
 }

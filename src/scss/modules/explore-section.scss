@@ -8,43 +8,64 @@
         color: $blue;
         display: inline-block;
     }
+}
+
+.explore-wrap {
 
     .uk-card {
-        padding-bottom: 30px;
 
-        a {
-            z-index: 1;
-        }
-
-        @include hover {
+        &.width-1-2-vw {
             .uk-card-media-top {
-                img {
-                    opacity: .7;
-                    transform: scale3d(1.1, 1.1, 1);
-                }
+                width: 50vw;
             }
         }
-    }
 
-    .uk-card-body {
-        padding: 30px 0 0;
-    }
+        &.right {
 
-    .uk-card-media-top {
-        background-color: $black;
-        overflow: hidden;
+            .uk-card-body {
+                padding-right: 80px;
+            }
 
-        img {
-            transition: 1s;
-            max-width: none;
-            backface-visibility: hidden;
-            width: 100%;
+            .uk-card-media-top {
+                left: 0;
+            }
         }
-    }
 
-    .uk-card-title {
-        font-family: $font-default;
-        font-weight: $bold;
-        margin-top: 10px;
+        &.left {
+
+            .uk-card-media-top {
+                right: 0;
+            }
+        }
+
+        &.large {
+            padding-top: 607px;
+
+            .uk-card-media-top {
+                height: 607px;
+            }
+        }
+
+        &.medium {
+            padding-top: 530px;
+
+            .uk-card-media-top {
+                height: 530px;
+            }
+        }
+
+        &.small {
+            padding-top: 440px;
+
+            .uk-card-media-top {
+                height: 440px;
+            }
+        }
+
+        .uk-card-media-top {
+            position: absolute;
+            width: 100%;
+            top: 0;
+        }
     }
 }

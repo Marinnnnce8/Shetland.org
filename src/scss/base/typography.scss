@@ -58,6 +58,14 @@ h2.alt {
 	font-size: 48px;
 }
 
+.hero-title {
+	font-size: 74px;
+	line-height: 1.1em;
+	color: $blue;
+	font-family: $font-recoleta;
+	margin-bottom: 25px;
+}
+
 .uk-card-title {
 	font-size: 26px;
 	line-height: 1.3em;
@@ -65,6 +73,11 @@ h2.alt {
 
 	&.large {
 		font-size: 44px;
+		line-height: 1.1em;
+	}
+
+	&.medium {
+		font-size: 34px;
 		line-height: 1.1em;
 	}
 
