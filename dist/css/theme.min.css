@@ -152,6 +152,11 @@ h2.alt {
   margin-bottom: 25px;
 }
 
+.hero-pretitle {
+  font-size: 26px;
+  line-height: 1.3em;
+}
+
 .uk-card-title {
   font-size: 26px;
   line-height: 1.3em;
@@ -170,6 +175,10 @@ h2.alt {
 
 .uk-card-title.small {
   font-size: 18px;
+}
+
+.uk-card-title.alt {
+  font-family: "TT Norms", sans-serif;
 }
 
 label,
@@ -1786,6 +1795,14 @@ input[type='submit'] {
   }
 }
 
+.nb-no-border {
+  border: 0 !important;
+}
+
+.nb-padding-medium {
+  padding: 30px;
+}
+
 .nb-cookie {
   left: 0;
   margin: 0;
@@ -2280,18 +2297,28 @@ input[type='submit'] {
   background-color: #1b365d;
 }
 
-.banner.home .banner-inner {
-  min-height: 0;
-}
-
 .banner-inner {
+  position: relative;
   min-height: 670px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+.banner-inner::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 460px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(27, 54, 93, 0) 0%, #1b365d 100%);
+}
+
 .banner-text {
+  position: relative;
+  z-index: 1;
   padding: 30px 70px;
 }
 
@@ -2315,6 +2342,18 @@ input[type='submit'] {
   margin: 15px;
 }
 
+.banner-text .uk-button-default > span:last-of-type::after {
+  background-color: #fff;
+}
+
+.banner-text .uk-button-default > span:last-of-type .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+  fill: #fff;
+}
+
+.banner-video .banner-inner {
+  max-height: 670px;
+}
+
 @media (min-aspect-ratio: 16 / 9) {
   .video-wrapper {
     width: 100%;
@@ -2331,6 +2370,7 @@ input[type='submit'] {
 
 .video-controls {
   margin: 0 70px 45px 0;
+  z-index: 2;
 }
 
 .video-controls button,
@@ -2872,6 +2912,7 @@ input[type='submit'] {
 .entry-item {
   background-color: #000;
   height: 190px;
+  width: 100%;
 }
 
 .entry-item .uk-card-body {
@@ -2880,6 +2921,7 @@ input[type='submit'] {
   background-color: #000;
   overflow: hidden;
   position: relative;
+  height: 100%;
 }
 
 .entry-item .uk-card-body::after {
@@ -3339,6 +3381,10 @@ input[type='submit'] {
   content: "";
 }
 
+.newsletter-section {
+  padding: 60px 0;
+}
+
 .newsletter-section .uk-container > span {
   font-size: 21px;
   line-height: 1.7em;
@@ -3385,6 +3431,76 @@ input[type='submit'] {
 
 .newsletter-inner .uk-button {
   background-color: #1b365d;
+}
+
+.visit-section {
+  padding: 45px 0 60px;
+}
+
+.visit-section h2 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visit-section .nb-video {
+  height: 407px;
+}
+
+.visit-section > .uk-container > .uk-flex-center {
+  padding-top: 60px;
+}
+
+.visit-section .uk-width-1-3 .uk-card,
+.visit-section .uk-width-1-2 .uk-card {
+  padding-left: 40px;
+}
+
+.visit-seasons {
+  padding: 60px 0 110px;
+}
+
+.visit-inner {
+  max-width: 1136px;
+}
+
+.visit-inner > p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.visit-inner .uk-width-3-5 {
+  width: 54.84%;
+}
+
+.visit-inner .uk-width-3-5 .uk-card {
+  height: 306px;
+}
+
+.visit-inner .uk-width-2-5 {
+  width: 45.15%;
+}
+
+.visit-inner .uk-width-2-5 .uk-card {
+  height: 456px;
+}
+
+.visit-inner .uk-width-1-5 {
+  background-color: #fff;
+}
+
+.visit-inner .entry-item .uk-card-body::after {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.visit-experience {
+  background-color: #f7f6f1;
+  padding: 100px 0 110px;
 }
 
 em {
@@ -3659,6 +3775,13 @@ em {
   .uk-grid-column-medium > *,
   .uk-grid-medium > * {
     padding-left: 80px;
+  }
+  * + .uk-grid-margin-medium,
+  .uk-grid + .uk-grid-medium,
+  .uk-grid + .uk-grid-row-medium,
+  .uk-grid-medium > .uk-grid-margin,
+  .uk-grid-row-medium > .uk-grid-margin {
+    margin-top: 80px;
   }
 }
 

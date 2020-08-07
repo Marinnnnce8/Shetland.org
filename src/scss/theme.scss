@@ -51,6 +51,7 @@
 @import 'modules/image-card.scss';
 @import 'modules/campaign-slider.scss';
 @import 'modules/newsletter-section.scss';
+@import 'modules/visit.scss';
 
 // Theme
 @import "theme/base.scss";
@@ -120,5 +121,13 @@
 		>* {
 			padding-left: 80px;
 		}
+	}
+
+	*+.uk-grid-margin-medium,
+	.uk-grid+.uk-grid-medium,
+	.uk-grid+.uk-grid-row-medium,
+	.uk-grid-medium>.uk-grid-margin,
+	.uk-grid-row-medium>.uk-grid-margin {
+		margin-top: 80px;
 	}
 }

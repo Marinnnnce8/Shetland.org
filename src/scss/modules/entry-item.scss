@@ -1,6 +1,7 @@
 .entry-item {
     background-color: $black;
     height: 190px;
+    width: 100%;
 
     .uk-card-body {
         min-height: 190px;
@@ -8,6 +9,7 @@
         background-color: $black;
         overflow: hidden;
         position: relative;
+        height: 100%;
 
         &::after {
             position: absolute;

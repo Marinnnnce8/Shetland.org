@@ -1,3 +1,9 @@
+.banner-video {
+	.banner-inner {
+		max-height: 670px;
+	}
+}
+
 .video-wrapper {
 
 	@media (min-aspect-ratio: 16 / 9) {
@@ -13,6 +19,7 @@
 
 .video-controls {
 	margin: 0 70px 45px 0;
+	z-index: 2;
 
 	button,
 	.button-volume {
