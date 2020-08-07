@@ -10,6 +10,7 @@
 			list-style: none;
 			margin: 0;
 			padding: 0;
+
 			&:not(:first-of-type) {
 				margin-left: 10px;
 			}
@@ -17,6 +18,7 @@
 			a {
 				color: $white;
 				position: relative;
+
 				&::after {
 					position: absolute;
 					left: 0;
@@ -39,6 +41,12 @@
 			@media (max-width: $breakpointMobile) {
 				display: block;
 			}
+		}
+	}
+
+	@media (max-width: $breakpointMedium) {
+		.uk-flex {
+			justify-content: center;
 		}
 	}
 }

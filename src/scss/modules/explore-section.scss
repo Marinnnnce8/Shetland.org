@@ -14,51 +14,13 @@
 
     .uk-card {
 
-        &.width-1-2-vw {
-            .uk-card-media-top {
-                width: 50vw;
-            }
-        }
-
-        &.right {
-
-            .uk-card-body {
-                padding-right: 80px;
-            }
-
-            .uk-card-media-top {
-                left: 0;
-            }
-        }
-
-        &.left {
-
-            .uk-card-media-top {
-                right: 0;
-            }
-        }
-
-        &.large {
-            padding-top: 607px;
-
-            .uk-card-media-top {
-                height: 607px;
-            }
-        }
-
-        &.medium {
-            padding-top: 530px;
-
-            .uk-card-media-top {
-                height: 530px;
-            }
-        }
-
+        &.large,
+        &.medium,
         &.small {
-            padding-top: 440px;
+            padding-top: 210px;
 
             .uk-card-media-top {
-                height: 440px;
+                height: 210px;
             }
         }
 
@@ -66,6 +28,62 @@
             position: absolute;
             width: 100%;
             top: 0;
+        }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        padding-bottom: 40px;
+
+        .uk-card {
+            padding-bottom: 90px;
+
+            &.width-1-2-vw {
+                .uk-card-media-top {
+                    width: 50vw;
+                }
+            }
+
+            &.right {
+
+                .uk-card-body {
+                    padding-right: 80px;
+                }
+
+                .uk-card-media-top {
+                    left: 0;
+                }
+            }
+
+            &.left {
+
+                .uk-card-media-top {
+                    right: 0;
+                }
+            }
+
+            &.large {
+                padding-top: 607px;
+
+                .uk-card-media-top {
+                    height: 607px;
+                }
+            }
+
+            &.medium {
+                padding-top: 530px;
+
+                .uk-card-media-top {
+                    height: 530px;
+                }
+            }
+
+            &.small {
+                padding-top: 440px;
+
+                .uk-card-media-top {
+                    height: 440px;
+                }
+            }
         }
     }
 }

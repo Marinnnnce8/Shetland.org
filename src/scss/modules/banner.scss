@@ -42,6 +42,12 @@
 			background-color: $blue;
 		}
 	}
+
+	&.home {
+		.banner-inner {
+			min-height: 0;
+		}
+	}
 }
 
 .banner-inner {

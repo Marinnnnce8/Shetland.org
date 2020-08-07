@@ -13,6 +13,22 @@
         background-color: $black;
         overflow: hidden;
 
+        .uk-background-cover {
+            transition: 1s;
+
+            &::after {
+                background-color: rgba($black, .3);
+                position: absolute;
+                left: 0;
+                content: '';
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                opacity: 0;
+                transition: 1s;
+            }
+        }
+
         img {
             transition: 1s;
             max-width: none;
@@ -31,11 +47,38 @@
         }
     }
 
+    .uk-button-text {
+        display: inline-block;
+        font-size: 28px;
+        line-height: 1.3em;
+        color: $blue-light;
+        font-weight: normal;
+        margin-top: 30px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 80px;
+            height: 4px;
+            top: -10px;
+            left: 0;
+            background-color: $blue-light;
+        }
+    }
+
     @include hover {
         .uk-card-media-top {
             img {
                 opacity: .7;
                 transform: scale3d(1.1, 1.1, 1);
+            }
+
+            .uk-background-cover {
+                transform: scale(1.1);
+
+                &::after {
+                    opacity: 1;
+                }
             }
         }
 

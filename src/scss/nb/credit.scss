@@ -1,7 +1,6 @@
 .nb-credit {
 
 	a {
-		display: block;
 		margin-top: 15px;
 
 		@include hover {
@@ -16,5 +15,8 @@
 	}
 	@media (min-width: $breakpointMedium) {
 		text-align: right;
+		a {
+			display: block;
+		}
 	}
 }
