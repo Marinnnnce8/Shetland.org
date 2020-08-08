@@ -1,39 +1,63 @@
 .useful-links {
     padding-bottom: 115px;
 
-    li {
-        min-height: 80px;
+    &.visit {
+        padding: 120px 0 60px;
+    }
 
-        &:nth-of-type(-n+2) a {
-            border-top: 2px solid $gray-cold;
-        }
+    ul {
+        list-style-type: none;
 
-        img {
-            margin-right: 20px;
-        }
+        li {
+            min-height: 80px;
 
-        a {
-            border-bottom: 2px solid $gray-cold;
-            font-size: 20px;
-            font-weight: $bold;
-            line-height: 1.3em;
-            padding: 26px 21px 23px 20px;
-            color: $blue;
-            left: 80px;
+            &:first-of-type a:not(.uk-button) {
+                border-top: 2px solid $gray-cold;
+            }
 
-            @include hover {
-                span {
-                    color: $green-pastel;
+            img {
+                margin-right: 20px;
+            }
+
+            a {
+                border-bottom: 2px solid $gray-cold;
+                font-size: 20px;
+                font-weight: $bold;
+                line-height: 1.3em;
+                padding: 26px 21px 23px 15px;
+                color: $blue;
+                width: 100%;
+
+                @include hover {
+                    span {
+                        color: $green-pastel;
+                    }
                 }
+            }
+
+            img+span {
+                position: absolute;
+                left: 80px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: $nbSec ease-in-out;
             }
         }
 
-        span {
-            position: absolute;
-            left: 80px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: $nbSec ease-in-out;
+        .uk-button-default {
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-radius: 0;
+            justify-content: flex-start;
+            font-family: $font-recoleta;
+            font-size: 26px;
+            line-height: 1.1em;
+            font-weight: normal;
+
+            @include hover {
+                border-color: $gray-cold;
+            }
         }
     }
 

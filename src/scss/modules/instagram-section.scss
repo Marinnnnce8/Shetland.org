@@ -1,0 +1,30 @@
+.instagram-section {
+    padding: 60px 0;
+
+    .uk-button-default {
+        border-color: $blue;
+
+        span:first-of-type {
+            transition: $nbSec ease-in-out;
+        }
+
+        .font-instagram {
+            &::after {
+                display: none;
+            }
+
+            &::before {
+                font-size: 24px;
+                color: $green-pastel;
+            }
+        }
+
+        @include hover {
+            background-color: $blue-hover;
+
+            >span:first-of-type {
+                color: $white;
+            }
+        }
+    }
+}

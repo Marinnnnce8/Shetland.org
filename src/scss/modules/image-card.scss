@@ -7,8 +7,9 @@
     justify-content: flex-end;
     overflow: hidden;
 
-    &:not(.orange):not(.alt) {
+    &:not(.orange-border):not(.green-border):not(.blue-border):not(.green-dark-border):not(.alt) {
         padding-left: 30px;
+        border-bottom: 0;
     }
 
     &::after {
@@ -24,10 +25,29 @@
         transition: $nbSec ease-in-out;
     }
 
-    &.orange {
+    &.orange-border,
+    &.green-border,
+    &.blue-border,
+    &.green-dark-border {
         &::after {
             opacity: .7;
         }
+    }
+
+    &.orange-border {
+        border-bottom-color: $orange-mid;
+    }
+
+    &.green-border {
+        border-bottom-color: $green-pastel;
+    }
+
+    &.blue-border {
+        border-bottom-color: $blue-navy;
+    }
+
+    &.green-dark-border {
+        border-bottom-color: $green;
     }
 
     &.alt {
@@ -118,9 +138,24 @@
             height: 308px;
         }
 
-        &.orange::after {
+        &.orange-border::after {
             height: 250px;
-            background: $hover-overlay;
+            background: $orange-overlay;
+        }
+
+        &.green-border::after {
+            height: 250px;
+            background: $green-overlay;
+        }
+
+        &.blue-border::after {
+            height: 250px;
+            background: $blue-overlay;
+        }
+
+        &.green-dark-border::after {
+            height: 250px;
+            background: $green-dark-overlay;
         }
 
         &.alt {

@@ -52,7 +52,7 @@
                     <video class="banner-video" src="./img/shetland-video.mp4"
                         data-uk-video="automute: true; autoplay: true" playsinline></video>
                 </div>
-                <ul class="video-controls uk-flex uk-position-bottom-right">
+                <div class="video-controls uk-flex uk-position-bottom-right">
                     <button class="js-button-video button-video button-video-active uk-margin-small-right"
                         aria-label="Pause">
                         <span class="left"></span><span class="right"></span>
@@ -70,15 +70,15 @@
                             </path>
                         </svg>
                     </button>
-                </ul>
+                </div>
                 <div class="banner-text uk-position-bottom-left">
                     <div class="uk-width-1-2">
                         <span class="hero-pretitle">Things To Do</span>
                         <h1>5 Amazing Beaches for Romantic Summer’s Evening</h1>
                         <div class="uk-flex uk-margin-bottom">
                             <a href="#" class='uk-button uk-button-default'><span>Find your favorite beach in
-                                    Shetland</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    Shetland</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                             <span class="label">Events</span>
                             <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">Shetland Nature Festival</h3>
                             <!-- <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
                                         alt='image' /></span></a> -->
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                             <span class="label">See Shetland with Sarah McBurnie</span>
                             <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">Nature & Wildlife</h3>
                             <!-- <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
                                         alt='image' /></span></a> -->
                         </div>
                     </div>
@@ -207,7 +207,7 @@
                                 Summer’s
                                 Evening</h3>
                             <!-- <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
                                         alt='image' /></span></a> -->
                         </div>
                     </div>
@@ -219,15 +219,15 @@
                             <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">10 Spectacular Scenery Walks
                             </h3>
                             <!-- <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
+                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
                                         alt='image' /></span></a> -->
                         </div>
                     </div>
                 </div>
                 <div class="uk-flex uk-flex-center">
                     <button type='button' class='uk-button uk-button-large uk-button-default'><span>View all
-                            from Nature & Wildlife</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
-                                alt='image' /></span></button>
+                            from Nature & Wildlife</span><span role="presentation"><img data-uk-svg
+                                src="./img/button-arrow-right.svg" alt='image' /></span></button>
                 </div>
             </div>
         </section>
@@ -237,32 +237,28 @@
                 <span>Subscribe to</span>
                 <h2 class="uk-margin-medium-bottom uk-margin-small-top">Visit Shetland Newsletter</h2>
                 <div class="newsletter-box uk-position-relative uk-flex uk-flex-center">
-                    <img class="uk-position-bottom-right" src="./img/shetland-mark.png" data-uk-img alt="image"
-                        role="presentation">
+                    <img class="uk-position-bottom-right" src="./img/shetland-mark.png" data-uk-img alt="image">
                     <div class="newsletter-inner">
                         <span class="uk-margin-medium-bottom">Sign up to our newsletter to receive regular updates to
                             help you plan your trip to
                             Shetland.</span>
-                        <form id='nb-form-nb-styleguide' class='uk-form-stacked uk-margin-top InputfieldForm'
+                        <form id='nb-form-nb-styleguide_visit_2' class='uk-form-stacked uk-margin-top InputfieldForm'
                             method='post' data-uk-nb-form novalidate data-colspacing='1'>
                             <div class="uk-child-width-1-2@m" data-uk-grid>
                                 <div class='Inputfield InputfieldText nb-form-required uk-first-column'
-                                    id='wrap_nb-form-nb-styleguide_name'>
-                                    <!-- <label class='uk-form-label' for='nb-form-nb-styleguide_name'>Your Name</label> -->
+                                    id='wrap_nb-form-nb-styleguide_name_visit_2'>
                                     <div class='nb-form-content'>
                                         <div role='alert'></div>
-                                        <input id='nb-form-nb-styleguide_name' class='uk-input InputfieldMaxWidth'
+                                        <input id='nb-form-nb-styleguide_name_visit_2' class='uk-input InputfieldMaxWidth'
                                             name='name' type='text' maxlength='2048' aria-invalid='true'
                                             title='Please enter your name' placeholder="My name is:" required>
                                     </div>
                                 </div>
                                 <div class='Inputfield InputfieldEmail nb-form-required uk-grid-margin uk-first-column'
-                                    id='wrap_nb-form-nb-styleguide_email'>
-                                    <!-- <label class='uk-form-label' for='nb-form-nb-styleguide_email'>Email
-										Address</label> -->
+                                    id='wrap_nb-form-nb-styleguide_email_visit_2'>
                                     <div class='nb-form-content'>
                                         <div role='alert'></div>
-                                        <input id='nb-form-nb-styleguide_email' name='email'
+                                        <input id='nb-form-nb-styleguide_email_visit_2' name='email'
                                             class='uk-input InputfieldMaxWidth' type='email' maxlength='512'
                                             aria-invalid='true' title='Please enter a valid email address'
                                             placeholder="My email address is:" required>
@@ -270,13 +266,14 @@
                                 </div>
                             </div>
                             <div class='Inputfield InputfieldSubmit uk-width-1-1 uk-grid-margin uk-first-column'
-                                id='wrap_nb-form-nb-styleguide_submit'>
+                                id='wrap_nb-form-nb-styleguide_submit_visit_2'>
                                 <div class='nb-form-content'>
                                     <div role='alert'></div>
-                                    <button type='button' id='nb-form-nb-styleguide_submit'
+                                    <button id='nb-form-nb-styleguide_submit_visit_2'
                                         class='uk-button uk-button-primary uk-button-large uk-margin-auto' name='submit'
-                                        value='Subscribe' type='submit'><span>Subscribe</span><span><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></button>
+                                        value='Subscribe' type='submit'><span>Subscribe</span><span
+                                            role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
+                                                alt='image' /></span></button>
                                 </div>
                             </div>
                         </form>
@@ -362,54 +359,178 @@
                 </div>
                 <div data-uk-grid class="uk-child-width-1-2 uk-grid-medium">
                     <div>
-                        <div class="image-card orange uk-card uk-card-body uk-background-cover" data-uk-img
+                        <div class="image-card orange-border uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/image-card-1.jpg');">
                             <a href="#" class="uk-position-cover"></a>
                             <h3 class="uk-card-title large uk-margin-small-bottom">Walk</h3>
                             <span class="label">Outdoors & Adventure</span>
                             <a href="$=#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div>
-                        <div class="image-card orange uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/image-card-1.jpg');">
+                        <div class="image-card green-border uk-card uk-card-body uk-background-cover" data-uk-img
+                            style="background-image: url('./img/image-card-4.jpg');">
                             <a href="#" class="uk-position-cover"></a>
                             <h3 class="uk-card-title large uk-margin-small-bottom">Cycle</h3>
                             <span class="label">Outdoors & Adventure</span>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div>
-                        <div class="image-card orange uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/image-card-1.jpg');">
+                        <div class="image-card blue-border uk-card uk-card-body uk-background-cover" data-uk-img
+                            style="background-image: url('./img/image-card-5.jpg');">
                             <a href="#" class="uk-position-cover"></a>
                             <h3 class="uk-card-title large uk-margin-small-bottom">Cruise</h3>
                             <span class="label">Travel To Shetland</span>
                             <a href="$=#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div>
-                        <div class="image-card orange uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/image-card-1.jpg');">
+                        <div class="image-card green-dark-border uk-card uk-card-body uk-background-cover" data-uk-img
+                            style="background-image: url('./img/home-img-9.jpg');">
                             <a href="#" class="uk-position-cover"></a>
                             <h3 class="uk-card-title large uk-margin-small-bottom">Jimmy Perez</h3>
                             <span class="label">Scottish TV Drama</span>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="useful-links visit">
+            <div class="uk-container uk-container-large">
+                <h2 class="uk-text-center uk-margin-medium-bottom">Plan Your Trip</h2>
+                <div class="uk-grid-medium uk-child-width-1-3@s" data-uk-grid data-uk-height-match="target: >ul>li">
+                    <ul>
+                        <li class="uk-position-relative">
+                            <a href="#" class='uk-button uk-button-default uk-position-cover'><span>How to get
+                                    here</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                        </li>
+                        <li class="uk-position-relative">
+                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+                                <img src="./img/airplane.svg" data-uk-img alt="image">
+                                <span>Fly to Shetland</span>
+                            </a>
+                        </li>
+                        <li class="uk-position-relative">
+                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+                                <img src="./img/boat.svg" data-uk-img alt="image">
+                                <span>Sail to Shetland</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="uk-position-relative">
+                            <a href="#" class='uk-button uk-button-default'><span>Accommodation</span><span
+                                    role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
+                                        alt='image' /></span></a>
+                        </li>
+                        <li class="uk-position-relative">
+                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+                                <img src="./img/airplane.svg" data-uk-img alt="image">
+                                <span>Late Availability</span>
+                            </a>
+                        </li>
+                        <li class="uk-position-relative">
+                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+                                <img src="./img/boat.svg" data-uk-img alt="image">
+                                <span>Autumn Offers</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="uk-position-relative">
+                            <a href="#" class='uk-button uk-button-default'><span
+                                    role="presentation">Itineraries</span><span><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                        </li>
+                        <li class="uk-position-relative">
+                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+                                <img src="./img/airplane.svg" data-uk-img alt="image">
+                                <span>Weekend Itineraries</span>
+                            </a>
+                        </li>
+                        <li class="uk-position-relative">
+                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
+                                <img src="./img/boat.svg" data-uk-img alt="image">
+                                <span>Visitor Guides</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
+        <section class="instagram-section uk-text-center">
+            <div class="uk-container uk-container-large">
+                <h2>Be inspired by others to explore Shetland</h2>
+                <p>Share your favourite pics using <a href="#">#inspiredbyshetland</a> and <a
+                        href="#">#visitshetland!</a></p>
+                <div class="uk-flex uk-flex-center">
+                    <a href="#" class='uk-button uk-button-large uk-button-default'><span>Follow us on
+                            Instagram</span><span class="font-instagram" role="presentation"></span></a>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter-section uk-margin-bottom">
+            <div class="uk-container uk-container-large uk-text-center uk-flex uk-flex-column uk-flex-middle">
+                <span>Subscribe to</span>
+                <h2 class="uk-margin-medium-bottom uk-margin-small-top">Visit Shetland Newsletter</h2>
+                <div class="newsletter-box uk-position-relative uk-flex uk-flex-center">
+                    <img class="uk-position-bottom-right" src="./img/shetland-mark.png" data-uk-img alt="image">
+                    <div class="newsletter-inner">
+                        <span class="uk-margin-medium-bottom">Sign up to our newsletter to receive regular updates to
+                            help you plan your trip to
+                            Shetland.</span>
+                        <form id='nb-form-nb-styleguide_visit_1' class='uk-form-stacked uk-margin-top InputfieldForm'
+                            method='post' data-uk-nb-form novalidate data-colspacing='1'>
+                            <div class="uk-child-width-1-2@m" data-uk-grid>
+                                <div class='Inputfield InputfieldText nb-form-required uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_name_visit_1'>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_name_visit_1' class='uk-input InputfieldMaxWidth'
+                                            name='name' type='text' maxlength='2048' aria-invalid='true'
+                                            title='Please enter your name' placeholder="My name is:" required>
+                                    </div>
+                                </div>
+                                <div class='Inputfield InputfieldEmail nb-form-required uk-grid-margin uk-first-column'
+                                    id='wrap_nb-form-nb-styleguide_email_visit_1'>
+                                    <div class='nb-form-content'>
+                                        <div role='alert'></div>
+                                        <input id='nb-form-nb-styleguide_email_visit_1' name='email'
+                                            class='uk-input InputfieldMaxWidth' type='email' maxlength='512'
+                                            aria-invalid='true' title='Please enter a valid email address'
+                                            placeholder="My email address is:" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='Inputfield InputfieldSubmit uk-width-1-1 uk-grid-margin uk-first-column'
+                                id='wrap_nb-form-nb-styleguide_submit_visit_1'>
+                                <div class='nb-form-content'>
+                                    <div role='alert'></div>
+                                    <button id='nb-form-nb-styleguide_submit_visit_1'
+                                        class='uk-button uk-button-primary uk-button-large uk-margin-auto' name='submit'
+                                        value='Subscribe' type='submit'><span>Subscribe</span><span
+                                            role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
+                                                alt='image' /></span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class='footer uk-background-cover' data-uk-img style="background-image: url('./img/footer-banner.jpg');">

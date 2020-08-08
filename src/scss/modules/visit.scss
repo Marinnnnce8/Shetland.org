@@ -28,11 +28,14 @@
 .visit-inner {
     max-width: 1136px;
 
+    >h2 {
+        margin-bottom: 30px;
+    }
+
     >p:first-of-type {
         margin-top: 0;
         margin-bottom: 50px;
     }
-
 
     .uk-width-3-5 {
         width: 54.84%;

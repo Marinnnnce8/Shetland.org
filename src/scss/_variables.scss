@@ -25,6 +25,7 @@ $blue-mid: #e7f4f2;
 $blue-lightest: #cce9f8;
 $blue-bright: #107cc0;
 $blue-bright-light: #d2e8fb;
+$blue-navy: #0091da;
 $beige: #fbfbf8;
 $green: #5e7e29;
 $green-pastel: #86c8bc;
@@ -34,6 +35,7 @@ $turquise-dark: #cfebe4;
 $yellow: #967110;
 $yellow-light: #f8eecc;
 $orange: #bd5b0e;
+$orange-mid: #daaa00;
 $orange-light: #fbe4cc;
 $red: #cb4c48;
 $red-light: #fce6e5;
@@ -47,10 +49,13 @@ $gray-cold-hover: #cbd2dc;
 $black: #000;
 
 //Gradients
-$hero-overlay: linear-gradient(180deg, rgba(27, 54, 93, 0) 0%, #1b365d 100%);
-$hover-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, #DAAA00 100%);
+$hero-overlay: linear-gradient(180deg, rgba(27, 54, 93, 0) 0%, $blue 100%);
+$orange-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, $orange-mid 100%);
+$green-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, $green-pastel 100%);
+$blue-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, $blue-navy 100%);
+$green-dark-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, $green 100%);
 
-$site-colors: ('black': $black,
+$site-colors: ('black': $black, 
 	'white': $white) !default;
 
 //----------  Bootstrap grid
