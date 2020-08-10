@@ -1,0 +1,19 @@
+.nb-author {
+    margin-right: 40px;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    max-width: 300px;
+    width: 100%;
+    padding-top: 30px;
+
+    * {
+        color: $blue;
+    }
+
+    img {
+        width: 48px;
+        height: auto;
+        margin-left: 15px;
+    }
+}

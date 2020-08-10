@@ -176,13 +176,6 @@ h2.alt {
   font-family: "TT Norms", sans-serif;
 }
 
-.uk-text-large {
-  font-weight: 300;
-  font-size: 21px;
-  line-height: 1.7em;
-  color: #1b365d;
-}
-
 label,
 .label {
   font-family: "Recoleta", sans-serif;
@@ -218,6 +211,16 @@ label.alt,
   color: #1b365d;
   font-size: 28px;
   line-height: 1.7em;
+}
+
+.nb-capital-letter {
+  font-size: 105px;
+  line-height: inherit;
+  font-weight: inherit;
+  float: left;
+  padding: 0 10px 45px 0;
+  top: 20px;
+  position: relative;
 }
 
 p {
@@ -264,8 +267,20 @@ blockquote a:not(.uk-accordion-title):active::after {
   height: 100%;
 }
 
+.uk-text-large {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.7em;
+  color: #1b365d;
+}
+
 .uk-text-small {
   font-size: 16px;
+  line-height: 1.7em;
+}
+
+.uk-text-small.xsmall {
+  font-size: 12px;
 }
 
 blockquote {
@@ -418,7 +433,7 @@ img {
   font-display: swap;
 }
 
-.font-button-arrow-left:before, .font-button-arrow-right:before, .font-chevron-down:before, .font-chevron-left:before, .font-chevron-right:before, .font-chevron-up:before, .font-email:before, .font-envelope:before, .font-expand:before, .font-external-link:before, .font-eye:before, .font-facebook:before, .font-globe:before, .font-heart:before, .font-info:before, .font-instagram:before, .font-list-view:before, .font-live-streaming:before, .font-long-arrow-down:before, .font-long-arrow-left:before, .font-long-arrow-right:before, .font-map:before, .font-news:before, .font-pause:before, .font-play-button-arrowhead:before, .font-play-sharp:before, .font-play:before, .font-print:before, .font-quote:before, .font-right-arrow:before, .font-search:before, .font-share:before, .font-twitter:before, .font-volume-mute:before, .font-volume-up:before, .font-youtube:before {
+.font-button-arrow-left:before, .font-button-arrow-right:before, .font-chevron-down:before, .font-chevron-left:before, .font-chevron-right:before, .font-chevron-up:before, .font-email:before, .font-envelope:before, .font-expand:before, .font-external-link:before, .font-eye:before, .font-facebook:before, .font-globe:before, .font-heart:before, .font-info:before, .font-instagram:before, .font-linkedin:before, .font-list-view:before, .font-live-streaming:before, .font-long-arrow-down:before, .font-long-arrow-left:before, .font-long-arrow-right:before, .font-map:before, .font-news:before, .font-pause:before, .font-play-button-arrowhead:before, .font-play-sharp:before, .font-play:before, .font-print:before, .font-quote:before, .font-right-arrow:before, .font-search:before, .font-share:before, .font-twitter:before, .font-volume-mute:before, .font-volume-up:before, .font-youtube:before {
   font-family: 'svgicons';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -499,84 +514,88 @@ img {
   content: "";
 }
 
-.font-list-view:before {
+.font-linkedin:before {
   content: "";
 }
 
-.font-live-streaming:before {
+.font-list-view:before {
   content: "";
 }
 
-.font-long-arrow-down:before {
+.font-live-streaming:before {
   content: "";
 }
 
-.font-long-arrow-left:before {
+.font-long-arrow-down:before {
   content: "";
 }
 
-.font-long-arrow-right:before {
+.font-long-arrow-left:before {
   content: "";
 }
 
-.font-map:before {
+.font-long-arrow-right:before {
   content: "";
 }
 
-.font-news:before {
+.font-map:before {
   content: "";
 }
 
-.font-pause:before {
+.font-news:before {
   content: "";
 }
 
-.font-play-button-arrowhead:before {
+.font-pause:before {
   content: "";
 }
 
-.font-play-sharp:before {
+.font-play-button-arrowhead:before {
   content: "";
 }
 
-.font-play:before {
+.font-play-sharp:before {
   content: "";
 }
 
-.font-print:before {
+.font-play:before {
   content: "";
 }
 
-.font-quote:before {
+.font-print:before {
   content: "";
 }
 
-.font-right-arrow:before {
+.font-quote:before {
   content: "";
 }
 
-.font-search:before {
+.font-right-arrow:before {
   content: "";
 }
 
-.font-share:before {
+.font-search:before {
   content: "";
 }
 
-.font-twitter:before {
+.font-share:before {
   content: "";
 }
 
-.font-volume-mute:before {
+.font-twitter:before {
   content: "";
 }
 
-.font-volume-up:before {
+.font-volume-mute:before {
   content: "";
 }
 
-.font-youtube:before {
+.font-volume-up:before {
   content: "";
+}
+
+.font-youtube:before {
+  content: "";
 }
 
 * {
@@ -886,7 +905,7 @@ input[type='submit'] {
 }
 
 .scroll-button-down::before {
-  content: "";
+  content: "";
   font-family: 'svgicons';
   transform: translate(-50%, -50%);
   top: 50%;
@@ -2255,6 +2274,41 @@ input[type='submit'] {
   height: 100%;
 }
 
+.nb-author {
+  margin-right: 40px;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  max-width: 300px;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.nb-author * {
+  color: #1b365d;
+}
+
+.nb-author img {
+  width: 48px;
+  height: auto;
+  margin-left: 15px;
+}
+
+.nb-bio {
+  border-top: 1px solid #eff1f4;
+}
+
+.nb-bio-inner {
+  background-color: #f7f6f1;
+  padding: 50px 0 40px;
+}
+
+.nb-bio-inner img {
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
+}
+
 .banner {
   margin-bottom: 25px;
   padding: 0 40px;
@@ -2993,7 +3047,7 @@ input[type='submit'] {
   transform: translateX(-50%);
   top: 55px;
   font-family: 'svgicons';
-  content: "";
+  content: "";
   font-size: 84px;
   color: #86c8bc;
   line-height: 1;
@@ -3175,9 +3229,22 @@ input[type='submit'] {
   margin: 15px 0 60px;
 }
 
-.nb-share-inner {
+.nb-share .nb-share-inner {
   background-color: #f7f6f1;
   padding: 70px 0 75px;
+}
+
+.nb-share.alt .nb-share-inner {
+  background-color: transparent;
+}
+
+.nb-share ul {
+  list-style-type: none;
+}
+
+.nb-share ul .uk-button {
+  font-size: 12px;
+  padding: 11px 33px;
 }
 
 .image-card {
@@ -3967,6 +4034,14 @@ em {
 
 .uk-container-large {
   max-width: 1380px;
+}
+
+.uk-container-small {
+  max-width: 890px;
+}
+
+.uk-container-xsmall {
+  max-width: 650px;
 }
 
 @media (min-width: 1200px) {

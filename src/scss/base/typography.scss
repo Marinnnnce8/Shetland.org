@@ -90,13 +90,6 @@ h2.alt {
 	}
 }
 
-.uk-text-large {
-	font-weight: $light;
-	font-size: 21px;
-	line-height: 1.7em;
-	color: $blue;
-}
-
 label,
 .label {
 	font-family: $font-recoleta;
@@ -128,6 +121,16 @@ label,
 	color: $blue;
 	font-size: 28px;
 	line-height: 1.7em;
+}
+
+.nb-capital-letter {
+	font-size: 105px;
+	line-height: inherit;
+	font-weight: inherit;
+	float: left;
+	padding: 0 10px 45px 0;
+	top: 20px;
+	position: relative;
 }
 
 p {
@@ -169,8 +172,20 @@ blockquote {
 	}
 }
 
+.uk-text-large {
+	font-weight: $light;
+	font-size: 21px;
+	line-height: 1.7em;
+	color: $blue;
+}
+
 .uk-text-small {
 	font-size: 16px;
+	line-height: 1.7em;
+
+	&.xsmall {
+		font-size: 12px;
+	}
 }
 
 blockquote {

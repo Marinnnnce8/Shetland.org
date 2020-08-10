@@ -1,0 +1,14 @@
+.nb-bio {
+    border-top: 1px solid $gray-cold;
+}
+
+.nb-bio-inner {
+    background-color: $white-flag;
+    padding: 50px 0 40px;
+
+    img {
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: auto;
+    }
+}

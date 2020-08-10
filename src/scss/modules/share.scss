@@ -1,4 +1,21 @@
-.nb-share-inner {
-    background-color: $white-flag;
-    padding: 70px 0 75px;
+.nb-share {
+    .nb-share-inner {
+        background-color: $white-flag;
+        padding: 70px 0 75px;
+    }
+
+    &.alt {
+        .nb-share-inner {
+            background-color: transparent;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        .uk-button {
+            font-size: 12px;
+            padding: 11px 33px;
+        }
+    }
 }

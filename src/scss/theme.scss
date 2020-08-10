@@ -35,6 +35,9 @@
 @import 'nb/accordion.scss';
 @import 'nb/social.scss';
 @import 'nb/widget.scss';
+@import 'nb/blog.scss';
+@import 'nb/author.scss';
+@import 'nb/bio.scss';
 
 // Modules
 @import 'modules/banner.scss';
@@ -103,6 +106,14 @@
 //uikit/container
 .uk-container-large {
 	max-width: 1380px;
+}
+
+.uk-container-small {
+	max-width: 890px;
+}
+
+.uk-container-xsmall {
+	max-width: 650px;
 }
 
 //uikit/grid
