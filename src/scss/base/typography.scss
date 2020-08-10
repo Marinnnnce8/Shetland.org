@@ -66,11 +66,6 @@ h2.alt {
 	margin-bottom: 25px;
 }
 
-.hero-pretitle {
-	font-size: 26px;
-	line-height: 1.3em;
-}
-
 .uk-card-title {
 	font-size: 26px;
 	line-height: 1.3em;
@@ -93,6 +88,13 @@ h2.alt {
 	&.alt {
 		font-family: $font-default;
 	}
+}
+
+.uk-text-large {
+	font-weight: $light;
+	font-size: 21px;
+	line-height: 1.7em;
+	color: $blue;
 }
 
 label,
@@ -124,12 +126,8 @@ label,
 .uk-text-lead {
 	font-family: $font-default;
 	color: $blue;
-	font-size: 18px;
-	line-height: 1.7em;
-}
-
-.nb-main .uk-text-lead {
 	font-size: 28px;
+	line-height: 1.7em;
 }
 
 p {

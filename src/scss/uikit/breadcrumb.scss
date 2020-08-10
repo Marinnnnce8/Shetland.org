@@ -1,12 +1,18 @@
 // uikit/breadcrumb
 .uk-breadcrumb {
 
-    > :last-child>* {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        display: inline-block;
-        vertical-align: middle;
+    > :last-child {
+        >* {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        >span {
+            color: $blue;
+        }
     }
 
     >*>* {
@@ -29,6 +35,7 @@
             bottom: 0;
             content: '';
         }
+
         @include hover {
             &::after {
                 opacity: 1;

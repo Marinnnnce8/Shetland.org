@@ -1,0 +1,51 @@
+.things-to-do-section {
+    padding: 70px 0 100px;
+}
+
+.things-to-do-wrap {
+    min-height: 430px;
+
+    &:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    //first option solution
+    // &:nth-of-type(odd) {
+    //     .uk-grid {
+    //         justify-content: flex-end;
+    //     }
+    // }
+
+    // &:nth-of-type(even) {
+    //     .uk-grid {
+    //         justify-content: flex-start;
+    //     }
+    // }
+
+    //second option solution
+    &:nth-of-type(odd) {
+        padding-right: 110px;
+    }
+
+    &:nth-of-type(even) {
+        padding-left: 110px;
+    }
+
+    .uk-grid {
+        justify-content: flex-start;
+    }
+
+    @media (min-width: $breakpointLarge) {
+        &:not(:last-of-type) {
+            margin-bottom: 80px;
+        }
+
+        .uk-grid-column-medium,
+        .uk-grid-medium {
+
+            .uk-position-left {
+                padding-left: 0;
+            }
+        }
+    }
+}

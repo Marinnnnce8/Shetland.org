@@ -1,0 +1,101 @@
+.beach-section {
+    .uk-card {
+        min-height: 430px;
+
+        >a.uk-position-cover {
+            width: calc(100% - 30px);
+            left: 30px;
+        }
+    }
+
+    .uk-card-body ul,
+    p:last-of-type,
+    .uk-card-title {
+        margin-bottom: 25px;
+    }
+
+    .uk-card-body {
+
+        li {
+            &:not(:first-of-type) {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .uk-card-media-left {
+        position: relative;
+
+        img {
+            top: 20px;
+        }
+    }
+
+    .uk-card-title {
+        line-height: 1.3em;
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    @media (min-width: $breakpointLarge) {
+        .uk-card {
+            >a.uk-position-cover {
+                width: calc(100% - 80px);
+                left: 80px;
+            }
+        }
+
+        .uk-card-body {
+            li {
+                &:not(:first-of-type) {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+.beach-filter {
+    li {
+        margin-bottom: 10px;
+
+        &:not(:first-of-type) {
+            margin-left: 20px;
+        }
+    }
+
+    .uk-button-default {
+        border-color: $blue;
+        color: $blue;
+
+        &::before {
+            margin-right: 15px;
+            transition: $nbSec;
+        }
+
+        @include hover {
+            background-color: $blue;
+            border-color: $blue;
+            color: $white;
+
+            &::before {
+                color: $white;
+            }
+        }
+
+        &.uk-active {
+            background-color: $blue;
+            border-color: $blue;
+            color: $white;
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        li:not(:first-of-type) {
+            margin-left: 40px;
+        }
+    }
+}

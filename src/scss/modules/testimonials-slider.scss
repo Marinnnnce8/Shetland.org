@@ -16,14 +16,14 @@
     .uk-panel {
         background-color: $turquise-light;
         min-height: 454px;
-        padding: 152px 20px 20px;
+        padding: 142px 20px 0;
         position: relative;
 
         &::after {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: 65px;
+            top: 55px;
             font-family: 'svgicons';
             content: font-char($quote);
             font-size: 84px;
@@ -34,6 +34,11 @@
 
     blockquote {
         padding: 0;
+        max-width: 895px;
+
+        p:last-of-type {
+            margin-bottom: 20px;
+        }
     }
 
     .uk-slidenav {

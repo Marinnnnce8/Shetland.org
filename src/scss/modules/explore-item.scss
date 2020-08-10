@@ -1,12 +1,25 @@
 .explore-item {
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
 
     a {
         z-index: 1;
     }
 
     .uk-card-body {
-        padding: 30px 0 0;
+        padding: 0;
+
+        .label {
+            margin: 30px 0 10px;
+            display: block;
+        }
+
+        >.uk-card-title {
+            margin-top: 25px;
+        }
+
+        .label + .uk-card-title {
+            margin-top: 0;
+        }
     }
 
     .uk-card-media-top {
@@ -40,10 +53,9 @@
     .uk-card-title {
         font-family: $font-default;
         font-weight: $bold;
-        margin-top: 10px;
 
         &+* {
-            margin-top: 35px;
+            margin-top: 20px;
         }
     }
 
