@@ -172,6 +172,13 @@ blockquote {
 	}
 }
 
+.uk-text-large,
+.uk-text-small {
+	&.alt {
+		font-family: $font-default;
+	}
+}
+
 .uk-text-large {
 	font-weight: $light;
 	font-size: 21px;
@@ -190,7 +197,7 @@ blockquote {
 
 blockquote {
 	padding: 10px 0 10px 60px;
-	margin-top: 40px 0 45px;
+	margin: 40px 0 25px;
 	position: relative;
 
 	p,

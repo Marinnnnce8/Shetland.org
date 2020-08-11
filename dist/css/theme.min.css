@@ -267,6 +267,11 @@ blockquote a:not(.uk-accordion-title):active::after {
   height: 100%;
 }
 
+.uk-text-large.alt,
+.uk-text-small.alt {
+  font-family: "TT Norms", sans-serif;
+}
+
 .uk-text-large {
   font-weight: 300;
   font-size: 21px;
@@ -285,7 +290,7 @@ blockquote a:not(.uk-accordion-title):active::after {
 
 blockquote {
   padding: 10px 0 10px 60px;
-  margin-top: 40px 0 45px;
+  margin: 40px 0 25px;
   position: relative;
 }
 
@@ -1003,6 +1008,10 @@ input[type='submit'] {
   content: '';
 }
 
+.uk-breadcrumb a:hover, .uk-breadcrumb a:focus, .uk-breadcrumb a:active {
+  color: #1b365d;
+}
+
 .uk-breadcrumb a:hover::after, .uk-breadcrumb a:focus::after, .uk-breadcrumb a:active::after {
   opacity: 1;
 }
@@ -1395,19 +1404,19 @@ input[type='submit'] {
 
 .nb-block-content .align_right {
   float: right;
-  margin-bottom: 2.5rem;
+  margin-bottom: 20px;
   margin-left: 2.5rem;
 }
 
 .nb-block-content .align_left {
   float: left;
-  margin-bottom: 2.5rem;
+  margin-bottom: 20px;
   margin-right: 2.5rem;
 }
 
 .nb-block-content .align_center {
   clear: both;
-  margin: 15px auto;
+  margin: 40px auto 20px;
   text-align: center;
 }
 
@@ -1499,6 +1508,10 @@ input[type='submit'] {
   opacity: .6;
   display: inline-block;
   margin-left: 20px;
+}
+
+.nb-block-slideshow h2 {
+  margin-bottom: 40px;
 }
 
 .nb-block-slideshow .uk-slideshow-items {
@@ -1647,10 +1660,20 @@ input[type='submit'] {
 
 .nb-block-form .InputfieldRadio label {
   font-size: 16px;
+  cursor: pointer;
 }
 
 .nb-block-form label i {
   margin-right: 0.25rem;
+}
+
+.nb-block-form .uk-form-controls.uk-grid-medium {
+  margin-left: -70px;
+  margin-top: 12px;
+}
+
+.nb-block-form .uk-form-controls.uk-grid-medium > * {
+  padding-left: 70px;
 }
 
 .nb-block-form .nb-checkbox {
@@ -2073,7 +2096,7 @@ input[type='submit'] {
 }
 
 .uk-accordion li:last-of-type {
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .uk-accordion li.uk-open {
@@ -2382,7 +2405,7 @@ input[type='submit'] {
   color: #fff;
 }
 
-.banner-text span {
+.banner-text > span {
   font-size: 26px;
   line-height: 1.3em;
 }
@@ -3019,7 +3042,7 @@ input[type='submit'] {
 }
 
 .testimonials-slider {
-  padding: 130px 0 120px;
+  padding: 90px 0 80px;
 }
 
 .testimonials-slider h2 {
@@ -3055,6 +3078,7 @@ input[type='submit'] {
 
 .testimonials-slider blockquote {
   padding: 0;
+  margin: 0;
   max-width: 895px;
 }
 
@@ -3109,7 +3133,7 @@ input[type='submit'] {
 }
 
 .useful-links {
-  padding-bottom: 115px;
+  padding-bottom: 75px;
 }
 
 .useful-links.visit {
@@ -3177,7 +3201,7 @@ input[type='submit'] {
 
 .find-out-more ul {
   list-style-type: none;
-  margin-bottom: 90px;
+  margin: 10px 0 100px;
   padding: 0;
 }
 
@@ -3661,7 +3685,7 @@ input[type='submit'] {
 }
 
 .things-to-do-section {
-  padding: 70px 0 100px;
+  padding: 70px 0;
 }
 
 .things-to-do-wrap {
@@ -3692,6 +3716,10 @@ input[type='submit'] {
   .things-to-do-wrap .uk-grid-medium .uk-position-left {
     padding-left: 0;
   }
+}
+
+.beach-section {
+  padding-bottom: 60px;
 }
 
 .beach-section .uk-card {
@@ -3730,6 +3758,17 @@ input[type='submit'] {
   list-style-type: none;
 }
 
+.beach-section .uk-button-default {
+  background-color: #1b365d;
+  color: #fff;
+}
+
+.beach-section .uk-button-default:hover, .beach-section .uk-button-default:focus, .beach-section .uk-button-default:active {
+  background-color: transparent;
+  border-color: #1b365d;
+  color: #1b365d;
+}
+
 @media (min-width: 1200px) {
   .beach-section .uk-card > a.uk-position-cover {
     width: calc(100% - 80px);
@@ -3750,7 +3789,7 @@ input[type='submit'] {
 
 .beach-filter .uk-button-default {
   border-color: #1b365d;
-  color: #1b365d;
+  color: #fff;
 }
 
 .beach-filter .uk-button-default::before {
@@ -3759,18 +3798,22 @@ input[type='submit'] {
 }
 
 .beach-filter .uk-button-default:hover, .beach-filter .uk-button-default:focus, .beach-filter .uk-button-default:active {
-  background-color: #1b365d;
+  background-color: transparent;
   border-color: #1b365d;
-  color: #fff;
+  color: #1b365d;
 }
 
 .beach-filter .uk-button-default:hover::before, .beach-filter .uk-button-default:focus::before, .beach-filter .uk-button-default:active::before {
-  color: #fff;
+  color: #1b365d;
 }
 
 .beach-filter .uk-button-default.uk-active {
   background-color: #1b365d;
   border-color: #1b365d;
+  color: #fff;
+}
+
+.beach-filter .uk-button-default.uk-active::before {
   color: #fff;
 }
 

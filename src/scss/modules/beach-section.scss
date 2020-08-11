@@ -1,4 +1,6 @@
 .beach-section {
+    padding-bottom: 60px;
+
     .uk-card {
         min-height: 430px;
 
@@ -40,6 +42,17 @@
         list-style-type: none;
     }
 
+    .uk-button-default {
+        background-color: $blue;
+        color: $white;
+
+        @include hover {
+            background-color: transparent;
+            border-color: $blue;
+            color: $blue;
+        }
+    }
+
     @media (min-width: $breakpointLarge) {
         .uk-card {
             >a.uk-position-cover {
@@ -69,7 +82,7 @@
 
     .uk-button-default {
         border-color: $blue;
-        color: $blue;
+        color: $white;
 
         &::before {
             margin-right: 15px;
@@ -77,12 +90,12 @@
         }
 
         @include hover {
-            background-color: $blue;
+            background-color: transparent;
             border-color: $blue;
-            color: $white;
+            color: $blue;
 
             &::before {
-                color: $white;
+                color: $blue;
             }
         }
 
@@ -90,6 +103,10 @@
             background-color: $blue;
             border-color: $blue;
             color: $white;
+
+            &::before {
+                color: $white;
+            }
         }
     }
 

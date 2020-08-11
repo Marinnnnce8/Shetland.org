@@ -129,19 +129,19 @@
 
 		.align_right {
 			float: right;
-			margin-bottom: $nbSpace;
+			margin-bottom: 20px;
 			margin-left: $nbSpace;
 		}
 
 		.align_left {
 			float: left;
-			margin-bottom: $nbSpace;
+			margin-bottom: 20px;
 			margin-right: $nbSpace;
 		}
 
 		.align_center {
 			clear: both;
-			margin: 15px auto;
+			margin: 40px auto 20px;
 			text-align: center;
 		}
 
@@ -241,6 +241,10 @@
 	}
 
 	&-slideshow {
+		h2 {
+			margin-bottom: 40px;
+		}
+
 		.uk-slideshow-items {
 			min-height: 595px !important;
 
@@ -392,12 +396,22 @@
 
 		.InputfieldRadio label {
 			font-size: 16px;
+			cursor: pointer;
 		}
 
 		label {
 
 			i {
 				margin-right: $nbGutterSmall;
+			}
+		}
+
+		.uk-form-controls.uk-grid-medium {
+			margin-left: -70px;
+			margin-top: 12px;
+
+			>* {
+				padding-left: 70px;
 			}
 		}
 
