@@ -281,6 +281,132 @@
             </div>
         </section>
 
+        <section class="nb-map">
+            <div class="uk-container uk-container-large">
+                <h2 class="uk-text-center uk-margin-medium-bottom">Shetland Map</h2>
+
+                <div class='map-box'>
+                    <ul class='map-switch uk-flex uk-flex-center uk-flex-middle' data-uk-switcher='connect: .switcher-container'>
+                        <li><button class='label medium alt uk-text-bold font-area'>Areas</button></li>
+                        <li><button class='label medium alt uk-text-bold font-eye'>Interests</button>
+                        </li>
+                    </ul>
+                    <ul class='uk-switcher switcher-container'>
+                        <li>
+                            <div class='map' id="map_canvas_areas">
+                                <div class="uk-card map-card uk-position-relative" id='map-info-1'>
+                                    <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+                                    <button class="uk-position-top-right" data-uk-toggle='target: #map-info-1'
+                                        aria-label='Close this info box'></button>
+                                    <div class="uk-card-body">
+                                        <h3 class="uk-card-title small alt uk-text-bold">Sumburgh Head</h3>
+                                        <p class="uk-text-small alt">The striking headland to the south-east of Jarlshof
+                                            is Sumburgh
+                                            Head, the southernmost tip of
+                                            the Shetland Mainland.</p>
+                                        <a href="#" class="uk-button uk-button-text">
+                                            <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                            <span>Find out
+                                                more</span><span role="presentation"><img data-uk-svg
+                                                    src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                                    </div>
+                                    <div class="uk-card-media-bottom uk-background-cover" role="presentation"
+                                        data-uk-img style="background-image: url('./img/sumburgh-head.jpg');">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='uk-flex map-region'>
+                            <div class='map' id="map_canvas_region"></div>
+                            <div class='map-sidebar uk-text-center' id='map-sidebar-1'>
+                                <button class='uk-hidden@s' aria-label='Close map region sidebar'
+                                    data-uk-toggle='target: #map-sidebar-1'></button>
+                                <h3>Kirkwall</h3>
+                                <ul class='uk-flex uk-flex-center map-sidebar-nav' data-uk-switcher>
+                                    <li><button class='uk-text-uppercase'>Domestic assets</button></li>
+                                    <li><button class='uk-text-uppercase'>Business assets</button></li>
+                                </ul>
+                                <ul class='uk-switcher'>
+                                    <li>
+                                        <div class='map-assets'>
+                                            <ul class='uk-grid-match uk-grid-small uk-child-width-1-3' data-uk-grid>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>16</span>
+                                                    <span class='text'>Chargers</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>5</span>
+                                                    <span class='text'>Car clubs</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>9</span>
+                                                    <span class='text'>Local Generation</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>16</span>
+                                                    <span class='text'>Chargers</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>5</span>
+                                                    <span class='text'>Car clubs</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>9</span>
+                                                    <span class='text'>Local Generation</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class='map-assets'>
+                                            <ul class='uk-grid-match uk-grid-small uk-child-width-1-3' data-uk-grid>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>10</span>
+                                                    <span class='text'>Chargers</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>9</span>
+                                                    <span class='text'>Car clubs</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>9</span>
+                                                    <span class='text'>Local Generation</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>16</span>
+                                                    <span class='text'>Chargers</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>5</span>
+                                                    <span class='text'>Car clubs</span>
+                                                </li>
+                                                <li>
+                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
+                                                    <span class='number'>9</span>
+                                                    <span class='text'>Local Generation</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section class="visit-seasons uk-text-center">
             <div class="uk-container uk-container-large">
                 <div class="visit-inner uk-margin-auto uk-flex uk-flex-column uk-flex-middle">

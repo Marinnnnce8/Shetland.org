@@ -1,0 +1,51 @@
+.map-card {
+    max-width: 320px;
+    box-shadow: 0 10px 30px rgba($blue, .3);
+
+    >button {
+        right: 20px;
+        top: 20px;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+
+        &::before {
+            position: absolute;
+            font-size: 18px;
+            color: $blue;
+            font-family: 'svgicons';
+            content: font-char($close);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: $nbSec ease-in-out;
+        }
+
+        @include hover {
+
+            &::before {
+                color: $blue-light-hover;
+            }
+        }
+    }
+
+    .uk-card-body {
+        padding: 20px 20px 25px;
+
+        * {
+            color: $blue;
+        }
+
+        p {
+            opacity: 1;
+
+            &:last-of-type {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .uk-card-media-bottom {
+        height: 215px;
+    }
+}

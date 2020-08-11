@@ -1,0 +1,38 @@
+// .nb-map {}
+
+.map-switch {
+    background-color: $turquise-light;
+
+    li {
+        list-style-type: none;
+
+        button {
+            border-left: 1px solid $gray-mid;
+            display: inline-flex;
+            align-items: center;
+            padding: 24px 25px;
+
+            &::after {
+                position: absolute;
+                content: font-char($chevron-down-thin);
+                color: $blue;
+                right: 35px;
+                font-size: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &::before {
+                margin-right: 15px;
+            }
+        }
+
+        &:first-of-type button::before {
+            font-size: 18px;
+        }
+
+        &:last-of-type button {
+            border-right: 1px solid $gray-mid;
+        }
+    }
+}
