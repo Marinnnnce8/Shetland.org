@@ -85,9 +85,12 @@
 
 // uikit/utility
 .uk-logo {
+	padding: 0;
+	min-height: 0;
 
 	img {
-		width: 228px;
+		width: 100%;
+		height: auto;
 	}
 }
 

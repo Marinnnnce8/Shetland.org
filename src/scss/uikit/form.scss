@@ -16,6 +16,11 @@
 	line-height: 1.7em;
 	padding: 0 30px;
 
+	&:focus {
+		background-color: $beige-mid;
+		border-color: $blue;
+	}
+
 	@include placeholder {
 		font-size: 16px;
 		opacity: .8;

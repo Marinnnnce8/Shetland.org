@@ -21,7 +21,7 @@
 
 	.uk-parent {
 
-		> a {
+		>a {
 			position: relative;
 
 			.uk-icon {
@@ -47,11 +47,20 @@
 	&.nb-nav-desktop {
 
 		.uk-navbar-nav {
+			padding-top: 5px;
+			>li {
+				>a {
+					min-height: 0;
+					font-size: 20px;
+					text-transform: none;
+					color: $blue;
+					padding: 0 20px;
+				}
+			}
 
-			> .uk-parent {
+			>.uk-parent {
 
-				> a {
-
+				>a {
 					.uk-icon {
 						bottom: auto;
 						left: $nbGutterSmall;
@@ -87,13 +96,13 @@
 		.uk-navbar-nav {
 			display: block;
 
-			> li {
+			>li {
 				padding: $ukGutter $ukGutter 0;
 			}
 		}
 
 		.uk-navbar-item,
-		.uk-navbar-nav > li > a,
+		.uk-navbar-nav>li>a,
 		.uk-navbar-toggle {
 			display: block;
 			min-height: 0;
@@ -118,5 +127,93 @@
 				margin-top: 1em;
 			}
 		}
+	}
+}
+
+.nav-search {
+	min-width: 150px;
+	min-height: 48px;
+	padding-top: 25px;
+
+	>button {
+		line-height: 1.7em;
+		display: flex;
+		align-items: center;
+		color: rgba($blue, .7);
+
+		&::after {
+			content: font-char($search);
+			font-family: 'svgicons';
+			font-size: 20px;
+			color: inherit;
+			margin-left: 8px;
+		}
+	}
+
+	.nav-search-box {
+		background-color: $white;
+		display: none;
+		min-width: 560px;
+		z-index: 1;
+		position: relative;
+		top: 15px;
+
+		button.label {
+			padding-right: 10px;
+			padding-left: 17px;
+
+			&::after {
+				content: font-char($close);
+				font-family: 'svgicons';
+				font-size: 8px;
+				color: inherit;
+				margin-left: 15px;
+				font-weight: $bold;
+			}
+		}
+
+		&.nav-search-box-active {
+			display: block;
+			opacity: 0;
+			animation: searchOpacityIn .3s linear forwards;
+		}
+	}
+
+	form {
+		margin-left: 10px;
+		max-width: 400px;
+		width: 100%;
+
+		button[type='submit'] {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.uk-input {
+			border-radius: 50px; 
+			min-height: 48px;
+			padding: 0 40px 0 35px;
+
+			@include placeholder {
+				font-size: 14px;
+				opacity: .5;
+				color: inherit;
+				top: -2px;
+				position: relative;
+			}
+		}
+	}
+}
+
+
+@keyframes searchOpacityIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }

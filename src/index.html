@@ -10,29 +10,57 @@
 	<title>Shetland.org | Home</title>
 	<meta name='description' content='This is a meta description'>
 
-	<link rel='shortcut icon' href='./favicon/favicon.ico'>
+	<!-- <link rel='shortcut icon' href='./favicon/favicon.ico'> -->
 	<link rel='stylesheet' href='css/uikit.min.css' />
 	<link rel='stylesheet' href='css/theme.min.css' />
 </head>
 
 <body>
 
-	<header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
-		<nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+	<header class='header header-main'
+		data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
+		<nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
 			<div class='uk-navbar-left'>
 				<a href='#' class='uk-navbar-item uk-logo'>
-					<!-- <img src='img/logo.png' alt='Site Name Logo'> -->
+					<img src='img/logo.png' alt='Shatland Logo'>
 				</a>
 			</div>
 
 			<div class='uk-navbar-right'>
-				<div id='nav'>
-					<ul class='uk-navbar-nav' data-uk-nb-nav>
-						<li class='uk-active'><a href='index.html'>Home</a></li>
-						<li><a href='styleguide.html'>About</a></li>
-						<li><a href='styleguide.html'>Contact</a></li>
+				<div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
+					<ul class='uk-flex uk-flex-middle'>
+						<li><a href='#'>Blog</a></li>
+						<li><a href='#'>Map</a></li>
 					</ul>
+					<ul class='uk-flex uk-flex-middle'>
+						<li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+						<li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+						<li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+					</ul>
+				</div>
+				<div class='navbar-bottom uk-flex uk-flex-between'>
+					<div id='nav'>
+						<ul class='uk-navbar-nav' data-uk-nb-nav>
+							<li class='uk-active'><a href='index.html'>Visit</a></li>
+							<li><a href='styleguide.html'>Live, Work & Study</a></li>
+							<li><a href='styleguide.html'>Invest</a></li>
+						</ul>
+					</div>
+					<div class="nav-search uk-position-relative uk-flex uk-flex-right">
+						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active" class="label small alt">Search</button>
+						<div id="navSearchBox" class="nav-search-box uk-position-bottom-right">
+							<div class="uk-flex uk-flex-middle uk-flex-right">
+								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active" class="label small alt">Close
+									search</button>
+								<form action="/search" method="get" role="search" id="navSearch"
+									class="uk-search uk-search-default">
+									<button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+										class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 				<a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
 					hidden>
@@ -381,7 +409,7 @@
 					<li><a href='#' class='label medium alt uk-text-bold'>Press</a></li>
 				</ul>
 				<div class='uk-flex uk-flex-center uk-width-1-3@m'>
-					<a href='#' aria-label='Shetland.org Homepage'><img src='./img/logo.png' alt='image' /></a>
+					<a href='#' aria-label='Shetland.org Homepage'><img src='./img/footer-logo.png' alt='image' /></a>
 				</div>
 			</div>
 			<div class='footer-bottom uk-child-width-1-3@m uk-flex uk-flex-bottom' data-uk-grid>
