@@ -2344,8 +2344,13 @@ input[type='submit'] {
   height: auto;
 }
 
+.map-box {
+  overflow: hidden;
+}
+
 .map-switch {
   background-color: #e7f4f1;
+  margin: 0;
 }
 
 .map-switch li {
@@ -2357,28 +2362,109 @@ input[type='submit'] {
   display: inline-flex;
   align-items: center;
   padding: 24px 25px;
+  position: relative;
 }
 
 .map-switch li button::after {
-  position: absolute;
   content: "";
   color: #1b365d;
-  right: 35px;
   font-size: 24px;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: 8px;
+  font-family: 'svgicons';
+  margin-left: 10px;
 }
 
 .map-switch li button::before {
   margin-right: 15px;
 }
 
+.map-switch li:first-of-type button {
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
 .map-switch li:first-of-type button::before {
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .map-switch li:last-of-type button {
   border-right: 1px solid #c9d8db;
+}
+
+.map {
+  height: 620px;
+  max-height: 620px;
+  width: 100%;
+}
+
+.map-pins {
+  z-index: 2;
+}
+
+.map-pins li {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.map-pins li:nth-of-type(2) {
+  left: 75%;
+  top: 75%;
+}
+
+.map-pins button {
+  background-image: url("../../img/union-small.png");
+  background-size: 45%;
+  background-position: 60% 45%;
+  background-repeat: no-repeat;
+  -webkit-clip-path: url(#mapPin);
+          clip-path: url(#mapPin);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  background-color: #1b365d;
+  width: 86px;
+  height: 95px;
+}
+
+.map-pins button::after {
+  position: absolute;
+  content: "";
+  font-family: 'svgicons';
+  top: 40%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #fff;
+}
+
+.map-pins button:hover, .map-pins button:focus, .map-pins button:active {
+  transform: scale(1.2);
+}
+
+.map-totals {
+  z-index: 1;
+}
+
+.map-totals li {
+  background-color: #5e7e29;
+  border-radius: 50%;
+  color: #fff;
+  height: 40px;
+  left: 50%;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(27, 54, 93, 0.3);
+}
+
+.map-totals li:nth-of-type(2) {
+  left: 75%;
+  top: 75%;
 }
 
 .banner {
@@ -3873,8 +3959,14 @@ input[type='submit'] {
 }
 
 .map-card {
+  list-style-type: none;
+  background-color: #fff;
   max-width: 320px;
   box-shadow: 0 10px 30px rgba(27, 54, 93, 0.3);
+  z-index: 3;
+  position: absolute;
+  top: 60px;
+  right: 70px;
 }
 
 .map-card > button {

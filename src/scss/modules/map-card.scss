@@ -1,6 +1,12 @@
 .map-card {
+    list-style-type: none;
+    background-color: $white;
     max-width: 320px;
     box-shadow: 0 10px 30px rgba($blue, .3);
+    z-index: 3;
+    position: absolute;
+    top: 60px;
+    right: 70px;
 
     >button {
         right: 20px;

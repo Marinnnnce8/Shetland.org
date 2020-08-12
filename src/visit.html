@@ -10,13 +10,169 @@
     <title>Shetland.org | Visit</title>
     <meta name='description' content='This is a meta description'>
 
-    <link rel='shortcut icon' href='./favicon/favicon.ico'>
+    <!-- <link rel='shortcut icon' href='./favicon/favicon.ico'> -->
     <link rel='stylesheet' href='./css/jquery.fancybox.min.css' />
     <link rel='stylesheet' href='css/uikit.min.css' />
     <link rel='stylesheet' href='css/theme.min.css' />
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src='./js/infobox.js'></script>
 </head>
 
-<body>
+<script type="text/javascript">
+    function initialize() {
+        var secheltLoc = new google.maps.LatLng(60.155579, -1.150040);
+
+        var myMapOptionsAreas = {
+            zoom: 15,
+            center: secheltLoc,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var myMapOptionsInterests = {
+            zoom: 15,
+            center: secheltLoc,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var theMapAreas = new google.maps.Map(document.getElementById("map_canvas_areas"), myMapOptionsAreas);
+
+        var theMapInterests = new google.maps.Map(document.getElementById("map_canvas_interests"),
+            myMapOptionsInterests);
+
+
+        var markerAreas = new google.maps.Marker({
+            map: theMapAreas,
+            draggable: true,
+            position: new google.maps.LatLng(60.155579, -1.150040),
+            visible: true
+        });
+
+        var markerInterests = new google.maps.Marker({
+            map: theMapInterests,
+            draggable: true,
+            position: new google.maps.LatLng(60.155579, -1.150040),
+            visible: true
+        });
+
+        var boxTextAreas = document.createElement("div");
+        boxTextAreas.style.cssText = "";
+        boxTextAreas.innerHTML =
+            "<div>" +
+            "<ul class='map-info-boxes uk-position-cover'>" +
+            "<li class='uk-card map-card' id='map-info-1'>" +
+            "<a href='#' class='uk-position-cover' aria-label='Find out more'></a>" +
+            "<button class='uk-position-top-right' data-uk-toggle='target: #map-info-1' aria-label='Close this info box'></button>" +
+            "<div class='uk-card-body'>" +
+            "<h3 class='uk-card-title small alt uk-text-bold'>Sumburgh Head</h3>" +
+            "<p class='uk-text-small alt'>The striking headland to the south-east of Jarlshof is Sumburgh Head, the southernmost tip of the Shetland Mainland.</p>" +
+            "<a href='#' class='uk-button uk-button-text'>" +
+            "<img src='./img/text-button-frame.svg' data-uk-svg alt='image'>" +
+            "<span>Find out more</span><span role='presentation'><img data-uk-svg src='./img/button-arrow-right.svg' alt='image' /></span>" +
+            "</a>" +
+            "</div>" +
+            "<div class='uk-card-media-bottom uk-background-cover' role='presentation' data-uk-img style='background-image: url(\"./img/sumburgh-head.jpg\");'></div>" +
+            "</div>" +
+            "</li>" +
+            "</ul>" +
+            "<ul class='map-pins uk-position-cover'>" +
+            "<li><button aria-label='map pin'></button></li>" +
+            "<li><button aria-label='map pin'></button></li>" +
+            "</ul>" +
+            "<ul class='map-totals uk-position-cover'>" +
+            "<li class='label medium uk-text-bold alt'>7</li>" +
+            "<li class='label medium uk-text-bold alt'>12</li>" +
+            "</ul>" +
+            "</div>";
+
+        var boxTextInterests = document.createElement("div");
+        boxTextInterests.style.cssText = "";
+        boxTextInterests.innerHTML = "<div>" +
+            "<ul class='map-info-boxes uk-position-cover'>" +
+            "<li class='uk-card map-card' id='map-info-2'>" +
+            "<a href='#' class='uk-position-cover' aria-label='Find out more'></a>" +
+            "<button class='uk-position-top-right' data-uk-toggle='target: #map-info-2' aria-label='Close this info box'></button>" +
+            "<div class='uk-card-body'>" +
+            "<h3 class='uk-card-title small alt uk-text-bold'>Sumburgh Head</h3>" +
+            "<p class='uk-text-small alt'>The striking headland to the south-east of Jarlshof is Sumburgh Head, the southernmost tip of the Shetland Mainland.</p>" +
+            "<a href='#' class='uk-button uk-button-text'>" +
+            "<img src='./img/text-button-frame.svg' data-uk-svg alt='image'>" +
+            "<span>Find out more</span><span role='presentation'><img data-uk-svg src='./img/button-arrow-right.svg' alt='image' /></span>" +
+            "</a>" +
+            "</div>" +
+            "<div class='uk-card-media-bottom uk-background-cover' role='presentation' data-uk-img style='background-image: url(\"./img/sumburgh-head.jpg\");'></div>" +
+            "</div>" +
+            "</li>" +
+            "</ul>" +
+            "<ul class='map-pins uk-position-cover'>" +
+            "<li><button aria-label='map pin'></button></li>" +
+            "<li><button aria-label='map pin'></button></li>" +
+            "</ul>" +
+            "<ul class='map-totals uk-position-cover'>" +
+            "<li class='label medium uk-text-bold alt'>24</li>" +
+            "<li class='label medium uk-text-bold alt'>5</li>" +
+            "</ul>" +
+            "</div>";
+
+        var myOptionsAreas = {
+            content: boxTextAreas,
+            disableAutoPan: false,
+            maxWidth: 0,
+            pixelOffset: new google.maps.Size(-140, 0),
+            zIndex: null,
+            boxStyle: {
+                background: "none",
+                opacity: 1,
+                width: "100%",
+                height: "620px"
+            },
+            closeBoxMargin: "",
+            closeBoxURL: "",
+            infoBoxClearance: new google.maps.Size(1, 1),
+            isHidden: false,
+            pane: "floatPane",
+            enableEventPropagation: false
+        };
+
+        var myOptionsInterests = {
+            content: boxTextInterests,
+            disableAutoPan: false,
+            maxWidth: 0,
+            pixelOffset: new google.maps.Size(-140, 0),
+            zIndex: null,
+            boxStyle: {
+                background: "none",
+                opacity: 1,
+                width: "100%",
+                height: "620px"
+            },
+            closeBoxMargin: "",
+            closeBoxURL: "",
+            infoBoxClearance: new google.maps.Size(1, 1),
+            isHidden: false,
+            pane: "floatPane",
+            enableEventPropagation: false
+        };
+
+        google.maps.event.addListener(markerAreas, "click", function (e) {
+            ibAreas.open(theMapAreas, this);
+        });
+
+        var ibAreas = new InfoBox(myOptionsAreas);
+
+        ibAreas.open(theMapAreas, markerAreas);
+
+        google.maps.event.addListener(markerInterests, "click", function (e) {
+            ibInterests.open(theMapInterests, this);
+        });
+
+        var ibInterests = new InfoBox(myOptionsInterests);
+
+        ibInterests.open(theMapInterests, markerInterests);
+    }
+
+</script>
+
+<body onload="initialize()">
 
     <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
         <nav class='uk-navbar-container uk-navbar' data-uk-navbar>
@@ -286,121 +442,18 @@
                 <h2 class="uk-text-center uk-margin-medium-bottom">Shetland Map</h2>
 
                 <div class='map-box'>
-                    <ul class='map-switch uk-flex uk-flex-center uk-flex-middle' data-uk-switcher='connect: .switcher-container'>
+                    <ul class='map-switch uk-flex uk-flex-center uk-flex-middle'
+                        data-uk-switcher='connect: .switcher-container'>
                         <li><button class='label medium alt uk-text-bold font-area'>Areas</button></li>
                         <li><button class='label medium alt uk-text-bold font-eye'>Interests</button>
                         </li>
                     </ul>
                     <ul class='uk-switcher switcher-container'>
                         <li>
-                            <div class='map' id="map_canvas_areas">
-                                <div class="uk-card map-card uk-position-relative" id='map-info-1'>
-                                    <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                    <button class="uk-position-top-right" data-uk-toggle='target: #map-info-1'
-                                        aria-label='Close this info box'></button>
-                                    <div class="uk-card-body">
-                                        <h3 class="uk-card-title small alt uk-text-bold">Sumburgh Head</h3>
-                                        <p class="uk-text-small alt">The striking headland to the south-east of Jarlshof
-                                            is Sumburgh
-                                            Head, the southernmost tip of
-                                            the Shetland Mainland.</p>
-                                        <a href="#" class="uk-button uk-button-text">
-                                            <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-                                            <span>Find out
-                                                more</span><span role="presentation"><img data-uk-svg
-                                                    src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                                    </div>
-                                    <div class="uk-card-media-bottom uk-background-cover" role="presentation"
-                                        data-uk-img style="background-image: url('./img/sumburgh-head.jpg');">
-                                    </div>
-                                </div>
-                            </div>
+                            <div class='map' id="map_canvas_areas"></div>
                         </li>
-                        <li class='uk-flex map-region'>
-                            <div class='map' id="map_canvas_region"></div>
-                            <div class='map-sidebar uk-text-center' id='map-sidebar-1'>
-                                <button class='uk-hidden@s' aria-label='Close map region sidebar'
-                                    data-uk-toggle='target: #map-sidebar-1'></button>
-                                <h3>Kirkwall</h3>
-                                <ul class='uk-flex uk-flex-center map-sidebar-nav' data-uk-switcher>
-                                    <li><button class='uk-text-uppercase'>Domestic assets</button></li>
-                                    <li><button class='uk-text-uppercase'>Business assets</button></li>
-                                </ul>
-                                <ul class='uk-switcher'>
-                                    <li>
-                                        <div class='map-assets'>
-                                            <ul class='uk-grid-match uk-grid-small uk-child-width-1-3' data-uk-grid>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>16</span>
-                                                    <span class='text'>Chargers</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>5</span>
-                                                    <span class='text'>Car clubs</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>9</span>
-                                                    <span class='text'>Local Generation</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>16</span>
-                                                    <span class='text'>Chargers</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>5</span>
-                                                    <span class='text'>Car clubs</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>9</span>
-                                                    <span class='text'>Local Generation</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class='map-assets'>
-                                            <ul class='uk-grid-match uk-grid-small uk-child-width-1-3' data-uk-grid>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>10</span>
-                                                    <span class='text'>Chargers</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>9</span>
-                                                    <span class='text'>Car clubs</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>9</span>
-                                                    <span class='text'>Local Generation</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>16</span>
-                                                    <span class='text'>Chargers</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/car-club.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>5</span>
-                                                    <span class='text'>Car clubs</span>
-                                                </li>
-                                                <li>
-                                                    <span><img src='./img/charger.svg' data-uk-svg alt='image'></span>
-                                                    <span class='number'>9</span>
-                                                    <span class='text'>Local Generation</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                        <li class='uk-flex map-interests'>
+                            <div class='map' id="map_canvas_interests"></div>
                         </li>
                     </ul>
                 </div>
@@ -716,6 +769,14 @@
             </div>
         </div>
     </footer>
+
+    <svg width="0" height="0" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 57.5 72'>
+        <clipPath id='mapPin' clipPathUnits='objectBoundingBox' transform='scale(0.00847457627, 0.00757575757)'>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M64.326 76.909c13.186-2.605 23.128-14.232 23.128-28.182C87.454 32.862 74.593 20 58.727 20 42.862 20 30 32.862 30 48.727c0 13.52 9.338 24.857 21.916 27.915L58.545 92l5.781-15.091z"
+                fill="#1B365D" />
+        </clipPath>
+    </svg>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'
         integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>

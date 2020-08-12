@@ -1,7 +1,12 @@
 // .nb-map {}
 
+.map-box {
+    overflow: hidden;
+}
+
 .map-switch {
     background-color: $turquise-light;
+    margin: 0;
 
     li {
         list-style-type: none;
@@ -11,15 +16,15 @@
             display: inline-flex;
             align-items: center;
             padding: 24px 25px;
+            position: relative;
 
             &::after {
-                position: absolute;
                 content: font-char($chevron-down-thin);
                 color: $blue;
-                right: 35px;
                 font-size: 24px;
-                top: 50%;
-                transform: translateY(-50%);
+                font-size: 8px;
+                font-family: 'svgicons';
+                margin-left: 10px;
             }
 
             &::before {
@@ -27,12 +32,95 @@
             }
         }
 
-        &:first-of-type button::before {
-            font-size: 18px;
+        &:first-of-type {
+            button {
+                padding-right: 35px;
+                padding-left: 35px;
+
+                &::before {
+                    font-size: 23px;
+                }
+            }
         }
+
 
         &:last-of-type button {
             border-right: 1px solid $gray-mid;
+        }
+    }
+}
+
+.map {
+    height: 620px;
+    max-height: 620px;
+    width: 100%;
+}
+
+.map-pins {
+    z-index: 2;
+
+    //probably needs to be deleted - just li style
+    li {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        &:nth-of-type(2) {
+            left: 75%;
+            top: 75%;
+        }
+    }
+
+    button {
+        background-image: url('../../img/union-small.png');
+        background-size: 45%;
+        background-position: 60% 45%;
+        background-repeat: no-repeat;
+        clip-path: url(#mapPin);
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        background-color: $blue;
+        width: 86px;
+        height: 95px;
+
+        &::after {
+            position: absolute;
+            content: font-char($eye);
+            font-family: 'svgicons';
+            top: 40%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: $white;
+        }
+
+        @include hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.map-totals {
+    z-index: 1;
+    li {
+        background-color: $green;
+        border-radius: 50%;
+        color: $white;
+        height: 40px;
+        left: 50%;
+        list-style-type: none;
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba($blue, .3);
+
+        &:nth-of-type(2) {
+            left: 75%;
+            top: 75%;
         }
     }
 }
