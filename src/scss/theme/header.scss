@@ -1,24 +1,32 @@
 .header {
     background-color: $white;
-    padding: 13px 40px 19px 40px;
+    padding: 0 0 19px 0;
+
+    li {
+        list-style-type: none;
+    }
 
     .navbar-top {
         width: 100%;
-        // padding: 0 40px 12px 0;
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+        >.uk-flex:not(:first-of-type) {
+            margin-top: 13px;
+        }
 
-            &:last-of-type {
-                margin-left: 45px;
-            }
-
+        .uk-flex {
             li {
                 &:not(:first-of-type) {
                     margin-left: 30px;
                 }
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            &:last-of-type {
+                margin-left: 15px;
             }
         }
 
@@ -45,22 +53,83 @@
         }
     }
 
-    .navbar-bottom {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    &:not(.header-main) {
+        .navbar-top {
+            .uk-flex {
+                ul:last-of-type {
+                    margin-left: 45px;
+                }
+            }
+        }
+
+        .navbar-bottom .uk-navbar-nav {
+            top: 10px;
+            position: relative;
+        }
+
+        .uk-navbar-nav >li >a {
+            padding: 5px 20px 4px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-style: solid;
+                border-width: 8px 7.5px 0 7.5px;
+                content: '';
+                border-color: transparent;
+            }
+        }
     }
 
     &.header-main {
-        .nb-nav.nb-nav-desktop .uk-navbar-nav {
-            padding-top: 10px;
-        }
 
-        .uk-navbar-nav {
-            >li {
-                >a {
-                    font-family: $font-recoleta;
-                }
+        .navbar-top {
+            >.uk-flex:first-of-type {
+                margin-top: 13px;
+            }
+
+            ul:last-of-type {
+                margin-left: 45px;
+            }
+        }
+    }
+
+    &.header-visit {
+        .uk-navbar-nav .uk-active a {
+            background-color: $turquise-light;
+
+            &::after {
+                border-color: $turquise-light transparent transparent;
+            }
+        }
+        // .mega-menu:last-of-type {
+        //     .background-gray {
+        //         max-width: 690px;
+        //     }
+        // }
+    }
+
+    &.header-live {
+        .uk-navbar-nav .uk-active a {
+            background-color: $yellow-mid;
+
+            &::after {
+                border-color: $yellow-mid transparent transparent;
+            }
+        }
+    }
+
+    &.header-invest {
+        .uk-navbar-nav .uk-active a {
+            background-color: $blue-bright-light;
+
+            &::after {
+                border-color: $blue-bright-light transparent transparent;
             }
         }
     }

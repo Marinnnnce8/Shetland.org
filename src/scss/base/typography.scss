@@ -81,6 +81,10 @@ h2.alt {
 		line-height: 1.1em;
 	}
 
+	&.midi {
+		font-size: 20px;
+	}
+
 	&.small {
 		font-size: 18px;
 	}
@@ -97,6 +101,10 @@ label,
 	color: $blue;
 	opacity: .8;
 	line-height: 1.3em;
+
+	&.large {
+		font-size: 20px;
+	}
 
 	&.medium {
 		font-size: 16px;
