@@ -250,7 +250,6 @@
 		padding-bottom: 22px;
 
 		&.uk-open {
-
 			position: relative;
 
 			&::after {
@@ -261,7 +260,30 @@
 				left: 0;
 				right: 0;
 				bottom: -16px;
-				background-color: $green-pastel;
+			}
+
+			&.green {
+				color: $green-pastel;
+
+				&::after {
+					background-color: $green-pastel;
+				}
+			}
+
+			&.blue {
+				color: $blue-navy;
+
+				&::after {
+					background-color: $blue-navy;
+				}
+			}
+
+			&.yellow {
+				color: $orange-mid;
+
+				&::after {
+					background-color: $orange-mid;
+				}
 			}
 		}
 	}
@@ -283,7 +305,7 @@
 		box-shadow: none;
 		border-top: 1px solid $gray-light;
 		width: 100%;
-		
+
 		.background-gray {
 			background-color: $gray-cold-mid;
 		}
@@ -312,11 +334,6 @@
 			padding: 60px 40px 30px;
 		}
 
-		// >.uk-grid-column-medium,
-		// >.uk-grid-medium {
-		// 	margin-left: -80px;
-		// }
-
 		.uk-grid+.uk-grid-collapse,
 		.uk-grid+.uk-grid-row-collapse,
 		.uk-grid-collapse>.uk-grid-margin,
@@ -329,6 +346,11 @@
 			margin-bottom: 35px;
 		}
 
+		.label.small {
+			display: block;
+			margin-bottom: 20px;
+			line-height: 1.7em;
+		}
 	}
 
 	.uk-card-body {
@@ -337,8 +359,15 @@
 
 	.uk-card-media-left {
 		width: 90px;
+		min-width: 90px;
 		height: 60px;
 		margin-right: 40px;
+	}
+
+	.uk-card-title,
+	.label {
+		max-width: 100%;
+		white-space: initial;
 	}
 
 	.uk-button-text {
@@ -347,6 +376,17 @@
 
 	.uk-flex-right>.uk-button-text {
 		margin-right: 80px;
+	}
+
+	.nav-search {
+		min-width: 0;
+		padding: 0;
+		margin: 0 0 35px;
+
+		form {
+			max-width: 100%;
+			margin: 0;
+		}
 	}
 
 	@media (min-width: $breakpointLarge) {
@@ -364,5 +404,10 @@
 .nav-text-links {
 	li {
 		margin-bottom: 20px;
+
+		a {
+			max-width: 100%;
+			white-space: initial;
+		}
 	}
 }

@@ -1388,7 +1388,30 @@ input[type='submit'] {
   left: 0;
   right: 0;
   bottom: -16px;
+}
+
+.mega-menu > button.uk-open.green {
+  color: #86c8bc;
+}
+
+.mega-menu > button.uk-open.green::after {
   background-color: #86c8bc;
+}
+
+.mega-menu > button.uk-open.blue {
+  color: #0091da;
+}
+
+.mega-menu > button.uk-open.blue::after {
+  background-color: #0091da;
+}
+
+.mega-menu > button.uk-open.yellow {
+  color: #daaa00;
+}
+
+.mega-menu > button.uk-open.yellow::after {
+  background-color: #daaa00;
 }
 
 .mega-menu .green {
@@ -1448,14 +1471,27 @@ input[type='submit'] {
   margin-bottom: 35px;
 }
 
+.mega-menu > .uk-dropdown .label.small {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.7em;
+}
+
 .mega-menu .uk-card-body {
   padding: 0;
 }
 
 .mega-menu .uk-card-media-left {
   width: 90px;
+  min-width: 90px;
   height: 60px;
   margin-right: 40px;
+}
+
+.mega-menu .uk-card-title,
+.mega-menu .label {
+  max-width: 100%;
+  white-space: initial;
 }
 
 .mega-menu .uk-button-text {
@@ -1464,6 +1500,17 @@ input[type='submit'] {
 
 .mega-menu .uk-flex-right > .uk-button-text {
   margin-right: 80px;
+}
+
+.mega-menu .nav-search {
+  min-width: 0;
+  padding: 0;
+  margin: 0 0 35px;
+}
+
+.mega-menu .nav-search form {
+  max-width: 100%;
+  margin: 0;
 }
 
 @media (min-width: 1200px) {
@@ -1478,6 +1525,11 @@ input[type='submit'] {
 
 .nav-text-links li {
   margin-bottom: 20px;
+}
+
+.nav-text-links li a {
+  max-width: 100%;
+  white-space: initial;
 }
 
 .nb-table thead {
@@ -4589,6 +4641,11 @@ em {
   }
   .campaign-slider .uk-card {
     height: 165px;
+  }
+  .mega-menu .uk-card-title,
+  .nav-text-links li a,
+  .mega-menu .label {
+    white-space: pre-line;
   }
 }
 

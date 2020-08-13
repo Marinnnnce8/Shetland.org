@@ -43,4 +43,10 @@ screen and (-ms-high-contrast: none) {
             height: 165px;
         }
     }
+
+    .mega-menu .uk-card-title,
+    .nav-text-links li a,
+    .mega-menu .label {
+        white-space: pre-line;
+    }
 }
