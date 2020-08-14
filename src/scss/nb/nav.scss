@@ -177,9 +177,9 @@
 			padding-left: 17px;
 
 			&::after {
-				content: font-char($close);
+				content: font-char($close-search);
 				font-family: 'svgicons';
-				font-size: 8px;
+				font-size: 10px;
 				color: $blue;
 				margin-left: 15px;
 				font-weight: $bold;

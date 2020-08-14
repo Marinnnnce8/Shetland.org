@@ -17,22 +17,52 @@
 
 <body>
 
-    <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
-        <nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+    <!-- MAIN HEADER -->
+    <header class='header header-main' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
+        <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
             <div class='uk-navbar-left'>
                 <a href='#' class='uk-navbar-item uk-logo'>
-                    <!-- <img src='img/logo.png' alt='Site Name Logo'> -->
+                    <img src='img/logo.png' alt='Shatland Logo'>
                 </a>
             </div>
 
             <div class='uk-navbar-right'>
-                <div id='nav'>
-                    <ul class='uk-navbar-nav' data-uk-nb-nav>
-                        <li class='uk-active'><a href='index.html'>Home</a></li>
-                        <li><a href='styleguide.html'>About</a></li>
-                        <li><a href='styleguide.html'>Contact</a></li>
+                <div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href='#'>Blog</a></li>
+                        <li><a href='#'>Map</a></li>
                     </ul>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                        <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                        <li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+                    </ul>
+                </div>
+                <div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
+                    <div id='nav' class="nav">
+                        <ul class='uk-navbar-nav'>
+                            <li class='uk-active'><a href='visit.html'>Visit</a></li>
+                            <li><a href='live-work-study.html'>Live, Work & Study</a></li>
+                            <li><a href='invest.html'>Invest</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-search uk-position-relative uk-flex uk-flex-right">
+                        <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                            class="label small alt">Search</button>
+                        <div id="navSearchBox" class="nav-search-box">
+                            <div class="uk-flex uk-flex-middle uk-flex-right">
+                                <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                                    class="label small alt">Close
+                                    search</button>
+                                <form action="/search" method="get" role="search" id="navSearch"
+                                    class="uk-search uk-search-default">
+                                    <button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
                     hidden>
@@ -42,9 +72,10 @@
 
         </nav>
     </header>
+    <!-- MAIN HEADER -->
 
     <main>
-        <section class="banner uk-position-relative">
+        <div class="banner uk-position-relative">
             <div class="banner-inner uk-background-cover uk-background-fixed" data-uk-img
                 style="background-image: url('./img/nature-and-wildlife-banner.jpg');">
                 <div class="banner-text uk-width-1-2">
@@ -53,9 +84,9 @@
                 </div>
             </div>
             <span class="font-info" data-uk-tooltip="title: Photo by Photographer Name; pos: top-right"></span>
-        </section>
+        </div>
 
-        <section>
+        <div>
             <div class='uk-container uk-container-small'>
                 <ul class='uk-breadcrumb'>
                     <li><a href='index.html'>Home</a></li>
@@ -63,23 +94,23 @@
                     <li><span>Nature & Wildlife</span></li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <section class="uk-margin-medium-top uk-margin-medium-bottom">
+        <div class="uk-margin-medium-top uk-margin-medium-bottom">
             <div class="uk-container uk-container-small">
                 <p class="uk-text-lead">Shetland has a fascinating and unique natural environment. The location of the
                     islands has contributed to the evolution of a truly 'Shetlandic' collection of scenery and geology,
                     bird life, sea mammals, wild flowers and wonderful beaches.</p>
             </div>
-        </section>
+        </div>
 
-        <section class="things-to-do-section">
+        <div class="things-to-do-section">
             <div class="things-to-do-wrap">
                 <div class="uk-grid-medium" data-uk-grid>
                     <div class="uk-width-1-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/scenery.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Scenery</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -89,7 +120,7 @@
                     <div class="uk-width-2-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/bird-watching.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Bird Watching</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -103,7 +134,7 @@
                     <div class="uk-width-2-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/sea-mammals.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Sea Mammals</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -113,7 +144,7 @@
                     <div class="uk-width-1-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/northern-lights.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Northern Lights</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -127,7 +158,7 @@
                     <div class="uk-width-1-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/shetland-UNESCO-global-geopark.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Shetland UNESCO Global Geopark</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -137,7 +168,7 @@
                     <div class="uk-width-2-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/beaches.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Beaches</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -151,7 +182,7 @@
                     <div class="uk-width-2-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/shetland-ponies.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Shetland Ponies</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -161,7 +192,7 @@
                     <div class="uk-width-1-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/flora.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Flora</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -175,7 +206,7 @@
                     <div class="uk-width-1-3">
                         <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/eco-tourism.jpg');">
-                            <a href="#" class="uk-position-cover"></a>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
                             <h3 class="uk-card-title large uk-margin-remove">Eco-tourism</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
@@ -184,9 +215,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="explore-section uk-margin-large-top uk-margin-medium-bottom">
+        <div class="explore-section uk-margin-large-top uk-margin-medium-bottom">
             <div class='uk-container uk-container-large'>
                 <div class="uk-text-center">
                     <h2 class="uk-margin-remove-top">Get Inspired</h2>
@@ -262,7 +293,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
     </main>
 

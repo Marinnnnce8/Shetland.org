@@ -17,22 +17,52 @@
 
 <body>
 
-    <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
-        <nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+    <!-- MAIN HEADER -->
+    <header class='header header-main' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
+        <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
             <div class='uk-navbar-left'>
                 <a href='#' class='uk-navbar-item uk-logo'>
-                    <!-- <img src='img/logo.png' alt='Site Name Logo'> -->
+                    <img src='img/logo.png' alt='Shatland Logo'>
                 </a>
             </div>
 
             <div class='uk-navbar-right'>
-                <div id='nav'>
-                    <ul class='uk-navbar-nav' data-uk-nb-nav>
-                        <li class='uk-active'><a href='index.html'>Home</a></li>
-                        <li><a href='styleguide.html'>About</a></li>
-                        <li><a href='styleguide.html'>Contact</a></li>
+                <div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href='#'>Blog</a></li>
+                        <li><a href='#'>Map</a></li>
                     </ul>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                        <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                        <li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+                    </ul>
+                </div>
+                <div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
+                    <div id='nav' class="nav">
+                        <ul class='uk-navbar-nav'>
+                            <li class='uk-active'><a href='visit.html'>Visit</a></li>
+                            <li><a href='live-work-study.html'>Live, Work & Study</a></li>
+                            <li><a href='invest.html'>Invest</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-search uk-position-relative uk-flex uk-flex-right">
+                        <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                            class="label small alt">Search</button>
+                        <div id="navSearchBox" class="nav-search-box">
+                            <div class="uk-flex uk-flex-middle uk-flex-right">
+                                <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                                    class="label small alt">Close
+                                    search</button>
+                                <form action="/search" method="get" role="search" id="navSearch"
+                                    class="uk-search uk-search-default">
+                                    <button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
                     hidden>
@@ -42,8 +72,9 @@
 
         </nav>
     </header>
+    <!-- MAIN HEADER -->
 
-    <main class='nb-main uk-margin-large-top uk-margin-large-bottom'>
+    <main class='nb-main uk-margin-large-bottom'>
 
         <div class='uk-position-fixed uk-position-center-right nb-widget'>
             <ul>
@@ -99,9 +130,11 @@
                         <img src="./img/bio-author.png" data-uk-img alt="image">
                     </div>
                 </div>
-                <p class="uk-text-lead uk-margin-medium-bottom">Dentist and sea explorer Andy Kinnear shares his secret spots around Shetland’s
+                <p class="uk-text-lead uk-margin-medium-bottom">Dentist and sea explorer Andy Kinnear shares his secret
+                    spots around Shetland’s
                     wild coastline.</p>
-                <img class="uk-margin-medium-bottom" alt="This is a centre aligned image" data-uk-img src="./img/andy-kinnear-1.jpg" />
+                <img class="uk-margin-medium-bottom" alt="This is a centre aligned image" data-uk-img
+                    src="./img/andy-kinnear-1.jpg" />
                 <p>
                     <span class="nb-capital-letter">I</span>t was on a work excursion five years ago that dentist Andy
                     Kinnear caught the coasteering bug. ‘Around 12 of us went on an organised day exploring the caves
@@ -235,7 +268,7 @@
             <div class="nb-share alt uk-margin-bottom">
                 <div class="uk-container uk-container-large">
                     <div class="nb-share-inner uk-text-center">
-                        <h5>Share this page</h5>
+                        <span class="label large opacity-off">Share this page</span>
                         <ul class="uk-flex uk-flex-center nb-social uk-padding-remove-left uk-margin-medium-bottom">
                             <li><a href="#" class="font-facebook" aria-label="Share our page via Facebook"></a></li>
                             <li><a href="#" class="font-twitter" aria-label="Share our page via Twitter"></a></li>
@@ -262,7 +295,9 @@
                     <div class="nb-bio-inner uk-position-relative uk-text-center">
                         <div class="uk-width-2-3 uk-margin-auto">
                             <img class="uk-position-top-center" src="./img/bio-author.png" data-uk-img alt="image">
-                            <h4>Toby Skinner</h4>
+                            <div class="uk-flex uk-flex-center uk-margin-medium-top">
+                                <span class="label xlarge opacity-off">Toby Skinner</span>
+                            </div>
                             <p>Toby is an award-winning editor and writer based in London, with a passion for adventure
                                 and
                                 people-driven storytelling. Breckon in Yell is my favourite beach on the planet.</p>

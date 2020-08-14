@@ -91,6 +91,7 @@ h2.alt {
 
 	&.alt {
 		font-family: $font-default;
+		font-feature-settings: 'liga'off;
 	}
 }
 
@@ -101,6 +102,16 @@ label,
 	color: $blue;
 	opacity: .8;
 	line-height: 1.3em;
+
+	&.xxlarge {
+		font-size: 36px;
+		line-height: 1.1em;
+	}
+
+	&.xlarge {
+		font-size: 26px;
+		line-height: 1.1em;
+	}
 
 	&.large {
 		font-size: 20px;
@@ -119,7 +130,12 @@ label,
 	}
 
 	&.alt {
+		font-feature-settings: 'liga'off;
 		font-family: $font-default;
+		opacity: 1;
+	}
+
+	&.opacity-off {
 		opacity: 1;
 	}
 }
@@ -350,4 +366,8 @@ img {
 	&.uk-alert-danger {
 		background-color: $red-light;
 	}
+}
+
+.uk-text-meta {
+	color: $gray-dark;
 }

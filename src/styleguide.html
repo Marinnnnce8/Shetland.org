@@ -18,23 +18,52 @@
 
 <body>
 
-	<!-- <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'> -->
-	<header class='header'>
-		<nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+	<!-- MAIN HEADER -->
+	<header class='header header-main' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
+		<nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
 			<div class='uk-navbar-left'>
 				<a href='#' class='uk-navbar-item uk-logo'>
-					<!-- <img src='img/logo.png' alt='Site Name Logo'> -->
+					<img src='img/logo.png' alt='Shatland Logo'>
 				</a>
 			</div>
 
 			<div class='uk-navbar-right'>
-				<div id='nav'>
-					<ul class='uk-navbar-nav' data-uk-nb-nav>
-						<li><a href='index.html'>Home</a></li>
-						<li class='uk-active'><a href='styleguide.html'>About</a></li>
-						<li><a href='styleguide.html'>Contact</a></li>
+				<div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
+					<ul class='uk-flex uk-flex-middle'>
+						<li><a href='#'>Blog</a></li>
+						<li><a href='#'>Map</a></li>
 					</ul>
+					<ul class='uk-flex uk-flex-middle'>
+						<li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+						<li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+						<li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+					</ul>
+				</div>
+				<div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
+					<div id='nav' class="nav">
+						<ul class='uk-navbar-nav'>
+							<li class='uk-active'><a href='visit.html'>Visit</a></li>
+							<li><a href='live-work-study.html'>Live, Work & Study</a></li>
+							<li><a href='invest.html'>Invest</a></li>
+						</ul>
+					</div>
+					<div class="nav-search uk-position-relative uk-flex uk-flex-right">
+						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+							class="label small alt">Search</button>
+						<div id="navSearchBox" class="nav-search-box">
+							<div class="uk-flex uk-flex-middle uk-flex-right">
+								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+									class="label small alt">Close
+									search</button>
+								<form action="/search" method="get" role="search" id="navSearch"
+									class="uk-search uk-search-default">
+									<button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+										class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 				<a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
 					hidden>
@@ -44,8 +73,9 @@
 
 		</nav>
 	</header>
+	<!-- MAIN HEADER -->
 
-	<main class='nb-main uk-margin-large-top uk-margin-large-bottom'>
+	<main class='nb-main uk-margin-large-bottom'>
 		<div class='uk-position-fixed uk-position-center-right nb-widget'>
 			<ul>
 				<li><a href="#" class="font-facebook">Facebook</a></li>
@@ -471,8 +501,7 @@
 						src="https://player.vimeo.com/video/63655754?app_id=122963" width="640" height="360"
 						frameborder="0" title="Placeholder visual blip" allow="autoplay; fullscreen"
 						allowfullscreen></iframe>
-				</div> -->
-		</div>
+			</div> -->
 
 		<div class="testimonials-slider uk-text-center">
 			<h2>What our visitors say</h2>
@@ -701,21 +730,37 @@
 									alt='image' /></span></button>
 					</div>
 				</div>
+				<h3>Download Button Styles</h3>
+				<div class="uk-grid-medium uk-child-width-1-3@s uk-grid" data-uk-grid="">
+					<div class="uk-first-column">
+						<div class="uk-text-meta uk-form-label">Download button</div>
+						<a href="./download.txt" class="download-button" download>
+							<span class="text">
+								<span>&#68;ownload</span>
+								<span>&#68;ownloading</span>
+								<span>Open File</span>
+							</span>
+							<span class="icon">
+								<svg viewBox="0 0 24 24"></svg>
+							</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div class='nb-block nb-block-form uk-clearfix' data-nb-block='form'>
 			<div class='uk-container uk-container-small'>
-				<form id='nb-form-nb-styleguide'
-					class='uk-form-stacked InputfieldForm'
-					method='post' data-uk-nb-form novalidate data-colspacing='1'>
+				<form id='nb-form-nb-styleguide' class='uk-form-stacked InputfieldForm' method='post' data-uk-nb-form
+					novalidate data-colspacing='1'>
 
 					<h2>Form Styles</h2>
 
 					<div data-uk-grid>
 						<div class='Inputfield InputfieldText nb-form-required uk-width-3-4@m uk-first-column'
 							id='wrap_nb-form-nb-styleguide_name'>
-							<label class='uk-form-label uk-margin-remove-bottom' for='nb-form-nb-styleguide_name'>Your Name</label>
+							<label class='uk-form-label uk-margin-remove-bottom' for='nb-form-nb-styleguide_name'>Your
+								Name</label>
 							<span class="nb-prepend">Some prepended text.</span>
 							<span class="nb-description">A description in <strong>Markdown</strong></span>
 							<div class='nb-form-content'>
@@ -954,7 +999,7 @@
 					<div>
 						<div class="image-card orange-border uk-card uk-card-body uk-background-cover" data-uk-img
 							style="background-image: url('./img/image-card-1.jpg');">
-							<a href="#" class="uk-position-cover"></a>
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
 							<h3 class="uk-card-title large uk-margin-small-bottom">Walk</h3>
 							<span class="label">Outdoors & Adventure</span>
 							<a href="$=#" class='uk-button uk-button-primary'><span>Find out
@@ -965,7 +1010,7 @@
 					<div>
 						<div class="image-card green-border uk-card uk-card-body uk-background-cover" data-uk-img
 							style="background-image: url('./img/image-card-1.jpg');">
-							<a href="#" class="uk-position-cover"></a>
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
 							<h3 class="uk-card-title large uk-margin-small-bottom">Walk</h3>
 							<span class="label">Outdoors & Adventure</span>
 							<a href="#" class='uk-button uk-button-primary'><span>Find out
@@ -982,7 +1027,7 @@
 					<div>
 						<div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
 							style="background-image: url('./img/image-card-2.jpg');">
-							<a href="#" class="uk-position-cover"></a>
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
 							<h3 class="uk-card-title large uk-margin-remove">Nature & Wildlife</h3>
 							<a href="#" class='uk-button uk-button-primary'><span>Find out
 									more</span><span role="presentation"><img data-uk-svg
@@ -992,7 +1037,7 @@
 					<div>
 						<div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
 							style="background-image: url('./img/image-card-2.jpg');">
-							<a href="#" class="uk-position-cover"></a>
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
 							<h3 class="uk-card-title large uk-margin-remove">Nature & Wildlife</h3>
 							<a href="#" class='uk-button uk-button-primary'><span>Find out
 									more</span><span role="presentation"><img data-uk-svg
@@ -1008,7 +1053,7 @@
 					<div>
 						<div class="image-card alt uk-card uk-card-body uk-background-cover" data-uk-img
 							style="background-image: url('./img/image-card-3.jpg');">
-							<a href="#" class="uk-position-cover"></a>
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
 							<a href="#" class='uk-button button-back uk-button-primary'><span role="presentation"><img
 										data-uk-svg src="./img/button-arrow-bottom.svg" alt='image' /></span><span>Find
 									your
@@ -1019,7 +1064,7 @@
 					<div>
 						<div class="image-card alt uk-card uk-card-body uk-background-cover" data-uk-img
 							style="background-image: url('./img/image-card-3.jpg');">
-							<a href="#" class="uk-position-cover"></a>
+							<a href="#" class="uk-position-cover" aria-label="Find out more"></a>
 							<a href="#" class='uk-button button-back uk-button-primary'><span role="presentation"><img
 										data-uk-svg src="./img/button-arrow-bottom.svg" alt='image' /></span><span>Find
 									your
@@ -1096,6 +1141,7 @@
 	<script src='js/uikit-icons.min.js'></script>
 	<script src='js/nb.js'></script>
 	<script src='./js/jquery.fancybox.min.js'></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
 	<script src='js/theme.js'></script>
 </body>
 

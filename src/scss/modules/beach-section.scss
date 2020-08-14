@@ -43,6 +43,7 @@
     }
 
     .uk-button-default {
+        border: 2px solid $blue;
         background-color: $blue;
         color: $white;
 
@@ -81,7 +82,7 @@
     }
 
     .uk-button-default {
-        border-color: $blue;
+        border: 2px solid $blue;
         color: $white;
 
         &::before {

@@ -17,22 +17,52 @@
 
 <body>
 
-    <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
-        <nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+    <!-- MAIN HEADER -->
+    <header class='header header-main' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
+        <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
             <div class='uk-navbar-left'>
                 <a href='#' class='uk-navbar-item uk-logo'>
-                    <!-- <img src='img/logo.png' alt='Site Name Logo'> -->
+                    <img src='img/logo.png' alt='Shatland Logo'>
                 </a>
             </div>
 
             <div class='uk-navbar-right'>
-                <div id='nav'>
-                    <ul class='uk-navbar-nav' data-uk-nb-nav>
-                        <li class='uk-active'><a href='index.html'>Home</a></li>
-                        <li><a href='styleguide.html'>About</a></li>
-                        <li><a href='styleguide.html'>Contact</a></li>
+                <div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href='#'>Blog</a></li>
+                        <li><a href='#'>Map</a></li>
                     </ul>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                        <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                        <li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+                    </ul>
+                </div>
+                <div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
+                    <div id='nav' class="nav">
+                        <ul class='uk-navbar-nav'>
+                            <li class='uk-active'><a href='visit.html'>Visit</a></li>
+                            <li><a href='live-work-study.html'>Live, Work & Study</a></li>
+                            <li><a href='invest.html'>Invest</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-search uk-position-relative uk-flex uk-flex-right">
+                        <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                            class="label small alt">Search</button>
+                        <div id="navSearchBox" class="nav-search-box">
+                            <div class="uk-flex uk-flex-middle uk-flex-right">
+                                <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                                    class="label small alt">Close
+                                    search</button>
+                                <form action="/search" method="get" role="search" id="navSearch"
+                                    class="uk-search uk-search-default">
+                                    <button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
                     hidden>
@@ -42,8 +72,9 @@
 
         </nav>
     </header>
+    <!-- MAIN HEADER -->
 
-    <main class='nb-main uk-margin-large-top uk-margin-large-bottom'>
+    <main class='nb-main uk-margin-large-bottom'>
 
         <div class='uk-position-fixed uk-position-center-right nb-widget'>
             <ul>
@@ -219,7 +250,7 @@
             data-nb-block='content'>
             <div class="uk-container uk-container-small">
                 <div class="uk-margin-bottom">
-                    <h4>The sounds that inspire Ruth</h4>
+                    <span class="label xlarge opacity-off">The sounds that inspire Ruth</span>
                     <p>To listen to the sounds that inspire Ruth as she works, here is her <a href="#">Spotify
                             playlist</a>.
                     </p>
@@ -230,7 +261,7 @@
         <div class='nb-block nb-blog nb-block-content uk-clearfix' data-nb-block='content'>
             <div class="uk-container uk-container-small">
                 <div class="uk-margin-bottom">
-                    <h4>Her art can be seen at</h4>
+                    <span class="label xlarge opacity-off">Her art can be seen at</span>
                     <p>The <a href="#">Shetland Gallery</a> in Sellafirth, Yell, and at the <a href="#">Bonhoga
                             Gallery</a>
                         in Weisdale, on the Mainland.</p>
@@ -240,7 +271,7 @@
 
         <div class="find-out-more uk-margin-large-bottom">
             <div class='uk-container uk-container-small'>
-                <h3 class="uk-margin-medium-bottom">Find out more</h3>
+                <span class="label xxlarge opacity-off uk-margin-medium-bottom uk-flex">Find out more</span>
                 <ul data-uk-height-match="target: >li>a">
                     <li>
                         <a href="#" class="uk-position-relative">
@@ -262,7 +293,7 @@
             <div class="nb-share alt uk-margin-bottom">
                 <div class="uk-container uk-container-large">
                     <div class="nb-share-inner uk-text-center">
-                        <h5>Share this page</h5>
+                        <span class="label large opacity-off">Share this page</span>
                         <ul class="uk-flex uk-flex-center nb-social uk-padding-remove-left uk-margin-medium-bottom">
                             <li><a href="#" class="font-facebook" aria-label="Share our page via Facebook"></a></li>
                             <li><a href="#" class="font-twitter" aria-label="Share our page via Twitter"></a></li>
@@ -289,7 +320,9 @@
                     <div class="nb-bio-inner uk-position-relative uk-text-center">
                         <div class="uk-width-2-3 uk-margin-auto">
                             <img class="uk-position-top-center" src="./img/bio-author.png" data-uk-img alt="image">
-                            <h4>Toby Skinner</h4>
+                            <div class="uk-flex uk-flex-center uk-margin-medium-top">
+                                <span class="label xlarge opacity-off">Toby Skinner</span>
+                            </div>
                             <p>Toby is an award-winning editor and writer based in London, with a passion for adventure
                                 and
                                 people-driven storytelling. Breckon in Yell is my favourite beach on the planet.</p>

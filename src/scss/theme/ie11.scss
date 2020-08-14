@@ -8,6 +8,16 @@ screen and (-ms-high-contrast: none) {
         height: 670px;
     }
 
+    .banner-video video,
+    .video-controls,
+    .scroll-button-down {
+        display: none;
+    }
+
+    .banner-text .label {
+        margin: 15px 0;
+    }
+
     .image-card {
         height: 430px;
 
@@ -44,9 +54,32 @@ screen and (-ms-high-contrast: none) {
         }
     }
 
-    .mega-menu .uk-card-title,
+    .uk-dropdown .uk-card-title,
     .nav-text-links li a,
-    .mega-menu .label {
+    .uk-dropdown .label {
         white-space: pre-line;
+    }
+
+    .uk-dropdown .entry-item .uk-card-title {
+        white-space: normal;
+    }
+
+    .nav-search form button[type='submit'] {
+        transform: translateY(-50%);
+    }
+}
+
+
+//Firefox
+@-moz-document url-prefix() {
+
+    .uk-input:not(.uk-form-danger),
+    .uk-select:not(.uk-form-danger),
+    .uk-textarea:not(.uk-form-danger),
+    .uk-checkbox:not(.uk-form-danger),
+    .uk-radio:not(.uk-form-danger),
+    .uk-checkbox:checked:not(.uk-form-danger),
+    .uk-radio:checked:not(.uk-form-danger) {
+        line-height: 44px;
     }
 }

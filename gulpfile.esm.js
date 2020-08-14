@@ -42,6 +42,7 @@ gulp.task('build-dev', gulp.series(
 
 gulp.task('dev', gulp.series(
 	'build-all',
+	'assets',
 	'watch'
 ));
 

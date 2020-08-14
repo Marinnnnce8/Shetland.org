@@ -51,101 +51,104 @@
 	@if $filename == chevron-up {
 		$char: '\E008';
 	}
-	@if $filename == close {
+	@if $filename == close-search {
 		$char: '\E009';
 	}
-	@if $filename == email {
+	@if $filename == close {
 		$char: '\E00A';
 	}
-	@if $filename == envelope {
+	@if $filename == email {
 		$char: '\E00B';
 	}
-	@if $filename == expand {
+	@if $filename == envelope {
 		$char: '\E00C';
 	}
-	@if $filename == external-link {
+	@if $filename == expand {
 		$char: '\E00D';
 	}
-	@if $filename == eye {
+	@if $filename == external-link {
 		$char: '\E00E';
 	}
-	@if $filename == facebook {
+	@if $filename == eye {
 		$char: '\E00F';
 	}
-	@if $filename == globe {
+	@if $filename == facebook {
 		$char: '\E010';
 	}
-	@if $filename == heart {
+	@if $filename == globe {
 		$char: '\E011';
 	}
-	@if $filename == info {
+	@if $filename == heart {
 		$char: '\E012';
 	}
-	@if $filename == instagram {
+	@if $filename == info {
 		$char: '\E013';
 	}
-	@if $filename == linkedin {
+	@if $filename == instagram {
 		$char: '\E014';
 	}
-	@if $filename == list-view {
+	@if $filename == linkedin {
 		$char: '\E015';
 	}
-	@if $filename == live-streaming {
+	@if $filename == list-view {
 		$char: '\E016';
 	}
-	@if $filename == long-arrow-down {
+	@if $filename == live-streaming {
 		$char: '\E017';
 	}
-	@if $filename == long-arrow-left {
+	@if $filename == long-arrow-down {
 		$char: '\E018';
 	}
-	@if $filename == long-arrow-right {
+	@if $filename == long-arrow-left {
 		$char: '\E019';
 	}
-	@if $filename == map {
+	@if $filename == long-arrow-right {
 		$char: '\E01A';
 	}
-	@if $filename == news {
+	@if $filename == map {
 		$char: '\E01B';
 	}
-	@if $filename == pause {
+	@if $filename == news {
 		$char: '\E01C';
 	}
-	@if $filename == play-button-arrowhead {
+	@if $filename == pause {
 		$char: '\E01D';
 	}
-	@if $filename == play-sharp {
+	@if $filename == play-button-arrowhead {
 		$char: '\E01E';
 	}
-	@if $filename == play {
+	@if $filename == play-sharp {
 		$char: '\E01F';
 	}
-	@if $filename == print {
+	@if $filename == play {
 		$char: '\E020';
 	}
-	@if $filename == quote {
+	@if $filename == print {
 		$char: '\E021';
 	}
-	@if $filename == right-arrow {
+	@if $filename == quote {
 		$char: '\E022';
 	}
-	@if $filename == search {
+	@if $filename == right-arrow {
 		$char: '\E023';
 	}
-	@if $filename == share {
+	@if $filename == search {
 		$char: '\E024';
 	}
-	@if $filename == twitter {
+	@if $filename == share {
 		$char: '\E025';
 	}
-	@if $filename == volume-mute {
+	@if $filename == twitter {
 		$char: '\E026';
 	}
-	@if $filename == volume-up {
+	@if $filename == volume-mute {
 		$char: '\E027';
 	}
-	@if $filename == youtube {
+	@if $filename == volume-up {
 		$char: '\E028';
+	}
+	@if $filename == youtube {
+		$char: '\E029';
 	}
 
 	@return $char;
@@ -189,6 +192,9 @@
 }
 .font-chevron-up {
 	@include font(chevron-up);
+}
+.font-close-search {
+	@include font(close-search);
 }
 .font-close {
 	@include font(close);

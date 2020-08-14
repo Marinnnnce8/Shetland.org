@@ -17,22 +17,52 @@
 
 <body>
 
-    <header class='header' data-uk-sticky='{"media":960,"animation":"uk-animation-slide-top","show-on-up":true}'>
-        <nav class='uk-navbar-container uk-navbar' data-uk-navbar>
+    <!-- MAIN HEADER -->
+    <header class='header header-main' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
+        <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
             <div class='uk-navbar-left'>
                 <a href='#' class='uk-navbar-item uk-logo'>
-                    <!-- <img src='img/logo.png' alt='Site Name Logo'> -->
+                    <img src='img/logo.png' alt='Shatland Logo'>
                 </a>
             </div>
 
             <div class='uk-navbar-right'>
-                <div id='nav'>
-                    <ul class='uk-navbar-nav' data-uk-nb-nav>
-                        <li class='uk-active'><a href='index.html'>Home</a></li>
-                        <li><a href='styleguide.html'>About</a></li>
-                        <li><a href='styleguide.html'>Contact</a></li>
+                <div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href='#'>Blog</a></li>
+                        <li><a href='#'>Map</a></li>
                     </ul>
+                    <ul class='uk-flex uk-flex-middle'>
+                        <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                        <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                        <li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+                    </ul>
+                </div>
+                <div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
+                    <div id='nav' class="nav">
+                        <ul class='uk-navbar-nav'>
+                            <li class='uk-active'><a href='visit.html'>Visit</a></li>
+                            <li><a href='live-work-study.html'>Live, Work & Study</a></li>
+                            <li><a href='invest.html'>Invest</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-search uk-position-relative uk-flex uk-flex-right">
+                        <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                            class="label small alt">Search</button>
+                        <div id="navSearchBox" class="nav-search-box">
+                            <div class="uk-flex uk-flex-middle uk-flex-right">
+                                <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                                    class="label small alt">Close
+                                    search</button>
+                                <form action="/search" method="get" role="search" id="navSearch"
+                                    class="uk-search uk-search-default">
+                                    <button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
                     hidden>
@@ -42,6 +72,7 @@
 
         </nav>
     </header>
+    <!-- MAIN HEADER -->
 
     <main>
         <div class='uk-position-fixed uk-position-center-right nb-widget'>
@@ -62,7 +93,7 @@
                 </svg>
                 <span class="percent-num">0%</span></span>
         </div>
-        <section class="banner uk-position-relative">
+        <div class="banner uk-position-relative">
             <div class="banner-inner uk-background-cover uk-background-fixed" data-uk-img
                 style="background-image: url('./img/nature-and-wildlife-banner.jpg');">
                 <div class="banner-text uk-width-1-2">
@@ -76,9 +107,9 @@
                 </div>
             </div>
             <span class="font-info" data-uk-tooltip="title: Photo by Photographer Name; pos: top-right"></span>
-        </section>
+        </div>
 
-        <section>
+        <div>
             <div class='uk-container uk-container-small'>
                 <ul class='uk-breadcrumb' id="scrollTarget">
                     <li><a href='index.html'>Home</a></li>
@@ -87,9 +118,9 @@
                     <li><span>Beaches</span></li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <section class="uk-margin-medium-top uk-margin-large-bottom">
+        <div class="uk-margin-medium-top uk-margin-large-bottom">
             <div class="uk-container uk-container-small">
                 <p class="uk-text-lead uk-margin-medium-bottom">Shetland has almost 1,700 miles of coastline, carved
                     from a geology that’s
@@ -105,9 +136,9 @@
                     holders of <a href="#">Seaside Awards</a> given by Keep Scotland Beautiful.</p>
                 <p>Let’s begin your journey ...</p>
             </div>
-        </section>
+        </div>
 
-        <section class="beach-section">
+        <div class="beach-section">
             <div class="uk-container uk-container-large">
                 <div class="uk-text-center uk-margin-medium-bottom">
                     <span class="uk-text-large">1697 miles of spectacular coastline</span>
@@ -308,9 +339,9 @@
                     <a href="#" class="uk-button uk-button-default">Load More</a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="explore-section uk-margin-large-top uk-margin-medium-bottom">
+        <div class="explore-section uk-margin-large-top uk-margin-medium-bottom">
             <div class='uk-container uk-container-large'>
                 <div class="uk-text-center">
                     <h2 class="uk-margin-remove-top">Get Inspired</h2>
@@ -352,9 +383,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="testimonials-slider uk-text-center">
+        <div class="testimonials-slider uk-text-center">
             <h2>What our visitors say</h2>
             <div data-uk-slider="center: true">
                 <div class="uk-position-relative">
@@ -410,7 +441,7 @@
                 </div>
                 <ul class="uk-slider-nav uk-dotnav uk-flex-center"></ul>
             </div>
-        </section>
+        </div>
 
         <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
             <div class='uk-container uk-container-small'>
@@ -509,7 +540,7 @@
         <div class="nb-share uk-padding uk-padding-remove-horizontal">
             <div class="uk-container uk-container-large">
                 <div class="nb-share-inner uk-text-center">
-                    <h5>Share this page</h5>
+                    <span class="label large opacity-off">Share this page</span>
                     <ul class="uk-flex uk-flex-center nb-social uk-padding-remove-left">
                         <li><a href="#" class="font-facebook" aria-label="Share our page via Facebook"></a></li>
                         <li><a href="#" class="font-twitter" aria-label="Share our page via Twitter"></a></li>
@@ -519,7 +550,7 @@
             </div>
         </div>
 
-        <section class="explore-section uk-margin-medium-top uk-margin-large-bottom">
+        <div class="explore-section uk-margin-medium-top uk-margin-large-bottom">
             <div class='uk-container uk-container-large'>
                 <div class="uk-text-center">
                     <span class="uk-margin-small-bottom uk-text-large">What next?</span>
@@ -565,13 +596,12 @@
                     </div>
                 </div>
                 <div class="uk-flex uk-flex-center uk-padding-small uk-padding-remove-horizontal">
-                    <button class='uk-button uk-button-default button-back'><span
-                            role="presentation"><img data-uk-svg src="./img/button-arrow-left.svg"
-                                alt='image' /></span><span>Back to Nature &
+                    <button class='uk-button uk-button-default button-back'><span role="presentation"><img data-uk-svg
+                                src="./img/button-arrow-left.svg" alt='image' /></span><span>Back to Nature &
                             Wildlife</span></button>
                 </div>
             </div>
-        </section>
+        </div>
 
     </main>
 
