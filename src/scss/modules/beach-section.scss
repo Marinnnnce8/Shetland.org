@@ -101,12 +101,12 @@
         }
 
         &.uk-active {
-            background-color: $blue;
+            background-color: $white;
             border-color: $blue;
-            color: $white;
+            color: $blue;
 
             &::before {
-                color: $white;
+                color: $blue;
             }
         }
     }

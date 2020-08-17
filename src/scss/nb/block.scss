@@ -172,6 +172,10 @@
 				display: table;
 				width: 100%;
 
+				figcaption {
+					display: none;
+				}
+
 				.nb-gallery-image {
 					border: 20px solid transparent;
 					display: table-cell;
@@ -180,8 +184,9 @@
 					overflow: hidden;
 					position: relative;
 					vertical-align: top;
+					transition: $nbSec ease-in-out;
 
-					>span {
+					span {
 						position: absolute;
 						bottom: 10px;
 						right: 10px;
@@ -212,7 +217,7 @@
 					@include hover {
 						transform: scale(.95);
 
-						>span {
+						span {
 							opacity: 1;
 						}
 					}
