@@ -1,6 +1,13 @@
+.nb-widget-wrap {
+    max-width: 140px !important;
+    right: 0;
+    z-index: 0;
+}
+
 .nb-widget {
     z-index: 10;
     padding-bottom: 185px;
+    margin-bottom: 50px;
 
     ul {
         padding-left: 0;
