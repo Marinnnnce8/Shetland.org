@@ -76,27 +76,27 @@
 
     <main>
         <div class="uk-height-1-1 nb-widget-wrap" data-uk-sticky="bottom: true">
-			<div class='uk-position-bottom-right nb-widget'>
-				<ul>
-					<li><a href="#" class="font-facebook">Facebook</a></li>
-					<li><a href="#" class="font-twitter">Twitter</a></li>
-					<li><a href="#" class="font-envelope">Email</a></li>
-					<li><a href="#" class="font-print">Print</a></li>
-					<li><a href="#" class="font-share">Share</a></li>
-				</ul>
-				<span class="uk-text-uppercase">Share page on</span>
-				<span class="scroll-percent label alt small uk-text-bold">
-					<svg xmlns="http://www.w3.org/2000/svg" class="circle-chart" viewBox="0 0 50 50" width="50"
-						height="50">
-						<circle class="circle-chart__background" fill="none" stroke="#aec0d4" stroke-width="4" cx="26"
-							cy="26" r="22"></circle>
-						<circle class="circlePath" fill="none" stroke="#1b365d" stroke-dasharray="0" stroke-width="4"
-							cx="26" cy="26" r="22"></circle>
-					</svg>
-					<span class="percent-num">0%</span></span>
-			</div>
+            <div class='uk-position-bottom-right nb-widget'>
+                <ul>
+                    <li><a href="#" class="font-facebook">Facebook</a></li>
+                    <li><a href="#" class="font-twitter">Twitter</a></li>
+                    <li><a href="#" class="font-envelope">Email</a></li>
+                    <li><a href="#" class="font-print">Print</a></li>
+                    <li><a href="#" class="font-share">Share</a></li>
+                </ul>
+                <span class="uk-text-uppercase">Share page on</span>
+                <span class="scroll-percent label alt small uk-text-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="circle-chart" viewBox="0 0 50 50" width="50"
+                        height="50">
+                        <circle class="circle-chart__background" fill="none" stroke="#aec0d4" stroke-width="4" cx="26"
+                            cy="26" r="22"></circle>
+                        <circle class="circlePath" fill="none" stroke="#1b365d" stroke-dasharray="0" stroke-width="4"
+                            cx="26" cy="26" r="22"></circle>
+                    </svg>
+                    <span class="percent-num">0%</span></span>
+            </div>
         </div>
-        
+
         <div class="banner uk-position-relative">
             <div class="banner-inner uk-background-cover uk-background-fixed" data-uk-img
                 style="background-image: url('./img/nature-and-wildlife-banner.jpg');">
@@ -150,198 +150,265 @@
                 </div>
 
                 <div class="beach-filter uk-margin-medium-bottom">
-                    <ul class="uk-flex uk-flex-center uk-flex-middle">
-                        <li><button class="uk-button uk-button-default font-list-view uk-active">List view</button></li>
-                        <li><button class="uk-button uk-button-default font-map">Map view</button></li>
+                    <ul class="uk-flex uk-flex-center uk-flex-middle" data-uk-switcher="connect: .switcher-container">
+                        <li><a href="#" class="uk-button uk-button-default font-list-view">List view</a></li>
+                        <li><a href="#" class="uk-button uk-button-default font-map">Map view</a></li>
                     </ul>
                 </div>
 
-                <ul class="uk-grid-medium uk-child-width-1-1" data-uk-grid>
+                <ul class="uk-switcher switcher-container">
                     <li>
-                        <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
-                            <div>
-                                <div class='uk-card-media-left uk-background-cover uk-height-1-1'
-                                    style="background-image: url('./img/grutness.jpg')" data-uk-img></div>
+                        <div>
+                            <ul class="uk-grid-medium uk-child-width-1-1" data-uk-grid>
+                                <li>
+                                    <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
+                                        <div>
+                                            <div class='uk-card-media-left uk-background-cover uk-height-1-1'
+                                                style="background-image: url('./img/grutness.jpg')" data-uk-img></div>
+                                        </div>
+                                        <div>
+                                            <div class='uk-card-body uk-padding-remove'>
+                                                <h3 class='uk-card-title alt medium uk-text-bold'>Grutness, South
+                                                    Mainland
+                                                </h3>
+                                                <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/map-location.svg" data-uk-img alt="image">
+                                                        Sumburgh
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/airplane.svg" data-uk-img alt="image"> Sumburgh
+                                                        Airport,
+                                                        1km
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img src="./img/boat.svg"
+                                                            data-uk-img alt="image"> Ferry Terminal for
+                                                        Fair
+                                                        Isle, 1km</li>
+                                                </ul>
+                                                <p>Close to Sumburgh Airport and the ferry terminal for Fair Isle, the
+                                                    south-east
+                                                    facing strand at Grutness might appear, at a distant glance, to be
+                                                    an
+                                                    ordinary
+                                                    pebble beach. However, if – taking great care - you scramble among
+                                                    those
+                                                    ‘pebbles’, you realise that the scale is all wrong: they’re huge,
+                                                    many
+                                                    weighing
+                                                    a ton or more.</p>
+                                                <a href="#"
+                                                    class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
+                                                    <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                    <span>Find out
+                                                        more</span><span role="presentation"><img data-uk-svg
+                                                            src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                                            </div>
+                                        </div>
+                                        <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
+                                        <div>
+                                            <div class='uk-card-media-left uk-background-cover uk-height-1-1'
+                                                style="background-image: url('./img/west-voe.jpg')" data-uk-img></div>
+                                        </div>
+                                        <div>
+                                            <div class='uk-card-body uk-padding-remove'>
+                                                <h3 class='uk-card-title alt medium uk-text-bold'>West Voe, South
+                                                    Mainland
+                                                </h3>
+                                                <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/map-location.svg" data-uk-img alt="image">
+                                                        Sumburgh
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/airplane.svg" data-uk-img alt="image"> Sumburgh
+                                                        Airport, 1km
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img src="./img/boat.svg"
+                                                            data-uk-img alt="image"> Ferry Terminal for Fair
+                                                        Isle, 1km</li>
+                                                </ul>
+                                                <p>At the other side of Sumburgh Airport from Grutness, the West Voe of
+                                                    Sumburgh
+                                                    is
+                                                    one of the four Shetland beaches that have won a Seaside Award from
+                                                    Keep
+                                                    Scotland Beautiful. A crescent of white sand around the voe’s
+                                                    turquoise
+                                                    water,
+                                                    it’s backed by steep dunes clad in marram grass. It’s not only the
+                                                    beach
+                                                    that is
+                                                    spectacular, though.</p>
+                                                <a href="#"
+                                                    class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
+                                                    <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                    <span>Find out
+                                                        more</span><span role="presentation"><img data-uk-svg
+                                                            src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                                            </div>
+                                        </div>
+                                        <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
+                                        <div>
+                                            <div class='uk-card-media-left uk-background-cover uk-height-1-1'
+                                                style="background-image: url('./img/the-peerie-voe.jpg')" data-uk-img>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class='uk-card-body uk-padding-remove'>
+                                                <h3 class='uk-card-title alt medium uk-text-bold'>The Peerie Voe,
+                                                    Spiggie,
+                                                    South
+                                                    Mainland</h3>
+                                                <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/map-location.svg" data-uk-img alt="image">
+                                                        Sumburgh
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/airplane.svg" data-uk-img alt="image"> Sumburgh
+                                                        Airport, 1km
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img src="./img/boat.svg"
+                                                            data-uk-img alt="image"> Ferry Terminal for Fair
+                                                        Isle, 1km</li>
+                                                </ul>
+                                                <p>In the south of the Shetland mainland, anyone looking for wide,
+                                                    sweeping
+                                                    sandy
+                                                    beaches is spoilt for choice: the west and east voes of Sumburgh,
+                                                    Quendale
+                                                    Beach, the Scousburgh Sands and Rerwick are all magnificent; all
+                                                    have
+                                                    their
+                                                    adherents and there are more details at the bottom of this page.</p>
+                                                <a href="#"
+                                                    class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
+                                                    <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                    <span>Find out
+                                                        more</span><span role="presentation"><img data-uk-svg
+                                                            src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                                            </div>
+                                        </div>
+                                        <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
+                                        <div>
+                                            <div class='uk-card-media-left uk-background-cover uk-height-1-1'
+                                                style="background-image: url('./img/sands-of-breckon.jpg')" data-uk-img>
+                                                <img src="./img/seaside-award.png" class="uk-position-top-right"
+                                                    data-uk-img alt="image">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class='uk-card-body uk-padding-remove'>
+                                                <h3 class='uk-card-title alt medium uk-text-bold'>Sands of Breckon, Yell
+                                                </h3>
+                                                <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/map-location.svg" data-uk-img alt="image">
+                                                        Sumburgh
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/airplane.svg" data-uk-img alt="image"> Sumburgh
+                                                        Airport, 1km
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img src="./img/boat.svg"
+                                                            data-uk-img alt="image"> Ferry Terminal for Fair
+                                                        Isle, 1km</li>
+                                                </ul>
+                                                <p>Framed by the cliff scenery of north Yell, the sandy beach at Breckon
+                                                    is
+                                                    one
+                                                    of
+                                                    the island’s highlights. It holds a Seaside Award from Keep Scotland
+                                                    Beautiful
+                                                    and has been highly rated by visitors. Although the bay is open to
+                                                    the
+                                                    Atlantic,
+                                                    the beach is well sheltered from most wind directions and the dunes
+                                                    provide
+                                                    an
+                                                    infinite variety of picnic places on good days.</p>
+                                                <a href="#"
+                                                    class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
+                                                    <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                    <span>Find out
+                                                        more</span><span role="presentation"><img data-uk-svg
+                                                            src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                                            </div>
+                                        </div>
+                                        <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
+                                        <div>
+                                            <div class='uk-card-media-left uk-background-cover uk-height-1-1'
+                                                style="background-image: url('./img/st-ninians-ayre.jpg')" data-uk-img>
+                                                <img src="./img/seaside-award.png" class="uk-position-top-right"
+                                                    data-uk-img alt="image">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class='uk-card-body uk-padding-remove'>
+                                                <h3 class='uk-card-title alt medium uk-text-bold'>St Ninian’s Ayre,
+                                                    South
+                                                    Mainland
+                                                </h3>
+                                                <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/map-location.svg" data-uk-img alt="image">
+                                                        Sumburgh
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img
+                                                            src="./img/airplane.svg" data-uk-img alt="image"> Sumburgh
+                                                        Airport, 1km
+                                                    </li>
+                                                    <li class="label alt uk-text-bold small"><img src="./img/boat.svg"
+                                                            data-uk-img alt="image"> Ferry Terminal for Fair
+                                                        Isle, 1km</li>
+                                                </ul>
+                                                <p>Among Shetland’s many striking coastal features is the ayre, or
+                                                    tombolo,
+                                                    that
+                                                    connects St Ninian’s Isle to the Shetland mainland; it’s five
+                                                    hundred
+                                                    metres
+                                                    long and the finest of its type in Britain. This unique beach is
+                                                    also
+                                                    the
+                                                    holder
+                                                    of a Keep Scotland Beautiful Seaside Award.</p>
+                                                <a href="#"
+                                                    class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
+                                                    <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                    <span>Find out
+                                                        more</span><span role="presentation"><img data-uk-svg
+                                                            src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                                            </div>
+                                        </div>
+                                        <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="uk-flex uk-flex-center uk-margin-medium-top">
+                                <a href="#" class="uk-button uk-button-default">Load More</a>
                             </div>
-                            <div>
-                                <div class='uk-card-body uk-padding-remove'>
-                                    <h3 class='uk-card-title alt medium uk-text-bold'>Grutness, South Mainland</h3>
-                                    <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
-                                        <li class="label alt uk-text-bold small"><img src="./img/map-location.svg"
-                                                data-uk-img alt="image"> Sumburgh</li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/airplane.svg"
-                                                data-uk-img alt="image"> Sumburgh Airport,
-                                            1km
-                                        </li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/boat.svg" data-uk-img
-                                                alt="image"> Ferry Terminal for
-                                            Fair
-                                            Isle, 1km</li>
-                                    </ul>
-                                    <p>Close to Sumburgh Airport and the ferry terminal for Fair Isle, the
-                                        south-east
-                                        facing strand at Grutness might appear, at a distant glance, to be an
-                                        ordinary
-                                        pebble beach. However, if – taking great care - you scramble among those
-                                        ‘pebbles’, you realise that the scale is all wrong: they’re huge, many
-                                        weighing
-                                        a ton or more.</p>
-                                    <a href="#" class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
-                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-                                        <span>Find out
-                                            more</span><span role="presentation"><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                                </div>
-                            </div>
-                            <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
                         </div>
                     </li>
-                    <li>
-                        <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
-                            <div>
-                                <div class='uk-card-media-left uk-background-cover uk-height-1-1'
-                                    style="background-image: url('./img/west-voe.jpg')" data-uk-img></div>
-                            </div>
-                            <div>
-                                <div class='uk-card-body uk-padding-remove'>
-                                    <h3 class='uk-card-title alt medium uk-text-bold'>West Voe, South Mainland</h3>
-                                    <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
-                                        <li class="label alt uk-text-bold small"><img src="./img/map-location.svg"
-                                                data-uk-img alt="image"> Sumburgh</li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/airplane.svg"
-                                                data-uk-img alt="image"> Sumburgh Airport, 1km
-                                        </li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/boat.svg" data-uk-img
-                                                alt="image"> Ferry Terminal for Fair
-                                            Isle, 1km</li>
-                                    </ul>
-                                    <p>At the other side of Sumburgh Airport from Grutness, the West Voe of Sumburgh is
-                                        one of the four Shetland beaches that have won a Seaside Award from Keep
-                                        Scotland Beautiful. A crescent of white sand around the voe’s turquoise water,
-                                        it’s backed by steep dunes clad in marram grass. It’s not only the beach that is
-                                        spectacular, though.</p>
-                                    <a href="#" class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
-                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-                                        <span>Find out
-                                            more</span><span role="presentation"><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                                </div>
-                            </div>
-                            <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
-                            <div>
-                                <div class='uk-card-media-left uk-background-cover uk-height-1-1'
-                                    style="background-image: url('./img/the-peerie-voe.jpg')" data-uk-img></div>
-                            </div>
-                            <div>
-                                <div class='uk-card-body uk-padding-remove'>
-                                    <h3 class='uk-card-title alt medium uk-text-bold'>The Peerie Voe, Spiggie, South
-                                        Mainland</h3>
-                                    <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
-                                        <li class="label alt uk-text-bold small"><img src="./img/map-location.svg"
-                                                data-uk-img alt="image"> Sumburgh</li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/airplane.svg"
-                                                data-uk-img alt="image"> Sumburgh Airport, 1km
-                                        </li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/boat.svg" data-uk-img
-                                                alt="image"> Ferry Terminal for Fair
-                                            Isle, 1km</li>
-                                    </ul>
-                                    <p>In the south of the Shetland mainland, anyone looking for wide, sweeping sandy
-                                        beaches is spoilt for choice: the west and east voes of Sumburgh, Quendale
-                                        Beach, the Scousburgh Sands and Rerwick are all magnificent; all have their
-                                        adherents and there are more details at the bottom of this page.</p>
-                                    <a href="#" class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
-                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-                                        <span>Find out
-                                            more</span><span role="presentation"><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                                </div>
-                            </div>
-                            <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
-                            <div>
-                                <div class='uk-card-media-left uk-background-cover uk-height-1-1'
-                                    style="background-image: url('./img/sands-of-breckon.jpg')" data-uk-img>
-                                    <img src="./img/seaside-award.png" class="uk-position-top-right" data-uk-img
-                                        alt="image">
-                                </div>
-                            </div>
-                            <div>
-                                <div class='uk-card-body uk-padding-remove'>
-                                    <h3 class='uk-card-title alt medium uk-text-bold'>Sands of Breckon, Yell</h3>
-                                    <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
-                                        <li class="label alt uk-text-bold small"><img src="./img/map-location.svg"
-                                                data-uk-img alt="image"> Sumburgh</li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/airplane.svg"
-                                                data-uk-img alt="image"> Sumburgh Airport, 1km
-                                        </li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/boat.svg" data-uk-img
-                                                alt="image"> Ferry Terminal for Fair
-                                            Isle, 1km</li>
-                                    </ul>
-                                    <p>Framed by the cliff scenery of north Yell, the sandy beach at Breckon is one of
-                                        the island’s highlights. It holds a Seaside Award from Keep Scotland Beautiful
-                                        and has been highly rated by visitors. Although the bay is open to the Atlantic,
-                                        the beach is well sheltered from most wind directions and the dunes provide an
-                                        infinite variety of picnic places on good days.</p>
-                                    <a href="#" class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
-                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-                                        <span>Find out
-                                            more</span><span role="presentation"><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                                </div>
-                            </div>
-                            <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class='uk-card uk-grid-medium uk-child-width-1-2@m' data-uk-grid>
-                            <div>
-                                <div class='uk-card-media-left uk-background-cover uk-height-1-1'
-                                    style="background-image: url('./img/st-ninians-ayre.jpg')" data-uk-img>
-                                    <img src="./img/seaside-award.png" class="uk-position-top-right" data-uk-img
-                                        alt="image">
-                                </div>
-                            </div>
-                            <div>
-                                <div class='uk-card-body uk-padding-remove'>
-                                    <h3 class='uk-card-title alt medium uk-text-bold'>St Ninian’s Ayre, South Mainland
-                                    </h3>
-                                    <ul class='uk-flex uk-padding-remove-left uk-flex-middle'>
-                                        <li class="label alt uk-text-bold small"><img src="./img/map-location.svg"
-                                                data-uk-img alt="image"> Sumburgh</li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/airplane.svg"
-                                                data-uk-img alt="image"> Sumburgh Airport, 1km
-                                        </li>
-                                        <li class="label alt uk-text-bold small"><img src="./img/boat.svg" data-uk-img
-                                                alt="image"> Ferry Terminal for Fair
-                                            Isle, 1km</li>
-                                    </ul>
-                                    <p>Among Shetland’s many striking coastal features is the ayre, or tombolo, that
-                                        connects St Ninian’s Isle to the Shetland mainland; it’s five hundred metres
-                                        long and the finest of its type in Britain. This unique beach is also the holder
-                                        of a Keep Scotland Beautiful Seaside Award.</p>
-                                    <a href="#" class="uk-button uk-button-text uk-button-large uk-padding-remove-left">
-                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-                                        <span>Find out
-                                            more</span><span role="presentation"><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                                </div>
-                            </div>
-                            <a href='#' class='uk-position-cover uk-width-1-1' aria-label='Read More'></a>
-                        </div>
-                    </li>
+                    <li>map view</li>
                 </ul>
-                <div class="uk-flex uk-flex-center uk-margin-medium-top">
-                    <a href="#" class="uk-button uk-button-default">Load More</a>
-                </div>
             </div>
         </div>
 

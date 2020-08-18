@@ -2,18 +2,20 @@
 	.banner-inner {
 		max-height: 670px;
 	}
+
+	@media (min-width: $breakpointLarge) {
+		.banner-inner {
+			background-image: none !important;//sass-lint:disable-line no-important
+			&::before {
+				display: none;
+			}
+		}
+	}
 }
 
 .video-wrapper {
-
-	@media (min-aspect-ratio: 16 / 9) {
-		width: 100%;
-		height: auto;
-	}
-
-	@media (max-aspect-ratio: 16 / 9) {
-		width: auto;
-		height: 100%;
+	video {
+		min-height: 710px;
 	}
 }
 

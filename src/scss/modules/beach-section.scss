@@ -79,34 +79,34 @@
         &:not(:first-of-type) {
             margin-left: 20px;
         }
-    }
 
-    .uk-button-default {
-        border: 2px solid $blue;
-        color: $white;
-
-        &::before {
-            margin-right: 15px;
-            transition: $nbSec;
-        }
-
-        @include hover {
-            background-color: transparent;
-            border-color: $blue;
-            color: $blue;
-
-            &::before {
-                color: $blue;
-            }
-        }
-
-        &.uk-active {
+        .uk-button-default {
             background-color: $white;
             border-color: $blue;
             color: $blue;
 
             &::before {
-                color: $blue;
+                margin-right: 15px;
+                transition: $nbSec;
+            }
+
+            @include hover {
+                background-color: $blue;
+                color: $white;
+
+                &::before {
+                    color: $white;
+                }
+            }
+        }
+
+        &.uk-active .uk-button-default {
+            background-color: $blue;
+            border: 2px solid $blue;
+            color: $white;
+
+            &::before {
+                color: $white;
             }
         }
     }

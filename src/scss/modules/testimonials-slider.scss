@@ -82,11 +82,26 @@
                 width: 12px;
                 height: 12px;
                 border: 2px solid $blue;
+                position: relative;
+                overflow: visible;
+
+                &::before {
+                    position: absolute;
+                    width: calc(100% + 5px);
+                    top: 0;
+                    bottom: 0;
+                    background-color: transparent;
+                    content: '';
+                    left: 0;
+                    border-radius: 50%;
+                }
             }
 
             &.uk-active {
                 a {
-                    background-color: $blue;
+                    &::before {
+                        background-color: $blue;
+                    }
                 }
             }
         }
