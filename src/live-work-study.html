@@ -15,7 +15,7 @@
     <link rel='stylesheet' href='css/theme.min.css' />
 </head>
 
-<body>
+<body id="scroll-top">
 
     <header class='header header-live' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
         <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
@@ -303,8 +303,8 @@
                                                     <span class="label small alt uk-text-bold uk-text-uppercase">Your
                                                         next job is here</span>
                                                     <div class="nav-search">
-                                                        <form action="/search" method="get" role="search" id="navDropdownSearch"
-                                                            class="uk-search uk-search-default">
+                                                        <form action="/search" method="get" role="search"
+                                                            id="navDropdownSearch" class="uk-search uk-search-default">
                                                             <button type="submit"
                                                                 aria-label="Find a job"></button><input
                                                                 aria-label="Search Phrase" class="uk-input"
@@ -506,6 +506,10 @@
     </header>
 
     <main>
+        <div class="uk-position-bottom-right scroll-button-up">
+            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+        </div>
+
         <div class="banner uk-position-relative">
             <div class="banner-inner uk-background-cover uk-background-fixed" data-uk-img
                 style="background-image: url('./img/nature-and-wildlife-banner.jpg');">

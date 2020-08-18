@@ -98,7 +98,7 @@
     </script>
 </head>
 
-<body onload="initialize()">
+<body onload="initialize()" class="scroll-top">
 
     <header class='header header-visit' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
         <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
@@ -639,6 +639,10 @@
     </header>
 
     <main>
+        <div class="uk-position-bottom-right scroll-button-up">
+            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+        </div>
+
         <div class="banner video uk-position-relative uk-margin-large-bottom">
             <div class="banner-inner uk-cover-container uk-background-cover"
                 style="background-image: url('./img/banner-home.jpg');">

@@ -15,7 +15,7 @@
     <link rel='stylesheet' href='css/theme.min.css' />
 </head>
 
-<body>
+<body id="scroll-top">
 
     <!-- MAIN HEADER -->
     <header class='header header-main' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
@@ -75,6 +75,10 @@
     <!-- MAIN HEADER -->
 
     <main>
+        <div class="uk-position-bottom-right scroll-button-up">
+            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+        </div>
+
         <div class="banner uk-position-relative">
             <div class="banner-inner uk-background-cover uk-background-fixed" data-uk-img
                 style="background-image: url('./img/things-to-do-banner.jpg');">

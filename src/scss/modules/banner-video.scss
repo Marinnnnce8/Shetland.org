@@ -3,12 +3,15 @@
 		max-height: 670px;
 	}
 
+	@media (max-width: $breakpointXmedium) and (min-width: $breakpointLarge) {
+		.banner-inner::before {
+			display: none;
+		}
+	}
+
 	@media (min-width: $breakpointLarge) {
 		.banner-inner {
-			background-image: none !important;//sass-lint:disable-line no-important
-			&::before {
-				display: none;
-			}
+			background-image: none !important; //sass-lint:disable-line no-important
 		}
 	}
 }

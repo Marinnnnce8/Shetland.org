@@ -100,4 +100,47 @@ screen and (-ms-high-contrast: none) {
     .uk-button-default>span:last-of-type::after {
         background-color: rgba($blue-light, .5);
     }
+
+    .uk-button-text {
+        @include hover {
+            >svg {
+                animation: .5s drawShape .5s forwards;
+            }
+        }
+    }
+}
+
+
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .uk-button-text {
+        @include hover {
+            >svg {
+                animation: .5s drawShape -.5s linear forwards;
+            }
+        }
+    }
+}
+
+//Opera
+@media all and (-webkit-min-device-pixel-ratio:10000),
+not all and (-webkit-min-device-pixel-ratio:0) {
+    .uk-button-text {
+        @include hover {
+            >svg {
+                animation: .5s drawShape -.5s linear forwards;
+            }
+        }
+    }
+}
+
+//Edge
+@supports (-ms-ime-align: auto) {
+    .uk-button-text {
+        @include hover {
+            >svg {
+                animation: .5s drawShape -.5s linear forwards;
+            }
+        }
+    }
 }

@@ -202,17 +202,22 @@ input[type='submit'] {
 }
 
 .uk-button-text {
-	min-height: 0;
-	padding: 10px 25px 10px 1px;
-	transition: .5s linear;
+	padding: 10px 55px 10px 30px;
+	transition: .45s;
 	min-width: auto;
 	overflow: visible;
-	font-size: 14px;
 	color: $blue;
 	position: relative;
+	border: 0;
+	border-radius: 0;
+	min-height: 58px;
 
 	&::before {
 		display: none;
+	}
+
+	&.uk-button-large {
+		min-height: 64px;
 	}
 
 	>span:last-of-type {
@@ -220,50 +225,56 @@ input[type='submit'] {
 			background-color: $blue-light;
 		}
 
-		.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
-			fill: $blue-light;
+		svg {
+			color: $blue-light;
 		}
 	}
 
+	.uk-svg:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+		fill: transparent;
+		stroke: $gray-cold;
+	}
+
 	>svg {
+		fill: transparent;
 		position: absolute;
 		width: 100%;
 		left: 0;
 		top: 0;
 		bottom: 0;
-
-		.shape {
-			fill: transparent;
-			stroke-dasharray: 130 365;
-			stroke-dashoffset: -715;
-			stroke-width: 8px;
-			stroke: $gray-cold;
-			transition: .5s linear;
-		}
+		stroke-dasharray: 138 370;
+		stroke-dashoffset: -745;
 	}
 
 	@include hover {
 		background-color: transparent;
 
-		>svg {
-			.shape {
-				stroke: $gray-cold-hover;
-				animation: .5s drawShape linear forwards;
+		>span:last-of-type {
+			&::after {
+				width: 18px;
 			}
+
+			svg {
+				left: 18px;
+			}
+		}
+
+		>svg {
+			animation: .5s drawShape 0s linear forwards;
 		}
 	}
 }
 
 @keyframes drawShape {
 	0% {
-		stroke-dasharray: 130 365;
-		stroke-dashoffset: -715;
+		stroke-dasharray: 138 370;
+		stroke-dashoffset: -745;
 		stroke-width: 8px;
 	}
 
 	100% {
-		stroke-dasharray: 395 306;
-		stroke-dashoffset: -700;
+		stroke-dasharray: 475 286;
+		stroke-dashoffset: -745;
 		stroke-width: 2px;
 	}
 }
