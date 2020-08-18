@@ -1,51 +1,84 @@
-// .nb-map {}
-
-.map-box {
+.nb-map {
     overflow: hidden;
 }
 
-.map-switch {
+.map-form {
     background-color: $turquise-light;
     margin: 0;
 
     li {
         list-style-type: none;
+        position: relative;
 
-        button {
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $blue;
+            pointer-events: none;
+        }
+
+        &::after {
+            content: font-char($chevron-down-thin);
+            color: $blue;
+            font-size: 24px;
+            font-size: 8px;
+            font-family: 'svgicons';
+        }
+
+        .uk-select:not([multiple]):not([size]) {
+            background-color: $turquise-light;
+            background-image: none;
+            border-color: transparent;
+            border-width: 0;
             border-left: 1px solid $gray-mid;
+            border-radius: 0;
             display: inline-flex;
             align-items: center;
-            padding: 24px 25px;
-            position: relative;
+            min-height: 64px;
 
-            &::after {
-                content: font-char($chevron-down-thin);
+            * {
+                // font-feature-settings: 'liga'off !important;
+                font-family: Arial, Helvetica, sans-serif;
                 color: $blue;
-                font-size: 24px;
-                font-size: 8px;
-                font-family: 'svgicons';
-                margin-left: 10px;
-            }
-
-            &::before {
-                margin-right: 15px;
+                font-size: inherit;
             }
         }
 
         &:first-of-type {
-            button {
-                padding-right: 35px;
-                padding-left: 35px;
 
-                &::before {
-                    font-size: 23px;
-                }
+            &::before {
+                font-size: 23px;
+                left: 35px;
+            }
+
+            &::after {
+                right: 35px;
+            }
+
+            .uk-select:not([multiple]):not([size]) {
+                padding-right: 50px;
+                padding-left: 65px;
             }
         }
 
 
-        &:last-of-type button {
-            border-right: 1px solid $gray-mid;
+        &:last-of-type {
+
+            &::before {
+                left: 25px;
+            }
+
+            &::after {
+                right: 25px;
+            }
+
+            .uk-select:not([multiple]):not([size]) {
+                border-right: 1px solid $gray-mid;
+                padding-right: 40px;
+                padding-left: 63px;
+            }
         }
     }
 }
@@ -103,6 +136,7 @@
 
 .map-totals {
     z-index: 1;
+
     li {
         background-color: $green;
         border-radius: 50%;

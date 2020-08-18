@@ -28,28 +28,6 @@ var theme = {
 			this.addMultiListener(window, 'load resize', theme.campaignItemSetHeight);
 		}
 
-		$('[data-fancybox="images"]').fancybox({
-			buttons: [
-				'zoom',
-				'fullScreen',
-				'share',
-				'close'
-			],
-			caption : function( instance, item ) {
-				return $(this).find('figcaption').html();
-			},
-			btnTpl: {
-				// Arrows
-				arrowLeft:
-				'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left font-chevron-left" title="{{PREV}}">' +
-				"</button>",
-
-				arrowRight:
-				'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right font-chevron-right" title="{{NEXT}}">' +
-				"</button>",
-			}
-		});
-
 		// if(downloadButton) {
 		// 	this.downloadButtonEvent();
 		// }

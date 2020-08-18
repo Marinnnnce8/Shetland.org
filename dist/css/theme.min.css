@@ -1941,10 +1941,6 @@ input[type='submit'] {
   margin-bottom: 0;
 }
 
-.nb-block [data-uk-lightbox] a {
-  cursor: zoom-in;
-}
-
 .nb-block-content p > a:not(.uk-accordion-title),
 .nb-block-content li > a:not(.uk-accordion-title) {
   color: #1b365d;
@@ -2102,10 +2098,6 @@ input[type='submit'] {
   width: 100%;
 }
 
-.nb-block-gallery .nb-gallery-images .nb-gallery-row figcaption {
-  display: none;
-}
-
 .nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image {
   border: 20px solid transparent;
   display: table-cell;
@@ -2117,7 +2109,7 @@ input[type='submit'] {
   transition: 256ms ease-in-out;
 }
 
-.nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image span {
+.nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image > span {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -2129,7 +2121,7 @@ input[type='submit'] {
   border-radius: 50%;
 }
 
-.nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image span::before {
+.nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image > span::before {
   color: #1b365d;
   position: absolute;
   left: 50%;
@@ -2149,7 +2141,7 @@ input[type='submit'] {
   transform: scale(0.95);
 }
 
-.nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image:hover span, .nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image:focus span, .nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image:active span {
+.nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image:hover > span, .nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image:focus > span, .nb-block-gallery .nb-gallery-images .nb-gallery-row .nb-gallery-image:active > span {
   opacity: 1;
 }
 
@@ -3001,51 +2993,80 @@ input[type='submit'] {
   height: auto;
 }
 
-.map-box {
+.nb-map {
   overflow: hidden;
 }
 
-.map-switch {
+.map-form {
   background-color: #e7f4f1;
   margin: 0;
 }
 
-.map-switch li {
+.map-form li {
   list-style-type: none;
-}
-
-.map-switch li button {
-  border-left: 1px solid #c9d8db;
-  display: inline-flex;
-  align-items: center;
-  padding: 24px 25px;
   position: relative;
 }
 
-.map-switch li button::after {
+.map-form li::before, .map-form li::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1b365d;
+  pointer-events: none;
+}
+
+.map-form li::after {
   content: "";
   color: #1b365d;
   font-size: 24px;
   font-size: 8px;
   font-family: 'svgicons';
-  margin-left: 10px;
 }
 
-.map-switch li button::before {
-  margin-right: 15px;
+.map-form li .uk-select:not([multiple]):not([size]) {
+  background-color: #e7f4f1;
+  background-image: none;
+  border-color: transparent;
+  border-width: 0;
+  border-left: 1px solid #c9d8db;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 64px;
 }
 
-.map-switch li:first-of-type button {
-  padding-right: 35px;
-  padding-left: 35px;
+.map-form li .uk-select:not([multiple]):not([size]) * {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1b365d;
+  font-size: inherit;
 }
 
-.map-switch li:first-of-type button::before {
+.map-form li:first-of-type::before {
   font-size: 23px;
+  left: 35px;
 }
 
-.map-switch li:last-of-type button {
+.map-form li:first-of-type::after {
+  right: 35px;
+}
+
+.map-form li:first-of-type .uk-select:not([multiple]):not([size]) {
+  padding-right: 50px;
+  padding-left: 65px;
+}
+
+.map-form li:last-of-type::before {
+  left: 25px;
+}
+
+.map-form li:last-of-type::after {
+  right: 25px;
+}
+
+.map-form li:last-of-type .uk-select:not([multiple]):not([size]) {
   border-right: 1px solid #c9d8db;
+  padding-right: 40px;
+  padding-left: 63px;
 }
 
 .map {
@@ -3124,88 +3145,43 @@ input[type='submit'] {
   top: 75%;
 }
 
-.fancybox-is-open .fancybox-bg {
+.uk-lightbox {
   background-color: #fff;
-  opacity: 1;
 }
 
-.fancybox-container {
-  transition-duration: 20s;
-}
-
-.fancybox-slide--image {
-  padding: 40px 80px 40px 40px;
-}
-
-.fancybox-toolbar .fancybox-button {
-  background-color: transparent;
+.uk-lightbox * {
   color: #1b365d;
 }
 
-.fancybox-toolbar .fancybox-button:hover, .fancybox-toolbar .fancybox-button:focus, .fancybox-toolbar .fancybox-button:active {
-  color: rgba(27, 54, 93, 0.6);
+.uk-lightbox-toolbar {
+  background-color: #fff;
 }
 
-.fancybox-infobar {
-  font-size: 14px;
-  line-height: 1.7em;
-  padding: 0 40px;
-}
-
-.fancybox-button,
-.fancybox-button:link,
-.fancybox-button:visited {
-  color: #1b365d;
-}
-
-.fancybox-navigation .fancybox-button {
+.uk-lightbox-button {
   background-color: transparent;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   border: 2px solid #1b365d;
   padding: 0;
-}
-
-.fancybox-navigation .fancybox-button::before {
-  color: #1b365d;
-  font-size: 18px;
-}
-
-.fancybox-navigation .fancybox-button:hover, .fancybox-navigation .fancybox-button:focus, .fancybox-navigation .fancybox-button:active {
-  background-color: #1b365d;
-}
-
-.fancybox-navigation .fancybox-button:hover::before, .fancybox-navigation .fancybox-button:focus::before, .fancybox-navigation .fancybox-button:active::before {
-  color: #fff;
-}
-
-.fancybox-navigation .fancybox-button--arrow_left,
-.fancybox-navigation .fancybox-button--arrow_right {
-  padding: 0;
-  margin: 10px;
-}
-
-.fancybox-navigation .fancybox-button--arrow_left {
-  left: auto;
-  right: 0;
-  right: env(safe-area-inset-right);
-  top: calc(50% + 15px);
-}
-
-.fancybox-show-nav .fancybox-navigation .fancybox-button {
   transition: 256ms ease-in-out;
 }
 
-.fancybox-show-caption .fancybox-caption {
-  background: none;
-  color: #1b365d;
+.uk-lightbox-button svg polyline {
+  transition: inherit;
 }
 
-.fancybox-show-caption .fancybox-caption span {
-  color: rgba(27, 54, 93, 0.6);
-  display: block;
-  margin-top: 15px;
+.uk-lightbox-button:hover, .uk-lightbox-button:focus, .uk-lightbox-button:active {
+  background-color: #1b365d;
+}
+
+.uk-lightbox-button:hover svg polyline, .uk-lightbox-button:focus svg polyline, .uk-lightbox-button:active svg polyline {
+  color: #fff;
+}
+
+.uk-lightbox-caption {
+  font-size: 16px;
+  line-height: 1.7em;
 }
 
 .banner {

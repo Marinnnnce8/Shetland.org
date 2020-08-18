@@ -1,102 +1,39 @@
-.fancybox-is-open .fancybox-bg {
+.uk-lightbox {
     background-color: $white;
-    opacity: 1;
-}
 
-//delete this
-.fancybox-container {
-    transition-duration: 20s;
-}
-
-.fancybox-slide--image {
-    padding: 40px 80px 40px 40px;
-}
-
-// .fancybox-content {
-//     transform: translate(40px, 40px) !important;
-//     transition: $nbSec ease-in-out;
-// }
-
-.fancybox-toolbar {
-    .fancybox-button {
-        background-color: transparent;
+    * {
         color: $blue;
-
-        @include hover {
-            color: rgba($blue, .6);
-        }
     }
 }
 
-.fancybox-infobar {
-    font-size: 14px;
-    line-height: 1.7em;
-    // color: $blue;
-    padding: 0 40px;
+.uk-lightbox-toolbar {
+    background-color: $white;
 }
 
-.fancybox-button,
-.fancybox-button:link,
-.fancybox-button:visited {
-    color: $blue;
-}
 
-.fancybox-navigation {
-    .fancybox-button {
-        background-color: transparent;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        border: 2px solid $blue;
-        padding: 0;
-
-        &::before {
-            color: $blue;
-            font-size: 18px;
-        }
-
-        @include hover {
-            background-color: $blue;
-
-            &::before {
-                color: $white;
-            }
-        }
-    }
-
-    .fancybox-button--arrow_left,
-    .fancybox-button--arrow_right {
-        padding: 0;
-        margin: 10px;
-    }
-
-    .fancybox-button--arrow_left {
-        left: auto;
-        right: 0;
-        right: env(safe-area-inset-right);
-        top: calc(50% + 15px);
-    }
-}
-
-.fancybox-show-nav .fancybox-navigation .fancybox-button {
+.uk-lightbox-button {
+    background-color: transparent;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid $blue;
+    padding: 0;
     transition: $nbSec ease-in-out;
-}
 
-.fancybox-show-caption .fancybox-caption {
-    // width: 11.875%;
-    // display: inline-flex;
-    background: none;
-    color: $blue;
+    svg polyline {
+        transition: inherit;
+    }
 
-    span {
-        color: rgba($blue, .6);
-        display: block;
-        margin-top: 15px;
+    @include hover {
+        background-color: $blue;
+
+        svg polyline {
+            color: $white;
+        }
     }
 }
 
-// .fancybox-stage {
-//     max-width: 67.8125%;
-//     display: inline-flex;
-//     justify-content: flex-start;
-// }
+.uk-lightbox-caption {
+    font-size: 16px;
+    line-height: 1.7em;
+}

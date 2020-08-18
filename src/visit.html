@@ -11,7 +11,6 @@
     <meta name='description' content='This is a meta description'>
 
     <!-- <link rel='shortcut icon' href='./favicon/favicon.ico'> -->
-    <link rel='stylesheet' href='./css/jquery.fancybox.min.css' />
     <link rel='stylesheet' href='css/uikit.min.css' />
     <link rel='stylesheet' href='css/theme.min.css' />
     <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
@@ -20,39 +19,23 @@
     <script>
         function initialize() {
             var secheltLoc = new google.maps.LatLng(60.155579, -1.150040);
-    
+
             var myMapOptionsAreas = {
                 zoom: 15,
                 center: secheltLoc,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
-    
-            var myMapOptionsInterests = {
-                zoom: 15,
-                center: secheltLoc,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-    
+
             var theMapAreas = new google.maps.Map(document.getElementById("map_canvas_areas"), myMapOptionsAreas);
-    
-            var theMapInterests = new google.maps.Map(document.getElementById("map_canvas_interests"),
-                myMapOptionsInterests);
-    
-    
+
+
             var markerAreas = new google.maps.Marker({
                 map: theMapAreas,
                 draggable: true,
                 position: new google.maps.LatLng(60.155579, -1.150040),
                 visible: true
             });
-    
-            var markerInterests = new google.maps.Marker({
-                map: theMapInterests,
-                draggable: true,
-                position: new google.maps.LatLng(60.155579, -1.150040),
-                visible: true
-            });
-    
+
             var boxTextAreas = document.createElement("div");
             boxTextAreas.style.cssText = "";
             boxTextAreas.innerHTML =
@@ -82,36 +65,7 @@
                 "<li class='label medium uk-text-bold alt'>12</li>" +
                 "</ul>" +
                 "</div>";
-    
-            var boxTextInterests = document.createElement("div");
-            boxTextInterests.style.cssText = "";
-            boxTextInterests.innerHTML = "<div>" +
-                "<ul class='map-info-boxes uk-position-cover'>" +
-                "<li class='uk-card map-card' id='map-info-2'>" +
-                "<a href='#' class='uk-position-cover' aria-label='Find out more'></a>" +
-                "<button class='uk-position-top-right' data-uk-toggle='target: #map-info-2' aria-label='Close this info box'></button>" +
-                "<div class='uk-card-body'>" +
-                "<h3 class='uk-card-title small alt uk-text-bold'>Sumburgh Head</h3>" +
-                "<p class='uk-text-small alt'>The striking headland to the south-east of Jarlshof is Sumburgh Head, the southernmost tip of the Shetland Mainland.</p>" +
-                "<a href='#' class='uk-button uk-button-text'>" +
-                "<img src='./img/text-button-frame.svg' data-uk-svg alt='image'>" +
-                "<span>Find out more</span><span role='presentation'><img data-uk-svg src='./img/button-arrow-right.svg' alt='image' /></span>" +
-                "</a>" +
-                "</div>" +
-                "<div class='uk-card-media-bottom uk-background-cover' role='presentation' data-uk-img style='background-image: url(\"./img/sumburgh-head.jpg\");'></div>" +
-                "</div>" +
-                "</li>" +
-                "</ul>" +
-                "<ul class='map-pins uk-position-cover'>" +
-                "<li><button aria-label='map pin'></button></li>" +
-                "<li><button aria-label='map pin'></button></li>" +
-                "</ul>" +
-                "<ul class='map-totals uk-position-cover'>" +
-                "<li class='label medium uk-text-bold alt'>24</li>" +
-                "<li class='label medium uk-text-bold alt'>5</li>" +
-                "</ul>" +
-                "</div>";
-    
+
             var myOptionsAreas = {
                 content: boxTextAreas,
                 disableAutoPan: false,
@@ -131,587 +85,558 @@
                 pane: "floatPane",
                 enableEventPropagation: false
             };
-    
-            var myOptionsInterests = {
-                content: boxTextInterests,
-                disableAutoPan: false,
-                maxWidth: 0,
-                pixelOffset: new google.maps.Size(-140, 0),
-                zIndex: null,
-                boxStyle: {
-                    background: "none",
-                    opacity: 1,
-                    width: "100%",
-                    height: "620px"
-                },
-                closeBoxMargin: "",
-                closeBoxURL: "",
-                infoBoxClearance: new google.maps.Size(1, 1),
-                isHidden: false,
-                pane: "floatPane",
-                enableEventPropagation: false
-            };
-    
+
             google.maps.event.addListener(markerAreas, "click", function (e) {
                 ibAreas.open(theMapAreas, this);
             });
-    
+
             var ibAreas = new InfoBox(myOptionsAreas);
-    
+
             ibAreas.open(theMapAreas, markerAreas);
-    
-            google.maps.event.addListener(markerInterests, "click", function (e) {
-                ibInterests.open(theMapInterests, this);
-            });
-    
-            var ibInterests = new InfoBox(myOptionsInterests);
-    
-            ibInterests.open(theMapInterests, markerInterests);
         }
-    
+
     </script>
 </head>
 
 <body onload="initialize()">
 
     <header class='header header-visit' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
-		<nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
+        <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
-			<div class='uk-navbar-left'>
-				<a href='#' class='uk-navbar-item uk-logo'>
-					<img src='img/logo.png' alt='Shatland Logo'>
-				</a>
-			</div>
+            <div class='uk-navbar-left'>
+                <a href='#' class='uk-navbar-item uk-logo'>
+                    <img src='img/logo.png' alt='Shatland Logo'>
+                </a>
+            </div>
 
-			<div class='uk-navbar-right'>
-				<div class='navbar-top uk-flex uk-flex-between'>
-					<ul class='uk-navbar-nav'>
-						<li class='uk-active'><a href='index.html'>Visit</a></li>
-						<li><a href='styleguide.html'>Live, Work & Study</a></li>
-						<li><a href='styleguide.html'>Invest</a></li>
-					</ul>
-					<div class="uk-flex uk-flex-between uk-flex-middle">
-						<ul class='uk-flex uk-flex-middle'>
-							<li><a href='#'>Blog</a></li>
-							<li><a href='#'>Map</a></li>
-						</ul>
-						<ul class='uk-flex uk-flex-middle'>
-							<li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
-							<li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
-							<li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
-					<div id='nav' class="nav">
-						<ul class='uk-navbar-nav'>
-							<li class='mega-menu'><button
-									class="label large alt uk-text-bold green">Inspiration</button>
-								<div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
-									id="dropdown-inspiration">
-									<button data-uk-toggle="target: #dropdown-inspiration" class="dropdown-close"
-										aria-label="Close dropdown menu"></button>
-									<ul class="uk-child-width-1-3 uk-grid-medium uk-nav uk-dropdown-nav" data-uk-grid>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-1.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">10 Reasons To Visit Shetland</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-2.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">Shetland With Kids</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-3.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">'New Feature'</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-4.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">Eating Out In Shetland</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-5.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">'New Feature'</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-6.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">'New Feature'</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-7.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">10 Of Shetland's Hidden Gems</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-8.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">'New Feature'</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="uk-card uk-flex uk-flex-middle">
-												<a href="#" aria-label="Find out more" class="uk-position-cover"></a>
-												<div class="uk-card-media-left uk-background-cover" data-uk-img
-													style="background-image: url('./img/visit-inspiration-9.jpg');"
-													role="presentation"></div>
-												<div>
-													<div class="uk-card-body">
-														<h3 class="uk-card-title midi">'New Feature'</h3>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-									<div class="uk-flex uk-flex-right">
-										<a href="#" class="uk-button uk-button-text uk-text-uppercase">
-											<img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-											<span>View more</span><span role="presentation"><img data-uk-svg
-													src="./img/button-arrow-right.svg" alt='image' /></span></a>
-									</div>
-								</div>
-							</li>
-							<li class='mega-menu'><button class="label large alt uk-text-bold green">Things To Do
-								</button>
-								<div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
-									id="dropdown-things-to-do">
-									<button data-uk-toggle="target: #dropdown-things-to-do" class="dropdown-close"
-										aria-label="Close dropdown menu"></button>
-									<ul class="uk-child-width-1-6 uk-grid-medium uk-nav uk-dropdown-nav" data-uk-grid>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Popular</span>
-												<ul class="uk-child-width-1-1 uk-grid-collapse" data-uk-grid>
-													<li class="uk-card uk-flex uk-flex-middle">
-														<a href="#" aria-label="Find out more"
-															class="uk-position-cover"></a>
-														<div class="uk-card-media-left uk-background-cover" data-uk-img
-															style="background-image: url('./img/visit-things-to-do-1.jpg');"
-															role="presentation"></div>
-														<div>
-															<div class="uk-card-body">
-																<h3 class="uk-card-title midi">Walk</h3>
-															</div>
-														</div>
-													</li>
-													<li class="uk-card uk-flex uk-flex-middle">
-														<a href="#" aria-label="Find out more"
-															class="uk-position-cover"></a>
-														<div class="uk-card-media-left uk-background-cover" data-uk-img
-															style="background-image: url('./img/visit-things-to-do-2.jpg');"
-															role="presentation"></div>
-														<div>
-															<div class="uk-card-body">
-																<h3 class="uk-card-title midi">Cycle</h3>
-															</div>
-														</div>
-													</li>
-													<li class="uk-card uk-flex uk-flex-middle">
-														<a href="#" aria-label="Find out more"
-															class="uk-position-cover"></a>
-														<div class="uk-card-media-left uk-background-cover" data-uk-img
-															style="background-image: url('./img/visit-things-to-do-3.jpg');"
-															role="presentation"></div>
-														<div>
-															<div class="uk-card-body">
-																<h3 class="uk-card-title midi">Sail</h3>
-															</div>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Outdoor &
-													Adventure</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Angling</a></li>
-													<li><a href="#" class="label medium alt">Kayak</a></li>
-													<li><a href="#" class="label medium alt">Surf</a></li>
-													<li><a href="#" class="label medium alt">Dive</a></li>
-													<li><a href="#" class="label medium alt">Climb</a></li>
-													<li><a href="#" class="label medium alt">Golf</a></li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Explore Nature</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Scenery</a></li>
-													<li><a href="#" class="label medium alt">Bird Watching</a></li>
-													<li><a href="#" class="label medium alt">Sea Mammals</a></li>
-													<li><a href="#" class="label medium alt">Northern Lights</a></li>
-													<li><a href="#" class="label medium alt">Shetland UNESCO Global
-															Geopark</a></li>
-													<li><a href="#" class="label medium alt">Beaches</a></li>
-													<li><a href="#" class="label medium alt">Shetland Ponies</a></li>
-												</ul>
-												<div class="uk-flex">
-													<a href="#" class="uk-button uk-button-text uk-text-uppercase">
-														<img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-														<span>View all</span><span role="presentation"><img data-uk-svg
-																src="./img/button-arrow-right.svg"
-																alt='image' /></span></a>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">History and
-													Heritage</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">World Class Archaeology</a>
-													</li>
-													<li><a href="#" class="label medium alt">Museums and Visitor
-															Centres</a></li>
-													<li><a href="#" class="label medium alt">In Viking Footsteps</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Trips and Tours</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Over Land</a></li>
-													<li><a href="#" class="label medium alt">By Sea</a></li>
-													<li><a href="#" class="label medium alt">Wildlife and Nature</a>
-													</li>
-													<li><a href="#" class="label medium alt"> Textiles</a></li>
-													<li><a href="#" class="label medium alt">Culture and Heritage</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Our Favourite
-													Places</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Indoor</a></li>
-													<li><a href="#" class="label medium alt">Outdoor</a></li>
-													<li><a href="#" class="label medium alt">For Children</a></li>
-													<li><a href="#" class="label medium alt"> Food and Drink</a></li>
-													<li><a href="#" class="label medium alt">History and Culture</a>
-													</li>
-													<li><a href="#" class="label medium alt">Nature and Wildlife</a>
-													</li>
-													<li><a href="#" class="label medium alt">Arts, Crafts and
-															Textiles</a></li>
-												</ul>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class='mega-menu'><button class="label large alt uk-text-bold green">Events
-								</button>
-								<div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
-									id="dropdown-events">
-									<button data-uk-toggle="target: #dropdown-events" class="dropdown-close"
-										aria-label="Close dropdown menu"></button>
-									<ul class="uk-child-width-1-4 uk-grid-medium uk-nav uk-dropdown-nav" data-uk-grid>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Up Helly Aa</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Fire Festival Events</a>
-													</li>
-													<li><a href="#" class="label medium alt">Lerwick Up Helly Aa</a>
-													</li>
-													<li><a href="#" class="label medium alt">Scalloway Fire Festival</a>
-													</li>
-													<li><a href="#" class="label medium alt">Nesting and Girlsta Up
-															Helly Aa</a></li>
-													<li><a href="#" class="label medium alt">Uyeasound Up Helly Aa</a>
-													</li>
-													<li><a href="#" class="label medium alt">Northmavine Up Helly Aa</a>
-													</li>
-													<li><a href="#" class="label medium alt">Bressay Up Helly Aa</a>
-													</li>
-												</ul>
-												<div class="uk-flex">
-													<a href="#" class="uk-button uk-button-text uk-text-uppercase">
-														<img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-														<span>View all</span><span role="presentation"><img data-uk-svg
-																src="./img/button-arrow-right.svg"
-																alt='image' /></span></a>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Music</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Shetland Folk Festival</a>
-													</li>
-													<li><a href="#" class="label medium alt">Shetland Accordion and
-															Fiddle Festival</a></li>
-													<li><a href="#" class="label medium alt">Shetland Folk Frenzy</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Culture and
-													Heritage</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Craft Fair</a></li>
-													<li><a href="#" class="label medium alt">Taste of Shetland
-															Festival</a></li>
-													<li><a href="#" class="label medium alt">Screenplay and Wordplay</a>
-													</li>
-													<li><a href="#" class="label medium alt"> Shetland Wool Week</a>
-													</li>
-													<li><a href="#" class="label medium alt">UnstFest</a></li>
-													<li><a href="#" class="label medium alt">Shetland Classic Motor
-															Show</a></li>
-													<li><a href="#" class="label medium alt">Shetland Nature
-															Festival</a></li>
-												</ul>
-												<div class="uk-flex">
-													<a href="#" class="uk-button uk-button-text uk-text-uppercase">
-														<img src="./img/text-button-frame.svg" data-uk-svg alt="image">
-														<span>View all</span><span role="presentation"><img data-uk-svg
-																src="./img/button-arrow-right.svg"
-																alt='image' /></span></a>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div>
-												<span class="label large alt uk-text-bold green">Maritime</span>
-												<ul class="nav-text-links">
-													<li><a href="#" class="label medium alt">Bergen-Shetland Race</a>
-													</li>
-													<li><a href="#" class="label medium alt">Kayak Symposium</a></li>
-													<li><a href="#" class="label medium alt">Round Britain and Ireland
-															Race</a></li>
-												</ul>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class='mega-menu'><button class="label large alt uk-text-bold green">Plan Your Trip
-								</button>
-								<div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
-									id="dropdown-plan-your-trip">
-									<button data-uk-toggle="target: #dropdown-plan-your-trip" class="dropdown-close"
-										aria-label="Close dropdown menu"></button>
-									<div class="uk-grid-collapse" data-uk-grid>
-										<div class="uk-width-expand">
-											<ul class="uk-child-width-1-3 uk-grid-medium uk-nav uk-dropdown-nav"
-												data-uk-grid>
-												<li>
-													<div>
-														<span class="label large alt uk-text-bold green">How To Get
-															Here</span>
-														<ul class="nav-text-links">
-															<li><a href="#" class="label medium alt">Ferry</a></li>
-															<li><a href="#" class="label medium alt">Flight</a></li>
-															<li><a href="#" class="label medium alt">Yacht</a></li>
-															<li><a href="#" class="label medium alt">Cruise Ship</a>
-															</li>
-															<li><a href="#" class="label medium alt">Package
-																	Holidays</a></li>
-														</ul>
-													</div>
-												</li>
-												<li>
-													<div>
-														<span class="label large alt uk-text-bold green">How To Get
-															Around</span>
-														<ul class="nav-text-links">
-															<li><a href="#" class="label medium alt">Public
-																	Transport</a></li>
-															<li><a href="#" class="label medium alt">Car and Bike
-																	Hire</a></li>
-															<li><a href="#" class="label medium alt">Taxis</a></li>
-															<li><a href="#" class="label medium alt">Coach Hire</a></li>
-														</ul>
-													</div>
-												</li>
-												<li>
-													<div>
-														<span class="label large alt uk-text-bold green">Essential
-															Information</span>
-														<ul class="nav-text-links">
-															<li><a href="#" class="label medium alt">Responsible
-																	Tourism</a></li>
-															<li><a href="#" class="label medium alt">Accommodation</a>
-															</li>
-															<li><a href="#" class="label medium alt">Caravan and
-																	Camping</a></li>
-															<li><a href="#" class="label medium alt">Travel
-																	Information</a></li>
-														</ul>
-													</div>
-												</li>
-											</ul>
-										</div>
-										<div class="background-gray uk-width-auto">
-											<ul class="uk-grid-collapse uk-nav uk-dropdown-nav"
-												data-uk-grid>
-												<li>
-													<div>
-														<span class="label large alt uk-text-bold green">Areas</span>
-														<div data-uk-grid>
-															<div>
-																<ul class="nav-text-links">
-																	<li><a href="#" class="label medium alt">Lerwick</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Central
-																			Mainland</a></li>
-																	<li><a href="#"
-																			class="label medium alt">Northmavine</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Delting,
-																			Lunnasting
-																			& Nesting</a></li>
-																	<li><a href="#" class="label medium alt">South
-																			Mainland</a></li>
-																	<li><a href="#"
-																			class="label medium alt">Westside</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Unst</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Yell</a>
-																	</li>
-																</ul>
-															</div>
-															<div>
-																<ul class="nav-text-links">
-																	<li><a href="#" class="label medium alt">Fetlar</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Whalsay</a>
-																	</li>
-																	<li><a href="#"
-																			class="label medium alt">Skerries</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Bressay &
-																			Noss</a></li>
-																	<li><a href="#" class="label medium alt">Fair
-																			Isle</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Foula</a>
-																	</li>
-																	<li><a href="#" class="label medium alt">Papa
-																			Stour</a>
-																	</li>
-																</ul>
-															</div>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div>
-														<span class="label large alt uk-text-bold green">Explore by
-															map</span>
-														<img src="./img/explore-by-map.png" data-uk-img alt="image">
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="nav-search uk-position-relative uk-flex uk-flex-right">
-						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-							class="label small alt">Search</button>
-						<div id="navSearchBox" class="nav-search-box">
-							<div class="uk-flex uk-flex-middle uk-flex-right">
-								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-									class="label small alt">Close
-									search</button>
-								<form action="/search" method="get" role="search" id="navSearch"
-									class="uk-search uk-search-default">
-									<button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
-										class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
-					hidden>
-					<span data-uk-navbar-toggle-icon></span>
-				</a>
-			</div>
-		</nav>
-	</header>
+            <div class='uk-navbar-right'>
+                <div class='navbar-top uk-flex uk-flex-between'>
+                    <ul class='uk-navbar-nav'>
+                        <li class='uk-active'><a href='index.html'>Visit</a></li>
+                        <li><a href='styleguide.html'>Live, Work & Study</a></li>
+                        <li><a href='styleguide.html'>Invest</a></li>
+                    </ul>
+                    <div class="uk-flex uk-flex-between uk-flex-middle">
+                        <ul class='uk-flex uk-flex-middle'>
+                            <li><a href='#'>Blog</a></li>
+                            <li><a href='#'>Map</a></li>
+                        </ul>
+                        <ul class='uk-flex uk-flex-middle'>
+                            <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
+                            <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
+                            <li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
+                    <div id='nav' class="nav">
+                        <ul class='uk-navbar-nav'>
+                            <li class='mega-menu'><button
+                                    class="label large alt uk-text-bold green">Inspiration</button>
+                                <div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
+                                    id="dropdown-inspiration">
+                                    <button data-uk-toggle="target: #dropdown-inspiration" class="dropdown-close"
+                                        aria-label="Close dropdown menu"></button>
+                                    <ul class="uk-child-width-1-3 uk-grid-medium uk-nav uk-dropdown-nav" data-uk-grid>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-1.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">10 Reasons To Visit Shetland</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-2.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">Shetland With Kids</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-3.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">'New Feature'</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-4.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">Eating Out In Shetland</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-5.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">'New Feature'</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-6.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">'New Feature'</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-7.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">10 Of Shetland's Hidden Gems</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-8.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">'New Feature'</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-card uk-flex uk-flex-middle">
+                                                <a href="#" aria-label="Find out more" class="uk-position-cover"></a>
+                                                <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                    style="background-image: url('./img/visit-inspiration-9.jpg');"
+                                                    role="presentation"></div>
+                                                <div>
+                                                    <div class="uk-card-body">
+                                                        <h3 class="uk-card-title midi">'New Feature'</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="uk-flex uk-flex-right">
+                                        <a href="#" class="uk-button uk-button-text uk-text-uppercase">
+                                            <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                            <span>View more</span><span role="presentation"><img data-uk-svg
+                                                    src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class='mega-menu'><button class="label large alt uk-text-bold green">Things To Do
+                                </button>
+                                <div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
+                                    id="dropdown-things-to-do">
+                                    <button data-uk-toggle="target: #dropdown-things-to-do" class="dropdown-close"
+                                        aria-label="Close dropdown menu"></button>
+                                    <ul class="uk-child-width-1-6 uk-grid-medium uk-nav uk-dropdown-nav" data-uk-grid>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Popular</span>
+                                                <ul class="uk-child-width-1-1 uk-grid-collapse" data-uk-grid>
+                                                    <li class="uk-card uk-flex uk-flex-middle">
+                                                        <a href="#" aria-label="Find out more"
+                                                            class="uk-position-cover"></a>
+                                                        <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                            style="background-image: url('./img/visit-things-to-do-1.jpg');"
+                                                            role="presentation"></div>
+                                                        <div>
+                                                            <div class="uk-card-body">
+                                                                <h3 class="uk-card-title midi">Walk</h3>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="uk-card uk-flex uk-flex-middle">
+                                                        <a href="#" aria-label="Find out more"
+                                                            class="uk-position-cover"></a>
+                                                        <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                            style="background-image: url('./img/visit-things-to-do-2.jpg');"
+                                                            role="presentation"></div>
+                                                        <div>
+                                                            <div class="uk-card-body">
+                                                                <h3 class="uk-card-title midi">Cycle</h3>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="uk-card uk-flex uk-flex-middle">
+                                                        <a href="#" aria-label="Find out more"
+                                                            class="uk-position-cover"></a>
+                                                        <div class="uk-card-media-left uk-background-cover" data-uk-img
+                                                            style="background-image: url('./img/visit-things-to-do-3.jpg');"
+                                                            role="presentation"></div>
+                                                        <div>
+                                                            <div class="uk-card-body">
+                                                                <h3 class="uk-card-title midi">Sail</h3>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Outdoor &
+                                                    Adventure</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Angling</a></li>
+                                                    <li><a href="#" class="label medium alt">Kayak</a></li>
+                                                    <li><a href="#" class="label medium alt">Surf</a></li>
+                                                    <li><a href="#" class="label medium alt">Dive</a></li>
+                                                    <li><a href="#" class="label medium alt">Climb</a></li>
+                                                    <li><a href="#" class="label medium alt">Golf</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Explore Nature</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Scenery</a></li>
+                                                    <li><a href="#" class="label medium alt">Bird Watching</a></li>
+                                                    <li><a href="#" class="label medium alt">Sea Mammals</a></li>
+                                                    <li><a href="#" class="label medium alt">Northern Lights</a></li>
+                                                    <li><a href="#" class="label medium alt">Shetland UNESCO Global
+                                                            Geopark</a></li>
+                                                    <li><a href="#" class="label medium alt">Beaches</a></li>
+                                                    <li><a href="#" class="label medium alt">Shetland Ponies</a></li>
+                                                </ul>
+                                                <div class="uk-flex">
+                                                    <a href="#" class="uk-button uk-button-text uk-text-uppercase">
+                                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                        <span>View all</span><span role="presentation"><img data-uk-svg
+                                                                src="./img/button-arrow-right.svg"
+                                                                alt='image' /></span></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">History and
+                                                    Heritage</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">World Class Archaeology</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Museums and Visitor
+                                                            Centres</a></li>
+                                                    <li><a href="#" class="label medium alt">In Viking Footsteps</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Trips and Tours</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Over Land</a></li>
+                                                    <li><a href="#" class="label medium alt">By Sea</a></li>
+                                                    <li><a href="#" class="label medium alt">Wildlife and Nature</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt"> Textiles</a></li>
+                                                    <li><a href="#" class="label medium alt">Culture and Heritage</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Our Favourite
+                                                    Places</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Indoor</a></li>
+                                                    <li><a href="#" class="label medium alt">Outdoor</a></li>
+                                                    <li><a href="#" class="label medium alt">For Children</a></li>
+                                                    <li><a href="#" class="label medium alt"> Food and Drink</a></li>
+                                                    <li><a href="#" class="label medium alt">History and Culture</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Nature and Wildlife</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Arts, Crafts and
+                                                            Textiles</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class='mega-menu'><button class="label large alt uk-text-bold green">Events
+                                </button>
+                                <div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
+                                    id="dropdown-events">
+                                    <button data-uk-toggle="target: #dropdown-events" class="dropdown-close"
+                                        aria-label="Close dropdown menu"></button>
+                                    <ul class="uk-child-width-1-4 uk-grid-medium uk-nav uk-dropdown-nav" data-uk-grid>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Up Helly Aa</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Fire Festival Events</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Lerwick Up Helly Aa</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Scalloway Fire Festival</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Nesting and Girlsta Up
+                                                            Helly Aa</a></li>
+                                                    <li><a href="#" class="label medium alt">Uyeasound Up Helly Aa</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Northmavine Up Helly Aa</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Bressay Up Helly Aa</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="uk-flex">
+                                                    <a href="#" class="uk-button uk-button-text uk-text-uppercase">
+                                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                        <span>View all</span><span role="presentation"><img data-uk-svg
+                                                                src="./img/button-arrow-right.svg"
+                                                                alt='image' /></span></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Music</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Shetland Folk Festival</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Shetland Accordion and
+                                                            Fiddle Festival</a></li>
+                                                    <li><a href="#" class="label medium alt">Shetland Folk Frenzy</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Culture and
+                                                    Heritage</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Craft Fair</a></li>
+                                                    <li><a href="#" class="label medium alt">Taste of Shetland
+                                                            Festival</a></li>
+                                                    <li><a href="#" class="label medium alt">Screenplay and Wordplay</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt"> Shetland Wool Week</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">UnstFest</a></li>
+                                                    <li><a href="#" class="label medium alt">Shetland Classic Motor
+                                                            Show</a></li>
+                                                    <li><a href="#" class="label medium alt">Shetland Nature
+                                                            Festival</a></li>
+                                                </ul>
+                                                <div class="uk-flex">
+                                                    <a href="#" class="uk-button uk-button-text uk-text-uppercase">
+                                                        <img src="./img/text-button-frame.svg" data-uk-svg alt="image">
+                                                        <span>View all</span><span role="presentation"><img data-uk-svg
+                                                                src="./img/button-arrow-right.svg"
+                                                                alt='image' /></span></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span class="label large alt uk-text-bold green">Maritime</span>
+                                                <ul class="nav-text-links">
+                                                    <li><a href="#" class="label medium alt">Bergen-Shetland Race</a>
+                                                    </li>
+                                                    <li><a href="#" class="label medium alt">Kayak Symposium</a></li>
+                                                    <li><a href="#" class="label medium alt">Round Britain and Ireland
+                                                            Race</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class='mega-menu'><button class="label large alt uk-text-bold green">Plan Your Trip
+                                </button>
+                                <div data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;offset: 0;mode: click"
+                                    id="dropdown-plan-your-trip">
+                                    <button data-uk-toggle="target: #dropdown-plan-your-trip" class="dropdown-close"
+                                        aria-label="Close dropdown menu"></button>
+                                    <div class="uk-grid-collapse" data-uk-grid>
+                                        <div class="uk-width-expand">
+                                            <ul class="uk-child-width-1-3 uk-grid-medium uk-nav uk-dropdown-nav"
+                                                data-uk-grid>
+                                                <li>
+                                                    <div>
+                                                        <span class="label large alt uk-text-bold green">How To Get
+                                                            Here</span>
+                                                        <ul class="nav-text-links">
+                                                            <li><a href="#" class="label medium alt">Ferry</a></li>
+                                                            <li><a href="#" class="label medium alt">Flight</a></li>
+                                                            <li><a href="#" class="label medium alt">Yacht</a></li>
+                                                            <li><a href="#" class="label medium alt">Cruise Ship</a>
+                                                            </li>
+                                                            <li><a href="#" class="label medium alt">Package
+                                                                    Holidays</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="label large alt uk-text-bold green">How To Get
+                                                            Around</span>
+                                                        <ul class="nav-text-links">
+                                                            <li><a href="#" class="label medium alt">Public
+                                                                    Transport</a></li>
+                                                            <li><a href="#" class="label medium alt">Car and Bike
+                                                                    Hire</a></li>
+                                                            <li><a href="#" class="label medium alt">Taxis</a></li>
+                                                            <li><a href="#" class="label medium alt">Coach Hire</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="label large alt uk-text-bold green">Essential
+                                                            Information</span>
+                                                        <ul class="nav-text-links">
+                                                            <li><a href="#" class="label medium alt">Responsible
+                                                                    Tourism</a></li>
+                                                            <li><a href="#" class="label medium alt">Accommodation</a>
+                                                            </li>
+                                                            <li><a href="#" class="label medium alt">Caravan and
+                                                                    Camping</a></li>
+                                                            <li><a href="#" class="label medium alt">Travel
+                                                                    Information</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="background-gray uk-width-auto">
+                                            <ul class="uk-grid-collapse uk-nav uk-dropdown-nav" data-uk-grid>
+                                                <li>
+                                                    <div>
+                                                        <span class="label large alt uk-text-bold green">Areas</span>
+                                                        <div data-uk-grid>
+                                                            <div>
+                                                                <ul class="nav-text-links">
+                                                                    <li><a href="#" class="label medium alt">Lerwick</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Central
+                                                                            Mainland</a></li>
+                                                                    <li><a href="#"
+                                                                            class="label medium alt">Northmavine</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Delting,
+                                                                            Lunnasting
+                                                                            & Nesting</a></li>
+                                                                    <li><a href="#" class="label medium alt">South
+                                                                            Mainland</a></li>
+                                                                    <li><a href="#"
+                                                                            class="label medium alt">Westside</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Unst</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Yell</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div>
+                                                                <ul class="nav-text-links">
+                                                                    <li><a href="#" class="label medium alt">Fetlar</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Whalsay</a>
+                                                                    </li>
+                                                                    <li><a href="#"
+                                                                            class="label medium alt">Skerries</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Bressay &
+                                                                            Noss</a></li>
+                                                                    <li><a href="#" class="label medium alt">Fair
+                                                                            Isle</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Foula</a>
+                                                                    </li>
+                                                                    <li><a href="#" class="label medium alt">Papa
+                                                                            Stour</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <span class="label large alt uk-text-bold green">Explore by
+                                                            map</span>
+                                                        <img src="./img/explore-by-map.png" data-uk-img alt="image">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-search uk-position-relative uk-flex uk-flex-right">
+                        <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                            class="label small alt">Search</button>
+                        <div id="navSearchBox" class="nav-search-box">
+                            <div class="uk-flex uk-flex-middle uk-flex-right">
+                                <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                                    class="label small alt">Close
+                                    search</button>
+                                <form action="/search" method="get" role="search" id="navSearch"
+                                    class="uk-search uk-search-default">
+                                    <button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
+                    hidden>
+                    <span data-uk-navbar-toggle-icon></span>
+                </a>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <div class="banner video uk-position-relative uk-margin-large-bottom">
@@ -831,9 +756,9 @@
                 <div class="uk-grid-medium" data-uk-grid data-uk-height-match="target: >div >div;row: false">
                     <div class="uk-width-2-3@m">
                         <div class="nb-video uk-position-relative uk-background-cover" data-uk-img
-                            style="background-image: url('./img/simons-kings-shetland.jpg');">
-                            <a href="https://youtu.be/YR6qxmuuVHk" data-fancybox="videos"
-                                class="fancybox uk-position-cover" aria-label="Play video"></a>
+                            style="background-image: url('./img/embedded-hero.jpg');" data-uk-lightbox>
+                            <a href="https://youtu.be/YR6qxmuuVHk" data-caption="Video" class="uk-position-cover"
+                                aria-label="Play video"></a>
                             <div class="nb-video-inner">
                                 <div class="nb-video-content">
                                     <span class="font-play-sharp" role="presentation"></span>
@@ -850,8 +775,8 @@
                             <span class="label">Events</span>
                             <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">Shetland Nature Festival</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div class="uk-width-1-2@m">
@@ -861,8 +786,8 @@
                             <span class="label">See Shetland with Sarah McBurnie</span>
                             <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">Nature & Wildlife</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div class="uk-width-1-4@m">
@@ -874,8 +799,8 @@
                                 Summer’s
                                 Evening</h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div class="uk-width-1-4@m">
@@ -886,8 +811,8 @@
                             <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">10 Spectacular Scenery Walks
                             </h3>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                 </div>
@@ -950,25 +875,31 @@
             </div>
         </div>
 
-        <div class="nb-map">
+        <div>
             <div class="uk-container uk-container-large">
                 <h2 class="uk-text-center uk-margin-medium-bottom">Shetland Map</h2>
 
-                <div class='map-box'>
-                    <ul class='map-switch uk-flex uk-flex-center uk-flex-middle'
-                        data-uk-switcher='connect: .switcher-container'>
-                        <li><button class='label medium alt uk-text-bold font-area'>Areas</button></li>
+                <div class='nb-map'>
+                    <form action="/search" method="get" role="search" id="mapForm">
+                        <ul class='map-form uk-flex uk-flex-center uk-flex-middle'>
+                            <li class="font-area">
+                                <select class="uk-select label medium alt uk-text-bold">
+                                    <option>Areas</option>
+                                    <option>Areas 2</option>
+                                </select>
+                            </li>
+                            <li class="font-eye">
+                                <select class="uk-select label medium alt uk-text-bold">
+                                    <option>Interests</option>
+                                    <option>Interests 2</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </form>
+                    <!-- <li><button class='label medium alt uk-text-bold font-area'>Areas</button></li>
                         <li><button class='label medium alt uk-text-bold font-eye'>Interests</button>
-                        </li>
-                    </ul>
-                    <ul class='uk-switcher switcher-container'>
-                        <li>
-                            <div class='map' id="map_canvas_areas"></div>
-                        </li>
-                        <li class='uk-flex map-interests'>
-                            <div class='map' id="map_canvas_interests"></div>
-                        </li>
-                    </ul>
+                        </li> -->
+                    <div class='map' id="map_canvas_areas"></div>
                 </div>
             </div>
         </div>
@@ -1296,7 +1227,6 @@
     <script src='js/uikit.min.js'></script>
     <script src='js/uikit-icons.min.js'></script>
     <script src='js/nb.js'></script>
-    <script src='./js/jquery.fancybox.min.js'></script>
     <script src='js/theme.js'></script>
 </body>
 

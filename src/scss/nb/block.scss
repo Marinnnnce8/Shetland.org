@@ -10,10 +10,6 @@
 		margin-bottom: 0;
 	}
 
-	[data-uk-lightbox] a {
-		cursor: zoom-in;
-	}
-
 	&-content {
 
 		p,
@@ -172,10 +168,6 @@
 				display: table;
 				width: 100%;
 
-				figcaption {
-					display: none;
-				}
-
 				.nb-gallery-image {
 					border: 20px solid transparent;
 					display: table-cell;
@@ -186,7 +178,7 @@
 					vertical-align: top;
 					transition: $nbSec ease-in-out;
 
-					span {
+					>span {
 						position: absolute;
 						bottom: 10px;
 						right: 10px;
@@ -217,7 +209,7 @@
 					@include hover {
 						transform: scale(.95);
 
-						span {
+						>span {
 							opacity: 1;
 						}
 					}
