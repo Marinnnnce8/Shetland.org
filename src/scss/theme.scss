@@ -12,6 +12,7 @@
 // Layout / Helpers
 @import 'layout/_icon-font.scss';
 @import 'helpers/helpers.scss';
+@import 'helpers/keyframes.scss';
 @import 'layout/buttons.scss';
 
 // UIkit
@@ -43,8 +44,6 @@
 // Modules
 @import 'modules/banner.scss';
 @import 'modules/banner-video.scss';
-@import 'modules/slider.scss';
-@import 'modules/team-list.scss';
 @import 'modules/explore-section.scss';
 @import 'modules/explore-item.scss';
 @import 'modules/entry-item.scss';
@@ -71,18 +70,6 @@
 
 
 // Template | Remove or Integrate
-
-// // uikit/base
-// a, .uk-link {
-// 	color: $nbRed;
-// }
-
-// // .uk-link-toggle:focus .uk-link,
-// // .uk-link-toggle:hover .uk-link,
-// // .uk-link:hover,
-// // a:hover {
-// // 	color: $nbRed;
-// // }
 
 // uikit/utility
 .uk-logo {

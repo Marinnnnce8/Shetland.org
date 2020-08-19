@@ -1,0 +1,296 @@
+//Text button
+@keyframes drawShape {
+	0% {
+		stroke-dasharray: 138 370;
+		stroke-width: 4px;
+	}
+
+	100% {
+		stroke-dasharray: 475 286;
+		stroke-width: 2px;
+	}
+}
+
+//Download button
+@keyframes text {
+
+	10%,
+	85% {
+		transform: translateY(-100%);
+	}
+
+	95%,
+	100% {
+		transform: translateY(-200%);
+	}
+}
+
+@keyframes line {
+
+	5%,
+	10% {
+		transform: translateY(-30px);
+	}
+
+	40% {
+		transform: translateY(-20px);
+	}
+
+	65% {
+		transform: translateY(0);
+	}
+
+	75%,
+	100% {
+		transform: translateY(30px);
+	}
+}
+
+@keyframes svg {
+
+	0%,
+	20% {
+		stroke-dasharray: 0;
+		stroke-dashoffset: 0;
+	}
+
+	21%,
+	89% {
+		stroke-dasharray: 26px;
+		stroke-dashoffset: 26px;
+		stroke-width: 3px;
+		margin: -10px 0 0 -10px;
+		stroke: var(--checkmark);
+	}
+
+	100% {
+		stroke-dasharray: 26px;
+		stroke-dashoffset: 0;
+		margin: -10px 0 0 -10px;
+		stroke: var(--checkmark);
+	}
+
+	12% {
+		opacity: 1;
+	}
+
+	20%,
+	89% {
+		opacity: 0;
+	}
+
+	90%,
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes backgroundChange {
+	10% {
+		transform: scaleY(0);
+	}
+
+	40% {
+		transform: scaleY(.15);
+	}
+
+	65% {
+		transform: scaleY(.5);
+		border-radius: 0 0 50% 50%;
+	}
+
+	75% {
+		border-radius: 0 0 50% 50%;
+	}
+
+	90%,
+	100% {
+		border-radius: 0;
+	}
+
+	75%,
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+//Video play/sound buttons
+@keyframes small {
+
+	0% {
+		stroke-dasharray: 0 0 30px 64px;
+	}
+
+	30% {
+		stroke-dasharray: 0 0 30px 64px;
+	}
+
+	40% {
+		stroke-dashoffset: 16px;
+	}
+
+	80% {
+		stroke-dashoffset: 1px;
+	}
+
+	70% {
+		stroke-dasharray: 0 43px 30px 64px;
+	}
+
+	100% {
+		stroke-dasharray: 0 39px 30px 64px;
+		stroke-dashoffset: 1px;
+	}
+}
+
+@keyframes small-r {
+	0% {
+		stroke-dasharray: 0 39px 30px 64px;
+		stroke-dashoffset: 1px;
+	}
+
+	40% {
+		stroke-dashoffset: 1px;
+	}
+
+	70% {
+		stroke-dashoffset: 16px;
+		stroke-dasharray: 0 0 30px 64px;
+	}
+
+	100% {
+		stroke-dasharray: 0 0 30px 64px;
+	}
+}
+
+@keyframes large {
+
+	0% {
+		stroke-dasharray: 0 0 50px 84px;
+	}
+
+	30% {
+		stroke-dasharray: 0 0 50px 84px;
+	}
+
+	40% {
+		stroke-dashoffset: 16px;
+	}
+
+	80% {
+		stroke-dashoffset: 1px;
+	}
+
+	70% {
+		stroke-dasharray: 0 82px 32px 84px;
+	}
+
+	100% {
+		stroke-dasharray: 0 78px 32px 84px;
+		stroke-dashoffset: 1px;
+	}
+}
+
+@keyframes large-r {
+	0% {
+		stroke-dasharray: 0 78px 32px 84px;
+		stroke-dashoffset: 1px;
+	}
+
+	40% {
+		stroke-dashoffset: 1px;
+	}
+
+	70% {
+		stroke-dashoffset: 16px;
+		stroke-dasharray: 0 0 50px 84px;
+	}
+
+	100% {
+		stroke-dasharray: 0 0 50px 84px;
+	}
+}
+
+@keyframes shape {
+	0% {
+		stroke-dasharray: 60px 0 184px;
+		stroke-dashoffset: 0;
+	}
+
+	70% {
+		stroke-dasharray: 63px 51px 184px;
+		stroke-dashoffset: 21px;
+	}
+
+	100% {
+		stroke-dasharray: 59px 47px 184px;
+		stroke-dashoffset: 17px;
+	}
+}
+
+@keyframes shape-r {
+	0% {
+		stroke-dasharray: 59px 47px 184px;
+		stroke-dashoffset: 17px;
+	}
+
+	100% {
+		stroke-dasharray: 60px 0 184px;
+		stroke-dashoffset: 0;
+	}
+}
+
+//Blog author link
+@keyframes imagePuls {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.95);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes imagePulsOut {
+    0% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: scale(.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+//Form checkbox bounce
+@keyframes bounce {
+	50% {
+		transform: scale(1.2);
+	}
+
+	75% {
+		transform: scale(.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+//Header navigation search
+@keyframes searchOpacityIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

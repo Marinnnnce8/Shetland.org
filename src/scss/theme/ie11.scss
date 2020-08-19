@@ -9,9 +9,68 @@ screen and (-ms-high-contrast: none) {
     }
 
     .banner-video video,
-    .video-controls,
-    .scroll-button-down {
+    .scroll-button-down,
+    .nb-block-form .nb-checkbox.bounce:not(.uk-form-danger) svg,
+    .uk-button-text>svg,
+    .uk-button-text>span:last-of-type::after {
         display: none;
+    }
+
+    .button-sound {
+
+        svg {
+            stroke: $white;
+            stroke-width: 6px;
+
+            path {
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    stroke-dashoffset: 1px;
+                }
+            }
+        }
+
+        &:not(.button-sound-active) {
+            svg {
+                path {
+                    &:nth-child(1) {
+                        stroke-dasharray: 59px 47px 184px;
+                        stroke-dashoffset: 17px;
+                    }
+
+                    &:nth-child(2) {
+                        stroke-dasharray: 0 39px 30px 64px;
+                        stroke-dashoffset: 1px;
+                    }
+
+                    &:nth-child(3) {
+                        stroke-dasharray: 0 78px 32px 84px;
+                        stroke-dashoffset: 1px;
+                    }
+                }
+            }
+        }
+
+        &.button-sound-active,
+        &[data-uk-video~='automute: true'] {
+            svg {
+                path {
+                    &:nth-child(1) {
+                        stroke-dasharray: 60px 0 184px;
+                        stroke-dashoffset: 0;
+                    }
+
+                    &:nth-child(2) {
+                        stroke-dasharray: 0 0 30px 64px;
+                    }
+
+                    &:nth-child(3) {
+                        stroke-dasharray: 0 0 50px 84px;
+                    }
+                }
+            }
+        }
     }
 
     .banner-text .label {
@@ -42,12 +101,6 @@ screen and (-ms-high-contrast: none) {
         }
     }
 
-    .nb-block-form .nb-checkbox.bounce:not(.uk-form-danger) {
-        svg {
-            display: none;
-        }
-    }
-
     .campaign-slider {
         .uk-card {
             height: 165px;
@@ -74,10 +127,30 @@ screen and (-ms-high-contrast: none) {
         &.uk-button-large {
             padding-left: 0;
         }
+    }
 
-        >svg,
-        >span:last-of-type::after {
-            display: none;
+    .map-pins button {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        overflow: visible;
+
+        &::before {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7px 0 7px;
+            border-color: $blue transparent transparent transparent;
+            left: 50%;
+            top: calc(100% - 1px);
+            transform: translateX(-50%);
+            content: '';
+        }
+
+        &::after {
+            left: 50%;
+            top: 50%;
         }
     }
 }

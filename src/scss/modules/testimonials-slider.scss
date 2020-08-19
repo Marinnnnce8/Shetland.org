@@ -43,10 +43,7 @@
     }
 
     .uk-slidenav {
-        border-radius: 50%;
-        border: 2px solid $blue;
-        width: 56px;
-        height: 56px;
+        border-color: $blue;
         transition: $nbSec ease-in-out;
         max-width: calc(100% - (22px * 2));
         margin: 22px;

@@ -278,10 +278,7 @@
 		}
 
 		.uk-slidenav {
-			border-radius: 50%;
-			border: 2px solid $blue;
-			width: 56px;
-			height: 56px;
+			border-color: $blue;
 			transition: $nbSec ease-in-out;
 
 			svg {
@@ -560,21 +557,6 @@
 		iframe {
 			width: 100%;
 		}
-	}
-}
-
-
-@keyframes bounce {
-	50% {
-		transform: scale(1.2);
-	}
-
-	75% {
-		transform: scale(.9);
-	}
-
-	100% {
-		transform: scale(1);
 	}
 }
 

@@ -81,10 +81,7 @@
                     display: inline-flex;
                     justify-content: center;
                     align-content: center;
-                    width: 56px;
-                    height: 56px;
-                    border-radius: 50%;
-                    border: 2px solid $white;
+                    border-color: $white;
 
                     &::after {
                         height: 0;

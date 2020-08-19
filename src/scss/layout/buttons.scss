@@ -202,7 +202,6 @@ input[type='submit'] {
 }
 
 .uk-button-text {
-	// padding: 10px 55px 10px 30px;
 	padding: 0 55px 0 30px;
 	transition: .45s;
 	min-width: auto;
@@ -272,23 +271,16 @@ input[type='submit'] {
 	}
 }
 
-@keyframes drawShape {
-	0% {
-		stroke-dasharray: 138 370;
-		stroke-width: 4px;
-	}
-
-	100% {
-		stroke-dasharray: 475 286;
-		stroke-width: 2px;
-	}
-}
-
-.scroll-button-down {
-	border: 2px solid $white;
+.round-button {
 	border-radius: 50%;
 	width: 56px;
 	height: 56px;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.scroll-button-down {
+	border-color: $white;
 	padding: 0;
 	z-index: 1;
 	display: inline-block;
@@ -481,7 +473,7 @@ input[type='submit'] {
 			}
 
 			&::after {
-				animation: background calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+				animation: backgroundChange calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
 			}
 
 			svg {
@@ -491,104 +483,159 @@ input[type='submit'] {
 	}
 }
 
-@keyframes text {
+.button-sound {
+	--line: #fff;
+	--line-width: 6px;
+	--duration: .5s;
+	position: relative;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 
-	10%,
-	85% {
-		transform: translateY(-100%);
+
+	svg {
+		display: block;
+		fill: none;
+		stroke: var(--line);
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: var(--line-width);
+		width: 18px;
+		height: auto;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		path {
+			animation: var(--name) var(--duration) ease forwards;
+
+			&:nth-child(2) {
+				stroke-dashoffset: 1px;
+			}
+
+			&:nth-child(3) {
+				stroke-dashoffset: 1px;
+			}
+		}
 	}
 
-	95%,
-	100% {
-		transform: translateY(-200%);
+	&:not(.button-sound-active) {
+		svg {
+			path {
+				&:nth-child(1) {
+					--name: shape;
+				}
+
+				&:nth-child(2) {
+					--name: small;
+				}
+
+				&:nth-child(3) {
+					--name: large;
+				}
+			}
+		}
+	}
+
+	&.button-sound-active,
+	&[data-uk-video~='automute: true'] {
+		svg {
+			path {
+				&:nth-child(1) {
+					--name: shape-r;
+				}
+
+				&:nth-child(2) {
+					--name: small-r;
+				}
+
+				&:nth-child(3) {
+					--name: large-r;
+				}
+			}
+		}
 	}
 }
 
-@keyframes line {
+.button-video {
+	$color: $white;
+	$highlight: darken($color, 10%);
+	$duration: .4s;
+	$sin: .866;
+	$size: 18px;
+	border: $size * .1 solid $color;
+	border-radius: 50%;
+	font-size: 0;
+	white-space: nowrap;
+	text-align: center;
+	cursor: pointer;
 
-	5%,
-	10% {
-		transform: translateY(-30px);
+	.left,
+	.right,
+	&::before {
+		display: inline-block;
+		vertical-align: middle;
+		transition: border $duration, width $duration, height $duration, margin $duration ease;
+		transition-timing-function: cubic-bezier(1, 0, 0, 1);
 	}
 
-	40% {
-		transform: translateY(-20px);
+	&::before {
+		content: '';
+		height: $size;
 	}
 
-	65% {
-		transform: translateY(0);
+	.left,
+	.right {
+		border-radius: 2px;
 	}
 
-	75%,
-	100% {
-		transform: translateY(30px);
-	}
-}
+	&.button-video-active {
 
-@keyframes svg {
+		.left,
+		.right {
+			margin: 0;
+			border-left: $size * .33 solid $color;
+			border-top: 0 solid transparent;
+			border-bottom: 0 solid transparent;
+			height: $size * $sin;
+		}
 
-	0%,
-	20% {
-		stroke-dasharray: 0;
-		stroke-dashoffset: 0;
-	}
-
-	21%,
-	89% {
-		stroke-dasharray: 26px;
-		stroke-dashoffset: 26px;
-		stroke-width: 3px;
-		margin: -10px 0 0 -10px;
-		stroke: var(--checkmark);
+		.left {
+			margin-right: 2px;
+		}
 	}
 
-	100% {
-		stroke-dasharray: 26px;
-		stroke-dashoffset: 0;
-		margin: -10px 0 0 -10px;
-		stroke: var(--checkmark);
+	&:not(.button-video-active) {
+		$border: $size / 4;
+
+		.left,
+		.right {
+			border-radius: 0;
+		}
+
+		.left {
+			margin-left: $size / 6;
+			border-left: $size * $sin / 2 solid $color;
+			border-top: $border solid transparent;
+			border-bottom: $border solid transparent;
+			height: $size + 1;
+		}
+
+		.right {
+			margin: 0;
+			border-left: $size * $sin / 2 solid $color;
+			border-top: $border solid transparent;
+			border-bottom: $border solid transparent;
+			height: 0;
+		}
 	}
 
-	12% {
-		opacity: 1;
-	}
+	@include hover {
+		border-color: $highlight;
 
-	20%,
-	89% {
-		opacity: 0;
-	}
-
-	90%,
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes background {
-	10% {
-		transform: scaleY(0);
-	}
-
-	40% {
-		transform: scaleY(.15);
-	}
-
-	65% {
-		transform: scaleY(.5);
-		border-radius: 0 0 50% 50%;
-	}
-
-	75% {
-		border-radius: 0 0 50% 50%;
-	}
-
-	90%,
-	100% {
-		border-radius: 0;
-	}
-
-	75%,
-	100% {
-		transform: scaleY(1);
+		.left,
+		.right {
+			border-left-color: $highlight;
+		}
 	}
 }

@@ -69,10 +69,8 @@
     }
 
     .uk-slidenav {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        border: 2px solid $blue;
+        border-color: $blue;
+        transition: $nbSec ease-in-out;
 
         &::after {
             color: $blue;
@@ -82,6 +80,7 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            transition: $nbSec ease-in-out;
         }
 
         svg {
@@ -97,6 +96,14 @@
         &:last-of-type {
             &::after {
                 content: font-char($button-arrow-right);
+            }
+        }
+
+        @include hover {
+            background-color: $blue;
+
+            &::after {
+                color: $white;
             }
         }
     }

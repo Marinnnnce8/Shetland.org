@@ -229,18 +229,6 @@
 	}
 }
 
-
-@keyframes searchOpacityIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-
 .mega-menu {
 	&:not(:first-of-type) {
 		margin-left: 40px;

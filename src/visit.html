@@ -57,8 +57,8 @@
                 "</li>" +
                 "</ul>" +
                 "<ul class='map-pins uk-position-cover'>" +
-                "<li><button aria-label='map pin'></button></li>" +
-                "<li><button aria-label='map pin'></button></li>" +
+                "<li><button aria-label='map pin round-button'></button></li>" +
+                "<li><button aria-label='map pin round-button'></button></li>" +
                 "</ul>" +
                 "<ul class='map-totals uk-position-cover'>" +
                 "<li class='label medium uk-text-bold alt'>7</li>" +
@@ -426,7 +426,8 @@
                                                     </li>
                                                 </ul>
                                                 <div class="uk-flex">
-                                                    <a href="#" class="uk-button uk-button-text uk-text-uppercase uk-text-uppercase">
+                                                    <a href="#"
+                                                        class="uk-button uk-button-text uk-text-uppercase uk-text-uppercase">
                                                         <img src="./img/button-text-link.svg" data-uk-svg alt="image">
                                                         <span>View all</span><span role="presentation"><img data-uk-svg
                                                                 src="./img/button-arrow-right.svg"
@@ -651,11 +652,11 @@
                         data-uk-video="automute: true; autoplay: true" playsinline></video>
                 </div>
                 <div class="video-controls uk-flex uk-position-bottom-right uk-visible@l">
-                    <button class="js-button-video button-video button-video-active uk-margin-small-right"
+                    <button class="js-button-video round-button button-video button-video-active uk-margin-small-right"
                         aria-label="Pause">
                         <span class="left"></span><span class="right"></span>
                     </button>
-                    <button class="js-button-sound button-sound button-sound-active" aria-label="Mute">
+                    <button class="js-button-sound round-button button-sound button-sound-active" aria-label="Mute">
                         <svg viewBox="0 0 108 96">
                             <path
                                 d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z">
@@ -746,9 +747,9 @@
                             </div>
                         </li>
                     </ul>
-                    <a class="uk-position-center-left uk-position-small" href="#" aria-label="previous"
+                    <a class="uk-position-center-left round-button uk-position-small" href="#" aria-label="previous"
                         data-uk-slidenav-previous data-uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right uk-position-small" href="#" aria-label="next"
+                    <a class="uk-position-center-right round-button uk-position-small" href="#" aria-label="next"
                         data-uk-slidenav-next data-uk-slider-item="next"></a>
                 </div>
             </div>
@@ -1215,12 +1216,15 @@
         </div>
     </footer>
 
-    <svg width="0" height="0" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 57.5 72'>
-        <clipPath id='mapPin' clipPathUnits='objectBoundingBox' transform='scale(0.00847457627, 0.00757575757)'>
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M64.326 76.909c13.186-2.605 23.128-14.232 23.128-28.182C87.454 32.862 74.593 20 58.727 20 42.862 20 30 32.862 30 48.727c0 13.52 9.338 24.857 21.916 27.915L58.545 92l5.781-15.091z"
-                fill="#1B365D" />
-        </clipPath>
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 57.5 72' style='position:absolute;' height='0'
+        width='0'>
+        <defs>
+            <clipPath id='mapPin' clipPathUnits='objectBoundingBox' transform='scale(0.00847457627, 0.00757575757)'>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M64.326 76.909c13.186-2.605 23.128-14.232 23.128-28.182C87.454 32.862 74.593 20 58.727 20 42.862 20 30 32.862 30 48.727c0 13.52 9.338 24.857 21.916 27.915L58.545 92l5.781-15.091z"
+                    fill="#1B365D" />
+            </clipPath>
+        </defs>
     </svg>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'
