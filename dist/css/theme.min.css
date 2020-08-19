@@ -3006,6 +3006,14 @@ input[type='submit'] {
   height: auto;
 }
 
+.nb-bio-inner .uk-button-text span::after {
+  display: none;
+}
+
+.nb-bio-inner .uk-button-text .uk-svg:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+  stroke: #eaebeb;
+}
+
 .nb-map {
   overflow: hidden;
 }
@@ -3820,9 +3828,10 @@ input[type='submit'] {
   display: inline-block;
   font-size: 28px;
   line-height: 1.3em;
-  color: #267cb9;
   font-weight: normal;
   margin-top: 30px;
+  padding: 0;
+  color: #298fc2;
 }
 
 .explore-item .uk-button-text::after {
@@ -3832,7 +3841,16 @@ input[type='submit'] {
   height: 4px;
   top: -10px;
   left: 0;
-  background-color: #267cb9;
+  background-color: #298fc2;
+}
+
+.explore-item .uk-button-text > span:last-of-type::after {
+  background-color: #298fc2;
+}
+
+.explore-item .uk-button-text > span:last-of-type .uk-svg,
+.explore-item .uk-button-text > span:last-of-type .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+  fill: #298fc2;
 }
 
 .explore-item .uk-button-text:hover > span:last-of-type::after, .explore-item .uk-button-text:focus > span:last-of-type::after, .explore-item .uk-button-text:active > span:last-of-type::after {

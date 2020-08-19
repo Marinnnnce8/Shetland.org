@@ -11,4 +11,14 @@
         width: 100px;
         height: auto;
     }
+
+    .uk-button-text {
+        span::after {
+            display: none;
+        }
+
+        .uk-svg:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+            stroke: $gray-cold-dark;
+        }
+    }
 }

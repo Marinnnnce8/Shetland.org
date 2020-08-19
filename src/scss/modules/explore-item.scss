@@ -63,9 +63,10 @@
         display: inline-block;
         font-size: 28px;
         line-height: 1.3em;
-        color: $blue-light;
         font-weight: normal;
         margin-top: 30px;
+        padding: 0;
+        color: $blue-explore;
 
         &::after {
             position: absolute;
@@ -74,7 +75,18 @@
             height: 4px;
             top: -10px;
             left: 0;
-            background-color: $blue-light;
+            background-color: $blue-explore;
+        }
+
+        >span:last-of-type {
+            &::after {
+                background-color: $blue-explore;
+            }
+
+            .uk-svg,
+            .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+                fill: $blue-explore;
+            }
         }
 
         @include hover {
