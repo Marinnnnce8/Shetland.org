@@ -8,6 +8,24 @@
             width: calc(100% - 30px);
             left: 30px;
         }
+
+        @include hover {
+            .uk-button-text {
+                >span:last-of-type {
+                    &::after {
+                        width: 18px;
+                    }
+
+                    svg {
+                        left: 18px;
+                    }
+                }
+
+                .shape {
+                    animation: .35s drawShape 0s linear forwards;
+                }
+            }
+        }
     }
 
     .uk-card-body ul,

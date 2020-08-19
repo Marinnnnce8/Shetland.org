@@ -202,7 +202,8 @@ input[type='submit'] {
 }
 
 .uk-button-text {
-	padding: 10px 55px 10px 30px;
+	// padding: 10px 55px 10px 30px;
+	padding: 0 55px 0 30px;
 	transition: .45s;
 	min-width: auto;
 	overflow: visible;
@@ -217,16 +218,17 @@ input[type='submit'] {
 	}
 
 	&.uk-button-large {
-		min-height: 64px;
+		min-height: 62px;
 	}
 
 	>span:last-of-type {
 		&::after {
-			background-color: $blue-light;
+			background-color: $green-pastel;
 		}
 
-		svg {
-			color: $blue-light;
+		.uk-svg,
+		.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+			fill: $green-pastel;
 		}
 	}
 
@@ -242,8 +244,13 @@ input[type='submit'] {
 		left: 0;
 		top: 0;
 		bottom: 0;
+		height: 100%;
+	}
+
+	.shape {
 		stroke-dasharray: 138 370;
 		stroke-dashoffset: -745;
+		stroke-width: 4px;
 	}
 
 	@include hover {
@@ -259,8 +266,8 @@ input[type='submit'] {
 			}
 		}
 
-		>svg {
-			animation: .5s drawShape 0s linear forwards;
+		.shape {
+			animation: .35s drawShape 0s linear forwards;
 		}
 	}
 }
@@ -268,13 +275,11 @@ input[type='submit'] {
 @keyframes drawShape {
 	0% {
 		stroke-dasharray: 138 370;
-		stroke-dashoffset: -745;
-		stroke-width: 8px;
+		stroke-width: 4px;
 	}
 
 	100% {
 		stroke-dasharray: 475 286;
-		stroke-dashoffset: -745;
 		stroke-width: 2px;
 	}
 }
@@ -585,57 +590,5 @@ input[type='submit'] {
 	75%,
 	100% {
 		transform: scaleY(1);
-	}
-}
-
-.uk-button-text-alt {
-	position: relative;
-	display: flex;
-	align-items: center;
-	padding: 15px 25px;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: block;
-		border-radius: 28px;
-		border: 2px solid $gray-cold;
-		width: 48px;
-		height: 48px;
-		transition: $nbSec ease;
-	}
-
-	span {
-		position: relative;
-		color: $blue;
-
-		&::after {
-			display: none;
-		}
-	}
-
-	.uk-svg,
-	.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
-		fill: $blue;
-		transition: $nbSec ease;
-	}
-
-	@include hover {
-		background-color: transparent;
-
-		&::before {
-			width: 100%;
-		}
-
-		.uk-svg,
-		.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
-			transform: translateX(-5px);
-		}
-	}
-
-	&:active {
-		transform: scale(.96);
 	}
 }
