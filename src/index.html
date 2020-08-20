@@ -18,8 +18,7 @@
 <body id="scroll-top">
 
 	<!-- MAIN HEADER -->
-	<header class='header header-main'
-		data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
+	<header class='header header-main' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
 		<nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
 			<div class='uk-navbar-left'>
@@ -49,10 +48,12 @@
 						</ul>
 					</div>
 					<div class="nav-search uk-position-relative uk-flex uk-flex-right">
-						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active" class="label small alt">Search</button>
+						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+							class="label small alt">Search</button>
 						<div id="navSearchBox" class="nav-search-box">
 							<div class="uk-flex uk-flex-middle uk-flex-right">
-								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active" class="label small alt">Close
+								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+									class="label small alt">Close
 									search</button>
 								<form action="/search" method="get" role="search" id="navSearch"
 									class="uk-search uk-search-default">
@@ -63,10 +64,18 @@
 						</div>
 					</div>
 				</div>
-				<a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
+				<!-- <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
 					hidden>
 					<span data-uk-navbar-toggle-icon></span>
-				</a>
+				</a> -->
+				<!-- <button class="js-navbar-toggle uk-navbar-toggle" aria-label="Toggle menu">
+					<div class="nav-bars" role="presentation">
+						<span></span>
+						<span></span>
+						<span></span>
+						<div class="nav-bar-alt"></div>
+					</div>
+				</button> -->
 			</div>
 
 		</nav>
@@ -75,9 +84,9 @@
 
 	<main>
 		<div class="uk-position-bottom-right scroll-button-up">
-            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+			<a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
 		</div>
-		
+
 		<div class="banner video uk-position-relative uk-margin-large-bottom">
 			<div class="banner-inner uk-cover-container uk-background-cover"
 				style="background-image: url('./img/banner-home.jpg');">

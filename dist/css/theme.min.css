@@ -2309,6 +2309,76 @@ input[type='submit'] {
   white-space: initial;
 }
 
+.uk-navbar-toggle {
+  min-height: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.uk-navbar-toggle .nav-bars {
+  padding: 3px;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+.uk-navbar-toggle .nav-bars span {
+  display: block;
+  width: 85%;
+  height: 4px;
+  background-color: #1b365d;
+  margin-top: 6px;
+}
+
+.uk-navbar-toggle .nav-bars span:first-child {
+  margin-top: 0;
+  transform: scaleX(1);
+  transition: transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition-delay: .4s;
+}
+
+.uk-navbar-toggle .nav-bars span:nth-child(3) {
+  width: 50%;
+  transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition-delay: .4s;
+}
+
+.uk-navbar-toggle .nav-bars .nav-bar-alt {
+  width: 4px;
+  height: 0;
+  background-color: #1b365d;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  margin-left: -5px;
+  transition: height 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
+  z-index: 10;
+}
+
+.uk-navbar-toggle.uk-navbar-toggle-open .nav-bars {
+  transform: rotate(45deg) translate(-10%, 20%);
+  transition-delay: .4s;
+}
+
+.uk-navbar-toggle.uk-navbar-toggle-open .nav-bars span:first-child {
+  transform: scaleX(0);
+  transition: transform 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+.uk-navbar-toggle.uk-navbar-toggle-open .nav-bars span:nth-child(3) {
+  width: 0;
+  transition: width 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+}
+
+.uk-navbar-toggle.uk-navbar-toggle-open .nav-bars .nav-bar-alt {
+  height: 36px;
+  transition: height 0.2s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition-delay: .3s;
+}
+
 .nb-table thead {
   border-bottom: 2px solid #1b365d;
 }

@@ -13,6 +13,7 @@ var theme = {
 		var bannerVideo = document.getElementsByClassName('banner-video')[0];
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
 		var downloadButton = document.querySelectorAll('download-button');
+		var navToggleButton = document.getElementsByClassName('js-navbar-toggle')[0];
 
 		if(percentNumber) {
 			this.addMultiListener(window, 'load scroll', this.scrollPercentage);
@@ -26,6 +27,10 @@ var theme = {
 
 		if(campaignSlider) {
 			this.addMultiListener(window, 'load resize', theme.campaignItemSetHeight);
+		}
+
+		if(navToggleButton) {
+			navToggleButton.addEventListener('click', this.toggleButtonClass);
 		}
 
 		// if(downloadButton) {
@@ -206,6 +211,18 @@ var theme = {
 
 		for(var i = 0;i < campaignItem.length;i++) {
 			campaignItem[i].style.height = maxWidth + 'px';
+		}
+	},
+
+
+	//Toggle class on click
+	toggleButtonClass: function() {
+		var activeClass = 'uk-navbar-toggle-open';
+
+		if(this.classList.contains(activeClass)) {
+			this.classList.remove(activeClass)
+		} else {
+			this.classList.add(activeClass);
 		}
 	}
 
