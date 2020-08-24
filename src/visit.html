@@ -885,7 +885,7 @@
                 <h2 class="uk-text-center uk-margin-medium-bottom">Shetland Map</h2>
 
                 <div class='nb-map'>
-                    <form action="/search" method="get" role="search" id="mapForm">
+                    <!-- <form action="/search" method="get" role="search" id="mapForm">
                         <ul class='map-form uk-flex uk-flex-center uk-flex-middle'>
                             <li class="font-area">
                                 <select class="uk-select label medium alt uk-text-bold">
@@ -900,7 +900,28 @@
                                 </select>
                             </li>
                         </ul>
-                    </form>
+                    </form> -->
+                    <ul class="map-dropdown uk-flex uk-flex-center uk-flex-middle">
+                        <li><button class='label medium alt uk-text-bold font-area'>Areas</button>
+                            <div
+                                data-uk-dropdown="mode: click;boundary: .map-dropdown; boundary-align: true;pos: bottom-justify" class="uk-margin-remove-top">
+                                <button class="uk-position-top-right" data-uk-close aria-label="Close dropdown navigation"></button>
+                                <div>
+                                    Lorem
+                                    ipsum
+                                    dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt.</div>
+                            </div>
+                        </li>
+                        <li><button class='label medium alt uk-text-bold font-eye'>Interests</button>
+                            <div
+                                data-uk-dropdown="mode: click;boundary: .map-dropdown; boundary-align: true;pos: bottom-justify">
+                                Lorem
+                                ipsum
+                                dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt.</div>
+                        </li>
+                    </ul>
                     <div class='map' id="map_canvas_areas"></div>
                 </div>
             </div>
@@ -981,7 +1002,7 @@
                         good
                         to have a sentence or two included here.</p>
                 </div>
-                <div data-uk-grid class="uk-child-width-1-2 uk-grid-medium">
+                <div data-uk-grid class="uk-child-width-1-2@s uk-grid-medium">
                     <div>
                         <div class="image-card orange-border uk-card uk-card-body uk-background-cover" data-uk-img
                             style="background-image: url('./img/image-card-1.jpg');">

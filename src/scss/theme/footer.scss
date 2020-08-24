@@ -142,10 +142,17 @@
     @media (max-width: $breakpointSmall) {
         >.uk-flex:nth-child(2) {
             flex-direction: column;
+            align-items: center;
         }
 
-        .uk-button-default.font-news {
-            margin-bottom: 20px;
+        .uk-button-default {
+            max-width: 280px;
+            width: 100%;
+
+            &.font-news {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
         }
     }
 }

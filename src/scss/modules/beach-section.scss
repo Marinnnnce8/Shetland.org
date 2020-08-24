@@ -2,11 +2,11 @@
     padding-bottom: 60px;
 
     .uk-card {
-        min-height: 430px;
 
         >a.uk-position-cover {
             width: calc(100% - 30px);
             left: 30px;
+            margin-top: 0;
         }
 
         @include hover {
@@ -44,11 +44,7 @@
     }
 
     .uk-card-media-left {
-        position: relative;
-
-        img {
-            top: 20px;
-        }
+        min-height: 350px;
     }
 
     .uk-card-title {
@@ -86,6 +82,12 @@
                     margin-left: 40px;
                 }
             }
+        }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        .uk-card-media-left {
+            min-height: 430px;
         }
     }
 }

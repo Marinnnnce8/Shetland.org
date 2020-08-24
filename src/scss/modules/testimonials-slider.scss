@@ -1,5 +1,7 @@
 .testimonials-slider {
     padding: 90px 0 80px;
+    position: relative;
+    z-index: 2;
 
     h2 {
         margin-bottom: 40px;

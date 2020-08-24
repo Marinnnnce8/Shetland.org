@@ -249,7 +249,7 @@ blockquote {
 }
 
 blockquote {
-	padding: 10px 0 10px 60px;
+	padding: 15px 0 10px 30px;
 	margin: 40px 0 25px;
 	position: relative;
 
@@ -298,6 +298,10 @@ blockquote {
 		&::before {
 			color: $turquise-light;
 		}
+	}
+
+	@media (min-width: $breakpointSmall) {
+		padding: 10px 0 10px 60px;
 	}
 }
 

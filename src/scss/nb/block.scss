@@ -169,7 +169,7 @@
 				width: 100%;
 
 				.nb-gallery-image {
-					border: 20px solid transparent;
+					border: 5px solid transparent;
 					display: table-cell;
 					margin: 0;
 					outline: none;
@@ -180,10 +180,10 @@
 
 					>span {
 						position: absolute;
-						bottom: 10px;
-						right: 10px;
-						width: 40px;
-						height: 40px;
+						bottom: 5px;
+						right: 5px;
+						width: 20px;
+						height: 20px;
 						transition: $nbSec ease-in-out;
 						background-color: $white;
 						opacity: .3;
@@ -195,7 +195,7 @@
 							left: 50%;
 							top: 50%;
 							transform: translate(-50%, -50%);
-							font-size: 22px;
+							font-size: 14px;
 						}
 					}
 
@@ -218,6 +218,31 @@
 
 			.uk-container-expand & {
 				margin: 0 $nbGutterXsmall;
+			}
+
+			@media (min-width: $breakpointSmall) {
+
+				.nb-gallery-row .nb-gallery-image {
+					border: 10px solid transparent;
+
+					>span {
+						bottom: 10px;
+						right: 10px;
+						width: 40px;
+						height: 40px;
+
+						&::before {
+							font-size: 22px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: $breakpointMedium) {
+
+				.nb-gallery-row .nb-gallery-image {
+					border: 20px solid transparent;
+				}
 			}
 		}
 
@@ -243,7 +268,6 @@
 		}
 
 		.uk-slideshow-items {
-			min-height: 595px !important;
 
 			li,
 			a,
@@ -278,7 +302,7 @@
 		}
 
 		.uk-slidenav {
-			border-color: $blue;
+			border-color: $white;
 			transition: $nbSec ease-in-out;
 
 			svg {
@@ -289,12 +313,12 @@
 			}
 
 			&:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
-				stroke: $blue;
+				stroke: $white;
 				transition: $nbSec ease-in-out;
 			}
 
 			@include hover {
-				background-color: $blue;
+				background-color: $white;
 				text-decoration: none;
 
 				&:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
@@ -304,17 +328,43 @@
 		}
 
 		.uk-slidenav-previous {
-			transform: translateY(-50%) translateX(-20px) translateX(-100%);
+			transform: translateY(-50%) translateX(-20px) translateX(65%);
 		}
 
 		.uk-slidenav-next {
-			transform: translateY(-50%) translateX(20px) translateX(100%);
+			transform: translateY(-50%) translateX(20px) translateX(-65%);
 		}
 
 		@media (max-width: $breakpointSmall) {
 			.uk-slidenav {
 				width: 48px;
 				height: 48px;
+			}
+		}
+
+		@media (min-width: $breakpointLarge) {
+			.uk-slidenav {
+				border-color: $blue;
+
+				&:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+					stroke: $blue;
+				}
+
+				@include hover {
+					background-color: $blue;
+
+					&:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+						stroke: $white;
+					}
+				}
+			}
+
+			.uk-slidenav-previous {
+				transform: translateY(-50%) translateX(-20px) translateX(-100%);
+			}
+
+			.uk-slidenav-next {
+				transform: translateY(-50%) translateX(20px) translateX(100%);
 			}
 		}
 	}

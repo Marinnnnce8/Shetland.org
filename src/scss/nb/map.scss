@@ -2,82 +2,55 @@
     overflow: hidden;
 }
 
-.map-form {
+.map-dropdown {
     background-color: $turquise-light;
     margin: 0;
 
     li {
         list-style-type: none;
-        position: relative;
 
-        &::before,
-        &::after {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: $blue;
-            pointer-events: none;
-        }
-
-        &::after {
-            content: font-char($chevron-down-thin);
-            color: $blue;
-            font-size: 24px;
-            font-size: 8px;
-            font-family: 'svgicons';
-        }
-
-        .uk-select:not([multiple]):not([size]) {
-            background-color: $turquise-light;
-            background-image: none;
-            border-color: transparent;
-            border-width: 0;
+        >button {
             border-left: 1px solid $gray-mid;
-            border-radius: 0;
             display: inline-flex;
             align-items: center;
-            min-height: 64px;
+            padding: 24px 25px;
+            position: relative;
 
-            * {
-                // font-feature-settings: 'liga'off !important;
-                font-family: Arial, Helvetica, sans-serif;
+            &::after {
+                position: absolute;
+                content: font-char($chevron-down-thin);
                 color: $blue;
-                font-size: inherit;
+                right: 35px;
+                font-size: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 8px;
+                font-family: 'svgicons';
+            }
+
+            &::before {
+                margin-right: 15px;
             }
         }
 
         &:first-of-type {
+            >button {
+                padding-right: 52px;
+                padding-left: 40px;
 
-            &::before {
-                font-size: 23px;
-                left: 35px;
-            }
-
-            &::after {
-                right: 35px;
-            }
-
-            .uk-select:not([multiple]):not([size]) {
-                padding-right: 50px;
-                padding-left: 65px;
+                &::before {
+                    font-size: 23px;
+                }
             }
         }
 
 
-        &:last-of-type {
-
-            &::before {
-                left: 25px;
-            }
+        &:last-of-type >button {
+            border-right: 1px solid $gray-mid;
+            padding-right: 41px;
 
             &::after {
                 right: 25px;
-            }
-
-            .uk-select:not([multiple]):not([size]) {
-                border-right: 1px solid $gray-mid;
-                padding-right: 40px;
-                padding-left: 63px;
             }
         }
     }

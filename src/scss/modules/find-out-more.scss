@@ -11,30 +11,32 @@
 
         a {
             background-color: $turquise-light;
-            display: block;
+            display: flex;
+            align-items: center;
             font-size: 20px;
             font-weight: $bold;
             line-height: 1.3em;
             color: $blue;
-            padding: 26px 80px 15px 165px;
+            padding-right: 35px;
             min-height: 80px;
 
             &::after {
                 position: absolute;
-                right: 25px;
-                top: 25px;
+                right: 12px;
+                top: 10px;
                 font-family: 'svgicons';
                 color: $blue;
                 content: font-char($external-link);
-                font-size: 20px;
+                font-size: 14px;
+            }
+
+            >span {
+                padding: 20px 0 15px 15px;
             }
 
             img {
-                position: absolute;
                 width: 122px;
                 height: auto;
-                left: 0;
-                top: 0;
             }
 
             @include hover {
@@ -52,6 +54,24 @@
 
             &+* {
                 margin: 15px 0 60px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpointSmall) {
+        li {
+            a {
+                padding-right: 80px;
+
+                &::after {
+                    right: 25px;
+                    top: 25px;
+                    font-size: 20px;
+                }
+
+                >span {
+                    padding: 26px 0 15px 42px;
+                }
             }
         }
     }

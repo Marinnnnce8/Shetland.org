@@ -42,4 +42,10 @@
     .uk-button {
         background-color: $blue;
     }
+
+    @media (max-width: $breakpointLarge) {
+        form {
+            padding: 0 20px;
+        }
+    }
 }

@@ -8,6 +8,12 @@
     ul {
         list-style-type: none;
 
+        &:not(:first-of-type) {
+            li:first-of-type a:not(.uk-button) {
+                border-top: 0;
+            }
+        }
+
         li {
             min-height: 80px;
 
@@ -66,6 +72,14 @@
 
         >.uk-grid-margin {
             margin-top: 0;
+        }
+    }
+
+    @media (min-width: $breakpointSmall) {
+        ul:not(:first-of-type) {
+            li:first-of-type a:not(.uk-button) {
+                border-top: 2px solid $gray-cold;
+            }
         }
     }
 }

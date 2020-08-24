@@ -1,24 +1,13 @@
 .banner.video {
+	height: calc(86vh - 80px);
+	overflow: hidden;
+
 	.banner-inner {
-		max-height: 670px;
+		min-height: 100%;
 	}
 
-	@media (max-width: $breakpointXmedium) and (min-width: $breakpointLarge) {
-		.banner-inner::before {
-			display: none;
-		}
-	}
-
-	@media (min-width: $breakpointLarge) {
-		.banner-inner {
-			background-image: none !important; //sass-lint:disable-line no-important
-		}
-	}
-}
-
-.video-wrapper {
-	video {
-		min-height: 710px;
+	@media (min-width: $breakpointSmall) {
+		height: calc(75vh - 30px);
 	}
 }
 

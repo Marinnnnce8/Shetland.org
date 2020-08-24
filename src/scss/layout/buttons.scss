@@ -217,7 +217,7 @@ input[type='submit'] {
 	}
 
 	&.uk-button-large {
-		min-height: 62px;
+		padding: 0 30px;
 	}
 
 	>span:last-of-type {
@@ -267,6 +267,29 @@ input[type='submit'] {
 
 		.shape {
 			animation: .35s drawShape 0s linear forwards;
+		}
+	}
+
+	@media (min-width: $breakpointSmall) {
+		&.uk-button-large {
+			min-height: 62px;
+			padding: 0 55px 0 30px;
+		}
+	}
+
+	@media (max-width: $breakpointSmall) {
+		&.uk-button-large {
+			@include hover {
+				span:last-of-type {
+					&::after {
+						width: 10px;
+					}
+
+					svg {
+						left: 10px;
+					}
+				}
+			}
 		}
 	}
 }

@@ -51,7 +51,14 @@
         margin: 0 10px;
     }
 
-    @media (max-width: $breakpointXsmallMax) {
-        max-width: 128px;
+    > :last-child>*,
+    > :last-child>span {
+        @include text-truncate;
+        display: inline-block;
+        vertical-align: middle;
+
+        @media (max-width: $breakpointXsmallMax) {
+            max-width: 128px;
+        }
     }
 }
