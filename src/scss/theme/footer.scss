@@ -6,12 +6,16 @@
         position: relative;
     }
 
-    @media (min-width: $breakpointLarge) {
-        padding: 57px 0 40px;
-    }
-
     @media (min-width: $breakpointSmall) {
         padding: 57px 0 30px;
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 57px 0 40px;
+
+        >.uk-position-cover {
+            top: 70px;
+        }
     }
 }
 
@@ -62,6 +66,7 @@
         border-color: $blue;
         position: relative;
         padding-right: 70px;
+        font-size: 16px;
 
         &::before {
             font-size: 24px;
