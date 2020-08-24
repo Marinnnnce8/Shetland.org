@@ -1,12 +1,11 @@
 .nb-legal {
-	padding: $nbGutterSmall 0;
 
 	ul {
 		margin: 0;
 		padding: 0;
 
 		li {
-			display: inline-block;
+			display: block;
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -44,7 +43,17 @@
 		}
 	}
 
-	@media (max-width: $breakpointMedium) {
+	@media (min-width: $breakpointSmall) {
+		li {
+			display: inline-block;
+		}
+	}
+
+	@media (min-width: $breakpointLarge) {
+		padding-right: 40px;
+	}
+
+	@media (max-width: $breakpointXsmallMax) {
 		.uk-flex {
 			justify-content: center;
 		}

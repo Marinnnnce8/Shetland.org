@@ -1,7 +1,8 @@
 .nb-credit {
 
 	a {
-		margin-top: 15px;
+		margin-top: 7px;
+		display: block;
 
 		@include hover {
 			color: $nbRed;
@@ -13,10 +14,18 @@
 			margin-left: $nbGutterXsmall;
 		}
 	}
-	@media (min-width: $breakpointMedium) {
-		text-align: right;
+
+	@media (min-width: $breakpointSmall) {
 		a {
-			display: block;
+			margin-top: 15px;
+		}
+	}
+
+	@media (min-width: $breakpointLarge) {
+		text-align: right;
+
+		a {
+			display: inline-block;
 		}
 	}
 }

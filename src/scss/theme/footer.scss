@@ -1,11 +1,22 @@
 .footer {
-    min-height: 710px;
     border-top: 1px solid $gray-cold;
-    padding: 55px 0 35px;
+    padding: 57px 0 20px;
+
+    >.uk-container {
+        position: relative;
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 57px 0 40px;
+    }
+
+    @media (min-width: $breakpointSmall) {
+        padding: 57px 0 30px;
+    }
 }
 
 .footer-top {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 
     a img {
         max-width: 127px;
@@ -15,7 +26,7 @@
 
     >.uk-flex {
 
-        &:nth-child(3) {
+        &:last-child {
 
             a {
                 position: relative;
@@ -87,44 +98,53 @@
         }
     }
 
-    >.uk-flex:nth-child(3) li:not(:last-of-type) {
+    >.uk-flex:last-child li:not(:last-of-type) {
         margin-right: 20px;
     }
 
-    @media (max-width: $breakpointLarge) and (min-width: $breakpointSmall) {
+    @media (max-width: $breakpointLarge) {
 
-        .uk-button-default.font-news {
-            margin-right: 20px;
+        >.uk-flex {
+
+            &:nth-child(2) {
+                margin-top: 40px;
+            }
+
+            &:nth-child(3),
+            &:last-child {
+                margin-top: 45px;
+            }
         }
     }
 
-    @media (min-width: $breakpointLarge) {
+    @media (min-width: $breakpointSmall) {
+        padding-bottom: 140px;
 
         .uk-button-default.font-news,
-        >.uk-flex:nth-child(3) li:not(:last-of-type) {
+        >.uk-flex:last-child li:not(:last-of-type) {
             margin-right: 40px;
         }
     }
 
-    @media (min-width: $breakpointMedium) {
-        padding-bottom: 190px;
+    @media (min-width: $breakpointLarge) {
+        padding-bottom: 270px;
 
         >.uk-flex {
 
             &:first-child {
-                order: 4;
+                order: 2;
             }
 
             &:nth-child(2) {
-                order: 1;
+                order: 4;
             }
 
             &:nth-child(3) {
-                order: 3;
+                order: 1;
             }
 
             &:last-child {
-                order: 2;
+                order: 3;
             }
         }
 
@@ -133,22 +153,19 @@
         }
     }
 
-    @media (max-width: $breakpointMedium) {
+    @media (max-width: $breakpointMediumMax) {
         >.uk-flex {
             justify-content: center;
         }
     }
 
-    @media (max-width: $breakpointSmall) {
-        >.uk-flex:nth-child(2) {
+    @media (max-width: $breakpointXsmallMax) {
+        >.uk-flex:nth-child(3) {
             flex-direction: column;
             align-items: center;
         }
 
         .uk-button-default {
-            max-width: 280px;
-            width: 100%;
-
             &.font-news {
                 margin-bottom: 20px;
                 margin-right: 0;
@@ -157,15 +174,20 @@
     }
 }
 
+.footer-middle {
+    .scroll-button-up {
+        display: flex;
+        padding: 20px 0 40px;
+
+        .uk-button {
+            margin: 0;
+        }
+    }
+}
+
 .footer-bottom {
     * {
         color: $white;
-    }
-
-    >div {
-        &:first-of-type .label.small {
-            margin: 11px 0 15px;
-        }
     }
 
     .uk-button {
@@ -186,28 +208,26 @@
     .label.small {
         display: block;
         opacity: 1;
-        text-align: left;
+        text-align: center;
     }
 
-    @media (min-width: $breakpointMedium) {
-        >div {
+    @media (min-width: $breakpointLarge) {
+        >.uk-flex {
+            >.uk-flex {
+                &:first-child {
+                    order: 2;
+                    padding-left: 65px;
+                }
 
-            &:first-child {
-                order: 2;
-            }
-
-            &:nth-child(2) {
-                order: 1;
-            }
-
-            &:last-child {
-                order: 3;
+                &:last-child {
+                    padding-bottom: 7px;
+                }
             }
         }
     }
 
-    @media (max-width: $breakpointMedium) {
-        >div:last-child {
+    @media (max-width: $breakpointLarge) {
+        >.uk-flex:last-child {
             justify-content: center;
         }
 
@@ -215,6 +235,52 @@
         .uk-grid+.uk-grid,
         .uk-grid>.uk-grid-margin {
             margin-top: 15px;
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        >.uk-flex {
+            flex-direction: column;
+
+            >.uk-flex {
+                &:first-child {
+                    margin-bottom: 40px;
+
+                    .label.small {
+                        margin: 11px 0 15px;
+                    }
+                }
+
+                &:last-child>.uk-flex:first-child {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .nb-copyright {
+                        margin: 15px 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+        >.uk-flex>.uk-flex {
+            flex-direction: column;
+            align-items: center;
+
+            &:last-child>.uk-flex {
+                &:first-child {
+                    align-items: center;
+
+                    .nb-copyright {
+                        margin-top: 35px;
+                    }
+                }
+
+                &:last-of-type {
+                    margin-top: 35px;
+                }
+            }
         }
     }
 }
