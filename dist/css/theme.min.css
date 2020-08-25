@@ -3910,7 +3910,7 @@ input[type='submit'] {
 .banner-text {
   position: relative;
   z-index: 1;
-  padding: 30px 70px;
+  padding: 30px 80px 30px 70px;
 }
 
 .banner-text * {
