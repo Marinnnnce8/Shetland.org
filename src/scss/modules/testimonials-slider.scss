@@ -47,9 +47,8 @@
     .uk-slidenav {
         border-color: $blue;
         transition: $nbSec ease-in-out;
-        max-width: calc(100% - (22px * 2));
-        margin: 22px;
-        transform: translateY(-50%) translateY(-22px);
+        // max-width: calc(100% - (22px * 2));
+        // margin: 22px;
 
         svg {
             transform: translate(-50%, -50%);
@@ -88,6 +87,13 @@
                     background-color: $blue;
                 }
             }
+        }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        .uk-slidenav {
+            transform: translateY(-50%) translateY(-22px);
+            margin: 22px;
         }
     }
 }

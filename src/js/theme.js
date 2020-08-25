@@ -12,8 +12,9 @@ var theme = {
 		var percentNumber = document.getElementsByClassName('percent-num')[0];
 		var bannerVideo = document.getElementsByClassName('banner-video')[0];
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
-		var downloadButton = document.querySelectorAll('download-button');
 		var navToggleButton = document.getElementsByClassName('js-navbar-toggle')[0];
+
+		var downloadButton = document.querySelectorAll('download-button');
 
 		if(percentNumber) {
 			this.addMultiListener(window, 'load scroll', this.scrollPercentage);
@@ -213,7 +214,6 @@ var theme = {
 			campaignItem[i].style.height = maxWidth + 'px';
 		}
 	},
-
 
 	//Toggle class on click
 	toggleButtonClass: function() {

@@ -301,10 +301,21 @@ input[type='submit'] {
 
 .round-button {
 	border-radius: 50%;
-	width: 56px;
-	height: 56px;
+	width: 48px;
+	height: 48px;
 	border-width: 2px;
 	border-style: solid;
+
+	@media (min-width: $breakpointSmall) {
+		width: 56px;
+		height: 56px;
+	}
+
+	@media (max-width: $breakpointXsmallMax) {
+		&.uk-slidenav {
+			margin: 15px 10px;
+		}
+	}
 }
 
 .scroll-button-down {
@@ -501,20 +512,20 @@ input[type='submit'] {
 
 	&.loading {
 		>.text {
-			animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+			animation: downloadText calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
 		}
 
 		&>.icon {
 			&::before {
-				animation: line calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+				animation: downloadLine calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
 			}
 
 			&::after {
-				animation: backgroundChange calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+				animation: downloadBackgroundChange calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
 			}
 
 			svg {
-				animation: svg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+				animation: downloadSvg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
 			}
 		}
 	}
@@ -560,15 +571,15 @@ input[type='submit'] {
 		svg {
 			path {
 				&:nth-child(1) {
-					--name: shape;
+					--name: speakerShape;
 				}
 
 				&:nth-child(2) {
-					--name: small;
+					--name: smallVolume;
 				}
 
 				&:nth-child(3) {
-					--name: large;
+					--name: largeVolume;
 				}
 			}
 		}
@@ -579,15 +590,15 @@ input[type='submit'] {
 		svg {
 			path {
 				&:nth-child(1) {
-					--name: shape-r;
+					--name: speakerShape-active;
 				}
 
 				&:nth-child(2) {
-					--name: small-r;
+					--name: smallVolume-active;
 				}
 
 				&:nth-child(3) {
-					--name: large-r;
+					--name: largeVolume-active;
 				}
 			}
 		}

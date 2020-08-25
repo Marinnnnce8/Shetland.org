@@ -62,7 +62,7 @@
                 box-shadow: inset 0 0 0 15px $blue;
 
                 &+svg {
-                    animation: bounce .4s linear .2s forwards;
+                    animation: tickBounce .4s linear .2s forwards;
                 }
             }
         }

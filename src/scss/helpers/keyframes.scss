@@ -12,7 +12,7 @@
 }
 
 //Download button
-@keyframes text {
+@keyframes downloadText {
 
 	10%,
 	85% {
@@ -25,7 +25,7 @@
 	}
 }
 
-@keyframes line {
+@keyframes downloadLine {
 
 	5%,
 	10% {
@@ -46,7 +46,7 @@
 	}
 }
 
-@keyframes svg {
+@keyframes downloadSvg {
 
 	0%,
 	20% {
@@ -85,7 +85,7 @@
 	}
 }
 
-@keyframes backgroundChange {
+@keyframes downloadBackgroundChange {
 	10% {
 		transform: scaleY(0);
 	}
@@ -115,7 +115,7 @@
 }
 
 //Video play/sound buttons
-@keyframes small {
+@keyframes smallVolume {
 
 	0% {
 		stroke-dasharray: 0 0 30px 64px;
@@ -143,7 +143,7 @@
 	}
 }
 
-@keyframes small-r {
+@keyframes smallVolume-active {
 	0% {
 		stroke-dasharray: 0 39px 30px 64px;
 		stroke-dashoffset: 1px;
@@ -163,7 +163,7 @@
 	}
 }
 
-@keyframes large {
+@keyframes largeVolume {
 
 	0% {
 		stroke-dasharray: 0 0 50px 84px;
@@ -191,7 +191,7 @@
 	}
 }
 
-@keyframes large-r {
+@keyframes largeVolume-active {
 	0% {
 		stroke-dasharray: 0 78px 32px 84px;
 		stroke-dashoffset: 1px;
@@ -211,7 +211,7 @@
 	}
 }
 
-@keyframes shape {
+@keyframes speakerShape {
 	0% {
 		stroke-dasharray: 60px 0 184px;
 		stroke-dashoffset: 0;
@@ -228,7 +228,7 @@
 	}
 }
 
-@keyframes shape-r {
+@keyframes speakerShape-active {
 	0% {
 		stroke-dasharray: 59px 47px 184px;
 		stroke-dashoffset: 17px;
@@ -270,7 +270,7 @@
 }
 
 //Form checkbox bounce
-@keyframes bounce {
+@keyframes tickBounce {
 	50% {
 		transform: scale(1.2);
 	}
