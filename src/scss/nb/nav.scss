@@ -298,24 +298,10 @@
 			background-color: $gray-cold-mid;
 		}
 
-		.dropdown-close {
+		.dropdown-close-button {
 			position: absolute;
 			top: 25px;
 			right: 40px;
-
-			&::after {
-				content: font-char($close);
-				font-size: 24px;
-				color: $blue;
-				font-family: 'svgicons';
-				transition: $nbSec ease-in-out;
-			}
-
-			@include hover {
-				&::after {
-					color: $blue-navy;
-				}
-			}
 		}
 
 		.uk-dropdown-nav {

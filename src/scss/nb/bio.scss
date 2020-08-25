@@ -13,11 +13,18 @@
     }
 
     .uk-button-text {
+        margin-top: 5px;
+        min-height: 38px;
+        padding: 0 20px 0 30px;
+
         span::after {
             display: none;
         }
 
-        .uk-svg:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+        .shape {
+            width: 136px;
+            stroke-dasharray: 82 403;
+            stroke-dashoffset: -648;
             stroke: $gray-cold-dark;
         }
     }

@@ -216,10 +216,6 @@ input[type='submit'] {
 		display: none;
 	}
 
-	&.uk-button-large {
-		padding: 0 30px;
-	}
-
 	>span:last-of-type {
 		&::after {
 			background-color: $green-pastel;
@@ -244,12 +240,21 @@ input[type='submit'] {
 		top: 0;
 		bottom: 0;
 		height: 100%;
+		overflow: visible;
 	}
 
 	.shape {
-		stroke-dasharray: 138 370;
+		stroke-dasharray: 135 375;
 		stroke-dashoffset: -745;
 		stroke-width: 4px;
+	}
+
+	&.uk-button-large {
+		padding: 0 30px;
+
+		.shape {
+			stroke-dashoffset: -757;
+		}
 	}
 
 	@include hover {
@@ -668,6 +673,23 @@ input[type='submit'] {
 		.left,
 		.right {
 			border-left-color: $highlight;
+		}
+	}
+}
+
+.dropdown-close-button {
+
+	&::after {
+		content: font-char($close);
+		font-size: 24px;
+		color: $blue;
+		font-family: 'svgicons';
+		transition: $nbSec ease-in-out;
+	}
+
+	@include hover {
+		&::after {
+			color: $green-pastel;
 		}
 	}
 }
