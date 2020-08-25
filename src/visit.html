@@ -645,42 +645,46 @@
         </div>
 
         <div class="banner video uk-position-relative uk-margin-large-bottom">
-            <div class="banner-inner uk-cover-container uk-background-cover"
-                style="background-image: url('./img/banner-home.jpg');">
-                <div class="video-wrapper uk-visible@l">
-                    <video class="banner-video" src="./img/shetland-video.mp4"
-                        data-uk-video="automute: true; autoplay: true" playsinline></video>
-                </div>
-                <div class="video-controls uk-flex uk-position-bottom-right uk-visible@l">
-                    <button class="js-button-video round-button button-video button-video-active uk-margin-small-right"
-                        aria-label="Pause">
-                        <span class="left"></span><span class="right"></span>
-                    </button>
-                    <button class="js-button-sound round-button button-sound button-sound-active" aria-label="Mute">
-                        <svg viewBox="0 0 108 96">
-                            <path
-                                d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z">
-                            </path>
-                            <path
-                                d="M79,62 C83,57.3333333 85,52.6666667 85,48 C85,43.3333333 83,38.6666667 79,34 L49,3">
-                            </path>
-                            <path
-                                d="M95,69 C101.666667,61.6666667 105,54.3333333 105,47 C105,39.6666667 101.666667,32.3333333 95,25 L75.5,6 L49,33">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="banner-text uk-width-1-2 uk-position-bottom-left">
-                    <span>Things To Do</span>
-                    <h1>5 Amazing Beaches for Romantic Summer’s Evening</h1>
-                    <div class="uk-flex uk-margin-bottom">
-                        <a href="#" class='uk-button uk-button-default'><span>Find your favorite beach in
+			<div class="banner-inner uk-cover-container uk-background-cover uk-light" data-uk-img
+				style="background-image: url('./img/banner-home.jpg');">
+				<!-- <div class="video-wrapper uk-visible@l">
+					<video class="banner-video" src="./img/shetland-video.mp4"
+						data-uk-video="automute: false; autoplay: true" playsinline></video>
+				</div> -->
+				<video src="./img/shetland-video.mp4" data-uk-cover="" loop="" autoplay="" playsinline=""
+					class="uk-cover banner-video" muted=""></video>
+				<div class="video-controls uk-flex uk-position-bottom-right uk-visible@l">
+					<button class="js-button-video round-button button-video button-video-active uk-margin-small-right"
+						aria-label="Pause">
+						<span class="left"></span><span class="right"></span>
+					</button>
+					<button class="js-button-sound round-button button-sound button-sound-active" aria-label="Mute">
+						<svg viewBox="0 0 108 96">
+							<path
+								d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z">
+							</path>
+							<path
+								d="M79,62 C83,57.3333333 85,52.6666667 85,48 C85,43.3333333 83,38.6666667 79,34 L49,3">
+							</path>
+							<path
+								d="M95,69 C101.666667,61.6666667 105,54.3333333 105,47 C105,39.6666667 101.666667,32.3333333 95,25 L75.5,6 L49,33">
+							</path>
+						</svg>
+					</button>
+				</div>
+				<div class="banner-text uk-position-bottom-left">
+					<div class="uk-width-1-2">
+						<span class="label xlarge alt opacity-off uk-margin-remove uk-text-bold">Things To Do</span>
+                        <h1>5 Amazing Beaches for Romantic Summer’s Evening</h1>
+						<div class="uk-flex uk-margin-bottom">
+							<a href="#" class='uk-button uk-button-default'><span>Find your favorite beach in
                                 Shetland</span><span role="presentation"><img data-uk-svg
                                     src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
         <div class="campaign-slider uk-padding uk-padding-remove-horizontal">
             <div class="uk-container uk-container-large">
@@ -907,7 +911,9 @@
                                 class="uk-margin-remove-top" id="dropdown-map-area">
                                 <button data-uk-toggle="target: #dropdown-map-area" class="dropdown-close-button"
                                     aria-label="Close dropdown menu"></button>
-                                <ul id="find-areas" class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto" data-uk-grid>
+                                <ul id="find-areas"
+                                    class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
+                                    data-uk-grid>
                                     <li>
                                         <label class="nb-checkbox bounce" for="all-areas"><input class='uk-checkbox'
                                                 type='checkbox' value="all-areas" id="all-areas" name="all-areas">All
@@ -1033,7 +1039,8 @@
                                 class="uk-margin-remove-top" id="dropdown-map-interests">
                                 <button data-uk-toggle="target: #dropdown-map-interests" class="dropdown-close-button"
                                     aria-label="Close dropdown menu"></button>
-                                <ul id="find-interests" class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
+                                <ul id="find-interests"
+                                    class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
                                     data-uk-grid>
                                     <li>
                                         <label class="nb-checkbox bounce" for="all-interests"><input class='uk-checkbox'
