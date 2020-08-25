@@ -10,6 +10,10 @@
 		margin-bottom: 0;
 	}
 
+	[data-uk-lightbox] a {
+		cursor: zoom-in;
+	}
+
 	&-content {
 
 		p,
@@ -61,7 +65,7 @@
 			outline: none;
 
 			a {
-				cursor: pointer;
+				cursor: zoom-in;
 				display: block;
 				width: 100%;
 				position: relative;

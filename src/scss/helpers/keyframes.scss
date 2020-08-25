@@ -143,7 +143,7 @@
 	}
 }
 
-@keyframes smallVolume-active {
+@keyframes smallVolumeOn {
 	0% {
 		stroke-dasharray: 0 39px 30px 64px;
 		stroke-dashoffset: 1px;
@@ -191,7 +191,7 @@
 	}
 }
 
-@keyframes largeVolume-active {
+@keyframes largeVolumeOn {
 	0% {
 		stroke-dasharray: 0 78px 32px 84px;
 		stroke-dashoffset: 1px;
@@ -228,7 +228,7 @@
 	}
 }
 
-@keyframes speakerShape-active {
+@keyframes speakerShapeOn {
 	0% {
 		stroke-dasharray: 59px 47px 184px;
 		stroke-dashoffset: 17px;

@@ -9,7 +9,7 @@
     }
 
     .uk-card {
-        padding: 11px 30px;
+        padding: 11px 32px;
         min-height: 165px;
         outline: 5px solid transparent;
         transition: $nbSec ease-in-out;
@@ -58,7 +58,6 @@
             &::after {
                 opacity: 1;
             }
-
         }
     }
 

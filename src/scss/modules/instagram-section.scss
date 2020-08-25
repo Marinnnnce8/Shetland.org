@@ -3,10 +3,7 @@
 
     .uk-button-default {
         border-color: $blue;
-
-        span:first-of-type {
-            transition: $nbSec ease-in-out;
-        }
+        padding: 14px 38px;
 
         .font-instagram {
             &::after {
@@ -25,6 +22,36 @@
             >span:first-of-type {
                 color: $white;
             }
+        }
+    }
+
+    ul {
+        margin: 40px 0 57px;
+    }
+
+    .uk-card {
+        a {
+            &::after {
+                bottom: 20px;
+                color: $white;
+                content: font-char($instagram);
+                font-family: 'svgicons';
+                font-size: 20px;
+                left: 20px;
+                position: absolute;
+            }
+        }
+
+        &.large {
+            min-height: 297px;
+        }
+
+        &.medium {
+            min-height: 325px;
+        }
+
+        &.small {
+            min-height: 202px;
         }
     }
 }

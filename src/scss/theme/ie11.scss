@@ -6,11 +6,15 @@ screen and (-ms-high-contrast: none) {
 
     .banner-inner {
         height: 670px;
+        >.uk-container {
+            display: flex;
+            align-self: center;
+        }
     }
 
     .banner-video video,
     .scroll-button-down,
-    .nb-block-form .nb-checkbox.bounce:not(.uk-form-danger) svg,
+    .nb-checkbox.bounce:not(.uk-form-danger) svg,
     .uk-button-text>svg,
     .uk-button-text>span:last-of-type::after {
         display: none;
@@ -140,8 +144,8 @@ screen and (-ms-high-contrast: none) {
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 7px 7px 0 7px;
-            border-color: $blue transparent transparent transparent;
+            border-width: 7px 7px 0;
+            border-color: $blue transparent transparent;
             left: 50%;
             top: calc(100% - 1px);
             transform: translateX(-50%);

@@ -24,19 +24,19 @@ input[type='submit'] {
 }
 
 .uk-button {
-	font-weight: $bold;
-	font-size: 14px;
-	color: $white;
-	border-radius: 50px;
-	text-align: left;
-	line-height: 1.3em;
-	border: 0;
-	padding: 15px 35px;
-	transition: $nbSec ease-in-out;
-	text-transform: none;
-	display: inline-flex;
-	justify-content: space-between;
 	align-items: center;
+	border-radius: 50px;
+	border: 0;
+	color: $white;
+	display: inline-flex;
+	font-size: 14px;
+	font-weight: $bold;
+	justify-content: space-between;
+	line-height: 1.3em;
+	padding: 15px 35px;
+	text-align: left;
+	text-transform: none;
+	transition: $nbSec ease-in-out;
 
 	* {
 		transition: inherit;
@@ -59,26 +59,26 @@ input[type='submit'] {
 	}
 
 	>span:last-of-type {
-		display: inline-flex;
 		align-items: center;
-		position: relative;
+		display: inline-flex;
 		margin-left: 15px;
+		position: relative;
 
 		&::after {
-			position: absolute;
-			left: 0;
-			height: 1px;
 			background-color: $white;
 			content: '';
-			width: 0;
+			height: 1px;
+			left: 0;
+			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
 			transition: .7s ease;
+			width: 0;
 		}
 
 		svg {
-			position: relative;
 			left: 0;
+			position: relative;
 			transition: .7s ease;
 		}
 	}
@@ -86,20 +86,20 @@ input[type='submit'] {
 	&.button-back {
 		>span {
 			&:first-of-type {
-				display: inline-flex;
 				align-items: center;
+				display: inline-flex;
 				position: relative;
 
 				&::after {
-					position: absolute;
-					right: 0;
-					height: 1px;
 					background-color: $blue-light;
 					content: '';
-					width: 0;
+					height: 1px;
+					position: absolute;
+					right: 0;
 					top: 50%;
 					transform: translateY(-50%);
 					transition: .7s ease;
+					width: 0;
 				}
 
 				svg {
@@ -140,8 +140,8 @@ input[type='submit'] {
 	}
 
 	&.uk-button-large {
-		padding: 18px 40px;
 		font-size: 16px;
+		padding: 18px 40px;
 	}
 
 	@include hover {
@@ -164,10 +164,10 @@ input[type='submit'] {
 }
 
 .uk-button-default {
-	border: 2px solid $gray-cold;
 	background-color: transparent;
-	padding: 13px 33px;
+	border: 2px solid $gray-cold;
 	color: $blue;
+	padding: 13px 33px;
 
 	>span:last-of-type {
 		&::after {
@@ -202,15 +202,15 @@ input[type='submit'] {
 }
 
 .uk-button-text {
-	padding: 0 55px 0 30px;
-	transition: .45s;
+	border-radius: 0;
+	border: 0;
+	color: $blue;
+	min-height: 58px;
 	min-width: auto;
 	overflow: visible;
-	color: $blue;
+	padding: 0 55px 0 30px;
 	position: relative;
-	border: 0;
-	border-radius: 0;
-	min-height: 58px;
+	transition: .45s;
 
 	&::before {
 		display: none;
@@ -233,14 +233,14 @@ input[type='submit'] {
 	}
 
 	>svg {
-		fill: transparent;
-		position: absolute;
-		width: 100%;
-		left: 0;
-		top: 0;
 		bottom: 0;
+		fill: transparent;
 		height: 100%;
+		left: 0;
 		overflow: visible;
+		position: absolute;
+		top: 0;
+		width: 100%;
 	}
 
 	.shape {
@@ -301,14 +301,14 @@ input[type='submit'] {
 
 .round-button {
 	border-radius: 50%;
-	width: 48px;
-	height: 48px;
-	border-width: 2px;
 	border-style: solid;
+	border-width: 2px;
+	height: 48px;
+	width: 48px;
 
 	@media (min-width: $breakpointSmall) {
-		width: 56px;
 		height: 56px;
+		width: 56px;
 	}
 
 	@media (max-width: $breakpointXsmallMax) {
@@ -320,20 +320,20 @@ input[type='submit'] {
 
 .scroll-button-down {
 	border-color: $white;
-	padding: 0;
-	z-index: 1;
 	display: inline-block;
+	padding: 0;
 	position: relative;
+	z-index: 1;
 
 	&::before {
+		color: $white;
 		content: font-char($long-arrow-down);
 		font-family: 'svgicons';
-		transform: translate(-50%, -50%);
-		top: 50%;
+		font-size: 24px;
 		left: 50%;
 		position: absolute;
-		font-size: 24px;
-		color: $white;
+		top: 50%;
+		transform: translate(-50%, -50%);
 		transition: $nbSec ease-in-out;
 	}
 
@@ -349,23 +349,23 @@ input[type='submit'] {
 	z-index: 2;
 
 	.uk-button {
-		border: 2px solid $blue;
-		border-radius: 50%;
-		width: 48px;
-		height: 48px;
-		padding: 0;
-		margin-bottom: 490px;
-		z-index: 1;
-		display: flex;
-		justify-content: center;
 		align-items: center;
+		border-radius: 50%;
+		border: 2px solid $blue;
+		display: flex;
+		height: 48px;
+		justify-content: center;
+		margin-bottom: 490px;
+		padding: 0;
+		width: 48px;
+		z-index: 1;
 
 		&::before {
+			color: $blue;
 			content: font-char($chevron-up);
 			font-family: 'svgicons';
-			font-weight: normal;
-			color: $blue;
 			font-size: 10px;
+			font-weight: normal;
 			transition: inherit;
 		}
 
@@ -407,46 +407,46 @@ input[type='submit'] {
 
 //sass-lint:disable no-vendor-prefixes
 .download-button {
+	--arrow: #fff;
 	--background: #275efe;
+	--checkmark: #fff;
 	--rectangle: #184fee;
+	--shadow: rgba(10, 22, 50, .24);
 	--success: #{mix(#fff, #184fee, 20%)};
 	--text: #fff;
-	--arrow: #fff;
-	--checkmark: #fff;
-	--shadow: rgba(10, 22, 50, .24);
-	display: flex;
-	justify-content: space-between;
-	overflow: hidden;
-	text-decoration: none;
 	-webkit-mask-image: -webkit-radial-gradient(#fff, #000);
 	background: var(--background);
 	border-radius: 8px;
 	box-shadow: 0 2px 8px -1px var(--shadow);
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	text-decoration: none;
 	transition: transform .2s ease, box-shadow .2s ease;
 
 	&:active {
-		transform: scale(.95);
 		box-shadow: 0 1px 4px -1px var(--shadow);
+		transform: scale(.95);
 	}
 
 	>.text {
-		margin: 0;
-		padding: 16px 40px;
-		list-style: none;
-		text-align: center;
-		position: relative;
 		backface-visibility: hidden;
+		color: var(--text);
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 28px;
-		color: var(--text);
+		list-style: none;
+		margin: 0;
+		padding: 16px 40px;
+		position: relative;
+		text-align: center;
 
 		>span {
 			&:not(:first-child) {
-				top: 16px;
 				left: 0;
-				right: 0;
 				position: absolute;
+				right: 0;
+				top: 16px;
 			}
 
 			&:nth-child(2) {
@@ -460,10 +460,10 @@ input[type='submit'] {
 	}
 
 	>.icon {
+		background: var(--rectangle);
+		height: 60px;
 		position: relative;
 		width: 60px;
-		height: 60px;
-		background: var(--rectangle);
 
 		&::before,
 		&::after {
@@ -473,40 +473,40 @@ input[type='submit'] {
 		}
 
 		&::before {
-			border-radius: 1px;
-			width: 2px;
-			top: 50%;
-			left: 50%;
-			height: 17px;
-			margin: -9px 0 0 -1px;
 			background: var(--arrow);
+			border-radius: 1px;
+			height: 17px;
+			left: 50%;
+			margin: -9px 0 0 -1px;
+			top: 50%;
+			width: 2px;
 		}
 
 		&::after {
-			width: 60px;
-			height: 60px;
-			transform-origin: 50% 0;
-			border-radius: 0 0 80% 80%;
 			background: var(--success);
-			top: 0;
+			border-radius: 0 0 80% 80%;
+			height: 60px;
 			left: 0;
+			top: 0;
+			transform-origin: 50% 0;
 			transform: scaleY(0);
+			width: 60px;
 		}
 
 		svg {
 			display: block;
-			position: absolute;
-			width: 20px;
+			fill: none;
 			height: 20px;
 			left: 50%;
-			top: 50%;
 			margin: -9px 0 0 -10px;
-			fill: none;
-			z-index: 1;
-			stroke-width: 2px;
-			stroke: var(--arrow);
+			position: absolute;
 			stroke-linecap: round;
 			stroke-linejoin: round;
+			stroke-width: 2px;
+			stroke: var(--arrow);
+			top: 50%;
+			width: 20px;
+			z-index: 1;
 		}
 	}
 
@@ -532,27 +532,27 @@ input[type='submit'] {
 }
 
 .button-sound {
-	--line: #fff;
-	--line-width: 6px;
 	--duration: .5s;
-	position: relative;
-	cursor: pointer;
+	--line-width: 6px;
+	--line: #fff;
 	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+	position: relative;
 
 
 	svg {
 		display: block;
 		fill: none;
-		stroke: var(--line);
+		height: auto;
+		left: 50%;
+		position: absolute;
 		stroke-linecap: round;
 		stroke-linejoin: round;
 		stroke-width: var(--line-width);
-		width: 18px;
-		height: auto;
-		position: absolute;
-		left: 50%;
+		stroke: var(--line);
 		top: 50%;
 		transform: translate(-50%, -50%);
+		width: 18px;
 
 		path {
 			animation: var(--name) var(--duration) ease forwards;
@@ -590,15 +590,15 @@ input[type='submit'] {
 		svg {
 			path {
 				&:nth-child(1) {
-					--name: speakerShape-active;
+					--name: speakerShapeOn;
 				}
 
 				&:nth-child(2) {
-					--name: smallVolume-active;
+					--name: smallVolumeOn;
 				}
 
 				&:nth-child(3) {
-					--name: largeVolume-active;
+					--name: largeVolumeOn;
 				}
 			}
 		}
@@ -607,24 +607,24 @@ input[type='submit'] {
 
 .button-video {
 	$color: $white;
-	$highlight: darken($color, 10%);
 	$duration: .4s;
+	$highlight: darken($color, 10%);
 	$sin: .866;
 	$size: 18px;
-	border: $size * .1 solid $color;
 	border-radius: 50%;
-	font-size: 0;
-	white-space: nowrap;
-	text-align: center;
+	border: $size * .1 solid $color;
 	cursor: pointer;
+	font-size: 0;
+	text-align: center;
+	white-space: nowrap;
 
 	.left,
 	.right,
 	&::before {
 		display: inline-block;
-		vertical-align: middle;
-		transition: border $duration, width $duration, height $duration, margin $duration ease;
 		transition-timing-function: cubic-bezier(1, 0, 0, 1);
+		transition: border $duration, width $duration, height $duration, margin $duration ease;
+		vertical-align: middle;
 	}
 
 	&::before {
@@ -641,11 +641,11 @@ input[type='submit'] {
 
 		.left,
 		.right {
-			margin: 0;
+			border-bottom: 0 solid transparent;
 			border-left: $size * .33 solid $color;
 			border-top: 0 solid transparent;
-			border-bottom: 0 solid transparent;
 			height: $size * $sin;
+			margin: 0;
 		}
 
 		.left {
@@ -662,19 +662,19 @@ input[type='submit'] {
 		}
 
 		.left {
-			margin-left: $size / 6;
+			border-bottom: $border solid transparent;
 			border-left: $size * $sin / 2 solid $color;
 			border-top: $border solid transparent;
-			border-bottom: $border solid transparent;
 			height: $size + 1;
+			margin-left: $size / 6;
 		}
 
 		.right {
-			margin: 0;
+			border-bottom: $border solid transparent;
 			border-left: $size * $sin / 2 solid $color;
 			border-top: $border solid transparent;
-			border-bottom: $border solid transparent;
 			height: 0;
+			margin: 0;
 		}
 	}
 
@@ -691,10 +691,10 @@ input[type='submit'] {
 .dropdown-close-button {
 
 	&::after {
-		content: font-char($close);
-		font-size: 24px;
 		color: $blue;
+		content: font-char($close);
 		font-family: 'svgicons';
+		font-size: 24px;
 		transition: $nbSec ease-in-out;
 	}
 
