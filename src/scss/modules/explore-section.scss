@@ -28,6 +28,26 @@
     @media (min-width: $breakpointMedium) {
         padding-bottom: 40px;
 
+        &:nth-of-type(2) {
+            .uk-grid>div {
+                &:first-of-type {
+                    order: 2;
+                }
+
+                &:nth-of-type(2) {
+                    order: 1;
+                }
+
+                &:nth-of-type(3) {
+                    order: 3;
+                }
+
+                &:last-of-type {
+                    order: 4;
+                }
+            }
+        }
+
         .uk-card {
             padding-bottom: 90px;
 
@@ -76,6 +96,78 @@
 
                 .uk-card-media-top {
                     height: 440px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+
+        &:nth-of-type(2) {
+            .uk-grid>div {
+                position: relative;
+
+                &:first-of-type,
+                &:nth-of-type(2) {
+                    right: -30px;
+                }
+            }
+        }
+
+        .uk-first-column:first-of-type .explore-item,
+        .uk-first-column:last-of-type .explore-item {
+            left: 30px;
+        }
+
+        .uk-card {
+            &.right {
+                left: 30px;
+            }
+
+            &.left {
+                right: 30px;
+
+                .uk-card-body {
+                    padding-left: 60px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+
+        &:nth-of-type(2) {
+            .uk-grid>div {
+                position: relative;
+
+                &:first-of-type,
+                &:nth-of-type(2) {
+                    right: -10px;
+                }
+            }
+        }
+
+        .uk-first-column:first-of-type .explore-item,
+        .uk-first-column:last-of-type .explore-item {
+            left: 10px;
+        }
+
+        .uk-card {
+
+            // &.right,
+            // &.left {
+            //     width: calc(100% + 10px);
+            // }
+
+            &.right {
+                left: 10px;
+            }
+
+            &.left {
+                right: 10px;
+
+                .uk-card-body {
+                    padding-left: 20px;
                 }
             }
         }
