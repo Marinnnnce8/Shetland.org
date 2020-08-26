@@ -422,7 +422,7 @@ input[type='submit'] {
 	justify-content: space-between;
 	overflow: hidden;
 	text-decoration: none;
-	transition: transform .2s ease, box-shadow .2s ease;
+	transition: .2s ease;
 
 	&:active {
 		box-shadow: 0 1px 4px -1px var(--shadow);

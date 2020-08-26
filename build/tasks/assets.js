@@ -39,7 +39,7 @@ gulp.task('assets-fonts', () => {
 });
 
 gulp.task('assets-favicons', () => {
-	return gulp.src(`${config.src}/favicon/**`).pipe(gulp.dest(config.dist));
+	return gulp.src(`${config.src}/favicon/**`).pipe(gulp.dest(`${config.dist}/favicon`));
 });
 
 gulp.task('assets', gulp.series(

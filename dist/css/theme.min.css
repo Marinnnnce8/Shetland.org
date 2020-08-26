@@ -1603,7 +1603,7 @@ input[type='submit'] {
   justify-content: space-between;
   overflow: hidden;
   text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: .2s ease;
 }
 
 .download-button:active {
@@ -3509,7 +3509,7 @@ input[type='submit'] {
   width: auto;
   font-size: 12px;
   transition: font-size .3s;
-  transition-delay: 0;
+  transition-delay: none;
 }
 
 .nb-widget ul li a:hover::before, .nb-widget ul li a:focus::before, .nb-widget ul li a:active::before {
@@ -4975,6 +4975,10 @@ input[type='submit'] {
   position: absolute;
 }
 
+.instagram-section .uk-card > span.uk-position-cover {
+  transition: 1s ease;
+}
+
 .instagram-section .uk-card.large {
   min-height: 297px;
 }
@@ -4985,6 +4989,10 @@ input[type='submit'] {
 
 .instagram-section .uk-card.small {
   min-height: 202px;
+}
+
+.instagram-section .uk-card:hover > span.uk-position-cover, .instagram-section .uk-card:focus > span.uk-position-cover, .instagram-section .uk-card:active > span.uk-position-cover {
+  transform: scale(1.1);
 }
 
 .things-to-do-section {

@@ -42,6 +42,10 @@
             }
         }
 
+        >span.uk-position-cover {
+            transition: 1s ease;
+        }
+
         &.large {
             min-height: 297px;
         }
@@ -52,6 +56,12 @@
 
         &.small {
             min-height: 202px;
+        }
+
+        @include hover {
+            >span.uk-position-cover {
+                transform: scale(1.1);
+            }
         }
     }
 }
