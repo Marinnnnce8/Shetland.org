@@ -81,13 +81,14 @@
 					opacity: .3;
 					border-radius: 50%;
 
-					&::before {
-						color: $blue;
+					svg {
+						fill: $blue;
 						position: absolute;
 						left: 50%;
 						top: 50%;
 						transform: translate(-50%, -50%);
-						font-size: 22px;
+						width: 18px;
+						height: 23px;
 					}
 				}
 
@@ -193,13 +194,14 @@
 						opacity: .3;
 						border-radius: 50%;
 
-						&::before {
-							color: $blue;
+						svg {
+							fill: $blue;
 							position: absolute;
 							left: 50%;
 							top: 50%;
 							transform: translate(-50%, -50%);
-							font-size: 14px;
+							width: 18px;
+							height: 23px;
 						}
 					}
 

@@ -20,14 +20,12 @@
             padding-right: 35px;
             min-height: 80px;
 
-            &::after {
+            svg {
                 position: absolute;
                 right: 12px;
-                top: 10px;
-                font-family: 'svgicons';
-                color: $blue;
-                content: font-char($external-link);
-                font-size: 14px;
+                fill: $blue;
+                width: 23px;
+                height: 26px;
             }
 
             >span {
@@ -63,14 +61,15 @@
             a {
                 padding-right: 80px;
 
-                &::after {
+                svg {
                     right: 25px;
-                    top: 25px;
+                    top: 50%;
                     font-size: 20px;
+                    transform: translateY(-50%);
                 }
 
                 >span {
-                    padding: 26px 0 15px 42px;
+                    padding: 18px 0 15px 42px;
                 }
             }
         }

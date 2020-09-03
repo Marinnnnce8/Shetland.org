@@ -39,19 +39,18 @@
             padding: 24px 25px;
             position: relative;
 
-            &::after {
+            svg:last-of-type {
                 position: absolute;
-                content: font-char($chevron-down-thin);
-                color: $blue;
+                fill: $blue;
                 right: 35px;
                 font-size: 24px;
                 top: 50%;
                 transform: translateY(-50%);
-                font-size: 8px;
-                font-family: 'svgicons';
+                width: 8px;
+                height: 8px;
             }
 
-            &::before {
+            svg:first-of-type {
                 margin-right: 15px;
             }
         }
@@ -61,8 +60,9 @@
                 padding-right: 52px;
                 padding-left: 40px;
 
-                &::before {
-                    font-size: 23px;
+                svg:first-of-type {
+                    width: 23px;
+                    height: 23px;
                 }
             }
         }
@@ -72,8 +72,15 @@
             border-right: 1px solid $gray-mid;
             padding-right: 41px;
 
-            &::after {
-                right: 25px;
+            svg {
+                &:first-of-type {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &:last-of-type {
+                    right: 25px;
+                }
             }
         }
     }
@@ -164,15 +171,14 @@
         width: 86px;
         height: 95px;
 
-        &::after {
+        svg {
             position: absolute;
-            content: font-char($eye);
-            font-family: 'svgicons';
-            top: 40%;
+            top: 39%;
             left: 49%;
             transform: translate(-50%, -50%);
-            font-size: 14px;
-            color: $white;
+            width: 24px;
+            height: 24px;
+            fill: $white;
         }
 
         @include hover {

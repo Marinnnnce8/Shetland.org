@@ -18,7 +18,7 @@
         position: relative;
 
         &::after,
-        &::before {
+        svg {
             transition: $nbSec ease-in-out;
         }
 
@@ -34,8 +34,10 @@
             border-radius: 50%;
         }
 
-        &::before {
-            color: $blue;
+        svg {
+            fill: $blue;
+            width: 16px;
+            height: 21px;
             z-index: 1;
         }
 
@@ -45,8 +47,8 @@
                 transform: scale(1);
             }
 
-            &::before {
-                color: $white;
+            svg {
+                fill: $white;
             }
         }
     }

@@ -16,7 +16,7 @@
 	line-height: 44px;
 	padding: 5px 30px;
 
-	&:focus {
+	&:not(.uk-radio:not(.uk-form-danger)):focus {
 		background-color: $beige-mid;
 		border-color: $blue;
 	}

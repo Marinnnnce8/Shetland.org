@@ -50,9 +50,27 @@
                             <li><a href='#'>Map</a></li>
                         </ul>
                         <ul class='uk-flex uk-flex-middle'>
-                            <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
-                            <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
-                            <li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+                            <li>
+                                <a href="#" aria-label="Visit our Facebook page">
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Visit our Twitter page">
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Visit our Instagram page">
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -493,7 +511,9 @@
                     </div>
                     <div class="nav-search uk-position-relative uk-flex uk-flex-right">
                         <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-                            class="label small alt">Search</button>
+                            class="label small alt">Search<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#search"></use>
+                            </svg></button>
                         <div id="navSearchBox" class="nav-search-box">
                             <div class="uk-flex uk-flex-middle uk-flex-right">
                                 <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
@@ -501,7 +521,9 @@
                                     search</button>
                                 <form action="/search" method="get" role="search" id="navSearch"
                                     class="uk-search uk-search-default">
-                                    <button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
+                                    <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#search"></use>
+                                    </svg></button><input aria-label="Search Phrase"
                                         class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
                                 </form>
                             </div>
@@ -518,7 +540,11 @@
 
     <main>
         <div class="uk-position-bottom-right scroll-button-up">
-            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll>
+                <svg viewBox="0 0 512 512">
+                    <use xlink:href="./symbol/icons.svg#chevron-up"></use>
+                </svg>
+            </a>
         </div>
 
         <div class="banner uk-position-relative">
@@ -529,7 +555,11 @@
                     <h1>Nature & Wildlife</h1>
                 </div>
             </div>
-            <span class="font-info" data-uk-tooltip="title: Photo by Photographer Name; pos: top-right"></span>
+            <span data-uk-tooltip="title: Photo by Photographer Name; pos: top-right">
+                <svg viewBox="0 0 512 512">
+                    <use xlink:href="./symbol/icons.svg#info"></use>
+                </svg>
+            </span>
         </div>
 
         <div>
@@ -754,15 +784,47 @@
 					<a href='#' aria-label='Shetland.org Homepage'><img src='./img/footer-logo.png' alt='image' /></a>
 				</div>
 				<ul class='uk-flex uk-flex-center nb-social uk-width-1-3@l'>
-					<li><a href='#' class='font-facebook' aria-label='Share our page via Facebook'></a></li>
-					<li><a href='#' class='font-twitter' aria-label='Share our page via Twitter'></a></li>
-					<li><a href='#' class='font-youtube' aria-label='Share our page via Youtube'></a></li>
-					<li><a href='#' class='font-instagram' aria-label='Share our page via Instagram'></a></li>
-				</ul>
+                    <li>
+                        <a href='#' aria-label='Share our page via Facebook'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' aria-label='Share our page via Twitter'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' aria-label='Share our page via Youtube'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' aria-label='Share our page via Instagram'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
 				<div class='uk-flex uk-width-1-3@l'>
-					<button class='uk-button uk-button-default font-news'>Subscribe</button>
-					<button class='uk-button uk-button-default font-email'>Contact</button>
-				</div>
+                    <button class='uk-button uk-button-default icon-news'>Subscribe
+                        <svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#news"></use>
+                        </svg>
+                    </button>
+                    <button class='uk-button uk-button-default icon-email'>Contact
+                        <svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#email"></use>
+                        </svg>
+                    </button>
+                </div>
 				<ul class='uk-flex uk-flex-right uk-width-1-3@l uk-margin-small-bottom'>
 					<li><a href='#' class='label medium alt uk-text-bold'>Brand</a></li>
 					<li><a href='#' class='label medium alt uk-text-bold'>Media</a></li>
@@ -772,7 +834,11 @@
 			</div>
 			<div class="footer-middle uk-hidden@s">
 				<div class="scroll-button-up uk-flex-center">
-					<a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+					<a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll>
+                        <svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#chevron-up"></use>
+                        </svg>
+                    </a>
 				</div>
 			</div>
 			<div class='footer-bottom'>
@@ -817,6 +883,7 @@
 
     <script src='js/uikit.min.js'></script>
     <script src='js/uikit-icons.min.js'></script>
+    <script src='js/svgxuse.min.js'></script>
     <script src='js/nb.js'></script>
     <script src='js/theme.js'></script>
 </body>

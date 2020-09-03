@@ -68,21 +68,32 @@
         padding-right: 70px;
         font-size: 16px;
 
-        &::before {
-            font-size: 24px;
+        svg {
+            width: 20px;
+            height: 22px;
             position: absolute;
-            right: 35px;
+            right: 34px;
             top: 50%;
+            fill: $blue;
             transform: translateY(-50%);
         }
 
-        &.font-news::before {
-            font-weight: $bold;
+        &.icon-news {
+            margin-right: 40px;
+
+            svg {
+                width: 22px;
+                font-weight: $bold;
+            }
         }
 
         @include hover {
             background-color: $blue;
             color: $white;
+
+            svg {
+                fill: $white;
+            }
         }
     }
 
@@ -125,7 +136,7 @@
     @media (min-width: $breakpointSmall) {
         padding-bottom: 140px;
 
-        .uk-button-default.font-news,
+        .uk-button-default.icons-news,
         >.uk-flex:last-child li:not(:last-of-type) {
             margin-right: 40px;
         }
@@ -171,7 +182,7 @@
         }
 
         .uk-button-default {
-            &.font-news {
+            &.icon-news {
                 margin-bottom: 20px;
                 margin-right: 0;
             }

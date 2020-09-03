@@ -16,7 +16,7 @@
     }
 
     @include hover {
-        .font-play-sharp {
+        .icon-play-sharp {
             border-color: $green-pastel;
 
             &::after {
@@ -41,7 +41,7 @@
         color: $white;
     }
 
-    .font-play-sharp {
+    .icon-play-sharp {
         border-radius: 50%;
         width: 64px;
         height: 64px;
@@ -51,7 +51,7 @@
         border: 2px solid transparent;
         transition: .44s linear;
 
-        &::before,
+        svg,
         &::after {
             position: absolute;
         }
@@ -68,11 +68,13 @@
             z-index: 0;
         }
 
-        &::before {
-            left: 23px;
+        svg {
+            left: 22px;
             top: 18px;
-            font-size: 24px;
+            width: 24px;
+            height: 26px;
             z-index: 1;
+            fill: $white;
         }
     }
 

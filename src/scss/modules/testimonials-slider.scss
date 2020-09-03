@@ -21,15 +21,14 @@
         padding: 142px 20px 0;
         position: relative;
 
-        &::after {
+        svg {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             top: 55px;
-            font-family: 'svgicons';
-            content: font-char($quote);
-            font-size: 84px;
-            color: $green-pastel;
+            width: 115px;
+			height: 86px;
+            fill: $green-pastel;
             line-height: 1;
         }
     }

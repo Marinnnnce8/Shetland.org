@@ -31,12 +31,11 @@
 
     .uk-card {
         a {
-            &::after {
+            svg {
                 bottom: 20px;
-                color: $white;
-                content: font-char($instagram);
-                font-family: 'svgicons';
-                font-size: 20px;
+                fill: $white;
+                width: 20px;
+                height: 20px;
                 left: 20px;
                 position: absolute;
             }

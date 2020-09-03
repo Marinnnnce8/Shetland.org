@@ -277,26 +277,27 @@ blockquote {
 		font-size: 18px;
 	}
 
-	.font-quote {
+	>span[class*='icon-quote'] {
 		position: absolute;
-		width: 85px;
-		height: 70px;
+		width: 130px;
+		height: 100px;
 		left: 0;
 		top: 0;
 		z-index: -1;
 
-		&::before {
-			color: $blue-bright-light;
-			font-size: 84px;
+		svg {
+			fill: $blue-bright-light;
+			width: 115px;
+			height: 86px;
 			position: absolute;
+			left: -19px;
 			top: -15px;
-			left: 0;
 		}
 	}
 
-	&.quote-green .font-quote {
-		&::before {
-			color: $turquise-light;
+	&.quote-green>span[class*='icon-quote'] {
+		svg {
+			fill: $turquise-light;
 		}
 	}
 

@@ -71,10 +71,10 @@
         border-color: $blue;
         transition: $nbSec ease-in-out;
 
-        &::after {
-            color: $blue;
-            font-family: 'svgicons';
-            font-size: 12px;
+        svg {
+            fill: $blue;
+            width: 24px;
+            height: 24px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -82,27 +82,15 @@
             transition: $nbSec ease-in-out;
         }
 
-        svg {
+        svg[data-svg] {
             display: none;
-        }
-
-        &:first-of-type {
-            &::after {
-                content: font-char($button-arrow-left);
-            }
-        }
-
-        &:last-of-type {
-            &::after {
-                content: font-char($button-arrow-right);
-            }
         }
 
         @include hover {
             background-color: $blue;
 
-            &::after {
-                color: $white;
+            svg {
+                fill: $white;
             }
         }
     }

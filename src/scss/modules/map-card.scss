@@ -15,12 +15,11 @@
         width: 18px;
         height: 18px;
 
-        &::before {
+        svg {
             position: absolute;
-            font-size: 18px;
-            color: $blue;
-            font-family: 'svgicons';
-            content: font-char($close);
+            width: 18px;
+            height: 18px;
+            fill: $blue;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
@@ -29,8 +28,8 @@
 
         @include hover {
 
-            &::before {
-                color: $blue-light-hover;
+            svg {
+                fill: $blue-light-hover;
             }
         }
     }

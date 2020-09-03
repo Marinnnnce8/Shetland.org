@@ -10,6 +10,7 @@
     z-index: 10;
     padding-bottom: 185px;
     margin-bottom: 50px;
+    width: 100%;
 
     ul {
         padding-left: 0;
@@ -20,12 +21,14 @@
         li {
             display: flex;
             justify-content: flex-end;
+            width: 100%;
 
             a {
                 border-radius: 50px;
                 font-weight: $bold;
                 line-height: 1.3em;
-                padding: 16px 17px 16px 23px;
+                // padding: 16px 17px 16px 23px;
+                padding: 0;
                 color: transparent;
                 position: relative;
                 min-height: 48px;
@@ -37,26 +40,29 @@
                 transition-delay: .35s;
                 font-size: 0;
                 width: 48px;
-                transition: font-size .3s;
+                transition: .3s;
 
-                &::before {
-                    color: $blue;
-                    font-size: 16px;
+                svg {
+                    fill: $blue;
+                    width: 16px;
+                    height: 16px;
                     transition: inherit;
-                    margin-left: 12px;
+                    transform: translateX(12px);
                     pointer-events: none;
+                    position: relative;
                 }
 
                 @include hover {
+                    padding: 16px 17px 16px 23px;
                     background-color: $blue;
                     color: $white;
-                    width: auto;
+                    width: 100%;
                     font-size: 12px;
-                    transition: font-size .3s;
-                    transition-delay: none;
+                    transition: .3s;
 
-                    &::before {
-                        color: $white;
+                    svg {
+                        fill: $white;
+                        transform: translateX(0);
                     }
                 }
             }

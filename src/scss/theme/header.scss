@@ -35,9 +35,10 @@
             color: $blue;
             position: relative;
 
-            &::before {
-                font-size: 16px;
-                color: $blue;
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: $blue;
                 transition: $nbSec ease-in-out;
             }
 
@@ -46,7 +47,8 @@
             }
 
             @include hover {
-                &::before {
+                svg {
+                    //check this!!!
                     opacity: 1;
                 }
             }

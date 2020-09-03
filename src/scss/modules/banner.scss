@@ -8,7 +8,7 @@
 		margin-top: -25px;
 	}
 
-	.font-info {
+	span[data-uk-tooltip] {
 		bottom: 35px;
 		height: 20px;
 		position: absolute;
@@ -16,9 +16,10 @@
 		width: 20px;
 		z-index: 2;
 
-		&::before {
-			color: $white;
-			font-size: 20px;
+		svg {
+			fill: $white;
+			width: 20px;
+			height: 20px;
 			left: 0;
 			line-height: 1;
 			position: absolute;

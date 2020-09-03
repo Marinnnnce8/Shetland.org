@@ -11,17 +11,17 @@
     <meta name='description' content='This is a meta description'>
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="194x194" href="./favicon/favicon-194x194.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-	<link rel="manifest" href="./site.webmanifest">
-	<link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#298fc2">
-	<link rel="shortcut icon" href="./favicon/favicon.ico">
-	<meta name="apple-mobile-web-app-title" content="Shetland.org">
-	<meta name="application-name" content="Shetland.org">
-	<meta name="msapplication-TileColor" content="#298fc2">
-	<meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="./favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#298fc2">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Shetland.org">
+    <meta name="application-name" content="Shetland.org">
+    <meta name="msapplication-TileColor" content="#298fc2">
+    <meta name="theme-color" content="#ffffff">
     <link rel='stylesheet' href='css/uikit.min.css' />
     <link rel='stylesheet' href='css/theme.min.css' />
 </head>
@@ -45,9 +45,27 @@
                         <li><a href='#'>Map</a></li>
                     </ul>
                     <ul class='uk-flex uk-flex-middle'>
-                        <li><a href="#" class="font-facebook" aria-label="Visit our Facebook page"></a></li>
-                        <li><a href="#" class="font-twitter" aria-label="Visit our Twitter page"></a></li>
-                        <li><a href="#" class="font-instagram" aria-label="Visit our Instagram page"></a></li>
+                        <li>
+                            <a href="#" aria-label="Visit our Facebook page">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Visit our Twitter page">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Visit our Instagram page">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
@@ -60,7 +78,9 @@
                     </div>
                     <div class="nav-search uk-position-relative uk-flex uk-flex-right">
                         <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-                            class="label small alt">Search</button>
+                            class="label small alt">Search<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#search"></use>
+                            </svg></button>
                         <div id="navSearchBox" class="nav-search-box">
                             <div class="uk-flex uk-flex-middle uk-flex-right">
                                 <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
@@ -68,8 +88,10 @@
                                     search</button>
                                 <form action="/search" method="get" role="search" id="navSearch"
                                     class="uk-search uk-search-default">
-                                    <button type="submit" aria-label="Search"></button><input aria-label="Search Phrase"
-                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                    <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#search"></use>
+                                        </svg></button><input aria-label="Search Phrase" class="uk-input" type="search"
+                                        name="q" placeholder="Search Shetland.org">
                                 </form>
                             </div>
                         </div>
@@ -87,17 +109,31 @@
 
     <main>
         <div class="uk-position-bottom-right scroll-button-up">
-            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
+            <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll>
+                <svg viewBox="0 0 512 512">
+                    <use xlink:href="./symbol/icons.svg#chevron-up"></use>
+                </svg>
+            </a>
         </div>
 
         <div class="uk-height-1-1 nb-widget-wrap" data-uk-sticky="bottom: true">
             <div class='uk-position-bottom-right nb-widget'>
                 <ul>
-                    <li><a href="#" class="font-facebook">Facebook</a></li>
-                    <li><a href="#" class="font-twitter">Twitter</a></li>
-                    <li><a href="#" class="font-envelope">Email</a></li>
-                    <li><a href="#" class="font-print">Print</a></li>
-                    <li><a href="#" class="font-share">Share</a></li>
+                    <li><a href="#">Facebook<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#facebook"></use>
+                            </svg></a></li>
+                    <li><a href="#">Twitter<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#twitter"></use>
+                            </svg></a></li>
+                    <li><a href="#">Email<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#envelope"></use>
+                            </svg></a></li>
+                    <li><a href="#">Print<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#print"></use>
+                            </svg></a></li>
+                    <li><a href="#">Share<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#share"></use>
+                            </svg></a></li>
                 </ul>
                 <span class="uk-text-uppercase">Share page on</span>
                 <span class="scroll-percent label alt small uk-text-bold">
@@ -129,7 +165,11 @@
                     </div>
                 </div>
             </div>
-            <span class="font-info" data-uk-tooltip="title: Photo by Photographer Name; pos: top-right"></span>
+            <span data-uk-tooltip="title: Photo by Photographer Name; pos: top-right">
+                <svg viewBox="0 0 512 512">
+                    <use xlink:href="./symbol/icons.svg#info"></use>
+                </svg>
+            </span>
         </div>
 
         <div>
@@ -170,8 +210,12 @@
 
                 <div class="beach-filter uk-margin-medium-bottom">
                     <ul class="uk-flex uk-flex-center uk-flex-middle" data-uk-switcher="connect: .switcher-container">
-                        <li><a href="#" class="uk-button uk-button-default font-list-view">List view</a></li>
-                        <li><a href="#" class="uk-button uk-button-default font-map">Map view</a></li>
+                        <li><a href="#" class="uk-button uk-button-default"><svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#list-view"></use>
+                        </svg>List view</a></li>
+                        <li><a href="#" class="uk-button uk-button-default"><svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#map"></use>
+                        </svg>Map view</a></li>
                     </ul>
                 </div>
 
@@ -477,6 +521,9 @@
                     <ul class="uk-slider-items uk-grid uk-grid-small" data-uk-height-match="target: .uk-panel">
                         <li>
                             <div class="uk-panel">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#quote"></use>
+                                </svg>
                                 <blockquote class="uk-margin-auto">
                                     <p>We loved it on our first visit this summer and plan to return
                                         again. For us it was the scenery, the wildlife and the changing light. A
@@ -486,6 +533,9 @@
                         </li>
                         <li>
                             <div class="uk-panel">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#quote"></use>
+                                </svg>
                                 <blockquote class="uk-margin-auto">
                                     <p>Vestibulum ut elit ornare massa tincidunt malesuada eu feugiat
                                         diam. Nunc erat nisl, rutrum eget rhoncus nec, fringilla in est. Integer
@@ -497,6 +547,9 @@
                         </li>
                         <li>
                             <div class="uk-panel">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#quote"></use>
+                                </svg>
                                 <blockquote class="uk-margin-auto">
                                     <p>Integer at elementum mi, vitae facilisis purus 4th. Duis quis
                                         tellus quis lacus sagittis pharetra a at lorem. Praesent ornare ligula
@@ -510,6 +563,9 @@
                         </li>
                         <li>
                             <div class="uk-panel">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#quote"></use>
+                                </svg>
                                 <blockquote class="uk-margin-auto">
                                     <p>We loved it on our first visit this summer and plan to
                                         return
@@ -604,18 +660,27 @@
                         <a href="#" class="uk-position-relative">
                             <img src="./img/find-out-more-1.jpg" data-uk-img alt="image">
                             <span>Download a Shetland Beaches leaflet</span>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#external-link"></use>
+                            </svg>
                         </a>
                     </li>
                     <li>
                         <a href="#" class="uk-position-relative">
                             <img src="./img/find-out-more-2.jpg" data-uk-img alt="image">
                             <span>Learn about the diverse flora you'll find around Shetland</span>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#external-link"></use>
+                            </svg>
                         </a>
                     </li>
                     <li>
                         <a href="#" class="uk-position-relative">
                             <img src="./img/find-out-more-3.jpg" data-img-svg alt="image">
                             <span>Join a wildlife cruise</span>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#external-link"></use>
+                            </svg>
                         </a>
                     </li>
                 </ul>
@@ -627,9 +692,27 @@
                 <div class="nb-share-inner uk-text-center">
                     <span class="label large opacity-off">Share this page</span>
                     <ul class="uk-flex uk-flex-center nb-social uk-padding-remove-left">
-                        <li><a href="#" class="font-facebook" aria-label="Share our page via Facebook"></a></li>
-                        <li><a href="#" class="font-twitter" aria-label="Share our page via Twitter"></a></li>
-                        <li><a href="#" class="font-envelope" aria-label="Share our page via e-mail"></a></li>
+                        <li>
+                            <a href="#" aria-label="Share our page via Facebook">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Share our page via Twitter">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Share our page via e-mail">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#envelope"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -691,79 +774,116 @@
     </main>
 
     <footer class='footer uk-position-relative'>
-		<span class="uk-background-cover uk-position-cover uk-visible@l" role="presentation" data-uk-img
-			style="background-image: url('./img/footer-banner-desc.jpg');"></span>
-		<span class="uk-background-cover uk-position-cover uk-hidden@l" role="presentation" data-uk-img
-			style="background-image: url('./img/footer-banner.jpg');"></span>
-		<div class='uk-container uk-container-large uk-text-center'>
-			<div class='footer-top uk-flex uk-flex-wrap uk-flex-center uk-flex-bottom' data-uk-grid>
-				<div class='uk-flex uk-flex-center uk-width-1-3@l'>
-					<a href='#' aria-label='Shetland.org Homepage'><img src='./img/footer-logo.png' alt='image' /></a>
-				</div>
-				<ul class='uk-flex uk-flex-center nb-social uk-width-1-3@l'>
-					<li><a href='#' class='font-facebook' aria-label='Share our page via Facebook'></a></li>
-					<li><a href='#' class='font-twitter' aria-label='Share our page via Twitter'></a></li>
-					<li><a href='#' class='font-youtube' aria-label='Share our page via Youtube'></a></li>
-					<li><a href='#' class='font-instagram' aria-label='Share our page via Instagram'></a></li>
-				</ul>
-				<div class='uk-flex uk-width-1-3@l'>
-					<button class='uk-button uk-button-default font-news'>Subscribe</button>
-					<button class='uk-button uk-button-default font-email'>Contact</button>
-				</div>
-				<ul class='uk-flex uk-flex-right uk-width-1-3@l uk-margin-small-bottom'>
-					<li><a href='#' class='label medium alt uk-text-bold'>Brand</a></li>
-					<li><a href='#' class='label medium alt uk-text-bold'>Media</a></li>
-					<li><a href='#' class='label medium alt uk-text-bold'>Corporate</a></li>
-					<li><a href='#' class='label medium alt uk-text-bold'>Press</a></li>
-				</ul>
-			</div>
-			<div class="footer-middle uk-hidden@s">
-				<div class="scroll-button-up uk-flex-center">
-					<a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll></a>
-				</div>
-			</div>
-			<div class='footer-bottom'>
+        <span class="uk-background-cover uk-position-cover uk-visible@l" role="presentation" data-uk-img
+            style="background-image: url('./img/footer-banner-desc.jpg');"></span>
+        <span class="uk-background-cover uk-position-cover uk-hidden@l" role="presentation" data-uk-img
+            style="background-image: url('./img/footer-banner.jpg');"></span>
+        <div class='uk-container uk-container-large uk-text-center'>
+            <div class='footer-top uk-flex uk-flex-wrap uk-flex-center uk-flex-bottom' data-uk-grid>
+                <div class='uk-flex uk-flex-center uk-width-1-3@l'>
+                    <a href='#' aria-label='Shetland.org Homepage'><img src='./img/footer-logo.png' alt='image' /></a>
+                </div>
+                <ul class='uk-flex uk-flex-center nb-social uk-width-1-3@l'>
+                    <li>
+                        <a href='#' aria-label='Share our page via Facebook'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' aria-label='Share our page via Twitter'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' aria-label='Share our page via Youtube'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' aria-label='Share our page via Instagram'>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class='uk-flex uk-width-1-3@l'>
+                    <button class='uk-button uk-button-default icon-news'>Subscribe
+                        <svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#news"></use>
+                        </svg>
+                    </button>
+                    <button class='uk-button uk-button-default icon-email'>Contact
+                        <svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#email"></use>
+                        </svg>
+                    </button>
+                </div>
+                <ul class='uk-flex uk-flex-right uk-width-1-3@l uk-margin-small-bottom'>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Brand</a></li>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Media</a></li>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Corporate</a></li>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-middle uk-hidden@s">
+                <div class="scroll-button-up uk-flex-center">
+                    <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll>
+                        <svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#chevron-up"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class='footer-bottom'>
 
-				<div class="uk-flex uk-flex-between">
-					<div class='uk-flex uk-flex-column'>
-						<a href='#' aria-label='UNESCO Global Geopark'>
-							<img src='./img/ugg-logo.png' alt='UNESCO Global Geopark'>
-						</a>
-						<div class="uk-hidden@l">
-							<span class='label small'>Shetland is a UNESCO Global Geopark.</span>
-							<a href='#' class='uk-button'>Find out more</a>
-						</div>
-					</div>
-					<div class="uk-flex uk-flex-between uk-width-expand">
-						<div class='uk-flex uk-flex-left uk-flex-bottom'>
-							<div class='nb-legal'>
-								<ul class='uk-flex uk-flex-left'>
-									<li><a href='#' class='label small'>Terms &amp; Conditions</a></li>
-									<li><a href='#' class='label small'>Privacy Policy</a></li>
-									<li><a href='#' class='label small'>Disclaimer</a></li>
-								</ul>
-							</div>
-							<div class='nb-copyright label small uk-text-left'>
-								&copy; 2020
-								Shetland Islands Council.
-							</div>
-						</div>
-						<div class='uk-flex uk-flex-right uk-flex-bottom'>
-							<div class='nb-credit label small'>Website development by<span class="uk-hidden@m">:</span>
-								<a href='https://www.nbcommunication.com/'
-									title='NB Communication - Digital Marketing Agency'>
-									NB Communication
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+                <div class="uk-flex uk-flex-between">
+                    <div class='uk-flex uk-flex-column'>
+                        <a href='#' aria-label='UNESCO Global Geopark'>
+                            <img src='./img/ugg-logo.png' alt='UNESCO Global Geopark'>
+                        </a>
+                        <div class="uk-hidden@l">
+                            <span class='label small'>Shetland is a UNESCO Global Geopark.</span>
+                            <a href='#' class='uk-button'>Find out more</a>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-between uk-width-expand">
+                        <div class='uk-flex uk-flex-left uk-flex-bottom'>
+                            <div class='nb-legal'>
+                                <ul class='uk-flex uk-flex-left'>
+                                    <li><a href='#' class='label small'>Terms &amp; Conditions</a></li>
+                                    <li><a href='#' class='label small'>Privacy Policy</a></li>
+                                    <li><a href='#' class='label small'>Disclaimer</a></li>
+                                </ul>
+                            </div>
+                            <div class='nb-copyright label small uk-text-left'>
+                                &copy; 2020
+                                Shetland Islands Council.
+                            </div>
+                        </div>
+                        <div class='uk-flex uk-flex-right uk-flex-bottom'>
+                            <div class='nb-credit label small'>Website development by<span class="uk-hidden@m">:</span>
+                                <a href='https://www.nbcommunication.com/'
+                                    title='NB Communication - Digital Marketing Agency'>
+                                    NB Communication
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src='js/uikit.min.js'></script>
     <script src='js/uikit-icons.min.js'></script>
+    <script src='js/svgxuse.min.js'></script>
     <script src='js/nb.js'></script>
     <script src='js/theme.js'></script>
 </body>
