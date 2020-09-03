@@ -325,10 +325,8 @@ input[type='submit'] {
 	position: relative;
 	z-index: 1;
 
-	&::before {
+	svg {
 		color: $white;
-		content: font-char($long-arrow-down);
-		font-family: 'svgicons';
 		font-size: 24px;
 		left: 50%;
 		position: absolute;
@@ -339,7 +337,7 @@ input[type='submit'] {
 
 	@include hover {
 
-		&::before {
+		svg {
 			transform: translate(-50%, -35%);
 		}
 	}
@@ -360,13 +358,10 @@ input[type='submit'] {
 		width: 48px;
 		z-index: 1;
 
-		&::before {
-			color: $blue;
-			content: font-char($chevron-up);
-			font-family: 'svgicons';
-			font-size: 10px;
+		svg {
+			fill: $blue;
+			width: 16px;
 			font-weight: normal;
-			transition: inherit;
 		}
 
 		&::after {
@@ -376,8 +371,8 @@ input[type='submit'] {
 		@include hover {
 			background-color: $blue;
 
-			&::before {
-				color: $white;
+			svg {
+				fill: $white;
 			}
 		}
 	}

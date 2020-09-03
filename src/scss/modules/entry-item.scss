@@ -30,6 +30,30 @@
         }
     }
 
+    &.large {
+        min-height: 270px;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            bottom: 0;
+            content: '';
+            background: $hero-overlay;
+            transition: 1s;
+        }
+
+        .uk-card-body {
+            padding: 0 57px 20px 35px;
+            min-height: 270px;
+        }
+
+        .uk-card-title {
+            line-height: 1.3em;
+        }
+    }
+
     .uk-card-title {
         color: $white;
         line-height: 1.1em;
