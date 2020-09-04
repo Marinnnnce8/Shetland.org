@@ -52,13 +52,6 @@
 			margin-bottom: 28px;
 		}
 
-		.uk-list-disc {
-			li a::after {
-				left: 24px;
-				width: calc(100% - 24px);
-			}
-		}
-
 		figure {
 			display: table;
 			margin-top: 0;
@@ -432,20 +425,34 @@
 		}
 
 		.uk-form-stacked label,
-		label,
-		.uk-form-label {
+		label {
 			margin-bottom: 10px;
 			font-family: $font-default;
-			text-transform: uppercase;
-			font-weight: $bold;
 			color: $blue;
-			font-size: 14px;
 			line-height: 1.3em;
 			opacity: 1;
 		}
 
-		.InputfieldRadio label {
+		.uk-form-stacked label {
+			font-size: 14px;
+		}
+
+		.uk-form-stacked .uk-form-label {
+			margin-bottom: 15px;
+		}
+
+		label,
+		.InputfieldRadio label,
+		label.nb-checkbox {
 			font-size: 16px;
+		}
+
+		.uk-form-label {
+			text-transform: uppercase;
+			font-weight: $bold;
+		}
+
+		.InputfieldRadio label {
 			cursor: pointer;
 		}
 

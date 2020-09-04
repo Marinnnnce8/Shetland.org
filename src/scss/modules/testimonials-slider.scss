@@ -27,19 +27,29 @@
             transform: translateX(-50%);
             top: 55px;
             width: 115px;
-			height: 86px;
+            height: 86px;
             fill: $green-pastel;
             line-height: 1;
         }
     }
 
     blockquote {
-        padding: 0;
+        padding: 0 0 68px;
         margin: 0;
         max-width: 895px;
 
         p:last-of-type {
             margin-bottom: 20px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+        }
+
+        .label:first-of-type {
+            margin-bottom: 3px;
         }
     }
 
@@ -75,6 +85,10 @@
         margin: 25px 0 0;
 
         li {
+            &:not(:first-of-type) {
+                margin-left: 18px;
+            }
+
             a {
                 width: 12px;
                 height: 12px;

@@ -13,6 +13,7 @@ var theme = {
 		var bannerVideo = document.getElementsByClassName('banner-video')[0];
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
 		var navToggleButton = document.getElementsByClassName('js-navbar-toggle')[0];
+		var printButton = document.getElementsByClassName('js-print-button')[0];
 
 		var downloadButton = document.querySelectorAll('download-button');
 
@@ -32,6 +33,10 @@ var theme = {
 
 		if(navToggleButton) {
 			navToggleButton.addEventListener('click', this.toggleButtonClass);
+		}
+
+		if(printButton) {
+			printButton.addEventListener('click', this.printContainer);
 		}
 
 		// if(downloadButton) {
@@ -224,6 +229,20 @@ var theme = {
 		} else {
 			this.classList.add(activeClass);
 		}
+	},
+
+	//Print button's container
+	printContainer: function() {
+		var printContents = this.parentNode;
+
+		var printContents = printContents.innerHTML;
+     	var originalContents = document.body.innerHTML;
+
+     	document.body.innerHTML = printContents;
+
+     	window.print();
+
+     	document.body.innerHTML = originalContents;
 	}
 
 	// downloadButtonEvent: function() {

@@ -249,33 +249,81 @@ blockquote {
 }
 
 blockquote {
-	padding: 15px 0 10px 30px;
+	padding: 15px 10px 10px 30px;
 	margin: 40px 0 25px;
 	position: relative;
+	font-style: normal;
+
+	&.alt {
+		padding: 55px 0 22px 128px;
+
+		p:last-of-type {
+			margin-bottom: 40px;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 84px;
+			width: 84px;
+		}
+
+		>span[class*='icon-quote'] {
+			left: 55px;
+			top: 53px;
+			z-index: 1;
+
+			svg {
+				fill: $blue;
+				width: 50px;
+				height: 50px;
+				left: auto;
+				top: auto;
+			}
+		}
+
+		.label {
+			display: block;
+
+			&:first-of-type {
+				font-family: $font-literata;
+				margin-bottom: 3px;
+			}
+		}
+	}
 
 	p,
 	span:not(.quote) {
 		color: $blue;
-		font-family: $font-default;
 	}
 
 	p {
 		margin-top: 0;
+		font-family: $font-default;
 		font-size: 28px;
-		font-style: normal;
 		font-weight: $light;
 		line-height: 1.7em;
+
+		>span {
+			box-shadow: inset 0 -1px $gray-cold;
+			font-family: inherit;
+			font-size: inherit;
+			font-style: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+		}
 
 		&:last-of-type {
 			margin-bottom: 10px;
 		}
 	}
 
-	span:not(.quote) {
-		font-style: normal;
-		line-height: 1.7em;
-		font-size: 18px;
-	}
+	// span:not(.quote) {
+	// 	font-style: normal;
+	// 	line-height: 1.7em;
+	// 	font-size: 18px;
+	// }
 
 	>span[class*='icon-quote'] {
 		position: absolute;
@@ -324,6 +372,9 @@ ol {
 }
 
 .uk-list-disc {
+	&.alt * {
+		font-family: $font-default;
+	}
 
 	li {
 		margin-bottom: 10px;
