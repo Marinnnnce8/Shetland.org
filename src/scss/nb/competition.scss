@@ -1,0 +1,14 @@
+.competition-box {
+    background-color: $white-flag;
+    margin: 120px auto 0;
+    padding: 0 117px 75px;
+    max-width: 1126px;
+
+    p:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    img {
+        margin-top: -75px;
+    }
+}
