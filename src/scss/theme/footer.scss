@@ -1,26 +1,319 @@
+// .footer {
+//     border-top: 1px solid $gray-cold;
+//     padding: 57px 0 20px;
+
+//     >.uk-container {
+//         position: relative;
+//     }
+
+//     @media (min-width: $breakpointSmall) {
+//         padding: 57px 0 30px;
+//     }
+
+//     @media (min-width: $breakpointLarge) {
+//         padding: 57px 0 40px;
+
+//         >.uk-position-cover {
+//             top: 70px;
+//         }
+//     }
+// }
+
+// .footer-top {
+//     padding-bottom: 10px;
+
+//     a img {
+//         max-width: 127px;
+//         width: 100%;
+//         height: auto;
+//     }
+
+//     >.uk-flex {
+
+//         &:last-child {
+
+//             a {
+//                 position: relative;
+
+//                 &::after {
+//                     position: absolute;
+//                     left: 0;
+//                     width: 100%;
+//                     height: 1px;
+//                     opacity: 0;
+//                     background-color: $blue;
+//                     transition: $nbSec ease-in-out;
+//                     bottom: 0;
+//                     content: '';
+//                 }
+
+//                 @include hover {
+//                     color: $blue;
+
+//                     &::after {
+//                         opacity: 1;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     ul {
+//         list-style-type: none;
+//     }
+
+//     .uk-button-default {
+//         border-color: $blue;
+//         position: relative;
+//         padding-right: 70px;
+//         font-size: 16px;
+
+//         svg {
+//             width: 20px;
+//             height: 22px;
+//             position: absolute;
+//             right: 34px;
+//             top: 50%;
+//             fill: $blue;
+//             transform: translateY(-50%);
+//         }
+
+//         &.icon-news {
+//             margin-right: 40px;
+
+//             svg {
+//                 width: 22px;
+//                 font-weight: $bold;
+//             }
+//         }
+
+//         @include hover {
+//             background-color: $blue;
+//             color: $white;
+
+//             svg {
+//                 fill: $white;
+//             }
+//         }
+//     }
+
+//     .nb-social {
+//         a {
+//             border: 2px solid rgba($blue, .1);
+
+//             &::after {
+//                 width: 48px;
+//                 height: 48px;
+//                 left: -2px;
+//                 top: -2px;
+//             }
+
+//             @include hover {
+//                 border-color: $blue;
+//             }
+//         }
+//     }
+
+//     >.uk-flex:last-child li:not(:last-of-type) {
+//         margin-right: 20px;
+//     }
+
+//     @media (max-width: $breakpointLarge) {
+
+//         >.uk-flex {
+
+//             &:nth-child(2) {
+//                 margin-top: 40px;
+//             }
+
+//             &:nth-child(3),
+//             &:last-child {
+//                 margin-top: 45px;
+//             }
+//         }
+//     }
+
+//     @media (min-width: $breakpointSmall) {
+//         padding-bottom: 140px;
+
+//         .uk-button-default.icons-news,
+//         >.uk-flex:last-child li:not(:last-of-type) {
+//             margin-right: 40px;
+//         }
+//     }
+
+//     @media (min-width: $breakpointLarge) {
+//         padding-bottom: 270px;
+
+//         >.uk-flex {
+
+//             &:first-child {
+//                 order: 2;
+//             }
+
+//             &:nth-child(2) {
+//                 order: 4;
+//             }
+
+//             &:nth-child(3) {
+//                 order: 1;
+//             }
+
+//             &:last-child {
+//                 order: 3;
+//             }
+//         }
+
+//         .nb-social {
+//             padding-left: 40px;
+//         }
+//     }
+
+//     @media (max-width: $breakpointMediumMax) {
+//         >.uk-flex {
+//             justify-content: center;
+//         }
+//     }
+
+//     @media (max-width: $breakpointXsmallMax) {
+//         >.uk-flex:nth-child(3) {
+//             flex-direction: column;
+//             align-items: center;
+//         }
+
+//         .uk-button-default {
+//             &.icon-news {
+//                 margin-bottom: 20px;
+//                 margin-right: 0;
+//             }
+//         }
+//     }
+// }
+
+// .footer-middle {
+//     .scroll-button-up {
+//         display: flex;
+//         padding: 20px 0 40px;
+
+//         .uk-button {
+//             margin: 0;
+//         }
+//     }
+// }
+
+// .footer-bottom {
+//     * {
+//         color: $white;
+//     }
+
+//     .uk-button {
+//         font-size: 12px;
+//         line-height: 1.7em;
+//         font-weight: normal;
+//         border: 1px solid $white;
+//         padding: 3px 20px;
+//         min-height: 26px;
+
+//         @include hover {
+//             border-color: $blue;
+//             background-color: $blue;
+//             color: $white;
+//         }
+//     }
+
+//     .label.small {
+//         display: block;
+//         opacity: 1;
+//         text-align: center;
+//     }
+
+//     @media (min-width: $breakpointLarge) {
+//         >.uk-flex {
+//             >.uk-flex {
+//                 &:first-child {
+//                     order: 2;
+//                     padding-left: 65px;
+//                 }
+
+//                 &:last-child {
+//                     padding-bottom: 7px;
+//                 }
+//             }
+//         }
+//     }
+
+//     @media (max-width: $breakpointLarge) {
+//         >.uk-flex:last-child {
+//             justify-content: center;
+//         }
+
+//         *+.uk-grid-margin,
+//         .uk-grid+.uk-grid,
+//         .uk-grid>.uk-grid-margin {
+//             margin-top: 15px;
+//         }
+//     }
+
+//     @media (max-width: $breakpointMediumMax) {
+//         >.uk-flex {
+//             flex-direction: column;
+
+//             >.uk-flex {
+//                 &:first-child {
+//                     margin-bottom: 40px;
+
+//                     .label.small {
+//                         margin: 11px 0 15px;
+//                     }
+//                 }
+
+//                 &:last-child>.uk-flex:first-child {
+//                     flex-direction: column;
+//                     align-items: flex-start;
+
+//                     .nb-copyright {
+//                         margin: 15px 0 0;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     @media (max-width: $breakpointXsmallMax) {
+//         >.uk-flex>.uk-flex {
+//             flex-direction: column;
+//             align-items: center;
+
+//             &:last-child>.uk-flex {
+//                 &:first-child {
+//                     align-items: center;
+
+//                     .nb-copyright {
+//                         margin-top: 35px;
+//                     }
+//                 }
+
+//                 &:last-of-type {
+//                     margin-top: 35px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+//VERSION 2
 .footer {
     border-top: 1px solid $gray-cold;
-    padding: 57px 0 20px;
+}
 
-    >.uk-container {
-        position: relative;
-    }
-
-    @media (min-width: $breakpointSmall) {
-        padding: 57px 0 30px;
-    }
-
-    @media (min-width: $breakpointLarge) {
-        padding: 57px 0 40px;
-
-        >.uk-position-cover {
-            top: 70px;
-        }
-    }
+.footer-wrap {
+    min-height: 710px;
+    padding: 55px 0 30px;
 }
 
 .footer-top {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 
     a img {
         max-width: 127px;
@@ -30,7 +323,7 @@
 
     >.uk-flex {
 
-        &:last-child {
+        &:nth-child(3) {
 
             a {
                 position: relative;
@@ -66,34 +359,22 @@
         border-color: $blue;
         position: relative;
         padding-right: 70px;
-        font-size: 16px;
 
-        svg {
-            width: 20px;
-            height: 22px;
+        &::before {
+            font-size: 24px;
             position: absolute;
-            right: 34px;
+            right: 35px;
             top: 50%;
-            fill: $blue;
             transform: translateY(-50%);
         }
 
-        &.icon-news {
-            margin-right: 40px;
-
-            svg {
-                width: 22px;
-                font-weight: $bold;
-            }
+        &.font-news::before {
+            font-weight: $bold;
         }
 
         @include hover {
             background-color: $blue;
             color: $white;
-
-            svg {
-                fill: $white;
-            }
         }
     }
 
@@ -118,32 +399,23 @@
         margin-right: 20px;
     }
 
-    @media (max-width: $breakpointLarge) {
+    @media (max-width: $breakpointLarge) and (min-width: $breakpointSmall) {
 
-        >.uk-flex {
-
-            &:nth-child(2) {
-                margin-top: 40px;
-            }
-
-            &:nth-child(3),
-            &:last-child {
-                margin-top: 45px;
-            }
+        .uk-button-default.font-news {
+            margin-right: 20px;
         }
     }
 
     @media (min-width: $breakpointSmall) {
-        padding-bottom: 140px;
 
-        .uk-button-default.icons-news,
+        .uk-button-default.font-news,
         >.uk-flex:last-child li:not(:last-of-type) {
             margin-right: 40px;
         }
     }
 
     @media (min-width: $breakpointLarge) {
-        padding-bottom: 270px;
+        padding-bottom: 190px;
 
         >.uk-flex {
 
@@ -169,20 +441,23 @@
         }
     }
 
-    @media (max-width: $breakpointMediumMax) {
+    @media (max-width: $breakpointLarge) {
         >.uk-flex {
             justify-content: center;
         }
     }
 
-    @media (max-width: $breakpointXsmallMax) {
+    @media (max-width: $breakpointSmall) {
         >.uk-flex:nth-child(3) {
             flex-direction: column;
             align-items: center;
         }
 
         .uk-button-default {
-            &.icon-news {
+            max-width: 280px;
+            width: 100%;
+
+            &.font-news {
                 margin-bottom: 20px;
                 margin-right: 0;
             }
@@ -190,20 +465,15 @@
     }
 }
 
-.footer-middle {
-    .scroll-button-up {
-        display: flex;
-        padding: 20px 0 40px;
-
-        .uk-button {
-            margin: 0;
-        }
-    }
-}
-
 .footer-bottom {
     * {
         color: $white;
+    }
+
+    >div {
+        &:first-of-type .label.small {
+            margin: 11px 0 15px;
+        }
     }
 
     .uk-button {
@@ -224,26 +494,28 @@
     .label.small {
         display: block;
         opacity: 1;
-        text-align: center;
+        text-align: left;
     }
 
     @media (min-width: $breakpointLarge) {
-        >.uk-flex {
-            >.uk-flex {
-                &:first-child {
-                    order: 2;
-                    padding-left: 65px;
-                }
+        >div {
 
-                &:last-child {
-                    padding-bottom: 7px;
-                }
+            &:first-child {
+                order: 2;
+            }
+
+            &:nth-child(2) {
+                order: 1;
+            }
+
+            &:last-child {
+                order: 3;
             }
         }
     }
 
     @media (max-width: $breakpointLarge) {
-        >.uk-flex:last-child {
+        >div:last-child {
             justify-content: center;
         }
 
@@ -251,52 +523,6 @@
         .uk-grid+.uk-grid,
         .uk-grid>.uk-grid-margin {
             margin-top: 15px;
-        }
-    }
-
-    @media (max-width: $breakpointMediumMax) {
-        >.uk-flex {
-            flex-direction: column;
-
-            >.uk-flex {
-                &:first-child {
-                    margin-bottom: 40px;
-
-                    .label.small {
-                        margin: 11px 0 15px;
-                    }
-                }
-
-                &:last-child>.uk-flex:first-child {
-                    flex-direction: column;
-                    align-items: flex-start;
-
-                    .nb-copyright {
-                        margin: 15px 0 0;
-                    }
-                }
-            }
-        }
-    }
-
-    @media (max-width: $breakpointXsmallMax) {
-        >.uk-flex>.uk-flex {
-            flex-direction: column;
-            align-items: center;
-
-            &:last-child>.uk-flex {
-                &:first-child {
-                    align-items: center;
-
-                    .nb-copyright {
-                        margin-top: 35px;
-                    }
-                }
-
-                &:last-of-type {
-                    margin-top: 35px;
-                }
-            }
         }
     }
 }
