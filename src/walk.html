@@ -28,7 +28,7 @@
 
 <body id="scroll-top">
 
-    <header class='header header-visit' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
+    <header class='header header-visit'>
         <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
             <div class='uk-navbar-left'>
@@ -573,9 +573,9 @@
                                 <form action="/search" method="get" role="search" id="navSearch"
                                     class="uk-search uk-search-default">
                                     <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
-                                        <use xlink:href="./symbol/icons.svg#search"></use>
-                                    </svg></button><input aria-label="Search Phrase"
-                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                            <use xlink:href="./symbol/icons.svg#search"></use>
+                                        </svg></button><input aria-label="Search Phrase" class="uk-input" type="search"
+                                        name="q" placeholder="Search Shetland.org">
                                 </form>
                             </div>
                         </div>
@@ -654,7 +654,7 @@
             </span>
         </div>
 
-        <nav class="fixed-nav">
+        <nav class="fixed-nav" id="scrollTarget" data-uk-sticky="bottom: #offset">
             <div class="fixed-nav-wrap">
                 <ul class="uk-flex uk-flex-bottom">
                     <li><a class="lable alt uk-text-bold" href="#findAWalk" data-uk-scroll>Find a Walk</a></li>
@@ -674,8 +674,9 @@
 
         <div>
             <div class='uk-container uk-container-small'>
-                <ul class='uk-breadcrumb' id="scrollTarget">
+                <ul class='uk-breadcrumb'>
                     <li><a href='index.html'>Home</a></li>
+                    <li><a href='#'>Visit</a></li>
                     <li><a href='#'>Things To Do</a></li>
                     <li><a href='#'>Outdoors & Adventure</a></li>
                     <li><span>Walk</span></li>
@@ -683,7 +684,7 @@
             </div>
         </div>
 
-        <div class="uk-margin-medium-top uk-margin-large-bottom">
+        <div class="uk-margin-medium-top uk-margin-medium-bottom">
             <div class="uk-container uk-container-small">
                 <p class="uk-text-lead uk-margin-medium-bottom">Shetland offers some of the finest walking in Europe, at
                     all times of the year. The combination of spectacular coastal scenery on both North Sea and Atlantic
@@ -746,10 +747,10 @@
 
                 <blockquote class="quote-green">
                     <span class="icon-quote" role="presentation">
-						<svg viewBox="0 0 512 512">
-							<use xlink:href="./symbol/icons.svg#quote"></use>
-						</svg>
-					</span>
+                        <svg viewBox="0 0 512 512">
+                            <use xlink:href="./symbol/icons.svg#quote"></use>
+                        </svg>
+                    </span>
                     <p>If you want to tackle some exhilarating challenges, or simply explore a stunning landscape then a
                         walking holiday in Shetland is the perfect choice.</p>
                 </blockquote>
@@ -759,16 +760,16 @@
         <div class='nb-block nb-block-content uk-margin-xlarge-bottom uk-clearfix' data-nb-block='content'
             id="getInspired">
             <div class="uk-container uk-container-large">
-                <h2 class="uk-text-center uk-padding uk-padding-remove-horizontal">Get Inspired</h2>
+                <h2 class="uk-text-center uk-padding uk-padding-remove-horizontal">Get inspired</h2>
                 <div class="uk-child-width-1-3 uk-grid-medium" data-uk-grid>
                     <div>
                         <div class="uk-card explore-item">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
                             <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-1.jpg" alt="image" data-uk-img>
+                                <img src="./img/walk-inspired-1.jpg" alt="image" data-uk-img>
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">Top 7 Walks For History Lovers</h3>
+                                <h3 class="uk-card-title">Your Shetland bucket list</h3>
                             </div>
                         </div>
                     </div>
@@ -776,10 +777,10 @@
                         <div class="uk-card explore-item">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
                             <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-2.jpg" alt="image" data-uk-img>
+                                <img src="./img/walk-inspired-2.jpg" alt="image" data-uk-img>
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">5 Most Amazing Spots for Wildlife Viewing</h3>
+                                <h3 class="uk-card-title">10 Of Shetland's hidden gems</h3>
                             </div>
                         </div>
                     </div>
@@ -787,10 +788,10 @@
                         <div class="uk-card explore-item">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
                             <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-3.jpg" alt="image" data-uk-img>
+                                <img src="./img/walk-inspired-3.jpg" alt="image" data-uk-img>
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">10 Fantastic Walks in Frisian Surroundings</h3>
+                                <h3 class="uk-card-title">21 great reasons to visit Shetland</h3>
                             </div>
                         </div>
                     </div>
@@ -798,10 +799,10 @@
                         <div class="uk-card explore-item">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
                             <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-1.jpg" alt="image" data-uk-img>
+                                <img src="./img/walk-inspired-4.jpg" alt="image" data-uk-img>
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">10 Best Places to See the ‘Northern Lights’</h3>
+                                <h3 class="uk-card-title">Sustainable tourism in Shetland</h3>
                             </div>
                         </div>
                     </div>
@@ -809,10 +810,10 @@
                         <div class="uk-card explore-item">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
                             <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-2.jpg" alt="image" data-uk-img>
+                                <img src="./img/walk-inspired-5.jpg" alt="image" data-uk-img>
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">10 Spectacular Scenery Walks</h3>
+                                <h3 class="uk-card-title">30 top scenic spots to visit</h3>
                             </div>
                         </div>
                     </div>
@@ -820,10 +821,10 @@
                         <div class="uk-card explore-item">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
                             <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-3.jpg" alt="image" data-uk-img>
+                                <img src="./img/walk-inspired-6.jpg" alt="image" data-uk-img>
                             </div>
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">Shetland Marilyns</h3>
+                                <h3 class="uk-card-title">Family days out in Shetland</h3>
                             </div>
                         </div>
                     </div>
@@ -835,7 +836,8 @@
             <div class="uk-container uk-container-small">
                 <div class="uk-padding-small uk-padding-remove-horizontal">
                     <h2>Shetland Marilyns</h2>
-                    <p>A Marilyn is a hill of any height with a drop of 150 metres (nearly 500 ft) or more on all sides.
+                    <p class="uk-padding-small uk-padding-remove-horizontal">A Marilyn is a hill of any height with a
+                        drop of 150 metres (nearly 500 ft) or more on all sides.
                         In
                         other words, a Marilyn is a hill which is relatively high compared to its surroundings. There
                         are 19
@@ -865,7 +867,7 @@
             <div class="uk-container uk-container-small">
                 <div class="uk-padding-large uk-padding-remove-horizontal uk-padding-remove-bottom">
                     <h2 class="uk-margin-small-top">Operators</h2>
-                    <p class="uk-margin-medium-bottom">If you have never walked in Shetland before, using a guide is a
+                    <p>If you have never walked in Shetland before, using a guide is a
                         great way to enjoy a safe
                         introduction to walks which suit your ability. Guided walks are led by highly qualified and
                         knowledgeable guides, who have an in-depth knowledge of the landscape, weather and points of
@@ -873,71 +875,125 @@
                 </div>
             </div>
             <div class="uk-container uk-container-large">
-                <div class="uk-child-width-1-3 uk-grid-medium uk-margin-small-top uk-margin-large-bottom uk-padding uk-padding-remove-horizontal"
-                    data-uk-grid>
+                <div class="uk-child-width-1-4 uk-margin-large-bottom uk-padding uk-padding-remove-horizontal"
+                    data-uk-grid data-uk-height-match=".operator-card > .uk-card-body">
                     <div>
-                        <div class="uk-card explore-item">
+                        <div class="uk-card operator-card">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
-                            <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-1.jpg" alt="image" data-uk-img>
+                            <div class="uk-card-media-top uk-overflow-hidden uk-position-relative">
+                                <span class="uk-position-cover uk-background-cover" data-uk-img
+                                    style="background-image: url('./img/walk-operators-1.jpg');"
+                                    role="presentation"></span>
                             </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title">Top 7 Walks For History Lovers</h3>
+                            <div class="uk-card-body uk-flex uk-flex-column uk-flex-between">
+                                <h3 class="uk-card-title midi alt uk-text-bold">About Argyll Walking Holidays</h3>
+                                <div>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle">
+                                        <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#area"></use>
+                                        </svg>
+                                        Argyll, Scotland</span>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle"><svg
+                                            viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#globe-alt"></use>
+                                        </svg>www.aboutargyll.co.uk</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="uk-card explore-item">
+                        <div class="uk-card operator-card">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
-                            <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-2.jpg" alt="image" data-uk-img>
+                            <div class="uk-card-media-top uk-overflow-hidden uk-position-relative">
+                                <span class="uk-position-cover uk-background-cover" data-uk-img
+                                    style="background-image: url('./img/walk-operators-2.jpg');"
+                                    role="presentation"></span>
                             </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title">5 Most Amazing Spots for Wildlife Viewing</h3>
+                            <div class="uk-card-body uk-flex uk-flex-column uk-flex-between">
+                                <h3 class="uk-card-title midi alt uk-text-bold">Shetland Field Studies Group</h3>
+                                <div>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle">
+                                        <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#area"></use>
+                                        </svg>
+                                        Argyll, Scotland</span>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle"><svg
+                                            viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#globe-alt"></use>
+                                        </svg>www.aboutargyll.co.uk</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="uk-card explore-item">
+                        <div class="uk-card operator-card">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
-                            <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-3.jpg" alt="image" data-uk-img>
+                            <div class="uk-card-media-top uk-overflow-hidden uk-position-relative">
+                                <span class="uk-position-cover uk-background-cover" data-uk-img
+                                    style="background-image: url('./img/walk-operators-3.jpg');"
+                                    role="presentation"></span>
                             </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title">10 Fantastic Walks in Frisian Surroundings</h3>
+                            <div class="uk-card-body uk-flex uk-flex-column uk-flex-between">
+                                <h3 class="uk-card-title midi alt uk-text-bold">Shetland Ranger Service</h3>
+                                <div>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle">
+                                        <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#area"></use>
+                                        </svg>
+                                        Argyll, Scotland</span>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle"><svg
+                                            viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#globe-alt"></use>
+                                        </svg>www.aboutargyll.co.uk</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="uk-card explore-item">
+                        <div class="uk-card operator-card">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
-                            <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-1.jpg" alt="image" data-uk-img>
+                            <div class="uk-card-media-top uk-overflow-hidden uk-position-relative">
+                                <span class="uk-position-cover uk-background-cover" data-uk-img
+                                    style="background-image: url('./img/walk-operators-4.jpg');"
+                                    role="presentation"></span>
                             </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title">10 Best Places to See the ‘Northern Lights’</h3>
+                            <div class="uk-card-body uk-flex uk-flex-column uk-flex-between">
+                                <h3 class="uk-card-title midi alt uk-text-bold">Shetland Wildlife</h3>
+                                <div>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle">
+                                        <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#area"></use>
+                                        </svg>
+                                        Argyll, Scotland</span>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle"><svg
+                                            viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#globe-alt"></use>
+                                        </svg>www.aboutargyll.co.uk</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="uk-card explore-item">
+                        <div class="uk-card operator-card">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
-                            <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-2.jpg" alt="image" data-uk-img>
+                            <div class="uk-card-media-top uk-overflow-hidden uk-position-relative">
+                                <span class="uk-position-cover uk-background-cover" data-uk-img
+                                    style="background-image: url('./img/walk-operators-5.jpg');"
+                                    role="presentation"></span>
                             </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title">10 Spectacular Scenery Walks</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="uk-card explore-item">
-                            <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
-                            <div class="uk-card-media-top">
-                                <img src="./img/explore-nature-3.jpg" alt="image" data-uk-img>
-                            </div>
-                            <div class="uk-card-body">
-                                <h3 class="uk-card-title">Shetland Marilyns</h3>
+                            <div class="uk-card-body uk-flex uk-flex-column uk-flex-between">
+                                <h3 class="uk-card-title midi alt uk-text-bold">Wilderness Scotland</h3>
+                                <div>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle">
+                                        <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#area"></use>
+                                        </svg>
+                                        Argyll, Scotland</span>
+                                    <span class="label small alt opacity-off uk-flex uk-flex-middle"><svg
+                                            viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#globe-alt"></use>
+                                        </svg>www.aboutargyll.co.uk</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -945,7 +1001,8 @@
             </div>
         </div>
 
-        <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content' id="outdoorAccessCode">
+        <div class='nb-block nb-block-content uk-clearfix uk-padding-large uk-padding-remove-horizontal uk-padding-remove-bottom'
+            data-nb-block='content' id="outdoorAccessCode">
             <div class="uk-container uk-container-small">
                 <div class="uk-margin-medium-bottom">
                     <h2>Outdoor Access Code</h2>
@@ -984,7 +1041,7 @@
                         </div>
                     </li>
                     <li>
-                        <a class="uk-accordion-title" href="#">Know The Code Before You Go ...</a>
+                        <a class="uk-accordion-title" href="#">Know the code before you go ...</a>
                         <div class="uk-accordion-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt
@@ -997,7 +1054,7 @@
 
         <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content' id="corePaths">
             <div class="uk-container uk-container-small">
-                <div class="uk-margin-medium-top uk-margin-medium-bottom">
+                <div class="uk-margin-medium-bottom">
                     <h2>Core Paths</h2>
                     <p>There has been a traditional freedom of access across the isles with many places suitable to
                         walk,
@@ -1010,6 +1067,18 @@
                         useful
                         for land managers to be able to suggest good routes across their land for land management and
                         conservation reasons and so the core paths provide for that.</p>
+                    <p>
+                        <a href="#">Core Paths</a> form a basic network of paths across Shetland and linked with other
+                        <a href="#">access routes</a>
+                        they are often the most popular paths and key routes that link communities and provide access to
+                        some of the best scenery. They have been agreed with land managers and local communities and the
+                        access is inspected and well maintained by Shetland Islands Council. Whilst each core path may
+                        not be suitable for all user groups, the core path system in Shetland as a whole will provide
+                        for people of all abilities and is in a constant state of development.
+                    </p>
+                    <p>Until a time when core paths and access routes are recorded on Ordnance Survey maps it is
+                        recommended that you either print off the routes shown in the above links or transfer that
+                        information onto your own ordnance survey maps to help guide you on your walks.</p>
                 </div>
             </div>
             <div class="uk-container uk-container-large uk-margin-large-bottom">
@@ -1018,23 +1087,7 @@
             <div class="uk-container uk-container-small">
                 <ul data-uk-accordion>
                     <li>
-                        <a class="uk-accordion-title" href="#">Crofting Land</a>
-                        <div class="uk-accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="uk-accordion-title" href="#">Safety</a>
-                        <div class="uk-accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                                ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="uk-accordion-title" href="#">Know The Code Before You Go ...</a>
+                        <a class="uk-accordion-title" href="#">Encountered Problems?</a>
                         <div class="uk-accordion-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt
@@ -1097,7 +1150,7 @@
             </div>
         </div>
 
-        <div class="nb-share uk-padding-large uk-padding-remove-horizontal">
+        <div class="nb-share uk-padding uk-padding-remove-horizontal">
             <div class="uk-container uk-container-large">
                 <div class="nb-share-inner uk-margin-medium-bottom uk-text-center">
                     <h5>Share this page</h5>
