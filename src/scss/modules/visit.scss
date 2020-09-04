@@ -7,6 +7,12 @@
 
     .nb-video {
         height: 407px;
+
+        &::before {
+            height: 110px;
+            top: auto;
+            opacity: .6;
+        }
     }
 
     >.uk-container>.uk-flex-center {
