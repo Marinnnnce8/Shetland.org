@@ -1,0 +1,19 @@
+.alert-banner.uk-alert {
+    background-color: $orange-light;
+    border-radius: 0;
+    padding: 22px 22px 22px 110px;
+
+    button {
+        width: 48px;
+        height: 48px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 13px;
+        transition: $nbSec ease-in-out;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

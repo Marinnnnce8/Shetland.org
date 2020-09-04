@@ -385,10 +385,14 @@ img {
 	font-size: 16px;
 	color: $blue;
 	line-height: 1.3em;
-	padding: 16px 32px 17px;
+	padding: 20px 32px;
 
 	strong {
 		font-weight: $bold;
+	}
+
+	a:not([class]) {
+		text-decoration: none;
 	}
 
 	&.uk-alert-primary {
@@ -405,6 +409,16 @@ img {
 
 	&.uk-alert-danger {
 		background-color: $red-light;
+
+		a::after {
+			background-color: $orange-dark;
+		}
+	}
+
+	@include hover {
+		a:not([class]) {
+			text-decoration: none;
+		}
 	}
 }
 
