@@ -30,13 +30,29 @@
                 font-size: 20px;
                 font-weight: $bold;
                 line-height: 1.3em;
-                padding: 26px 21px 23px 15px;
+                padding: 26px 45px 23px 15px;
                 color: $blue;
                 width: 100%;
+
+                svg:not(.uk-svg) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    fill: $blue;
+                    opacity: 0;
+                    transition: $nbSec ease-in-out;
+                    width: 40px;
+                    height: 40px;
+                }
 
                 @include hover {
                     span {
                         color: $green-pastel;
+                    }
+
+                    svg {
+                        opacity: 1;
                     }
                 }
             }
@@ -47,6 +63,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 transition: $nbSec ease-in-out;
+                width: calc(100% - 125px);
             }
         }
 

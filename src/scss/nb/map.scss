@@ -10,9 +10,13 @@
     background-color: $turquise-light;
     margin: 0;
 
-    .uk-dropdown.uk-open {
-        box-shadow: none;
-        border-top: 1px solid $gray-warm;
+    .uk-dropdown {
+        padding: 50px 40px 40px;
+
+        &.uk-open {
+            box-shadow: none;
+            border-top: 1px solid $gray-warm;
+        }
     }
 
     *+.uk-grid-margin,
@@ -24,7 +28,7 @@
     .dropdown-close-button {
         position: absolute;
         top: 20px;
-        right: 40px;
+        right: 20px;
         z-index: 1;
     }
 
@@ -102,19 +106,19 @@
 
     .uk-button-text {
         min-height: 38px;
-        padding: 0 30px;
+        padding: 0 23px;
 
         svg {
-            width: 138px;
+            width: 100px;
         }
 
         .shape {
-            width: 136px;
-            stroke-dasharray: 82 403;
-            stroke-dashoffset: -648;
+            width: 100px;
+            stroke-dasharray: 58 402;
+            stroke-dashoffset: -584;
         }
 
-        .font-close {
+        >span {
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
@@ -125,18 +129,18 @@
                 display: none;
             }
 
-            &::before {
-                font-size: 10px;
-                color: inherit;
-                margin-left: 15px;
-                font-weight: $bold;
-            }
+            // &::before {
+            //     font-size: 10px;
+            //     color: inherit;
+            //     margin-left: 15px;
+            //     font-weight: $bold;
+            // }
         }
     }
 
     @media (min-width: $breakpointSmall) {
         .uk-button-secondary {
-            margin-left: 38px;
+            margin-left: 20px;
         }
     }
 }
