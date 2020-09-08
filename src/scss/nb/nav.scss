@@ -225,6 +225,11 @@
 			}
 		}
 	}
+	@media (max-width: $breakpointSmallMax) {
+		>button.label {
+			font-size: 0;
+		}
+	}
 }
 
 .mega-menu {

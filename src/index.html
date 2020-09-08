@@ -39,10 +39,11 @@
 			</div>
 
 			<div class='uk-navbar-right'>
-				<div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
+				<div class='navbar-top uk-visible@s uk-flex uk-flex-right uk-flex-middle'>
 					<ul class='uk-flex uk-flex-middle'>
-						<li><a href='#'>Blog</a></li>
 						<li><a href='#'>Map</a></li>
+						<li><a href='#'>What's New</a></li>
+						<li><a href='#'>Videos</a></li>
 					</ul>
 					<ul class='uk-flex uk-flex-middle'>
 						<li>
@@ -69,7 +70,7 @@
 					</ul>
 				</div>
 				<div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
-					<div id='nav' class="nav">
+					<div id='nav' class="nav uk-visible@m">
 						<ul class='uk-navbar-nav'>
 							<li class='uk-active'><a href='visit.html'>Visit</a></li>
 							<li><a href='live-work-study.html'>Live, Work & Study</a></li>
@@ -96,19 +97,45 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
-					hidden>
-					<span data-uk-navbar-toggle-icon></span>
-				</a> -->
-				<!-- <button class="js-navbar-toggle uk-navbar-toggle" aria-label="Toggle menu">
-					<div class="nav-bars" role="presentation">
-						<span></span>
-						<span></span>
-						<span></span>
-						<div class="nav-bar-alt"></div>
+					<button class="burger-menu uk-hidden@m" aria-label="Open navigation"><span role="presentation"></span></button>
+					<div id='navMob' class="nav" data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;">
+						<ul class='uk-navbar-nav'>
+							<li class='uk-active'><a href='visit.html'>Visit</a></li>
+							<li><a href='live-work-study.html'>Live, Work & Study</a></li>
+							<li><a href='invest.html'>Invest</a></li>
+						</ul>
+						<div class='navbar-top uk-hidden@s'>
+							<ul>
+								<li><a href='#'>Map</a></li>
+								<li><a href='#'>What's New</a></li>
+								<li><a href='#'>Videos</a></li>
+							</ul>
+							<ul class='uk-flex uk-flex-middle'>
+								<li>
+									<a href="#" aria-label="Visit our Facebook page">
+										<svg viewBox="0 0 512 512">
+											<use xlink:href="./symbol/icons.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Visit our Twitter page">
+										<svg viewBox="0 0 512 512">
+											<use xlink:href="./symbol/icons.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Visit our Instagram page">
+										<svg viewBox="0 0 512 512">
+											<use xlink:href="./symbol/icons.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</button> -->
+				</div>
 			</div>
 
 		</nav>
