@@ -141,10 +141,13 @@
 	// 		}
 	// 	}
 	// }
+	@media (max-width: $breakpointSmallMax) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 .nav-search {
-	min-width: 150px;
 	min-height: 48px;
 	padding-top: 25px;
 
@@ -225,6 +228,10 @@
 			}
 		}
 	}
+	@media (min-width: $breakpointMedium) {
+		min-width: 150px;
+	}
+
 	@media (max-width: $breakpointSmallMax) {
 		>button.label {
 			font-size: 0;

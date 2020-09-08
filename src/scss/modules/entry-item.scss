@@ -45,7 +45,7 @@
         }
 
         .uk-card-body {
-            padding: 0 57px 20px 35px;
+            padding: 0 57px 35px 35px;
             min-height: 270px;
         }
 
@@ -58,6 +58,7 @@
         color: $white;
         line-height: 1.1em;
         z-index: 1;
+        padding: 0 5px;
     }
 
     a {

@@ -87,6 +87,9 @@
 		width: 100%;
 		height: auto;
 	}
+	@media (max-width: $breakpointXsmallMax) {
+		width: 155px;
+	}
 }
 
 // uikit/tooltip

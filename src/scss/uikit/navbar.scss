@@ -6,7 +6,7 @@
 }
 
 .uk-navbar-right {
-    padding-left: 80px;
+    padding-left: 0;
     // padding-right: 40px;
     align-items: stretch;
     width: 100%;
@@ -17,5 +17,13 @@
         .uk-navbar-nav {
             padding-top: 0;
         }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        padding-left: 75px;
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding-left: 125px;
     }
 }
