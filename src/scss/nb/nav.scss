@@ -273,7 +273,7 @@
 		}
 
 		&.yellow::after {
-			border-color: $orange-mid transparent transparent;
+			border-color: $yellow transparent transparent;
 		}
 
 		&.uk-open {
@@ -305,10 +305,10 @@
 			}
 
 			&.yellow {
-				color: $orange-mid;
+				color: $yellow;
 
 				&::after {
-					background-color: $orange-mid;
+					background-color: $yellow;
 				}
 			}
 		}
@@ -323,7 +323,7 @@
 	}
 
 	.yellow {
-		color: $orange-mid;
+		color: $yellow;
 	}
 
 	>.uk-dropdown {
@@ -353,15 +353,23 @@
 			margin-top: 50px;
 		}
 
-		.label.large {
+		span.label.large {
 			display: block;
 			margin-bottom: 35px;
 		}
 
-		.label.small {
+		span.label.small {
 			display: block;
 			margin-bottom: 20px;
 			line-height: 1.7em;
+		}
+
+		ul li a.label.large {
+			margin-bottom: 20px;
+		}
+
+		ul li a.label.midi {
+			margin-bottom: 15px;
 		}
 	}
 
