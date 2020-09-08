@@ -125,6 +125,17 @@
                 border-color: $yellow-mid transparent transparent;
             }
         }
+
+        .uk-button-text>span:last-of-type {
+            &::after {
+                background-color: $orange-mid;
+            }
+
+            .uk-svg,
+            .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+                fill: $orange-mid;
+            }
+        }
     }
 
     &.header-invest {
@@ -133,6 +144,17 @@
 
             &::after {
                 border-color: $blue-bright-light transparent transparent;
+            }
+        }
+
+        .uk-button-text>span:last-of-type {
+            &::after {
+                background-color: $blue-navy;
+            }
+
+            .uk-svg,
+            .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+                fill: $blue-navy;
             }
         }
     }
