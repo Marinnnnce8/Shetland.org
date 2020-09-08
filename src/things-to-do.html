@@ -11,17 +11,17 @@
     <meta name='description' content='This is a meta description'>
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="194x194" href="./favicon/favicon-194x194.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-	<link rel="manifest" href="./site.webmanifest">
-	<link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#298fc2">
-	<link rel="shortcut icon" href="./favicon/favicon.ico">
-	<meta name="apple-mobile-web-app-title" content="Shetland.org">
-	<meta name="application-name" content="Shetland.org">
-	<meta name="msapplication-TileColor" content="#298fc2">
-	<meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="./favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#298fc2">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Shetland.org">
+    <meta name="application-name" content="Shetland.org">
+    <meta name="msapplication-TileColor" content="#298fc2">
+    <meta name="theme-color" content="#ffffff">
     <link rel='stylesheet' href='css/uikit.min.css' />
     <link rel='stylesheet' href='css/theme.min.css' />
 </head>
@@ -89,9 +89,9 @@
                                 <form action="/search" method="get" role="search" id="navSearch"
                                     class="uk-search uk-search-default">
                                     <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
-                                        <use xlink:href="./symbol/icons.svg#search"></use>
-                                    </svg></button><input aria-label="Search Phrase"
-                                        class="uk-input" type="search" name="q" placeholder="Search Shetland.org">
+                                            <use xlink:href="./symbol/icons.svg#search"></use>
+                                        </svg></button><input aria-label="Search Phrase" class="uk-input" type="search"
+                                        name="q" placeholder="Search Shetland.org">
                                 </form>
                             </div>
                         </div>
@@ -225,20 +225,26 @@
             <div class="things-to-do-wrap">
                 <div class="uk-grid-medium" data-uk-grid>
                     <div class="uk-width-1-3">
-                        <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/outdoor-and-adventure.jpg');">
+                        <div class="image-card uk-card uk-card-body">
+                            <span class="uk-position-cover uk-background-cover" data-uk-img
+                                style="background-image: url('./img/outdoor-and-adventure.jpg');"></span>
                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <h3 class="uk-card-title large uk-margin-remove">Outdoor & Adventure</h3>
+                            <div class="image-card-text">
+                                <h3 class="uk-card-title large uk-margin-remove">Outdoors and adventure</h3>
+                            </div>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
                                         src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div class="uk-width-2-3">
-                        <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/nature-and-wildlife.jpg');">
+                        <div class="image-card uk-card uk-card-body">
+                            <span class="uk-position-cover uk-background-cover" data-uk-img
+                                style="background-image: url('./img/wildlife-and-nature.jpg');"></span>
                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <h3 class="uk-card-title large uk-margin-remove">Nature & Wildlife</h3>
+                            <div class="image-card-text">
+                                <h3 class="uk-card-title large uk-margin-remove">Wildlife and nature</h3>
+                            </div>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
                                         src="./img/button-arrow-right.svg" alt='image' /></span></a>
@@ -249,20 +255,26 @@
             <div class="things-to-do-wrap">
                 <div class="uk-grid-medium" data-uk-grid>
                     <div class="uk-width-2-3">
-                        <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/history-and-heritage.jpg');">
+                        <div class="image-card uk-card uk-card-body">
+                            <span class="uk-position-cover uk-background-cover" data-uk-img
+                                style="background-image: url('./img/history-and-heritage.jpg');"></span>
                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <h3 class="uk-card-title large uk-margin-remove">History & Heritage</h3>
+                            <div class="image-card-text">
+                                <h3 class="uk-card-title large uk-margin-remove">History and heritage</h3>
+                            </div>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
                                         src="./img/button-arrow-right.svg" alt='image' /></span></a>
                         </div>
                     </div>
                     <div class="uk-width-1-3">
-                        <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/trips-and-tours.jpg');">
+                        <div class="image-card uk-card uk-card-body">
+                            <span class="uk-position-cover uk-background-cover" data-uk-img
+                                style="background-image: url('./img/trips-and-tours.jpg');"></span>
                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <h3 class="uk-card-title large uk-margin-remove">Trips & Tours</h3>
+                            <div class="image-card-text">
+                                <h3 class="uk-card-title large uk-margin-remove">Trips and tours</h3>
+                            </div>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
                                         src="./img/button-arrow-right.svg" alt='image' /></span></a>
@@ -273,10 +285,43 @@
             <div class="things-to-do-wrap">
                 <div class="uk-grid-medium" data-uk-grid>
                     <div class="uk-width-1-3">
-                        <div class="image-card uk-card uk-card-body uk-background-cover" data-uk-img
-                            style="background-image: url('./img/our-favourite-places.jpg');">
+                        <div class="image-card uk-card uk-card-body">
+                            <span class="uk-position-cover uk-background-cover" data-uk-img
+                                style="background-image: url('./img/shopping.jpg');"></span>
                             <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <h3 class="uk-card-title large uk-margin-remove">Our Favourite Places</h3>
+                            <div class="image-card-text">
+                                <h3 class="uk-card-title large uk-margin-remove">Shopping</h3>
+                            </div>
+                            <a href="#" class='uk-button uk-button-primary'><span>Find out
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                        </div>
+                    </div>
+                    <div class="uk-width-2-3">
+                        <div class="image-card uk-card uk-card-body">
+                            <span class="uk-position-cover uk-background-cover" data-uk-img
+                                style="background-image: url('./img/arts-and-crafts.jpg');"></span>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+                            <div class="image-card-text">
+                                <h3 class="uk-card-title large uk-margin-remove">Arts and crafts</h3>
+                            </div>
+                            <a href="#" class='uk-button uk-button-primary'><span>Find out
+                                    more</span><span role="presentation"><img data-uk-svg
+                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="things-to-do-wrap">
+                <div class="uk-grid-medium" data-uk-grid>
+                    <div class="uk-width-1-3">
+                        <div class="image-card uk-card uk-card-body">
+                            <span class="uk-position-cover uk-background-cover" data-uk-img
+                                style="background-image: url('./img/with-children.jpg');"></span>
+                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
+                            <div class="image-card-text">
+                                <h3 class="uk-card-title large uk-margin-remove">With children</h3>
+                            </div>
                             <a href="#" class='uk-button uk-button-primary'><span>Find out
                                     more</span><span role="presentation"><img data-uk-svg
                                         src="./img/button-arrow-right.svg" alt='image' /></span></a>
@@ -289,16 +334,16 @@
     </main>
 
     <footer class='footer uk-position-relative'>
-		<span class="uk-background-cover uk-position-cover uk-visible@l" role="presentation" data-uk-img
-			style="background-image: url('./img/footer-banner-desc.jpg');"></span>
-		<span class="uk-background-cover uk-position-cover uk-hidden@l" role="presentation" data-uk-img
-			style="background-image: url('./img/footer-banner.jpg');"></span>
-		<div class='uk-container uk-container-large uk-text-center'>
-			<div class='footer-top uk-flex uk-flex-wrap uk-flex-center uk-flex-bottom' data-uk-grid>
-				<div class='uk-flex uk-flex-center uk-width-1-3@l'>
-					<a href='#' aria-label='Shetland.org Homepage'><img src='./img/footer-logo.png' alt='image' /></a>
-				</div>
-				<ul class='uk-flex uk-flex-center nb-social uk-width-1-3@l'>
+        <span class="uk-background-cover uk-position-cover uk-visible@l" role="presentation" data-uk-img
+            style="background-image: url('./img/footer-banner-desc.jpg');"></span>
+        <span class="uk-background-cover uk-position-cover uk-hidden@l" role="presentation" data-uk-img
+            style="background-image: url('./img/footer-banner.jpg');"></span>
+        <div class='uk-container uk-container-large uk-text-center'>
+            <div class='footer-top uk-flex uk-flex-wrap uk-flex-center uk-flex-bottom' data-uk-grid>
+                <div class='uk-flex uk-flex-center uk-width-1-3@l'>
+                    <a href='#' aria-label='Shetland.org Homepage'><img src='./img/footer-logo.png' alt='image' /></a>
+                </div>
+                <ul class='uk-flex uk-flex-center nb-social uk-width-1-3@l'>
                     <li>
                         <a href='#' aria-label='Share our page via Facebook'>
                             <svg viewBox="0 0 512 512">
@@ -328,7 +373,7 @@
                         </a>
                     </li>
                 </ul>
-				<div class='uk-flex uk-width-1-3@l'>
+                <div class='uk-flex uk-width-1-3@l'>
                     <button class='uk-button uk-button-default icon-news'>Subscribe
                         <svg viewBox="0 0 512 512">
                             <use xlink:href="./symbol/icons.svg#news"></use>
@@ -340,61 +385,61 @@
                         </svg>
                     </button>
                 </div>
-				<ul class='uk-flex uk-flex-right uk-width-1-3@l uk-margin-small-bottom'>
-					<li><a href='#' class='label medium alt uk-text-bold'>Brand</a></li>
-					<li><a href='#' class='label medium alt uk-text-bold'>Media</a></li>
-					<li><a href='#' class='label medium alt uk-text-bold'>Corporate</a></li>
-					<li><a href='#' class='label medium alt uk-text-bold'>Press</a></li>
-				</ul>
-			</div>
-			<div class="footer-middle uk-hidden@s">
-				<div class="scroll-button-up uk-flex-center">
-					<a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll>
+                <ul class='uk-flex uk-flex-right uk-width-1-3@l uk-margin-small-bottom'>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Brand</a></li>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Media</a></li>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Corporate</a></li>
+                    <li><a href='#' class='label medium alt uk-text-bold'>Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-middle uk-hidden@s">
+                <div class="scroll-button-up uk-flex-center">
+                    <a href="#scroll-top" class="uk-button" aria-label="Scroll to top of the page" data-uk-scroll>
                         <svg viewBox="0 0 512 512">
                             <use xlink:href="./symbol/icons.svg#chevron-up"></use>
                         </svg>
                     </a>
-				</div>
-			</div>
-			<div class='footer-bottom'>
+                </div>
+            </div>
+            <div class='footer-bottom'>
 
-				<div class="uk-flex uk-flex-between">
-					<div class='uk-flex uk-flex-column'>
-						<a href='#' aria-label='UNESCO Global Geopark'>
-							<img src='./img/ugg-logo.png' alt='UNESCO Global Geopark'>
-						</a>
-						<div class="uk-hidden@l">
-							<span class='label small'>Shetland is a UNESCO Global Geopark.</span>
-							<a href='#' class='uk-button'>Find out more</a>
-						</div>
-					</div>
-					<div class="uk-flex uk-flex-between uk-width-expand">
-						<div class='uk-flex uk-flex-left uk-flex-bottom'>
-							<div class='nb-legal'>
-								<ul class='uk-flex uk-flex-left'>
-									<li><a href='#' class='label small'>Terms &amp; Conditions</a></li>
-									<li><a href='#' class='label small'>Privacy Policy</a></li>
-									<li><a href='#' class='label small'>Disclaimer</a></li>
-								</ul>
-							</div>
-							<div class='nb-copyright label small uk-text-left'>
-								&copy; 2020
-								Shetland Islands Council.
-							</div>
-						</div>
-						<div class='uk-flex uk-flex-right uk-flex-bottom'>
-							<div class='nb-credit label small'>Website development by<span class="uk-hidden@m">:</span>
-								<a href='https://www.nbcommunication.com/'
-									title='NB Communication - Digital Marketing Agency'>
-									NB Communication
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+                <div class="uk-flex uk-flex-between">
+                    <div class='uk-flex uk-flex-column'>
+                        <a href='#' aria-label='UNESCO Global Geopark'>
+                            <img src='./img/ugg-logo.png' alt='UNESCO Global Geopark'>
+                        </a>
+                        <div class="uk-hidden@l">
+                            <span class='label small'>Shetland is a UNESCO Global Geopark.</span>
+                            <a href='#' class='uk-button'>Find out more</a>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-between uk-width-expand">
+                        <div class='uk-flex uk-flex-left uk-flex-bottom'>
+                            <div class='nb-legal'>
+                                <ul class='uk-flex uk-flex-left'>
+                                    <li><a href='#' class='label small'>Terms &amp; Conditions</a></li>
+                                    <li><a href='#' class='label small'>Privacy Policy</a></li>
+                                    <li><a href='#' class='label small'>Disclaimer</a></li>
+                                </ul>
+                            </div>
+                            <div class='nb-copyright label small uk-text-left'>
+                                &copy; 2020
+                                Shetland Islands Council.
+                            </div>
+                        </div>
+                        <div class='uk-flex uk-flex-right uk-flex-bottom'>
+                            <div class='nb-credit label small'>Website development by<span class="uk-hidden@m">:</span>
+                                <a href='https://www.nbcommunication.com/'
+                                    title='NB Communication - Digital Marketing Agency'>
+                                    NB Communication
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src='js/uikit.min.js'></script>
     <script src='js/uikit-icons.min.js'></script>
