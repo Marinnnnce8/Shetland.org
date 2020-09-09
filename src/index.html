@@ -39,7 +39,7 @@
 			</div>
 
 			<div class='uk-navbar-right'>
-				<div class='navbar-top uk-visible@s uk-flex uk-flex-right uk-flex-middle'>
+				<div class='navbar-top uk-flex uk-flex-right uk-flex-middle'>
 					<ul class='uk-flex uk-flex-middle'>
 						<li><a href='#'>Map</a></li>
 						<li><a href='#'>What's New</a></li>
@@ -70,18 +70,14 @@
 					</ul>
 				</div>
 				<div class='navbar-bottom uk-flex uk-flex-between uk-width-1-1'>
-					<div id='nav' class="nav uk-visible@m">
+					<div id='nav' class="nav">
 						<ul class='uk-navbar-nav'>
 							<li class='uk-active'><a href='visit.html'>Visit</a></li>
 							<li><a href='live-work-study.html'>Live, Work & Study</a></li>
 							<li><a href='invest.html'>Invest</a></li>
 						</ul>
 					</div>
-					<div class="nav-search uk-position-relative uk-flex uk-flex-right">
-						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-							class="label small alt">Search<svg viewBox="0 0 512 512">
-								<use xlink:href="./symbol/icons.svg#search"></use>
-							</svg></button>
+					<div class="nav-search uk-flex uk-flex-right">
 						<div id="navSearchBox" class="nav-search-box">
 							<div class="uk-flex uk-flex-middle uk-flex-right">
 								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
@@ -95,16 +91,23 @@
 										name="q" placeholder="Search Shetland.org">
 								</form>
 							</div>
+							<svg viewBox="0 0 512 512">
+								<use xlink:href="./symbol/icons.svg#close"></use>
+							</svg>
 						</div>
+						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+						class="label small alt"><span>Search</span><svg viewBox="0 0 512 512">
+							<use xlink:href="./symbol/icons.svg#search"></use>
+						</svg></button>
 					</div>
-					<button class="burger-menu uk-hidden@m" aria-label="Open navigation"><span role="presentation"></span></button>
-					<div id='navMob' class="nav" data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;">
+					<button class="burger-menu" aria-label="Open navigation"><span role="presentation"></span></button>
+					<div id='navMob' class="nav nav-mob" data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;">
 						<ul class='uk-navbar-nav'>
 							<li class='uk-active'><a href='visit.html'>Visit</a></li>
 							<li><a href='live-work-study.html'>Live, Work & Study</a></li>
 							<li><a href='invest.html'>Invest</a></li>
 						</ul>
-						<div class='navbar-top uk-hidden@s'>
+						<div class='navbar-top'>
 							<ul>
 								<li><a href='#'>Map</a></li>
 								<li><a href='#'>What's New</a></li>
@@ -137,7 +140,6 @@
 					</div>
 				</div>
 			</div>
-
 		</nav>
 	</header>
 	<!-- MAIN HEADER -->

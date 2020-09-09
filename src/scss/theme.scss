@@ -84,11 +84,14 @@
 	min-height: 0;
 
 	img {
-		width: 100%;
 		height: auto;
+		width: 150px;
 	}
-	@media (max-width: $breakpointXsmallMax) {
-		width: 155px;
+
+	@media (min-width: $breakpointMedium) {
+		img {
+			width: 100%;
+		}
 	}
 }
 

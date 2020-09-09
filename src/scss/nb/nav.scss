@@ -18,21 +18,8 @@
 }
 
 .uk-navbar {
-	padding-left: 40px;
-	padding-right: 40px;
-	// .uk-parent {
-
-	// 	>a {
-	// 		position: relative;
-
-	// 		.uk-icon {
-	// 			position: absolute;
-	// 			right: 0;
-	// 			top: 50%;
-	// 			transform: translateY(-50%);
-	// 		}
-	// 	}
-	// }
+	padding-left: 20px;
+	padding-right: 15px;
 
 	// Show nav after load
 	.uk-navbar-nav {
@@ -45,8 +32,6 @@
 		margin-top: 0;
 	}
 
-	// &.nb-nav-desktop {
-
 	.uk-navbar-nav {
 
 		>li {
@@ -55,7 +40,7 @@
 				font-size: 16px;
 				text-transform: none;
 				color: $blue;
-				padding: 10px 20px 0;
+				padding: 20px 20px 0;
 				font-family: $font-recoleta;
 			}
 
@@ -93,90 +78,55 @@
 		left: 0 !important;
 	}
 
-	// }
+	@media (min-width: $breakpointTabletPortrait) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 
-	// &.nb-nav-mobile {
-	// 	background-color: $nbWhite;
-	// 	border-top: 1px solid $nbOffWhite;
-	// 	height: calc(100% - 80px);
-	// 	left: 0;
-	// 	overflow: auto;
-	// 	position: fixed;
-	// 	top: 80px;
-	// 	width: 100%;
-	// 	z-index: 1001;
+	@media (min-width: $breakpointMedium) {
 
-	// 	.uk-navbar-nav {
-	// 		display: block;
+		.uk-navbar-nav {
 
-	// 		>li {
-	// 			padding: $ukGutter $ukGutter 0;
-	// 		}
-	// 	}
-
-	// 	.uk-navbar-item,
-	// 	.uk-navbar-nav>li>a,
-	// 	.uk-navbar-toggle {
-	// 		display: block;
-	// 		min-height: 0;
-	// 		padding: 0;
-	// 	}
-
-	// 	.uk-navbar-dropdown {
-	// 		box-shadow: none;
-	// 		height: 100%;
-	// 		left: 0 !important;
-	// 		padding: $ukGutter;
-	// 		top: 0 !important;
-	// 		width: 100%;
-
-	// 		.nb-nav-back {
-	// 			font-size: 0.9em;
-	// 		}
-
-	// 		.nb-nav-title {
-	// 			font-size: 1.1em;
-	// 			font-weight: 700;
-	// 			margin-top: 1em;
-	// 		}
-	// 	}
-	// }
-	@media (max-width: $breakpointSmallMax) {
-		padding-left: 15px;
-		padding-right: 15px;
+			>li>a {
+				padding: 10px 20px 0;
+			}
+		}
 	}
 }
 
 .nav-search {
-	min-height: 48px;
-	padding-top: 25px;
+	padding-top: 0;
 
 	>button {
 		line-height: 1.7em;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		color: rgba($blue, .7);
+		margin-right: 10px;
 
 		svg {
 			width: 20px;
 			height: 20px;
 			fill: $blue;
-			margin-left: 8px;
 		}
 	}
 
 	.nav-search-box {
 		background-color: $white;
 		display: none;
-		min-width: 560px;
-		z-index: 1;
+		min-width: 0;
+		width: 100%;
+		z-index: 2;
 		position: absolute;
-		top: 15px;
-		right: -20px;
+		top: calc(100% + 2px);
+		right: 0;
+		padding: 20px 40px 50px;
 
 		button.label {
 			padding-right: 10px;
 			padding-left: 17px;
+			display: none;
 
 			&::after {
 				content: font-char($close-search);
@@ -196,15 +146,14 @@
 	}
 
 	form {
-		margin-left: 10px;
-		max-width: 400px;
+		max-width: 100%;
 		width: 100%;
 
 		button[type='submit'] {
 			position: absolute;
 			right: 20px;
 			top: 50%;
-			transform: translateY(-36%);
+			transform: translateY(-50%);
 
 			svg {
 				width: 20px;
@@ -217,11 +166,11 @@
 		.uk-input {
 			border-radius: 50px;
 			min-height: 48px;
-			padding: 0 40px 0 35px;
+			padding: 3px 40px 0 35px;
 
 			@include placeholder {
 				font-size: 14px;
-				opacity: .5;
+				opacity: .7;
 				color: inherit;
 				top: -2px;
 				position: relative;
@@ -229,13 +178,126 @@
 		}
 	}
 
-	@media (min-width: $breakpointMedium) {
-		min-width: 150px;
+	@media (min-width: $breakpointTabletPortrait) {
+
+		>button {
+			justify-content: flex-end;
+			margin-right: 0;
+		}
+
+		.nav-search-box {
+			top: calc(100% + 19px);
+		}
 	}
 
-	@media (max-width: $breakpointSmallMax) {
+	@media (min-width: $breakpointXmedium) {
+		min-width: 150px;
+		position: relative;
+		padding-top: 25px;
+		height: auto;
+
+		>button svg {
+			margin-left: 8px;
+		}
+
+		.nav-search-box {
+			min-width: 560px;
+			top: 15px;
+			right: -20px;
+			padding: 0;
+
+			button.label {
+				display: block;
+			}
+
+			>svg {
+				display: none;
+			}
+		}
+
+		form {
+			max-width: 400px;
+			margin-left: 10px;
+
+			button[type='submit'] {
+				transform: translateY(-36%);
+			}
+		}
+	}
+
+	@media (max-width: $breakpointXmediumMin) {
 		>button.label {
-			font-size: 0;
+			z-index: 3;
+			width: 48px;
+			height: 48px;
+			top: 15px;
+			position: relative;
+
+			span {
+				display: none;
+			}
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		.nav-search-box-active~button {
+			opacity: 0;
+		}
+
+		.nav-search-box {
+			&::after {
+				position: absolute;
+				content: '';
+				background-color: rgba($white, .8);
+				left: 0;
+				width: 100%;
+				bottom: 100%;
+				height: 122px;
+				z-index: 1;
+			}
+
+			>svg {
+				background-color: $white;
+				position: absolute;
+				pointer-events: none;
+				fill: $blue;
+				width: 20px;
+				height: 20px;
+				bottom: calc(100% + 19px);
+				transform: translateY(-50%);
+				right: 40px;
+				z-index: 3;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointMedium) {
+
+		.nav-search-box>svg {
+			bottom: calc(100% + 10px);
+		}
+	}
+
+	@media (max-width: $breakpointTabletPortraitMax) {
+		>button.label {
+			top: 0;
+			position: static;
+		}
+
+		.nav-search-box {
+			padding: 20px 20px 35px;
+
+			>svg {
+				right: 87px;
+			}
+		}
+
+		form .uk-input {
+			font-size: 16px;
+			line-height: 48px;
 		}
 	}
 }
@@ -332,6 +394,7 @@
 		box-shadow: none;
 		border-top: 1px solid $gray-light;
 		width: 100%;
+
 		&::after {
 			position: absolute;
 			content: '';

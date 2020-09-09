@@ -1,29 +1,41 @@
 .uk-navbar-left {
-    padding-top: 19px;
-    // padding-left: 40px;
-    max-width: 220px;
+    padding-top: 3px;
     width: 100%;
+    max-width: 150px;
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding-top: 19px;
+    }
+
+    @media (min-width: $breakpointMedium) {
+        max-width: 220px;
+    }
 }
 
 .uk-navbar-right {
     padding-left: 0;
-    // padding-right: 40px;
     align-items: stretch;
     width: 100%;
 
     .navbar-top {
-        padding-right: 5px;
 
         .uk-navbar-nav {
             padding-top: 0;
         }
     }
 
-    @media (min-width: $breakpointMedium) {
-        padding-left: 75px;
+    @media (min-width: $breakpointTabletPortraitMax) {
+        padding-left: 25px;
     }
 
-    @media (min-width: $breakpointTabletPortrait) {
+    @media (min-width: $breakpointLarge) {
         padding-left: 93px;
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+
+        >.navbar-top {
+            display: none;
+        }
     }
 }

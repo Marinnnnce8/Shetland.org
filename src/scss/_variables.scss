@@ -108,10 +108,13 @@ $grid-gutter-width: 30px !default;
 // Breakpoints
 $breakpointSmall: 640px;
 $breakpointTabletPortrait: 768px;
+$breakpointTabletPortraitMax: ($breakpointTabletPortrait - 1);
+$breakpointTabletPortraitMin: ($breakpointTabletPortraitMax - 1);
 $breakpointMedium: 960px;
 $breakpointLarge: 1200px;
 $breakpointXlarge: 1600px;
 $breakpointXmedium: 1366px;
+$breakpointXmediumMin: ($breakpointXmedium - 1);
 $breakpointXsmallMax: ($breakpointSmall - 1);
 $breakpointSmallMax: ($breakpointMedium - 1);
 $breakpointMediumMax: ($breakpointLarge - 1);
