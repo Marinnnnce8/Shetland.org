@@ -4,6 +4,11 @@
 
     li {
         list-style-type: none;
+
+        a,
+        .uk-card-title {
+            transition: $nbSec ease-in-out;
+        }
     }
 
     .navbar-top {
@@ -59,8 +64,27 @@
             position: relative;
         }
 
-        .navbar-top ul {
-            margin: 0;
+        .navbar-top {
+            ul {
+                margin: 0;
+
+            }
+
+            .uk-navbar-nav li {
+                &:not(.uk-active) a {
+                    color: rgba($blue, .7);
+
+                    @include hover {
+                        color: $blue;
+                    }
+                }
+
+                &.uk-active a {
+                    @include hover {
+                        color: $blue;
+                    }
+                }
+            }
         }
 
         .uk-navbar-nav>li>a:not(.label) {
@@ -74,12 +98,48 @@
 
     &.header-main {
 
+        .uk-navbar .uk-navbar-nav>li>a,
+        .navbar-top a {
+            @include hover {
+                color: $blue-light;
+
+                svg {
+                    fill: $blue-light;
+                }
+            }
+        }
+
         .uk-navbar .uk-navbar-nav>li>a {
             font-size: 20px;
         }
     }
 
     &.header-visit {
+
+        .uk-navbar .uk-navbar-nav>li>a,
+        .uk-navbar .uk-navbar-nav>li>button,
+        .uk-card:not(.entry-item),
+        .nav-text-links a,
+        .navbar-top a {
+            @include hover {
+                color: $turquise;
+
+                .uk-card-title {
+                    color: $turquise;
+                }
+
+                svg {
+                    fill: $turquise;
+                }
+            }
+        }
+
+        .nav-text-links a.green {
+            @include hover {
+                color: $green-pastel;
+            }
+        }
+
         .uk-navbar-nav .uk-active a {
             background-color: $turquise-light;
         }
@@ -90,6 +150,31 @@
     }
 
     &.header-live {
+
+        .uk-navbar .uk-navbar-nav>li>a,
+        .uk-navbar .uk-navbar-nav>li>button,
+        .uk-card:not(.entry-item),
+        .nav-text-links a,
+        .navbar-top a {
+            @include hover {
+                color: $yellow;
+
+                .uk-card-title {
+                    color: $yellow;
+                }
+
+                svg {
+                    fill: $yellow;
+                }
+            }
+        }
+
+        .nav-text-links a.yellow {
+            @include hover {
+                color: $orange-mid;
+            }
+        }
+
         .uk-navbar-nav .uk-active a {
             background-color: $yellow-mid;
         }
@@ -115,6 +200,31 @@
     }
 
     &.header-invest {
+
+        .uk-navbar .uk-navbar-nav>li>a,
+        .uk-navbar .uk-navbar-nav>li>button,
+        .uk-card:not(.entry-item),
+        .nav-text-links a,
+        .navbar-top a {
+            @include hover {
+                color: $blue-navy;
+
+                .uk-card-title {
+                    color: $blue-navy;
+                }
+
+                svg {
+                    fill: $blue-navy;
+                }
+            }
+        }
+
+        .nav-text-links a.yellow {
+            @include hover {
+                color: $blue-bright-light;
+            }
+        }
+
         .uk-navbar-nav .uk-active a {
             background-color: $blue-bright-light;
         }
