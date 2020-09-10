@@ -35,7 +35,7 @@
 	.uk-navbar-nav {
 
 		>li {
-			>a {
+			>a:not(.label) {
 				min-height: 0;
 				font-size: 16px;
 				text-transform: none;
@@ -44,9 +44,12 @@
 				font-family: $font-recoleta;
 			}
 
-			>button {
+			>button,
+			>a.label {
 				opacity: 1;
 				color: $blue;
+				text-transform: none;
+				min-height: 0;
 			}
 		}
 
@@ -87,7 +90,7 @@
 
 		.uk-navbar-nav {
 
-			>li>a {
+			>li>a:not(.label) {
 				padding: 10px 20px 0;
 			}
 		}
@@ -307,11 +310,12 @@
 		margin-left: 40px;
 	}
 
-	>button {
+	>button,
+	>a.label {
 		padding-bottom: 22px;
 		position: relative;
 
-		&::after {
+		&:not(a)::after {
 			position: absolute;
 			content: '';
 			width: 0;
