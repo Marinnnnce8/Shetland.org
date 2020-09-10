@@ -3,11 +3,14 @@
     width: 100%;
     max-width: 150px;
 
+    @media (max-width: $breakpointSmallMax) and (min-width: $breakpointTabletPortrait) {
+        max-width: 125px;
+    }
+
     @media (min-width: $breakpointTabletPortrait) {
         padding-top: 19px;
     }
-
-    @media (min-width: $breakpointMedium) {
+    @media (min-width: $breakpointLarge) {
         max-width: 220px;
     }
 }
@@ -26,6 +29,10 @@
 
     @media (min-width: $breakpointTabletPortraitMax) {
         padding-left: 25px;
+    }
+
+    @media (max-width: $breakpointSmallMax) and (min-width: $breakpointTabletPortrait) {
+        padding-left: 20px;
     }
 
     @media (min-width: $breakpointLarge) {

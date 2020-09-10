@@ -687,18 +687,19 @@ input[type='submit'] {
 }
 
 .dropdown-close-button {
+	width: 48px;
+	height: 48px;
 
-	&::after {
-		color: $blue;
-		content: font-char($close);
-		font-family: 'svgicons';
-		font-size: 24px;
+	svg {
+		fill: $blue;
+		width: 24px;
+		height: 24px;
 		transition: $nbSec ease-in-out;
 	}
 
 	@include hover {
-		&::after {
-			color: $green-pastel;
+		svg {
+			fill: $green-pastel;
 		}
 	}
 }
