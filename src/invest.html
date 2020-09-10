@@ -282,33 +282,71 @@
                         </ul>
                     </div>
                     <div class="nav-search uk-flex uk-flex-right">
-						<div id="navSearchBox" class="nav-search-box">
-							<div class="uk-flex uk-flex-middle uk-flex-right">
-								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-									class="label small alt">Close
-									search</button>
-								<form action="/search" method="get" role="search" id="navSearch"
-									class="uk-search uk-search-default">
-									<button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
-											<use xlink:href="./symbol/icons.svg#search"></use>
-										</svg></button><input aria-label="Search Phrase" class="uk-input" type="search"
-										name="q" placeholder="Search Shetland.org">
-								</form>
-							</div>
-							<svg viewBox="0 0 512 512">
-								<use xlink:href="./symbol/icons.svg#close"></use>
-							</svg>
-						</div>
-						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-						class="label small alt"><span>Search</span><svg viewBox="0 0 512 512">
-							<use xlink:href="./symbol/icons.svg#search"></use>
-						</svg></button>
-					</div>
+                        <div id="navSearchBox" class="nav-search-box">
+                            <div class="uk-flex uk-flex-middle uk-flex-right">
+                                <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                                    class="label small alt">Close
+                                    search</button>
+                                <form action="/search" method="get" role="search" id="navSearch"
+                                    class="uk-search uk-search-default">
+                                    <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#search"></use>
+                                        </svg></button><input aria-label="Search Phrase" class="uk-input" type="search"
+                                        name="q" placeholder="Search Shetland.org">
+                                </form>
+                            </div>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#close"></use>
+                            </svg>
+                        </div>
+                        <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                            class="label small alt"><span>Search</span><svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#search"></use>
+                            </svg></button>
+                    </div>
+                    <button class="burger-menu" aria-label="Open navigation"><span role="presentation"></span></button>
+                    <div id='navMob' class="nav nav-mob"
+                        data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;">
+                        <a href="#" class="">Invest</a>
+                        <ul class='uk-navbar-nav'>
+                            <li class='uk-active'><button>Success stories</button>
+                                <div data-uk-dropdown="mode: click" class="uk-navbar-dropdown uk-dropdown"
+                                    id="invest-nav-1">
+                                    <button data-uk-toggle="target: #invest-nav-1;">Back</button>
+                                    <ul>
+                                        <li><a href="#">The man behind the world’s
+                                                best mussels</a></li>
+                                        <li><a href="#">A bright future for Shetland
+                                                fishing</a></li>
+                                        <li><a href="#">Mapping the future of
+                                                Shetland energy</a></li>
+                                        <li><a href="#">Heading into orbit from Unst</a></li>
+                                        <li><a href="#">Aquaculture: a Shetland
+                                                success story</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href='#'>Why invest in Shetland?</a></li>
+                            <li><button>Sectors</button>
+                                <div data-uk-dropdown="mode: click" class="uk-navbar-dropdown uk-dropdown"
+                                    id="invest-nav-2">
+                                    <button data-uk-toggle="target: #invest-nav-2;">Back</button>
+                                    <ul>
+                                        <li><a href="#">Renewable energy</a></li>
+                                        <li><a href="#">Tourism</a></li>
+                                        <li><a href="#">Fisheries and aquaculture</a></li>
+                                        <li><a href="#">Space</a></li>
+                                        <li><a href="#">Filmmaking</a></li>
+                                        <li><a href="#">Oil and gas</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
-                    hidden>
-                    <span data-uk-navbar-toggle-icon></span>
-                </a>
             </div>
         </nav>
     </header>

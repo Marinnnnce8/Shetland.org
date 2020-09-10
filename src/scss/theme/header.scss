@@ -87,9 +87,9 @@
             }
         }
 
-        .uk-navbar-nav>li>a:not(.label) {
-            padding: 5px 20px 7px;
-        }
+        // .uk-navbar-nav>li>a:not(.label) {
+        //     padding: 5px 20px 7px;
+        // }
 
         .uk-active {
             z-index: 1021;
@@ -274,6 +274,12 @@
         .navbar-bottom {
             align-items: stretch;
         }
+
+        &:not(.header-main) {
+            .uk-navbar-nav>li>a:not(.label) {
+                padding: 5px 20px 7px;
+            }
+        }
     }
 
     @media (min-width: $breakpointXmedium) {
@@ -318,115 +324,127 @@
             display: none;
         }
 
-        &.header-main {
-            .nav {
-                background-color: transparent;
-                margin-top: 0;
-                padding-bottom: 55px;
-                box-shadow: none;
+        // &.header-main {
+        .nav {
+            background-color: transparent;
+            margin-top: 0;
+            padding-bottom: 55px;
+            box-shadow: none;
 
-                &::after {
-                    position: absolute;
-                    content: '';
-                    left: 0;
-                    width: 100%;
-                    top: 0;
-                    bottom: 0;
-                    height: 0;
-                    background-color: $white;
-                    z-index: -1;
-                }
-
-                .uk-navbar-nav {
-                    opacity: 0;
-
-                    >li>a {
-                        justify-content: left;
-                        padding: 15px 0 15px 90px;
-                        font-size: 26px;
-                    }
-                }
-
-                &:not(.uk-open) {
-                    &::after {
-                        animation: slideBackgroundIn $nbSec ease-out reverse;
-                    }
-
-                    .uk-navbar-nav {
-                        animation: slideIn $nbSec ease-out reverse;
-                    }
-                }
-
-                &.uk-open {
-                    &::after {
-                        animation: slideBackgroundIn $nbSec ease-out forwards;
-                    }
-
-                    .uk-navbar-nav {
-                        animation: slideIn $nbSec ease-out forwards;
-                        transform: scale(1.3);
-                        transform-origin: 0% 55%;
-                        opacity: 0;
-                    }
-                }
+            &::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                height: 0;
+                background-color: $white;
+                z-index: -1;
             }
 
             .uk-navbar-nav {
-                display: block;
+                opacity: 0;
+
+                >li>a {
+                    justify-content: left;
+                    padding: 15px 0 15px 90px;
+                    font-size: 26px;
+                }
             }
 
-            .navbar-bottom {
-                justify-content: flex-end;
+            &:not(.uk-open) {
+                &::after {
+                    animation: slideBackgroundIn $nbSec ease-out reverse;
+                }
+
+                .uk-navbar-nav {
+                    animation: slideIn $nbSec ease-out reverse;
+                }
             }
+
+            &.uk-open {
+                &::after {
+                    animation: slideBackgroundIn $nbSec ease-out forwards;
+                }
+
+                .uk-navbar-nav {
+                    animation: slideIn $nbSec ease-out forwards;
+                    transform: scale(1.3);
+                    transform-origin: 0% 55%;
+                    opacity: 0;
+                }
+            }
+        }
+
+        .uk-navbar-nav {
+            display: block;
+        }
+
+        // }
+        .navbar-bottom {
+            justify-content: flex-end;
         }
     }
 
     @media (max-width: $breakpointTabletPortraitMax) {
-        &.header-main {
-            .nav {
-                padding-bottom: 20px;
-                padding-top: 45px;
 
-                li>a {
-                    display: block;
+        // &.header-main {
+        .nav {
+            padding-bottom: 20px;
+            padding-top: 45px;
+
+            li>a {
+                display: block;
+                padding: 10px 0 10px 45px;
+                font-size: 18px;
+            }
+
+            .uk-navbar-nav {
+                padding-bottom: 20px;
+
+                >li>a {
                     padding: 10px 0 10px 45px;
-                    font-size: 18px;
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .navbar-top {
+            ul {
+                &:first-of-type {
+                    margin-bottom: 0;
                 }
 
-                .uk-navbar-nav {
-                    padding-bottom: 20px;
+                &:last-of-type {
+                    margin: 0;
 
-                    >li>a {
-                        padding: 10px 0 10px 45px;
-                        font-size: 26px;
+                    li:not(:first-of-type) {
+                        margin: 0;
+                    }
+
+                    li a {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+
+                    svg {
+                        width: 18px;
+                        height: 18px;
                     }
                 }
             }
+        }
 
-            .navbar-top {
-                ul {
-                    &:first-of-type {
-                        margin-bottom: 0;
-                    }
+        // }
+        &:not(.header-main) {
+            .uk-dropdown {
+                top: 0 !important;
+            }
 
-                    &:last-of-type {
-                        margin: 0;
-
-                        li:not(:first-of-type) {
-                            margin: 0;
-                        }
-
-                        li a {
-                            padding-top: 10px;
-                            padding-bottom: 10px;
-                        }
-
-                        svg {
-                            width: 18px;
-                            height: 18px;
-                        }
-                    }
-                }
+            .burger-menu,
+            .nav-search {
+                z-index: 1021;
             }
         }
     }
