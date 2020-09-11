@@ -85,14 +85,15 @@
 
 	img {
 		height: auto;
-		width: 150px;
+		// width: 150px;
+		width: 100%;
 	}
 
-	@media (min-width: $breakpointMedium) {
-		img {
-			width: 100%;
-		}
-	}
+	// @media (min-width: $breakpointMedium) {
+	// 	img {
+	// 		width: 100%;
+	// 	}
+	// }
 }
 
 // uikit/tooltip
