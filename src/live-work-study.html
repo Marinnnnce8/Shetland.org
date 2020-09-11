@@ -27,7 +27,7 @@
 </head>
 
 <body id="scroll-top">
-
+    <!-- LIVE,WORK,STUDY HEADER -->
     <header class='header header-live' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
         <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
@@ -130,7 +130,8 @@
                                                         role="presentation"></div>
                                                     <div>
                                                         <div class="uk-card-body">
-                                                            <h3 class="uk-card-title midi">How I found my dream NHS
+                                                            <h3 class="uk-card-title midi">How I found my dream <abbr
+                                                                    title="National Health Service">NHS</abbr>
                                                                 career</h3>
                                                         </div>
                                                     </div>
@@ -392,33 +393,272 @@
                         </ul>
                     </div>
                     <div class="nav-search uk-flex uk-flex-right">
-						<div id="navSearchBox" class="nav-search-box">
-							<div class="uk-flex uk-flex-middle uk-flex-right">
-								<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-									class="label small alt">Close
-									search</button>
-								<form action="/search" method="get" role="search" id="navSearch"
-									class="uk-search uk-search-default">
-									<button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
-											<use xlink:href="./symbol/icons.svg#search"></use>
-										</svg></button><input aria-label="Search Phrase" class="uk-input" type="search"
-										name="q" placeholder="Search Shetland.org">
-								</form>
-							</div>
-							<svg viewBox="0 0 512 512">
-								<use xlink:href="./symbol/icons.svg#close"></use>
-							</svg>
-						</div>
-						<button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
-						class="label small alt"><span>Search</span><svg viewBox="0 0 512 512">
-							<use xlink:href="./symbol/icons.svg#search"></use>
-						</svg></button>
-					</div>
+                        <div id="navSearchBox" class="nav-search-box">
+                            <div class="uk-flex uk-flex-middle uk-flex-right">
+                                <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                                    class="label small alt">Close
+                                    search</button>
+                                <form action="/search" method="get" role="search" id="navSearch"
+                                    class="uk-search uk-search-default">
+                                    <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#search"></use>
+                                        </svg></button><input aria-label="Search Phrase" class="uk-input" type="search"
+                                        name="q" placeholder="Search Shetland.org">
+                                </form>
+                            </div>
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#close"></use>
+                            </svg>
+                        </div>
+                        <button data-uk-toggle="target: #navSearchBox; cls: nav-search-box-active"
+                            class="label small alt"><span>Search</span><svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#search"></use>
+                            </svg></button>
+                    </div>
+                    <button class="burger-menu" aria-label="Open navigation"><span role="presentation"></span></button>
+                    <div id='navMob' class="nav nav-mob"
+                        data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;">
+                        <a href="#" class="label large opacity-off">Live, work, study</a>
+                        <ul class='uk-navbar-nav'>
+                            <li><button data-uk-toggle="target: #mob-why-shetland"
+                                    class="label xlarge alt opacity-off uk-text-bold">Why Shetland?
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                    </svg>
+                                </button>
+                                <div id="mob-why-shetland" data-uk-dropdown="mode: click"
+                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                        <button class="uk-navbar-close"
+                                            data-uk-toggle="target: #mob-why-shetland; animation: true"
+                                            aria-label="Close navigation">
+                                            <svg viewBox="0 0 512 512">
+                                                <use xlink:href="./symbol/icons.svg#button-arrow-left"></use>
+                                            </svg>
+                                        </button>
+                                        <span class="label xlarge alt opacity-off uk-text-bold">Why Shetland?</span>
+                                        <ul>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">21 great
+                                                    reasons to move to
+                                                    Shetland</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Building a
+                                                    dream home in Shetland
+                                                </a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">How I found
+                                                    my dream <abbr title="National Health Service">NHS</abbr> career
+                                                </a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Building a
+                                                    dream home in Shetland
+                                                </a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">How
+                                                    Shetland inspires me: artist Ruth Brownlee</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Meet the
+                                                    Budge sisters, Shetland’s pioneering farmers</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">How we live
+                                                    sustainably in Shetland</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">How
+                                                    Shetland inspires me: Photographer/ceramicist Ellie Duncan</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">The best
+                                                    thing about living in Shetland is…</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><button data-uk-toggle="target: #mob-live"
+                                    class="label xlarge alt opacity-off uk-text-bold">Live
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                    </svg>
+                                </button>
+                                <div id="mob-live" data-uk-dropdown="mode: click"
+                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                        <button class="uk-navbar-close"
+                                            data-uk-toggle="target: #mob-live; animation: true"
+                                            aria-label="Close navigation">
+                                            <svg viewBox="0 0 512 512">
+                                                <use xlink:href="./symbol/icons.svg#button-arrow-left"></use>
+                                            </svg>
+                                        </button>
+                                        <span class="label xlarge alt opacity-off uk-text-bold">Live</span>
+                                        <ul>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Walk</a>
+                                            </li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Cycle
+                                                </a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Sail
+                                                </a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Angling</a>
+                                            </li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Kayak</a>
+                                            </li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Surf and
+                                                    <abbr title="Stand Up Paddle">SUP</abbr></a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Dive</a>
+                                            </li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Climb</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><button data-uk-toggle="target: #mob-work"
+                                    class="label xlarge alt opacity-off uk-text-bold">Work
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                    </svg>
+                                </button>
+                                <div id="mob-work" data-uk-dropdown="mode: click"
+                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                        <button class="uk-navbar-close"
+                                            data-uk-toggle="target: #mob-work; animation: true"
+                                            aria-label="Close navigation">
+                                            <svg viewBox="0 0 512 512">
+                                                <use xlink:href="./symbol/icons.svg#button-arrow-left">
+                                                </use>
+                                            </svg>
+                                        </button>
+                                        <span class="label xlarge alt opacity-off uk-text-bold">Work</span>
+                                        <ul>
+                                            <li><button data-uk-toggle="target: #mob-find-a-job"
+                                                    class="label xlarge alt opacity-off uk-text-bold">Find a job
+                                                    <svg viewBox="0 0 512 512">
+                                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                                    </svg>
+                                                </button>
+                                                <div id="mob-find-a-job" data-uk-dropdown="mode: click"
+                                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                                        <button class="uk-navbar-close"
+                                                            data-uk-toggle="target: #mob-find-a-job; animation: true"
+                                                            aria-label="Close navigation">
+                                                            <svg viewBox="0 0 512 512">
+                                                                <use xlink:href="./symbol/icons.svg#button-arrow-left">
+                                                                </use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="label xlarge alt opacity-off uk-text-bold">Find a
+                                                            job</span>
+                                                        <ul>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Current vacancies</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><button data-uk-toggle="target: #mob-contract-type"
+                                                    class="label xlarge alt opacity-off uk-text-bold">Contract type
+                                                    <svg viewBox="0 0 512 512">
+                                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                                    </svg>
+                                                </button>
+                                                <div id="mob-contract-type" data-uk-dropdown="mode: click"
+                                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                                        <button class="uk-navbar-close"
+                                                            data-uk-toggle="target: #mob-contract-type; animation: true"
+                                                            aria-label="Close navigation">
+                                                            <svg viewBox="0 0 512 512">
+                                                                <use xlink:href="./symbol/icons.svg#button-arrow-left">
+                                                                </use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="label xlarge alt opacity-off uk-text-bold">Contract
+                                                            type</span>
+                                                        <ul>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Any</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Permanent</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Temporary</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Contract</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Apprenticeship</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><button data-uk-toggle="target: #mob-position-type"
+                                                    class="label xlarge alt opacity-off uk-text-bold">Position type
+                                                    <svg viewBox="0 0 512 512">
+                                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                                    </svg>
+                                                </button>
+                                                <div id="mob-position-type" data-uk-dropdown="mode: click"
+                                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                                        <button class="uk-navbar-close"
+                                                            data-uk-toggle="target: #mob-position-type; animation: true"
+                                                            aria-label="Close navigation">
+                                                            <svg viewBox="0 0 512 512">
+                                                                <use xlink:href="./symbol/icons.svg#button-arrow-left">
+                                                                </use>
+                                                            </svg>
+                                                        </button>
+                                                        <span class="label xlarge alt opacity-off uk-text-bold">Position
+                                                            type</span>
+                                                        <ul>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Any</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Full time</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Part time</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Term Time Part Time</a></li>
+                                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                                    href="#">Full Time & Part Time</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a class="label xlarge alt opacity-off uk-text-bold" href="#">Run a
+                                                    business</a></li>
+                                            <li><a class="label xlarge alt opacity-off uk-text-bold" href="#">Island
+                                                    Medics</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><button data-uk-toggle="target: #mob-study"
+                                    class="label xlarge alt opacity-off uk-text-bold">Study
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                    </svg>
+                                </button>
+                                <div id="mob-study" data-uk-dropdown="mode: click"
+                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                        <button class="uk-navbar-close"
+                                            data-uk-toggle="target: #mob-study; animation: true"
+                                            aria-label="Close navigation">
+                                            <svg viewBox="0 0 512 512">
+                                                <use xlink:href="./symbol/icons.svg#button-arrow-left">
+                                                </use>
+                                            </svg>
+                                        </button>
+                                        <span class="label xlarge alt opacity-off uk-text-bold">Study</span>
+                                        <ul>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Study
+                                                    options</a>
+                                            </li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Student
+                                                    life
+                                                </a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">What's
+                                                    studying in Shetland like
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <a href='#nav' class='uk-navbar-toggle' data-uk-toggle='{"animation": "uk-animation-slide-left"}'
-                    hidden>
-                    <span data-uk-navbar-toggle-icon></span>
-                </a>
             </div>
         </nav>
     </header>

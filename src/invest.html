@@ -27,7 +27,7 @@
 </head>
 
 <body id="scroll-top">
-
+    <!-- INVEST HEADER -->
     <header class='header header-invest' data-uk-sticky='{"animation":"uk-animation-slide-top","show-on-up":true}'>
         <nav class='uk-navbar-container uk-navbar-transparent uk-navbar' data-uk-navbar>
 
@@ -307,41 +307,78 @@
                     <button class="burger-menu" aria-label="Open navigation"><span role="presentation"></span></button>
                     <div id='navMob' class="nav nav-mob"
                         data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;">
-                        <a href="#" class="">Invest</a>
+                        <a href="#" class="label large opacity-off">Invest</a>
                         <ul class='uk-navbar-nav'>
-                            <li class='uk-active'><button>Success stories</button>
-                                <div data-uk-dropdown="mode: click" class="uk-navbar-dropdown uk-dropdown"
-                                    id="invest-nav-1">
-                                    <button data-uk-toggle="target: #invest-nav-1;">Back</button>
-                                    <ul>
-                                        <li><a href="#">The man behind the world’s
-                                                best mussels</a></li>
-                                        <li><a href="#">A bright future for Shetland
-                                                fishing</a></li>
-                                        <li><a href="#">Mapping the future of
-                                                Shetland energy</a></li>
-                                        <li><a href="#">Heading into orbit from Unst</a></li>
-                                        <li><a href="#">Aquaculture: a Shetland
-                                                success story</a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
+                            <li><button class="label xlarge alt opacity-off uk-text-bold">Success
+                                    stories
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                    </svg>
+                                </button>
+                                <div id="mob-success-stories" data-uk-dropdown="mode: click"
+                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                        <button class="uk-navbar-close"
+                                            data-uk-toggle="target: #mob-success-stories; animation: true"
+                                            aria-label="Close navigation">
+                                            <svg viewBox="0 0 512 512">
+                                                <use xlink:href="./symbol/icons.svg#button-arrow-left"></use>
+                                            </svg>
+                                        </button>
+                                        <span class="label xlarge alt opacity-off uk-text-bold">Success stories</span>
+                                        <ul>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">The man
+                                                    behind the world’s
+                                                    best mussels</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">A bright
+                                                    future for Shetland
+                                                    fishing</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Mapping the
+                                                    future of
+                                                    Shetland energy</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Heading
+                                                    into orbit from Unst</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                    href="#">Aquaculture: a Shetland
+                                                    success story</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </li>
-                            <li><a href='#'>Why invest in Shetland?</a></li>
-                            <li><button>Sectors</button>
-                                <div data-uk-dropdown="mode: click" class="uk-navbar-dropdown uk-dropdown"
-                                    id="invest-nav-2">
-                                    <button data-uk-toggle="target: #invest-nav-2;">Back</button>
-                                    <ul>
-                                        <li><a href="#">Renewable energy</a></li>
-                                        <li><a href="#">Tourism</a></li>
-                                        <li><a href="#">Fisheries and aquaculture</a></li>
-                                        <li><a href="#">Space</a></li>
-                                        <li><a href="#">Filmmaking</a></li>
-                                        <li><a href="#">Oil and gas</a></li>
-                                    </ul>
+                            <li><a href='#' class="label xlarge alt opacity-off uk-text-bold">Why invest in
+                                    Shetland?</a></li>
+                            <li><button data-uk-toggle="target: #mob-sectors"
+                                    class="label xlarge alt opacity-off uk-text-bold">Sectors
+                                    <svg viewBox="0 0 512 512">
+                                        <use xlink:href="./symbol/icons.svg#caret-right"></use>
+                                    </svg>
+                                </button>
+                                <div id="mob-sectors" data-uk-dropdown="mode: click"
+                                    class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left">
+                                    <div class="uk-nav uk-navbar-dropdown-nav">
+                                        <button class="uk-navbar-close"
+                                            data-uk-toggle="target: #mob-sectors; animation: true"
+                                            aria-label="Close navigation">
+                                            <svg viewBox="0 0 512 512">
+                                                <use xlink:href="./symbol/icons.svg#button-arrow-left"></use>
+                                            </svg>
+                                        </button>
+                                        <span class="label xlarge alt opacity-off uk-text-bold">Sectors</span>
+                                        <ul>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Renewable
+                                                    energy</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Tourism</a>
+                                            </li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Fisheries
+                                                    and aquaculture</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Space</a>
+                                            </li>
+                                            <li><a class="label large alt opacity-off uk-text-bold"
+                                                    href="#">Filmmaking</a></li>
+                                            <li><a class="label large alt opacity-off uk-text-bold" href="#">Oil and
+                                                    gas</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </li>
                         </ul>

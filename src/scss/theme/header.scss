@@ -43,13 +43,6 @@
             &:not(:first-of-type) {
                 margin-left: 25px;
             }
-
-            @include hover {
-                svg {
-                    //check this!!!
-                    opacity: 1;
-                }
-            }
         }
     }
 
@@ -87,10 +80,6 @@
             }
         }
 
-        // .uk-navbar-nav>li>a:not(.label) {
-        //     padding: 5px 20px 7px;
-        // }
-
         .uk-active {
             z-index: 1021;
         }
@@ -118,6 +107,7 @@
 
         .uk-navbar .uk-navbar-nav>li>a,
         .uk-navbar .uk-navbar-nav>li>button,
+        .nav-mob .uk-navbar-nav>li>button,
         .uk-card:not(.entry-item),
         .nav-text-links a,
         .navbar-top a {
@@ -131,6 +121,16 @@
                 svg {
                     fill: $turquise;
                 }
+            }
+        }
+
+        .nav-mob .uk-navbar-nav li button:not(.uk-navbar-close),
+        .nav-mob .uk-navbar-nav li a,
+        .nav-mob .uk-navbar-nav li span {
+            color: $turquise;
+
+            svg {
+                fill: $green-pastel;
             }
         }
 
@@ -153,6 +153,7 @@
 
         .uk-navbar .uk-navbar-nav>li>a,
         .uk-navbar .uk-navbar-nav>li>button,
+        .nav-mob .uk-navbar-nav>li>button,
         .uk-card:not(.entry-item),
         .nav-text-links a,
         .navbar-top a {
@@ -166,6 +167,16 @@
                 svg {
                     fill: $yellow;
                 }
+            }
+        }
+
+        .nav-mob .uk-navbar-nav li button:not(.uk-navbar-close),
+        .nav-mob .uk-navbar-nav li a,
+        .nav-mob .uk-navbar-nav li span {
+            color: $yellow;
+
+            svg {
+                fill: $orange-mid;
             }
         }
 
@@ -203,25 +214,36 @@
 
         .uk-navbar .uk-navbar-nav>li>a,
         .uk-navbar .uk-navbar-nav>li>button,
+        .nav-mob .uk-navbar-nav>li>button,
         .uk-card:not(.entry-item),
         .nav-text-links a,
         .navbar-top a {
             @include hover {
-                color: $blue-navy;
+                color: $blue-bright;
 
                 .uk-card-title {
-                    color: $blue-navy;
+                    color: $blue-bright;
                 }
 
                 svg {
-                    fill: $blue-navy;
+                    fill: $blue-bright;
                 }
             }
         }
 
-        .nav-text-links a.yellow {
+        .nav-mob .uk-navbar-nav li button:not(.uk-navbar-close),
+        .nav-mob .uk-navbar-nav li a,
+        .nav-mob .uk-navbar-nav li span {
+            color: $blue-bright;
+
+            svg {
+                fill: $blue-navy;
+            }
+        }
+
+        .nav-text-links a.blue {
             @include hover {
-                color: $blue-bright-light;
+                color: $blue-bright;
             }
         }
 
@@ -248,21 +270,6 @@
             }
         }
     }
-
-    // @media (min-width: $breakpointMedium) {
-    //     .navbar-top {
-
-    //         ul.uk-flex:last-of-type {
-    //             margin-left: 30px;
-    //         }
-
-    //         .uk-flex li {
-    //             &:not(:first-of-type) {
-    //                 margin-left: 30px;
-    //             }
-    //         }
-    //     }
-    // }
 
     @media (min-width: $breakpointTabletPortrait) {
         padding: 0 0 18px 0;
@@ -324,7 +331,20 @@
             display: none;
         }
 
-        // &.header-main {
+        &.header-main {
+            .nav .uk-navbar-nav>li>a {
+                font-size: 26px;
+            }
+
+            .navbar-top .uk-flex:last-of-type {
+                margin-left: 0;
+
+                >li>a {
+                    padding-left: 45px;
+                }
+            }
+        }
+
         .nav {
             background-color: transparent;
             margin-top: 0;
@@ -349,7 +369,6 @@
                 >li>a {
                     justify-content: left;
                     padding: 15px 0 15px 90px;
-                    font-size: 26px;
                 }
             }
 
@@ -381,7 +400,6 @@
             display: block;
         }
 
-        // }
         .navbar-bottom {
             justify-content: flex-end;
         }
@@ -389,16 +407,17 @@
 
     @media (max-width: $breakpointTabletPortraitMax) {
 
-        // &.header-main {
-        .nav {
-            padding-bottom: 20px;
-            padding-top: 45px;
-
-            li>a {
+        &.header-main {
+            .nav li>a {
                 display: block;
                 padding: 10px 0 10px 45px;
                 font-size: 18px;
             }
+        }
+
+        .nav {
+            padding-bottom: 20px;
+            padding-top: 45px;
 
             .uk-navbar-nav {
                 padding-bottom: 20px;
@@ -436,39 +455,118 @@
             }
         }
 
-        // }
         &:not(.header-main) {
-            .uk-dropdown {
+            .nav-mob {
                 top: 0 !important;
+                padding: 0;
+
+                >a {
+                    padding: 11px 12px 7px;
+                    left: 52px;
+                    display: inline-block;
+                    font-size: 16px;
+                    position: relative;
+                    max-width: 104px;
+                }
+
+                button.label {
+                    svg {
+                        width: 14px;
+                        height: 14px;
+                        margin-left: 5px;
+                    }
+                }
+
+                li {
+                    margin-bottom: 30px;
+                }
+
+                li button:not(.uk-navbar-close),
+                li a,
+                li span {
+                    padding: 0 30px 0 60px;
+                    text-align: left;
+                }
             }
 
-            .burger-menu,
-            .nav-search {
+            .navbar-bottom .uk-navbar-nav {
+                top: 0;
+                padding: 43px 0 10px 0;
+            }
+
+            .burger-menu {
                 z-index: 1021;
             }
+
+            .uk-navbar-dropdown {
+                background-color: $white;
+                position: absolute;
+                left: 0;
+                top: 0 !important;
+                width: 100%;
+                box-shadow: none;
+                padding: 0;
+                min-height: 100%;
+            }
+
+            .uk-navbar-dropdown-nav {
+                bottom: auto;
+                background-color: $white;
+                overflow: visible;
+                width: 100%;
+                padding: 43px 0 0;
+
+                ul {
+                    padding: 0;
+                }
+
+                >span {
+                    display: block;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .uk-navbar-close {
+                background-color: $white;
+                left: 0;
+                width: 48px;
+                height: 48px;
+                bottom: 99%;
+                position: absolute;
+
+                svg[data-svg*='close-icon'] {
+                    display: none;
+                }
+
+                svg {
+                    width: 22px;
+                    height: 22px;
+                    fill: $blue;
+                }
+            }
         }
-    }
-}
 
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: scale(1.3);
-    }
+        &.header-invest {
+            .nav-mob>a {
+                background-color: $blue-bright-light;
+            }
+        }
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+        &.header-visit {
+            .nav-mob>a {
+                background-color: $turquise-light;
+            }
+        }
 
-@keyframes slideBackgroundIn {
-    0% {
-        height: 0;
-    }
+        &.header-live {
+            .nav-mob>a {
+                background-color: $yellow-mid;
+            }
 
-    100% {
-        height: 100%;
+            .uk-navbar-close {
+                bottom: 100.5%;
+            }
+        }
     }
 }
 

@@ -20,6 +20,10 @@ body {
 	font-size: 16px;
 }
 
+abbr[title] {
+	text-decoration: none;
+}
+
 // Theming and colors iterator
 @each $colors-name in $site-colors {
 	$name: nth($colors-name, 1);
