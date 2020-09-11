@@ -14,6 +14,7 @@ var theme = {
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
 		var navToggleButton = document.getElementsByClassName('js-navbar-toggle')[0];
 		var printButton = document.getElementsByClassName('js-print-button')[0];
+		var navAligned = document.getElementsByClassName('js-nav-aligned')[0];
 
 		var downloadButton = document.querySelectorAll('download-button');
 
@@ -37,6 +38,10 @@ var theme = {
 
 		if(printButton) {
 			printButton.addEventListener('click', this.printContainer);
+		}
+
+		if(navAligned) {
+			this.addMultiListener(window, 'load resize', this.alignNavLinks);
 		}
 
 		// if(downloadButton) {
@@ -243,6 +248,31 @@ var theme = {
      	window.print();
 
      	document.body.innerHTML = originalContents;
+	},
+
+
+	//align dropdown navigation links with dropdown button 
+	alignNavLinks: function() {
+		var isDesktop = window.matchMedia('screen and (min-width: 1200px)').matches;
+		var navAligned = document.getElementsByClassName('js-nav-aligned')[0];
+
+		if(isDesktop) {
+			
+			var navParent = navAligned.closest('.mega-menu');
+			var navButton = navParent.getElementsByTagName('button')[0];
+
+			//calculate dropdown button's left offset
+			var bodyRect = document.body.getBoundingClientRect().left;
+			var navButtonLeftPos = navButton.getBoundingClientRect().left;
+			var navButtonLeftPosOffset = navButtonLeftPos - bodyRect;
+
+			navAligned.style.left = navButtonLeftPosOffset + 'px';
+			navAligned.style.paddingLeft = 0 + 'px';
+		} else {
+			navAligned.style.left = '';
+			navAligned.style.paddingLeft = '';
+			return;
+		}
 	}
 
 	// downloadButtonEvent: function() {
