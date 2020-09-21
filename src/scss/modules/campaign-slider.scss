@@ -1,28 +1,21 @@
 .campaign-slider {
-    li {
-        padding-top: 5px;
-        padding-bottom: 19px;
+    padding: 15px 0 20px;
 
-        &:not(.uk-active) .uk-card {
-            opacity: .3;
-        }
+    h2 {
+        margin-bottom: 34px;
     }
 
     .uk-card {
-        padding: 11px 32px;
-        min-height: 165px;
+        padding: 8.5px 16px;
+        min-height: 40.63vw;
         outline: 5px solid transparent;
         transition: $nbSec ease-in-out;
 
-        &::after,
         &::before {
             position: absolute;
             content: '';
             display: block;
             transition: inherit;
-        }
-
-        &::before {
             left: 0;
             top: 0;
             width: 100%;
@@ -30,41 +23,13 @@
             background-color: rgba($blue, .4);
             z-index: 0;
         }
-
-        &::after {
-            width: 0;
-            height: 0;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border-style: solid;
-            border-width: 19px 19px 0;
-            border-color: $green-pastel transparent transparent;
-            opacity: 0;
-            z-index: 1;
-        }
-
-        .uk-position-cover {
-            z-index: 2;
-        }
-
-        @include hover {
-            outline-color: $green-pastel;
-
-            &::before {
-                background-color: rgba($green-pastel, .7);
-            }
-
-            &::after {
-                opacity: 1;
-            }
-        }
     }
 
     .uk-card-title {
         color: $white;
         z-index: 1;
         position: relative;
+        margin: 0;
     }
 
     .uk-slidenav {
@@ -92,6 +57,107 @@
             svg {
                 fill: $white;
             }
+        }
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding: 40px 0 0;
+
+        h2 {
+            margin-bottom: 56px;
+        }
+
+        li {
+            padding-bottom: 19px;
+            padding-top: 5px;
+
+            &:not(.uk-active) .uk-card {
+                opacity: .3;
+            }
+        }
+
+        .uk-card {
+            padding: 11px 32px 25px;
+            min-height: 165px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                display: block;
+                transition: inherit;
+                width: 0;
+                height: 0;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-style: solid;
+                border-width: 19px 19px 0;
+                border-color: $green-pastel transparent transparent;
+                opacity: 0;
+                z-index: 1;
+            }
+
+            .uk-position-cover {
+                z-index: 2;
+            }
+
+            @include hover {
+                outline-color: $green-pastel;
+
+                &::before {
+                    background-color: rgba($green-pastel, .7);
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .campaign-items-mob {
+            display: none;
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 50px 0 20px;
+
+        h2 {
+            margin-bottom: 74px;
+        }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        h2 {
+            font-size: 26px;
+        }
+
+        .uk-slider-container {
+            display: none;
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) and (min-width: $breakpointTabletPortrait) {
+
+        .uk-grid-column-medium,
+        .uk-grid-medium {
+            margin-left: -25px;
+
+            >* {
+                padding-left: 25px;
+            }
+        }
+
+        *+.uk-grid-margin-medium,
+        .uk-grid+.uk-grid-medium,
+        .uk-grid+.uk-grid-row-medium,
+        .uk-grid-medium>.uk-grid-margin,
+        .uk-grid-row-medium>.uk-grid-margin {
+            margin-top: 25px;
+        }
+
+        .uk-slidenav {
+            margin: 15px 8px;
         }
     }
 }

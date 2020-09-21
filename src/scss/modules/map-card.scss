@@ -1,12 +1,12 @@
 .map-card {
     list-style-type: none;
     background-color: $white;
-    max-width: 320px;
+    max-width: 280px;
     box-shadow: 0 10px 30px rgba($blue, .3);
     z-index: 3;
     position: absolute;
     top: 60px;
-    right: 70px;
+    right: 20px;
 
     >button {
         right: 20px;
@@ -51,7 +51,7 @@
     }
 
     .uk-card-media-bottom {
-        height: 215px;
+        height: 183px;
     }
 
     @include hover {
@@ -70,5 +70,18 @@
                 animation: .35s drawShape 0s linear forwards;
             }
         }
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        max-width: 320px;
+        right: 40px;
+
+        .uk-card-media-bottom {
+            height: 215px;
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        right: 80px;
     }
 }

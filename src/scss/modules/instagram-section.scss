@@ -1,9 +1,27 @@
 .instagram-section {
     padding: 60px 0;
 
+    .uk-grid {
+        margin-left: -20px;
+
+        >* {
+            padding-left: 20px;
+        }
+    }
+
+    .uk-container p {
+        margin: 27px 0 35px;
+    }
+
+    *+.uk-grid-margin,
+    .uk-grid+.uk-grid,
+    .uk-grid>.uk-grid-margin {
+        margin-top: 20px;
+    }
+
     .uk-button-default {
         border-color: $blue;
-        padding: 14px 38px;
+        padding: 14px 20px 14px 40px;
         margin-top: 57px;
 
         .font-instagram {
@@ -47,21 +65,83 @@
         }
 
         &.large {
-            min-height: 297px;
-        }
-
-        &.medium {
-            min-height: 325px;
+            min-height: 186px;
         }
 
         &.small {
-            min-height: 202px;
+            min-height: 40.63vw;
         }
 
         @include hover {
             >span.uk-position-cover {
                 transform: scale(1.1);
             }
+        }
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        .uk-button-default {
+            padding: 14px 38px;
+        }
+
+        .uk-card {
+
+            &.large {
+                min-height: 279px;
+            }
+
+            &.small {
+                min-height: 24.75vw;
+            }
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        .uk-card {
+
+            &.large {
+                min-height: 297px;
+            }
+
+            &.medium {
+                min-height: 325px;
+            }
+
+            &.small {
+                min-height: 202px;
+            }
+        }
+
+    }
+
+    @media (max-width: $breakpointLarge) and (min-width: $breakpointTabletPortrait) {
+        .uk-grid {
+            margin-left: -40px;
+
+            >* {
+                padding-left: 40px;
+            }
+        }
+
+        *+.uk-grid-margin,
+        .uk-grid+.uk-grid,
+        .uk-grid>.uk-grid-margin {
+            margin-top: 40px;
+        }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        .uk-width-2-3 {
+            width: 100%;
+        }
+
+        .uk-width-1-3 {
+            width: 50%;
+        }
+
+        .uk-button-default {
+            width: 100%;
+            max-width: 280px;
         }
     }
 }

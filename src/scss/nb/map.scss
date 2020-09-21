@@ -1,5 +1,27 @@
 .nb-map {
-    margin: 70px 0 100px;
+    padding: 90px 0 100px;
+
+    h2 {
+        margin-bottom: 33px;
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding: 40px 0 110px;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 70px 0 100px;
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        .uk-container {
+            padding: 0;
+        }
+    }
 }
 
 .map-box {
@@ -44,7 +66,7 @@
             border-left: 1px solid $gray-mid;
             display: inline-flex;
             align-items: center;
-            padding: 24px 25px;
+            padding: 20px 25px;
             position: relative;
 
             svg:last-of-type {
@@ -146,9 +168,14 @@
 }
 
 .map {
-    height: 620px;
-    max-height: 620px;
+    height: 560px;
+    max-height: 560px;
     width: 100%;
+
+    @media (min-width: $breakpointTabletPortrait) {
+        height: 620px;
+        max-height: 620px;
+    }
 }
 
 .map-pins {

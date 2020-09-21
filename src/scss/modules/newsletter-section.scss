@@ -1,5 +1,13 @@
 .newsletter-section {
-    padding: 60px 0;
+    padding: 40px 0 100px;
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding: 60px 0 120px;
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 60px 0 95px;
+    }
 }
 
 .newsletter-box {
@@ -18,7 +26,7 @@
 
 .newsletter-inner {
     position: relative;
-    max-width: 890px;
+    padding: 0 20px;
     width: 100%;
 
     >span {
@@ -35,18 +43,23 @@
         padding: 0 45px;
     }
 
-    //sass-lint:disable class-name-format
-    .InputfieldSubmit {
-        margin-top: 35px;
-    }
-
     .uk-button {
         background-color: $blue;
     }
 
-    @media (max-width: $breakpointLarge) {
-        form {
-            padding: 0 20px;
+    @media (min-width: $breakpointLarge) {
+        max-width: 890px;
+        padding: 0;
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding: 0 56px;
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        .uk-button {
+            max-width: 280px;
+            width: 100%;
         }
     }
 }

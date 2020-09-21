@@ -2,7 +2,11 @@
     padding-bottom: 75px;
 
     &.visit {
-        padding: 120px 0 60px;
+        padding: 100px 0 50px;
+
+        h2 {
+            margin-bottom: 35px;
+        }
     }
 
     ul {
@@ -30,7 +34,7 @@
                 font-size: 20px;
                 font-weight: $bold;
                 line-height: 1.3em;
-                padding: 26px 45px 23px 15px;
+                padding: 26px 5px 23px 15px;
                 color: $blue;
                 width: 100%;
 
@@ -96,6 +100,37 @@
         ul:not(:first-of-type) {
             li:first-of-type a:not(.uk-button) {
                 border-top: 2px solid $gray-cold;
+            }
+        }
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        &.visit {
+            padding: 120px 0 50px;
+
+            h2 {
+                margin-bottom: 30px;
+            }
+        }
+
+        ul li a {
+            padding: 26px 45px 23px 15px;
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        &.visit {
+
+            h2 {
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        ul {
+            &:not(:last-of-type) {
+                margin-bottom: 60px;
             }
         }
     }

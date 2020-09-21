@@ -22,7 +22,11 @@ h1 {
 }
 
 h2 {
-	font-size: 44px;
+	font-size: 34px;
+
+	@media (min-width: $breakpointTabletPortrait) {
+		font-size: 44px;
+	}
 }
 
 h3 {
@@ -76,7 +80,7 @@ h2.alt {
 	color: $blue;
 
 	&.large {
-		font-size: 44px;
+		font-size: 34px;
 		line-height: 1.1em;
 	}
 
@@ -96,6 +100,12 @@ h2.alt {
 	&.alt {
 		font-family: $font-default;
 		font-feature-settings: 'liga'off;
+	}
+
+	@media (min-width: $breakpointTabletPortrait) {
+		&.large {
+			font-size: 44px;
+		}
 	}
 }
 

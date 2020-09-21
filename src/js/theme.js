@@ -214,14 +214,17 @@ var theme = {
 
 	//set campaign slider item height equal to width 
 	campaignItemSetHeight: function() {
+		var isDesktopandTablet = window.matchMedia('screen and (min-width: 768px)').matches;
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
 		var campaignItem = campaignSlider.querySelectorAll('.uk-card');
 		var maxWidth = 0;
 
-		maxWidth = campaignItem[0].offsetWidth;
+		if(isDesktopandTablet) {
+			maxWidth = campaignItem[0].offsetWidth;
 
-		for(var i = 0;i < campaignItem.length;i++) {
-			campaignItem[i].style.height = maxWidth + 'px';
+			for(var i = 0;i < campaignItem.length;i++) {
+				campaignItem[i].style.height = maxWidth + 'px';
+			}
 		}
 	},
 

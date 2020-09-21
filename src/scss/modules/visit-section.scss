@@ -25,6 +25,10 @@
             padding-left: 40px;
         }
     }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        display: none;
+    }
 }
 
 .visit-seasons {
@@ -35,7 +39,7 @@
     max-width: 1136px;
 
     >h2 {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     >p:first-of-type {
@@ -67,9 +71,29 @@
     .entry-item .uk-card-body::after {
         background-color: rgba($black, 0);
     }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        >h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        >p {
+            font-size: 16px;
+        }
+    }
 }
 
 .visit-experience {
     background-color: $white-flag;
-    padding: 100px 0 110px;
+    padding: 75px 0;
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding: 100px 0;
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 100px 0 110px;
+    }
 }

@@ -58,7 +58,7 @@
 @import 'modules/image-card.scss';
 @import 'modules/campaign-slider.scss';
 @import 'modules/newsletter-section.scss';
-@import 'modules/visit.scss';
+@import 'modules/visit-section.scss';
 @import 'modules/instagram-section.scss';
 @import 'modules/things-to-do-section.scss';
 @import 'modules/beach-section.scss';
@@ -110,6 +110,19 @@
 }
 
 //uikit/container
+.uk-container {
+
+	@media (max-width: $breakpointMediumMax) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	@media (max-width: $breakpointTabletPortraitMax) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 .uk-container-large {
 	max-width: 1380px;
 }
@@ -123,6 +136,43 @@
 }
 
 //uikit/grid
+.uk-grid-column-medium,
+.uk-grid-medium {
+	margin-left: -20px;
+
+	>* {
+		padding-left: 20px;
+	}
+}
+
+*+.uk-grid-margin-medium,
+.uk-grid+.uk-grid-medium,
+.uk-grid+.uk-grid-row-medium,
+.uk-grid-medium>.uk-grid-margin,
+.uk-grid-row-medium>.uk-grid-margin {
+	margin-top: 20px;
+}
+
+@media (min-width: $breakpointTabletPortrait) {
+
+	.uk-grid-column-medium,
+	.uk-grid-medium {
+		margin-left: -60px;
+
+		>* {
+			padding-left: 60px;
+		}
+	}
+
+	*+.uk-grid-margin-medium,
+	.uk-grid+.uk-grid-medium,
+	.uk-grid+.uk-grid-row-medium,
+	.uk-grid-medium>.uk-grid-margin,
+	.uk-grid-row-medium>.uk-grid-margin {
+		margin-top: 60px;
+	}
+}
+
 @media (min-width: $breakpointLarge) {
 
 	.uk-grid-column-large,
