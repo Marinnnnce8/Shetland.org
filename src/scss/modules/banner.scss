@@ -70,9 +70,14 @@
 }
 
 .banner-text {
-	padding: 30px 80px 30px 70px;
+	padding: 20px;
 	position: relative;
+	max-width: 900px;
 	z-index: 1;
+
+	&.large {
+		max-width: 1115px;
+	}
 
 	* {
 		color: $white;
@@ -84,8 +89,8 @@
 	}
 
 	h1 {
-		font-size: 74px;
-		margin: 15px 0 20px;
+		font-size: 34px;
+		margin: 15px 0 35px;
 	}
 
 	.label {
@@ -94,6 +99,8 @@
 	}
 
 	.uk-button-default {
+		padding: 13px 38px 13px 40px;
+
 		>span:last-of-type {
 			&::after {
 				background-color: $white;
@@ -103,5 +110,17 @@
 				fill: $white;
 			}
 		}
+	}
+
+	@media (min-width: $breakpointTabletPortrait) {
+		padding: 30px 60px 45px;
+
+		h1 {
+			font-size: 74px;
+		}
+	}
+
+	@media (min-width: $breakpointLarge) {
+		padding: 30px 80px;
 	}
 }
