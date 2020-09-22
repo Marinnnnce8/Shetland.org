@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <meta name='format-detection' content='telephone=no'>
 
-    <title>Shetland.org | Visit</title>
+    <title>Shetland.org | Listing Business Profile</title>
     <meta name='description' content='This is a meta description'>
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -31,58 +31,36 @@
         function initialize() {
             var secheltLoc = new google.maps.LatLng(60.155579, -1.150040);
 
-            var myMapOptionsAreas = {
+            var myMapOptionsListingsBusiness = {
                 zoom: 15,
                 center: secheltLoc,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
-            var theMapAreas = new google.maps.Map(document.getElementById("map_canvas_areas"), myMapOptionsAreas);
+            var theMapListingsBusiness = new google.maps.Map(document.getElementById("map_canvas_listings_business"),
+                myMapOptionsListingsBusiness);
 
 
-            var markerAreas = new google.maps.Marker({
-                map: theMapAreas,
+            var markerListingsBusiness = new google.maps.Marker({
+                map: theMapListingsBusiness,
                 draggable: true,
                 position: new google.maps.LatLng(60.155579, -1.150040),
                 visible: true
             });
 
-            var boxTextAreas = document.createElement("div");
-            boxTextAreas.style.cssText = "";
-            boxTextAreas.innerHTML =
+            var boxTextListingsBusiness = document.createElement("div");
+            boxTextListingsBusiness.style.cssText = "";
+            boxTextListingsBusiness.innerHTML =
                 "<div>" +
-                "<ul class='uk-position-cover'>" +
-                "<li class='uk-card map-card' id='map-info-1'>" +
-                "<a href='#' class='uk-position-cover' aria-label='Find out more'></a>" +
-                "<button class='uk-position-top-right' data-uk-toggle='target: #map-info-1' aria-label='Close this info box'>" +
-                "<svg viewBox='0 0 512 512'><use xlink:href='./symbol/icons.svg#close'></use></svg>" +
-                "</button>" +
-                "<div class='uk-card-body'>" +
-                "<h3 class='uk-card-title small alt uk-text-bold'>Sumburgh Head</h3>" +
-                "<p class='uk-text-small alt'>The striking headland to the south-east of Jarlshof is Sumburgh Head, the southernmost tip of the Shetland Mainland.</p>" +
-                "<a href='#' class='uk-button uk-button-text'>" +
-                "<img src='./img/button-text-link.svg' data-uk-svg alt='image'>" +
-                "<span>Find out more</span><span role='presentation'><img data-uk-svg src='./img/button-arrow-right.svg' alt='image' /></span>" +
-                "</a>" +
-                "</div>" +
-                "<div class='uk-card-media-bottom uk-background-cover' role='presentation' data-uk-img style='background-image: url(\"./img/sumburgh-head.jpg\");'></div>" +
-                "</div>" +
-                "</li>" +
-                "</ul>" +
                 "<ul class='map-pins uk-position-cover'>" +
                 "<li><button aria-label='map pin round-button'>" +
                 "<svg viewBox='0 0 512 512'><use xlink:href='./symbol/icons.svg#eye'></use></svg>" +
                 "</button></li>" +
-                "<li><button aria-label='map pin round-button'></button></li>" +
-                "</ul>" +
-                "<ul class='map-totals uk-position-cover'>" +
-                "<li class='label medium uk-text-bold alt'>7</li>" +
-                "<li class='label medium uk-text-bold alt'>12</li>" +
                 "</ul>" +
                 "</div>";
 
-            var myOptionsAreas = {
-                content: boxTextAreas,
+            var myOptionsListingsBusiness = {
+                content: boxTextListingsBusiness,
                 disableAutoPan: false,
                 maxWidth: 0,
                 pixelOffset: new google.maps.Size(-140, 0),
@@ -101,13 +79,13 @@
                 enableEventPropagation: false
             };
 
-            google.maps.event.addListener(markerAreas, "click", function (e) {
-                ibAreas.open(theMapAreas, this);
+            google.maps.event.addListener(markerListingsBusiness, "click", function (e) {
+                ibListingsBusiness.open(theMapListingsBusiness, this);
             });
 
-            var ibAreas = new InfoBox(myOptionsAreas);
+            var ibListingsBusiness = new InfoBox(myOptionsListingsBusiness);
 
-            ibAreas.open(theMapAreas, markerAreas);
+            ibListingsBusiness.open(theMapListingsBusiness, markerListingsBusiness);
         }
 
     </script>
@@ -1155,864 +1133,616 @@
             </a>
         </div>
 
-        <div class="banner uk-position-relative uk-margin-large-bottom">
-            <div class="banner-inner uk-cover-container uk-background-cover uk-light" data-uk-img
-                style="background-image: url('./img/banner-visit.jpg');">
-                <div class="banner-text uk-position-bottom-left">
-                    <span class="uk-text-bold">Visit</span>
-                    <h1>Shetland’s best beaches, by the locals</h1>
-                    <div class="uk-flex">
-                        <a href="#" class='uk-button uk-button-large uk-button-default'><span>Find your favorite beach
-                                in
-                                Shetland</span><span role="presentation"><img data-uk-svg
-                                    src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                    </div>
+        <div class="banner listing">
+            <div class="bg-white-flag">
+                <div class="uk-container uk-container-small">
+                    <span class="alt label xlarge opacity-off uk-text-bold">Caravan and camping</span>
+                    <h1>Levenwick Caravan and Campsite</h1>
                 </div>
             </div>
         </div>
 
-        <div class="campaign-slider">
-            <div class="uk-container uk-container-large">
-                <div>
-                    <h2>What Shetland experience are you looking for?</h2>
-                </div>
-            </div>
-            <div data-uk-slider="center: true">
-                <div class="uk-position-relative">
-                    <ul class="uk-slider-items uk-text-center uk-child-width-1-6@l uk-child-width-1-4@s uk-child-width-1-2 uk-grid-medium"
-                        data-uk-grid data-uk-height-match="target: .uk-card">
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-1.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Sports and leisure</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-2.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Wildlife and nature</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-3.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">History and heritage</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-4.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Food and drink</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-5.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Arts and crafts</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-6.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Life in Shetland</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-1.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Sports and leisure</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-2.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Wildlife and nature</h3>
-                            </div>
-                        </li>
-                    </ul>
-                    <a class="uk-position-center-left round-button uk-position-small js-campaign-btn" href="#"
-                        aria-label="previous" data-uk-slidenav-previous data-uk-slider-item="previous"><svg
-                            viewBox="0 0 512 512">
-                            <use xlink:href="./symbol/icons.svg#button-arrow-left"></use>
-                        </svg></a>
-                    <a class="uk-position-center-right round-button uk-position-small js-campaign-btn" href="#"
-                        aria-label="next" data-uk-slidenav-next data-uk-slider-item="next"><svg viewBox="0 0 512 512">
-                            <use xlink:href="./symbol/icons.svg#button-arrow-right"></use>
-                        </svg></a>
-                </div>
-            </div>
-            <div class="campaign-items-mob">
-                <div class="uk-container">
-                    <ul class="uk-text-center uk-child-width-1-2 uk-grid-medium" data-uk-grid
-                        data-uk-height-match="target: .uk-card">
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-1.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Sports and leisure</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-2.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Wildlife and nature</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-3.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">History and heritage</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-4.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Food and drink</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-5.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Arts and crafts</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-6.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Life in Shetland</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-1.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Sports and leisure</h3>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-flex uk-flex-column uk-flex-right uk-background-cover" data-uk-img
-                                style="background-image: url('./img/campaign-img-2.jpg');">
-                                <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                                <h3 class="uk-card-title small">Wildlife and nature</h3>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class='uk-container uk-container-small'>
+            <ul class='uk-breadcrumb' id="scrollTarget">
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='#'>Listings</a></li>
+                <li><span>Listing</span></li>
+            </ul>
         </div>
 
-        <div class="visit-section">
-            <h2>Visit Shetland</h2>
-            <div class="uk-container uk-container-large">
-                <div class="uk-grid-medium" data-uk-grid data-uk-height-match="target: >div >div;row: false">
-                    <div class="uk-width-2-3@l">
-                        <div class="nb-video uk-position-relative uk-background-cover" data-uk-img
-                            style="background-image: url('./img/embedded-hero-2.jpg');" data-uk-lightbox>
-                            <a href="https://youtu.be/YR6qxmuuVHk" data-caption="Video" class="uk-position-cover"
-                                aria-label="Play video"></a>
-                            <div class="nb-video-inner">
-                                <div class="nb-video-content">
-                                    <span class="icon-play-sharp" role="presentation">
-                                        <svg viewBox="0 0 512 512">
-                                            <use xlink:href="./symbol/icons.svg#play-sharp"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="label">Watch & Discover More</span>
-                                    <h3 class="nb-video-title alt">Simon King’s Shetland</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-3@l">
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/visit-card-1.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <span class="label">Events</span>
-                                <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">Nature Festival</h3>
-                            </div>
-                            <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2@l">
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/visit-card-2.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <span class="label">Trips and tours</span>
-                                <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">See Shetland with Sarah
-                                    McBurnie
-                                </h3>
-                            </div>
-                            <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4@l uk-width-1-2">
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/visit-card-3.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <span class="label">What's New</span>
-                                <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">Shetland’s best beaches, by
-                                    the
-                                    locals</h3>
-                            </div>
-                            <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-4@l uk-width-1-2">
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/visit-card-4.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <span class="label">What's New</span>
-                                <h3 class="uk-card-title alt uk-text-bold uk-margin-remove">30 top scenic spots to visit
-                                </h3>
-                            </div>
-                            <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-flex uk-flex-center">
-                    <a href="#" class='uk-button uk-button-large uk-button-default'><span>View all from Wildlife and
-                            nature</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
-                                alt='image' /></span></a>
-                </div>
-            </div>
-        </div>
+        <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
+            <div class='uk-container uk-container-small'>
 
-        <div class="nb-map">
-            <div class="uk-container uk-container-large">
-                <h2 class="uk-text-center">Shetland Map</h2>
+                <p class='uk-text-lead uk-margin-medium-bottom'>Welcome to Levenwick's community run campsite and hall
+                    in the beautiful Shetland Isles.
+                </p>
 
-                <div class='map-box'>
-                    <!-- <form action="/search" method="get" role="search" id="mapForm">
-                        <ul class='map-form uk-flex uk-flex-center uk-flex-middle'>
-                            <li class="font-area">
-                                <select class="uk-select label medium alt uk-text-bold">
-                                    <option>Areas</option>
-                                    <option>Areas 2</option>
-                                </select>
-                            </li>
-                            <li class="font-eye">
-                                <select class="uk-select label medium alt uk-text-bold">
-                                    <option>Interests</option>
-                                    <option>Interests 2</option>
-                                </select>
-                            </li>
-                        </ul>
-                    </form> -->
-                    <ul class="map-dropdown uk-flex uk-flex-center uk-flex-middle">
-                        <li><button class='label medium alt uk-text-bold'><svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#area"></use>
-                                </svg>Areas<svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#chevron-down-thin"></use>
-                                </svg></button>
-                            <div data-uk-dropdown="mode: click;boundary: .map-dropdown; boundary-align: true;pos: bottom-justify"
-                                class="uk-margin-remove-top" id="dropdown-map-area">
-                                <button data-uk-toggle="target: #dropdown-map-area" class="dropdown-close-button"
-                                    aria-label="Close dropdown menu">
-                                    <svg viewBox="0 0 512 512">
-                                        <use xlink:href="./symbol/icons.svg#close"></use>
-                                    </svg>
-                                </button>
-                                <ul id="find-areas"
-                                    class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
-                                    data-uk-grid>
-                                    <li>
-                                        <label class="nb-checkbox bounce" for="all-areas"><input class='uk-checkbox'
-                                                type='checkbox' value="all-areas" id="all-areas" name="all-areas">All
-                                            Areas
-                                            <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="area-1276"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1276" id="area-1276" name="area-1276">
-                                            South Mainland <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="nb-checkbox bounce" for="area-1271"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1271" id="area-1271" name="area-1271">
-                                            Unst <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="area-1275"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1275" id="area-1275" name="area-1275">
-                                            Fetlar <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="nb-checkbox bounce" for="area-1272"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1272" id="area-1272" name="area-1272">
-                                            Yell <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin uk-first-column">
-                                        <label class="nb-checkbox bounce" for="area-1335">
-                                            <input type="checkbox" class="uk-checkbox" value="area-1335" id="area-1335"
-                                                name="area-1335">
-                                            Central Mainland <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin uk-first-column">
-                                        <label class="nb-checkbox bounce" for="area-1280">
-                                            <input type="checkbox" class="uk-checkbox" value="area-1280" id="area-1280"
-                                                name="area-1280">
-                                            Bressay & Noss <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="area-1285"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1285" id="area-1285" name="area-1285">
-                                            Delting, Lunnasting & Nesting <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="area-1277"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1277" id="area-1277" name="area-1277">
-                                            Westside <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="area-1284"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1284" id="area-1284" name="area-1284">
-                                            Papa Stour <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="area-1278"> <input type="checkbox"
-                                                class="uk-checkbox" value="area-1278" id="area-1278" name="area-1278">
-                                            Northmavine <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin uk-first-column">
-                                        <label class="nb-checkbox bounce" for="area-1282">
-                                            <input type="checkbox" class="uk-checkbox" value="area-1282" id="area-1282"
-                                                name="area-1282">
-                                            Skerries <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin uk-first-column">
-                                        <label class="nb-checkbox bounce" for="area-1283">
-                                            <input type="checkbox" class="uk-checkbox" value="area-1283" id="area-1283"
-                                                name="area-1283">
-                                            Fair Isle <svg viewBox="0 0 512 512">
-                                                <use xlink:href="./symbol/icons.svg#check"></use>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                </ul>
-                                <div class="uk-flex uk-flex-right uk-flex-middle map-select-btns">
-                                    <button class="uk-button uk-button-text">
-                                        <img src="./img/button-text-link-small.svg" data-uk-svg alt="image">
-                                        <span>Clear all</span></button>
-                                    <button type='button' class='uk-button uk-button-secondary'><span>Apply
-                                            now</span><span role="presentation"><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></button>
-                                </div>
+                <div class="listings-business">
+                    <span class="uk-background-cover uk-position-relative uk-width-1-1" data-uk-img role="presentation"
+                        style="background-image: url('./img/business-profile.jpg');">
+                        <span data-uk-tooltip="title: Photo by Photographer Name; pos: top-right">
+                            <svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#info"></use>
+                            </svg>
+                        </span>
+                    </span>
+                    <div class="uk-position-relative">
+                        <img class="uk-position-top-center" src="./img/island-trails-shetland.png" data-uk-img
+                            alt="image">
+                        <div class="bg-white-flag listings-business-inner">
+                            <div class="uk-text-center">
+                                <span class="label alt xlarge uk-text-bold">Key information</span>
                             </div>
-                        </li>
-                        <li><button class='label medium alt uk-text-bold'><svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#eye"></use>
-                                </svg>Interests<svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#chevron-down-thin"></use>
-                                </svg></button>
-                            <div data-uk-dropdown="mode: click;boundary: .map-dropdown; boundary-align: true;pos: bottom-justify"
-                                class="uk-margin-remove-top" id="dropdown-map-interests">
-                                <button data-uk-toggle="target: #dropdown-map-interests" class="dropdown-close-button"
-                                    aria-label="Close dropdown menu">
-                                    <svg viewBox="0 0 512 512">
-                                        <use xlink:href="./symbol/icons.svg#close"></use>
-                                    </svg>
-                                </button>
-                                <ul id="find-interests"
-                                    class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
-                                    data-uk-grid>
-                                    <li>
-                                        <label class="nb-checkbox bounce" for="all-interests"><input class='uk-checkbox'
-                                                type='checkbox' value="all-interests" id="all-interests"
-                                                name="all-interests">All
-                                            Interests
-                                            <svg viewBox="0 0 21 21">
-                                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="interests-1276"> <input type="checkbox"
-                                                class="uk-checkbox" value="interests-1276" id="interests-1276"
-                                                name="interests-1276">
-                                            South Mainland <svg viewBox="0 0 21 21">
-                                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="nb-checkbox bounce" for="interests-1271"> <input type="checkbox"
-                                                class="uk-checkbox" value="interests-1271" id="interests-1271"
-                                                name="interests-1271">
-                                            Unst <svg viewBox="0 0 21 21">
-                                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li class="uk-grid-margin">
-                                        <label class="nb-checkbox bounce" for="interests-1275"> <input type="checkbox"
-                                                class="uk-checkbox" value="interests-1275" id="interests-1275"
-                                                name="interests-1275">
-                                            Fetlar <svg viewBox="0 0 21 21">
-                                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="nb-checkbox bounce" for="interests-1272"> <input type="checkbox"
-                                                class="uk-checkbox" value="interests-1272" id="interests-1272"
-                                                name="interests-1272">
-                                            Yell <svg viewBox="0 0 21 21">
-                                                <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
-                                            </svg>
-                                        </label>
-                                    </li>
-                                </ul>
-                                <div class="uk-flex uk-flex-right uk-flex-middle map-select-btns">
-                                    <button class="uk-button uk-button-text">
-                                        <img src="./img/button-text-link-small.svg" data-uk-svg alt="image">
-                                        <span>Clear all</span></button>
-                                    <button type='button' class='uk-button uk-button-secondary'><span>Apply
-                                            now</span><span role="presentation"><img data-uk-svg
-                                                src="./img/button-arrow-right.svg" alt='image' /></span></button>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class='map' id="map_canvas_areas"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="visit-experience">
-            <div class="uk-container uk-container-large">
-                <div class="visit-inner uk-margin-auto uk-flex uk-flex-column uk-flex-middle uk-text-center">
-                    <h2>The perfect way to experience Shetland...</h2>
-                    <p class="uk-width-3-4@l">To best optimise the page and provide the visitor with useful and
-                        informative text, it would be
-                        good
-                        to have a sentence or two included here.</p>
-                </div>
-                <div data-uk-grid class="uk-child-width-1-2@m uk-grid-medium">
-                    <div>
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/image-card-1.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <h3 class="uk-card-title large uk-margin-small-bottom">Walk</h3>
-                                <span class="label">Outdoors and adventure</span>
-                            </div>
-                            <a href="$=#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/image-card-4.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <h3 class="uk-card-title large uk-margin-small-bottom">Cycle</h3>
-                                <span class="label">Outdoors and adventure</span>
-                            </div>
-                            <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/image-card-5.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <h3 class="uk-card-title large uk-margin-small-bottom">Cruise</h3>
-                                <span class="label">Travel to Shetland</span>
-                            </div>
-                            <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="image-card uk-card uk-card-body">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/home-img-9.jpg');"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Find out more"></a>
-                            <div class="image-card-text">
-                                <h3 class="uk-card-title large uk-margin-small-bottom">Jimmy Perez</h3>
-                                <span class="label">Scottish TV Drama</span>
-                            </div>
-                            <a href="#" class='uk-button uk-button-primary'><span>Find out
-                                    more</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="useful-links visit">
-            <div class="uk-container uk-container-large">
-                <h2 class="uk-text-center">Plan Your Trip</h2>
-                <div class="uk-grid-medium uk-child-width-1-3@l" data-uk-grid data-uk-height-match="target: >ul>li">
-                    <ul>
-                        <li class="uk-position-relative">
-                            <a href="#" class='uk-button uk-button-default uk-position-cover'><span>How to get
-                                    here</span><span role="presentation"><img data-uk-svg
-                                        src="./img/button-arrow-right.svg" alt='image' /></span></a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/boat.svg" data-uk-img alt="image">
-                                <span>Ferry to Shetland</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/airplane.svg" data-uk-img alt="image">
-                                <span>Fly to Shetland</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/suitcase.svg" data-uk-img alt="image">
-                                <span>Package holidays</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="uk-position-relative">
-                            <a href="#" class='uk-button uk-button-default'><span>Things to do</span><span
-                                    role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/hiking.svg" data-uk-img alt="image">
-                                <span>Outdoors and adventure</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/seal.svg" data-uk-img alt="image">
-                                <span>Nature and wildlife</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/trips-and-tours.svg" data-uk-img alt="image">
-                                <span>Trips and tours</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="uk-position-relative">
-                            <a href="#" class='uk-button uk-button-default'><span role="presentation">Useful
-                                    information</span><span><img data-uk-svg src="./img/button-arrow-right.svg"
-                                        alt='image' /></span></a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/accommodation.svg" data-uk-img alt="image">
-                                <span>Accommodation</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/tip-a-z.svg" data-uk-img alt="image">
-                                <span>Shetland travel tips A-Z</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="uk-position-relative">
-                            <a href="#" class="uk-position-cover uk-flex uk-flex-middle">
-                                <img src="./img/location.svg" data-uk-img alt="image">
-                                <span>Area guides</span>
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#arrow-right-long"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="instagram-section uk-text-center">
-            <div class="uk-container uk-container-large">
-                <h2>Be inspired by others to explore Shetland</h2>
-                <p>Share your favourite pics using <a href="#">#inspiredbyshetland</a> and <a
-                        href="#">#visitshetland!</a></p>
-                <div class="uk-flex-middle uk-visible@l" data-uk-grid>
-                    <div class="uk-width-1-4">
-                        <div class="uk-card uk-overflow-hidden medium">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/instagram-img-1.jpg');" role="presentation"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-2">
-                        <div data-uk-grid>
-                            <div class="uk-width-1-1">
-                                <div class="uk-flex-bottom" data-uk-grid>
-                                    <div class="uk-width-2-3">
-                                        <div class="uk-card uk-overflow-hidden large">
-                                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                                style="background-image: url('./img/instagram-img-2.jpg');"
-                                                role="presentation"></span>
-                                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
+                            <div class="uk-child-width-1-2" data-uk-grid>
+                                <div>
+                                    <ul class="uk-padding-remove uk-list">
+                                        <li>
+                                            <div class="uk-flex">
                                                 <svg viewBox="0 0 512 512">
-                                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
+                                                    <use xlink:href="./symbol/icons.svg#status"></use>
                                                 </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-3">
-                                        <div class="uk-card uk-overflow-hidden small">
-                                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                                style="background-image: url('./img/instagram-img-3.jpg');"
-                                                role="presentation"></span>
-                                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
+                                                <span class="label alt medium opacity-off uk-text-bold">Status</span>
+                                            </div>
+                                            <div>
+                                                <ul class="uk-flex uk-list">
+                                                    <li class="alt label small opacity-off bg-gray-warm">None</li>
+                                                    <li
+                                                        class="alt label small opacity-off bg-orange-light uk-margin-small-left">
+                                                        Postponed</li>
+                                                    <li
+                                                        class="alt label small opacity-off bg-red-light uk-margin-small-left">
+                                                        Cancelled</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
                                                 <svg viewBox="0 0 512 512">
-                                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
+                                                    <use xlink:href="./symbol/icons.svg#area"></use>
                                                 </svg>
-                                            </a>
-                                        </div>
-                                    </div>
+                                                <span class="label alt medium opacity-off uk-text-bold">Location</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Lerwick</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#postcode"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Postcode</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">ZE2 9LE</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#address-map"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Address</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Bridge End, Burra, Shetland
+                                                    ZE2 9LE</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#telephone-call"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Telephone</span>
+                                            </div>
+                                            <div>
+                                                <a href="#">+44 (0)1595 123456</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#email"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Email</span>
+                                            </div>
+                                            <div>
+                                                <a href="#">info@company.co.uk</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#globe-alt"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Site</span>
+                                            </div>
+                                            <div>
+                                                <a href="#">www.shetlandartsandcrafts.co.uk</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#place-pin-map"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Latitude</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">60.150989</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#place-pin-map"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Longitude</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">-1.144591</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#hiking"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Difficulty
+                                                    Level</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Moderate</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#walk-distance"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Walk
+                                                    Distance</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">7km</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#cycle-distance"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Cycle
+                                                    Distance</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">48km / 29.8 miles (Circular
+                                                    route)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#duration"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Duration</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">3 hours</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#address-map"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Map
+                                                    Description</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">OS Explorer 470: Shetland -
+                                                    Unst, Yell & Fetlar</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#duration"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Duration</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">3 hours</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#water-depth"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Depth</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">7.0 - 4.8m (3.5 at low level
+                                                    quay)</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#kitchen"></use>
+                                                </svg>
+                                                <span
+                                                    class="label alt medium opacity-off uk-text-bold">Facilities</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Wheelchair Accessible,
+                                                    Amenity Building, Toilets and showers on site, WiFi, Kitchen
+                                                    facilities, Laundry facilities, Cafe / restaurant within 2 miles,
+                                                    Public telephone, Electric power points for each pitch, Waste water
+                                                    disposal point on site, Chemical disposal point on site, Pets
+                                                    welcome on site, Cold water supply</span>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="uk-width-1-1">
-                                <div data-uk-grid>
-                                    <div class="uk-width-1-3">
-                                        <div class="uk-card uk-overflow-hidden small">
-                                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                                style="background-image: url('./img/instagram-img-4.jpg');"
-                                                role="presentation"></span>
-                                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
+                                <div>
+                                    <ul class="uk-padding-remove uk-list">
+                                        <li>
+                                            <div class="uk-flex">
                                                 <svg viewBox="0 0 512 512">
-                                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
+                                                    <use xlink:href="./symbol/icons.svg#calendar"></use>
                                                 </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-2-3">
-                                        <div class="uk-card uk-overflow-hidden large">
-                                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                                style="background-image: url('./img/instagram-img-5.jpg');"
-                                                role="presentation"></span>
-                                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
+                                                <span class="label alt medium opacity-off uk-text-bold">Open from</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Mar 8, 2020</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
                                                 <svg viewBox="0 0 512 512">
-                                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
+                                                    <use xlink:href="./symbol/icons.svg#calendar"></use>
                                                 </svg>
-                                            </a>
-                                        </div>
-                                    </div>
+                                                <span class="label alt medium opacity-off uk-text-bold">Open to</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Nov 10, 2020</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#duration"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Opening
+                                                    hours</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Every day from 9am -
+                                                    5pm</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#calendar"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Start
+                                                    date/time</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Nov 8, 2020, 9am</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#calendar"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">End
+                                                    date/time</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Nov 10, 2020, 5pm</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#pound"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Price per night:
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Caravan £18 (with awning
+                                                    £22); Tent – from £10</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#caravan"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Touring
+                                                    pitches</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">10</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#tent"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Tent
+                                                    pitches</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">20</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#tripadvisor"></use>
+                                                </svg>
+                                                <span
+                                                    class="label alt medium opacity-off uk-text-bold">Tripadvisor</span>
+                                            </div>
+                                            <div>
+                                                <a href="#">Visit us on Tripadvisor</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#follow"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Follow us on
+                                                    social media</span>
+                                            </div>
+                                            <div>
+                                                <ul class="uk-flex uk-list uk-margin-remove">
+                                                    <li class="uk-padding-remove-left">
+                                                        <a href="#" aria-label="Follow us on Facebook">
+                                                            <svg viewBox="0 0 512 512">
+                                                                <use xlink:href="./symbol/icons.svg#facebook"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-label="Follow us on Twitter">
+                                                            <svg viewBox="0 0 512 512">
+                                                                <use xlink:href="./symbol/icons.svg#twitter"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" aria-label="Follow us on Linkedin">
+                                                            <svg viewBox="0 0 512 512">
+                                                                <use xlink:href="./symbol/icons.svg#linkedin"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#height-gain"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Height
+                                                    Gain</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">50m</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#place-pin-map"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Start Point Map
+                                                    Reference (what3words)</span>
+                                            </div>
+                                            <div>
+                                                <a href="#">///sculpting.gathering.unable</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#height-gain"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Height
+                                                    Gain</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">50m</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#radio-vhf"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Radio VHF
+                                                    Channel</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">12 16</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#yacht"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Yacht Facilities
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Power, water, fuel,
+                                                    engineering services, electrical repairs, boat yard, waste
+                                                    reception. Showers and laundry at the boating club.</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="uk-flex">
+                                                <svg viewBox="0 0 512 512">
+                                                    <use xlink:href="./symbol/icons.svg#info-listing"></use>
+                                                </svg>
+                                                <span class="label alt medium opacity-off uk-text-bold">Additional
+                                                    information</span>
+                                            </div>
+                                            <div>
+                                                <span class="label alt medium opacity-off">Our boat 'Seabird' is
+                                                    accessible for all - we have a ramp at the stern of the boat, which
+                                                    means we are accessible for wheelchairs, but wheelchair users must
+                                                    be able to get out of the wheelchair to access toilet and cabin - as
+                                                    the doors are not wide enough.</span>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="uk-width-1-4">
-                        <div class="uk-card uk-overflow-hidden medium">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/instagram-img-6.jpg');" role="presentation"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </div>
+                        <div class="listings-business-map" id="map_canvas_listings_business"></div>
                     </div>
                 </div>
-                <div class="uk-hidden@l" data-uk-grid>
-                    <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-right">
-                        <div class="uk-width-1-1 uk-card uk-overflow-hidden large">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/instagram-img-2.jpg');" role="presentation"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-3">
-                        <div data-uk-grid>
-                            <div class="uk-width-1-1">
-                                <div class="uk-card uk-overflow-hidden small">
-                                    <span class="uk-position-cover uk-background-cover" data-uk-img
-                                        style="background-image: url('./img/instagram-img-1.jpg');"
-                                        role="presentation"></span>
-                                    <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                        <svg viewBox="0 0 512 512">
-                                            <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-1">
-                                <div class="uk-card uk-overflow-hidden small">
-                                    <span class="uk-position-cover uk-background-cover" data-uk-img
-                                        style="background-image: url('./img/instagram-img-3.jpg');"
-                                        role="presentation"></span>
-                                    <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                        <svg viewBox="0 0 512 512">
-                                            <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-3">
-                        <div data-uk-grid>
-                            <div class="uk-width-1-1">
-                                <div class="uk-card uk-overflow-hidden small">
-                                    <span class="uk-position-cover uk-background-cover" data-uk-img
-                                        style="background-image: url('./img/instagram-img-4.jpg');"
-                                        role="presentation"></span>
-                                    <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                        <svg viewBox="0 0 512 512">
-                                            <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-1">
-                                <div class="uk-card uk-overflow-hidden small">
-                                    <span class="uk-position-cover uk-background-cover" data-uk-img
-                                        style="background-image: url('./img/instagram-img-6.jpg');"
-                                        role="presentation"></span>
-                                    <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                        <svg viewBox="0 0 512 512">
-                                            <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-2-3">
-                        <div class="uk-card uk-overflow-hidden large">
-                            <span class="uk-position-cover uk-background-cover" data-uk-img
-                                style="background-image: url('./img/instagram-img-5.jpg');" role="presentation"></span>
-                            <a href="#" class="uk-position-cover" aria-label="Click to see more">
-                                <svg viewBox="0 0 512 512">
-                                    <use xlink:href="./symbol/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-flex uk-flex-center">
-                    <a href="#" class='uk-button uk-button-large uk-button-default'><span>Follow us on
-                            Instagram</span><span class="font-instagram" role="presentation"></span></a>
-                </div>
+                <p>Lorem ipsum dolor sit amet, <strong>here's some bold text</strong>. Aliquam at ligula <em>here's some
+                        italic text</em>. Nulla facilisi. In in turpis non eros vehicula adipiscing in
+                    <em><strong>feugiat ligula</strong></em>. Vivamus et nulla<sub>2</sub> ultricies<sup>2</sup>, auctor
+                    tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at
+                    euismod dui. Duis at eros magna <a href="#">example link</a>. Pellentesque nec porttitor dui. Etiam
+                    sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
             </div>
         </div>
 
-        <div class="newsletter-section uk-margin-bottom">
-            <div class="uk-container uk-container-large uk-text-center uk-flex uk-flex-column uk-flex-middle">
-                <span class="uk-text-large">Subscribe to</span>
-                <h2 class="uk-margin-medium-bottom uk-margin-small-top">Visit Shetland Newsletter</h2>
-                <div class="newsletter-box uk-position-relative uk-flex uk-flex-center">
-                    <img class="uk-position-bottom-right" src="./img/shetland-mark.png" data-uk-img alt="image">
-                    <div class="newsletter-inner">
-                        <span class="uk-margin-medium-bottom">Sign up to our newsletter to receive regular updates to
-                            help you plan your trip to
-                            Shetland.</span>
-                        <a href="#" class='uk-button uk-button-secondary uk-button-large uk-margin-auto'><span>Subscribe
-                                now</span><span role="presentation"><img data-uk-svg src="./img/button-arrow-right.svg"
-                                    alt='image' /></span></a>
+        <div class='nb-block nb-block-content uk-clearfix' data-nb-block='content'>
+            <div class='uk-container uk-container-small'>
+                <h4>Heading 4</h4>
+
+                <ul class="uk-list-disc">
+					<li><a href="#">PDF File</a> - Download now!
+					</li>
+					<li><a href="#">Word Document</a></li>
+					<li><a href="#">Excel Spreadsheet</a></li>
+					<li><a href="#">Power Point</a>
+					</li>
+					<li><a href="#">Zip File</a></li>
+					<li><a href="#"><abbr title="Keyhole Markup Language">KML</abbr> File</a></li>
+					<li><a href="#"><abbr title="GPS Exchange Format">GPX</abbr> File</a></li>
+				</ul>
+            </div>
+        </div>
+
+        <div class='nb-block nb-block-gallery uk-clearfix' data-nb-block='gallery'>
+            <div class='uk-container uk-container-large'>
+                <h2 class='uk-text-center uk-margin-top'>Gallery</h2>
+
+                <div class='nb-gallery-images' data-uk-lightbox='{"animation":"fade"}'
+                    data-uk-scrollspy='{"cls":"uk-animation-fade","delay":128,"target":"> .nb-gallery-row > .nb-gallery-image"}'>
+                    <div class='nb-gallery-row'>
+                        <a href='https://aws.nbcommunication.com/template/img/placeholder-columns.jpg'
+                            class='nb-gallery-image' data-alt='This gallery image has a caption.'
+                            data-caption='<div>This gallery image has a caption.</div>'>
+                            <img alt='This gallery image has a caption.' width='1151' height='768'
+                                src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                data-src='./img/gallery-1.jpg' data-uk-img>
+                            <span role="presentation">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#expand"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href='https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.jpg'
+                            class='nb-gallery-image' data-alt data-caption>
+                            <img alt='Gallery Block' width='1151' height='768'
+                                src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                data-src='./img/gallery-2.jpg' data-uk-img>
+                            <span role="presentation">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#expand"></use>
+                                </svg>
+                            </span>
+                        </a>
                     </div>
+                    <div class='nb-gallery-row'>
+                        <a href='https://aws.nbcommunication.com/template/img/placeholder-sprinkler.jpg'
+                            class='nb-gallery-image' data-alt data-caption>
+                            <img alt='Gallery Block' width='1151' height='768'
+                                src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                data-src='./img/gallery-3.jpg' data-uk-img>
+                            <span role="presentation">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#expand"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href='https://aws.nbcommunication.com/template/img/placeholder-town.jpg'
+                            class='nb-gallery-image' data-alt='This gallery image also has a caption with HTML.'
+                            data-caption='<div>This <em>gallery</em> image also has a <strong>caption</strong> with HTML.</div>'>
+                            <img alt='This gallery image also has a caption with HTML.' width='1151' height='768'
+                                src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                data-src='./img/gallery-4.jpg' data-uk-img>
+                            <span role="presentation">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#expand"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href='https://aws.nbcommunication.com/template/img/placeholder-waterfall.jpg'
+                            class='nb-gallery-image' data-alt data-caption>
+                            <img alt='Gallery Block' width='768' height='768'
+                                src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+                                data-src='./img/gallery-5.jpg' data-uk-img>
+                            <span role="presentation">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#expand"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class='nb-gallery-caption uk-text-center'>Style of an gallery title caption. <span>Photo by
+                        Photographer Name</span></div>
+            </div>
+        </div>
+
+        <div class="nb-share uk-padding-large uk-padding-remove-horizontal">
+            <div class="uk-container uk-container-large">
+                <div class="nb-share-inner uk-text-center">
+                    <h5>Share this page</h5>
+                    <ul class="uk-flex uk-flex-center nb-social uk-padding-remove-left">
+                        <li>
+                            <a href="#" aria-label="Share our page via Facebook">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Share our page via Twitter">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Share our page via e-mail">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#envelope"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,11 +1,37 @@
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
+    .uk-button, .map-card .uk-button-text {
+
+        >span:last-of-type::after {
+            display: none;
+        }
+
+        @include hover {
+            span:last-of-type svg {
+                left: 10px;
+            }
+        }
+    }
+
+    .map-select-btns .uk-button-text {
+        line-height: 38px;
+
+        @include hover {
+            color: $blue-light;
+        }
+    }
+
+    .image-card .uk-button-primary>span:last-of-type svg {
+        left: 0;
+    }
+
     .uk-background-fixed {
         background-attachment: scroll;
     }
 
     .banner-inner {
         height: 670px;
+
         >.uk-container {
             display: flex;
             align-self: center;
@@ -111,10 +137,14 @@ screen and (-ms-high-contrast: none) {
         }
     }
 
-    .uk-dropdown .uk-card-title,
-    .nav-text-links li a,
-    .uk-dropdown .label {
-        white-space: pre-line;
+    // .uk-dropdown .uk-card-title,
+    // .nav-text-links li a,
+    // .uk-dropdown .label {
+    //     white-space: pre-line;
+    // }
+
+    .mega-menu .uk-button-text.uk-button-text-left {
+        margin-left: 0;
     }
 
     .uk-dropdown .entry-item .uk-card-title {
@@ -189,5 +219,9 @@ screen and (-ms-high-contrast: none) {
 
     .uk-button-default>span:last-of-type::after {
         background-color: rgba($blue-light, .5);
+    }
+
+    .footer-bottom .uk-button {
+        line-height: 27px;
     }
 }

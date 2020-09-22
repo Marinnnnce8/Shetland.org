@@ -47,6 +47,17 @@
 		}
 	}
 
+	&.listing {
+
+		>div {
+			padding: 90px 0 40px;
+		}
+
+		h1 {
+			margin-top: 15px;
+		}
+	}
+
 	@media (min-width: $breakpointLarge) {
 		padding: 0 40px;
 	}

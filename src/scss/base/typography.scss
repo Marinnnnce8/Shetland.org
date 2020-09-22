@@ -11,6 +11,15 @@ h6 {
 	font-weight: normal;
 	line-height: 1.1em;
 	color: $blue;
+
+	&.alt {
+		font-family: $font-default;
+	}
+
+	&:not(.alt),
+	&:not(.alt) {
+		line-height: 1.3em;
+	}
 }
 
 h1 {
@@ -46,24 +55,6 @@ h5 {
 h6 {
 	font-size: 18px;
 	line-height: 1.3em;
-}
-
-h1.alt,
-h2.alt,
-h3.alt,
-h4.alt,
-h5.alt,
-h6.alt {
-	font-family: $font-default;
-
-	&:not(h1.alt),
-	&:not(h2.alt) {
-		line-height: 1.3em;
-	}
-}
-
-h2.alt {
-	font-size: 48px;
 }
 
 .hero-title {

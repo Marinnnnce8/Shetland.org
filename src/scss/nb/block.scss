@@ -17,8 +17,9 @@
 	&-content {
 
 		p,
-		li {
-			>a:not(.uk-accordion-title) {
+		li,
+		.listings-business li div {
+			>a:not(.uk-accordion-title):not([aria-label]) {
 				color: $blue;
 				font-weight: normal;
 				position: relative;

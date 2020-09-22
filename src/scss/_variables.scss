@@ -67,12 +67,16 @@ $green-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, $green-pastel 1
 $blue-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, $blue-navy 100%);
 $green-dark-overlay: linear-gradient(180deg, rgba(218, 170, 0, 0) 0%, $green 100%);
 
-$snappy : cubic-bezier(0.694,  0.048, 0.335, 1.000);
+$snappy : cubic-bezier(0.694, 0.048, 0.335, 1.000);
 
-$site-colors: ('black': $black, 
+$site-colors: ('black': $black,
 	'white': $white,
 	'turquise-light': $turquise-light,
-	'gray-cold-mid': $gray-cold-mid) !default;
+	'gray-cold-mid': $gray-cold-mid,
+	'white-flag': $white-flag,
+	'gray-warm': $gray-warm,
+	'orange-light': $orange-light,
+	'red-light': $red-light) !default;
 
 //----------  Bootstrap grid
 //------------------------------------------------------------------------------
