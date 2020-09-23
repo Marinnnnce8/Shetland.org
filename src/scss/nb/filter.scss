@@ -1,0 +1,92 @@
+.nb-filter {
+    &.events {
+        .uk-list {
+            max-width: 100%;
+        }
+
+        li {
+            margin: 0;
+
+            &:not(:first-of-type) {
+                margin-left: 10px;
+            }
+        }
+
+        .uk-button {
+            padding: 15px 30px;
+            border: 2px solid $gray-warm-alt;
+
+            @include hover {
+                border-color: $blue;
+            }
+        }
+    }
+
+    li {
+        margin-bottom: 10px;
+
+        &:not(:first-of-type) {
+            margin-left: 20px;
+        }
+
+        .uk-button-default {
+            background-color: $white;
+            border-color: $blue;
+            color: $blue;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+                fill: $blue;
+                transition: $nbSec;
+            }
+
+            @include hover {
+                background-color: $blue;
+                color: $white;
+
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+
+        &.uk-active .uk-button-default {
+            background-color: $blue;
+            border: 2px solid $blue;
+            color: $white;
+
+            svg {
+                fill: $white;
+            }
+        }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        &.events {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        li:not(:first-of-type) {
+            margin-left: 40px;
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        &.events {
+            border-bottom: 1px solid $gray-warm-alt;
+            width: 100%;
+
+            .uk-list {
+                justify-content: center;
+                padding: 5px 0;
+            }
+        }
+    }
+}

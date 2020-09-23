@@ -32,10 +32,6 @@
 		margin: 0 !important;
 	}
 
-	// .uk-grid {
-	// 	display: block !important;
-	// }
-
 	@media (min-width: $breakpointLarge) {
 
 		.uk-grid-column-large,
@@ -46,7 +42,6 @@
 
 			>* {
 				padding-left: 0 !important;
-				// width: 100% !important;
 			}
 		}
 
@@ -79,7 +74,7 @@
 	.uk-sticky-placeholder,
 	.scroll-button-up,
 	figure,
-	blockquote >span[class*='icon-quote'],
+	blockquote>span[class*='icon-quote'],
 	.nb-block-gallery,
 	.nb-block-slideshow,
 	.nb-video,
@@ -87,12 +82,14 @@
 	.useful-links,
 	.find-out-more,
 	.nb-share,
-	.explore-section,
+	.explore-section:not(.events),
+	.nb-dropdown,
+	.explore-item .uk-card-media-top,
 	.entry-item,
 	.image-card,
 	.nb-blog,
 	.nb-bio-inner ul,
-	.beach-section .beach-filter,
+	.nb-filter,
 	.beach-section .uk-card .uk-card-media-left,
 	.beach-section .uk-card>a,
 	.nb-author,
@@ -102,6 +99,9 @@
 	.visit-seasons,
 	.nb-map,
 	.instagram-section,
+	.listing-business .uk-background-cover,
+	.listing-business .uk-position-top-center,
+	.listing-business-map,
 	.visit-experience {
 		display: none !important;
 	}
@@ -126,7 +126,8 @@
 		border-bottom: 1px solid $gray;
 	}
 
-	.uk-accordion li {
+	.uk-accordion li,
+	.listing-business-inner {
 		padding: 20px !important;
 	}
 
@@ -136,6 +137,15 @@
 
 	.beach-section {
 		padding: 0 !important;
+	}
+
+	.explore-section.events .uk-grid,
+	.listing-business {
+		margin: 0 !important;
+	}
+
+	.explore-item .uk-card-body >.label {
+		margin: 15px 0 0 !important;
 	}
 
 	table {

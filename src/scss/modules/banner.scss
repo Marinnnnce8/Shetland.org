@@ -8,10 +8,10 @@
 	}
 
 	span[data-uk-tooltip] {
-		bottom: 35px;
+		bottom: 15px;
 		height: 20px;
 		position: absolute;
-		right: 75px;
+		right: 20px;
 		width: 20px;
 		z-index: 2;
 
@@ -55,6 +55,13 @@
 
 		h1 {
 			margin-top: 15px;
+		}
+	}
+
+	@media (min-width: $breakpointTabletPortrait) {
+		span[data-uk-tooltip] {
+			bottom: 35px;
+			right: 75px;
 		}
 	}
 
