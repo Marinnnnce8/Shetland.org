@@ -18,7 +18,7 @@
 
 		p,
 		li,
-		.listings-business li div {
+		.listing-business li div {
 			>a:not(.uk-accordion-title):not([aria-label]) {
 				color: $blue;
 				font-weight: normal;
@@ -160,7 +160,7 @@
 	&-gallery {
 
 		.nb-gallery-images {
-			margin: 0 -10px;
+			margin: 0 -5px;
 			overflow: hidden;
 
 			.nb-gallery-row {
@@ -221,6 +221,7 @@
 			}
 
 			@media (min-width: $breakpointSmall) {
+				margin: 0 -10px;
 
 				.nb-gallery-row .nb-gallery-image {
 					border: 10px solid transparent;
@@ -239,6 +240,7 @@
 			}
 
 			@media (min-width: $breakpointMedium) {
+				margin: 0 -20px;
 
 				.nb-gallery-row .nb-gallery-image {
 					border: 20px solid transparent;

@@ -31,26 +31,26 @@
         function initialize() {
             var secheltLoc = new google.maps.LatLng(60.155579, -1.150040);
 
-            var myMapOptionsListingsBusiness = {
+            var myMapOptionsListingBusiness = {
                 zoom: 15,
                 center: secheltLoc,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
-            var theMapListingsBusiness = new google.maps.Map(document.getElementById("map_canvas_listings_business"),
-                myMapOptionsListingsBusiness);
+            var theMapListingBusiness = new google.maps.Map(document.getElementById("map_canvas_listing_business"),
+                myMapOptionsListingBusiness);
 
 
-            var markerListingsBusiness = new google.maps.Marker({
-                map: theMapListingsBusiness,
+            var markerListingBusiness = new google.maps.Marker({
+                map: theMapListingBusiness,
                 draggable: true,
                 position: new google.maps.LatLng(60.155579, -1.150040),
                 visible: true
             });
 
-            var boxTextListingsBusiness = document.createElement("div");
-            boxTextListingsBusiness.style.cssText = "";
-            boxTextListingsBusiness.innerHTML =
+            var boxTextListingBusiness = document.createElement("div");
+            boxTextListingBusiness.style.cssText = "";
+            boxTextListingBusiness.innerHTML =
                 "<div>" +
                 "<ul class='map-pins uk-position-cover'>" +
                 "<li><button aria-label='map pin round-button'>" +
@@ -59,8 +59,8 @@
                 "</ul>" +
                 "</div>";
 
-            var myOptionsListingsBusiness = {
-                content: boxTextListingsBusiness,
+            var myOptionsListingBusiness = {
+                content: boxTextListingBusiness,
                 disableAutoPan: false,
                 maxWidth: 0,
                 pixelOffset: new google.maps.Size(-140, 0),
@@ -79,13 +79,13 @@
                 enableEventPropagation: false
             };
 
-            google.maps.event.addListener(markerListingsBusiness, "click", function (e) {
-                ibListingsBusiness.open(theMapListingsBusiness, this);
+            google.maps.event.addListener(markerListingBusiness, "click", function (e) {
+                ibListingBusiness.open(theMapListingBusiness, this);
             });
 
-            var ibListingsBusiness = new InfoBox(myOptionsListingsBusiness);
+            var ibListingBusiness = new InfoBox(myOptionsListingBusiness);
 
-            ibListingsBusiness.open(theMapListingsBusiness, markerListingsBusiness);
+            ibListingBusiness.open(theMapListingBusiness, markerListingBusiness);
         }
 
     </script>
@@ -1157,7 +1157,7 @@
                     in the beautiful Shetland Isles.
                 </p>
 
-                <div class="listings-business">
+                <div class="listing-business">
                     <span class="uk-background-cover uk-position-relative uk-width-1-1" data-uk-img role="presentation"
                         style="background-image: url('./img/business-profile.jpg');">
                         <span data-uk-tooltip="title: Photo by Photographer Name; pos: top-right">
@@ -1169,11 +1169,11 @@
                     <div class="uk-position-relative">
                         <img class="uk-position-top-center" src="./img/island-trails-shetland.png" data-uk-img
                             alt="image">
-                        <div class="bg-white-flag listings-business-inner">
+                        <div class="bg-white-flag listing-business-inner">
                             <div class="uk-text-center">
                                 <span class="label alt xlarge uk-text-bold">Key information</span>
                             </div>
-                            <div class="uk-child-width-1-2" data-uk-grid>
+                            <div class="uk-child-width-1-2@m" data-uk-grid>
                                 <div>
                                     <ul class="uk-padding-remove uk-list">
                                         <li>
@@ -1184,13 +1184,14 @@
                                                 <span class="label alt medium opacity-off uk-text-bold">Status</span>
                                             </div>
                                             <div>
-                                                <ul class="uk-flex uk-list">
-                                                    <li class="alt label small opacity-off bg-gray-warm">None</li>
+                                                <ul class="uk-flex uk-flex-wrap uk-list uk-margin-remove">
                                                     <li
-                                                        class="alt label small opacity-off bg-orange-light uk-margin-small-left">
+                                                        class="alt label small opacity-off bg-gray-warm uk-margin-small-right">
+                                                        None</li>
+                                                    <li
+                                                        class="alt label small opacity-off bg-orange-light uk-margin-small-right">
                                                         Postponed</li>
-                                                    <li
-                                                        class="alt label small opacity-off bg-red-light uk-margin-small-left">
+                                                    <li class="alt label small opacity-off bg-red-light">
                                                         Cancelled</li>
                                                 </ul>
                                             </div>
@@ -1613,7 +1614,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="listings-business-map" id="map_canvas_listings_business"></div>
+                        <div class="listing-business-map" id="map_canvas_listing_business"></div>
                     </div>
                 </div>
                 <p>Lorem ipsum dolor sit amet, <strong>here's some bold text</strong>. Aliquam at ligula <em>here's some
@@ -1630,16 +1631,16 @@
                 <h4>Heading 4</h4>
 
                 <ul class="uk-list-disc">
-					<li><a href="#">PDF File</a> - Download now!
-					</li>
-					<li><a href="#">Word Document</a></li>
-					<li><a href="#">Excel Spreadsheet</a></li>
-					<li><a href="#">Power Point</a>
-					</li>
-					<li><a href="#">Zip File</a></li>
-					<li><a href="#"><abbr title="Keyhole Markup Language">KML</abbr> File</a></li>
-					<li><a href="#"><abbr title="GPS Exchange Format">GPX</abbr> File</a></li>
-				</ul>
+                    <li><a href="#">PDF File</a> - Download now!
+                    </li>
+                    <li><a href="#">Word Document</a></li>
+                    <li><a href="#">Excel Spreadsheet</a></li>
+                    <li><a href="#">Power Point</a>
+                    </li>
+                    <li><a href="#">Zip File</a></li>
+                    <li><a href="#"><abbr title="Keyhole Markup Language">KML</abbr> File</a></li>
+                    <li><a href="#"><abbr title="GPS Exchange Format">GPX</abbr> File</a></li>
+                </ul>
             </div>
         </div>
 
@@ -1719,7 +1720,7 @@
         <div class="nb-share uk-padding-large uk-padding-remove-horizontal">
             <div class="uk-container uk-container-large">
                 <div class="nb-share-inner uk-text-center">
-                    <h5>Share this page</h5>
+                    <span class="label large opacity-off">Share this page</span>
                     <ul class="uk-flex uk-flex-center nb-social uk-padding-remove-left">
                         <li>
                             <a href="#" aria-label="Share our page via Facebook">
@@ -1743,6 +1744,13 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div
+                    class="uk-flex uk-flex-center uk-padding-small uk-padding-remove-horizontal uk-padding-remove-bottom uk-margin-large-top">
+                    <button class='uk-button uk-button-large uk-button-default button-back'><span
+                            role="presentation"><img data-uk-svg src="./img/button-arrow-left.svg"
+                                alt='image' /></span><span>Back to Caravan and camping
+                        </span></button>
                 </div>
             </div>
         </div>
