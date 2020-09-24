@@ -188,7 +188,7 @@
             <div class="uk-container uk-container-large">
                 <ul
                     class="nb-dropdown uk-position-relative events blog uk-flex uk-flex-center uk-flex-middle uk-margin-small-bottom">
-                    <li class="nb-search">
+                    <li class="nb-search uk-visible@l uk-position-center-right">
                         <form action="/search" method="get" role="search" id="blogSearch"
                             class="uk-search uk-search-default">
                             <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
@@ -477,6 +477,15 @@
                         </div>
                     </li>
                 </ul>
+                <div class="nb-search uk-hidden@l uk-flex uk-flex-center">
+                    <form action="/search" method="get" role="search" id="blogSearch"
+                        class="uk-search uk-search-default">
+                        <button type="submit" aria-label="Search"><svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#search"></use>
+                            </svg></button><input aria-label="Search Phrase" class="uk-input" type="search" name="q"
+                            placeholder="Search term">
+                    </form>
+                </div>
             </div>
             <div class='uk-container uk-container-large'>
                 <div class="uk-child-width-1-3@l uk-child-width-1-2@s uk-grid-medium uk-margin-large-top uk-margin-large-bottom"

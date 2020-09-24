@@ -7,7 +7,7 @@
         display: inline-block;
     }
 
-    @media (max-width: $breakpointSmall) {
+    @media (max-width: $breakpointMediumMax) {
         &.events .uk-container:first-of-type {
             padding: 0;
         }

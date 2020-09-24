@@ -23,7 +23,6 @@
     }
 
     li {
-        // margin-bottom: 10px;
 
         &:not(:first-of-type) {
             margin-left: 20px;
@@ -63,15 +62,6 @@
         }
     }
 
-    @media (min-width: $breakpointMedium) {
-        &.events {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-
     @media (min-width: $breakpointTabletPortrait) {
         li:not(:first-of-type) {
             margin-left: 40px;
@@ -80,13 +70,18 @@
 
     @media (max-width: $breakpointSmallMax) {
         &.events {
-            border-bottom: 1px solid $gray-warm-alt;
             width: 100%;
 
             .uk-list {
                 justify-content: center;
                 padding: 5px 0;
             }
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        &.events {
+            margin-top: 30px;
         }
     }
 }

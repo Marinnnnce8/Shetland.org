@@ -90,42 +90,41 @@
     }
 
     @media (min-width: $breakpointTabletPortrait) {
-
         .uk-dropdown {
             padding: 50px 40px 40px;
         }
     }
 
-    @media (min-width: $breakpointMedium) {
-
-        &.events .nb-search {
-            max-width: 285px;
-            width: 100%;
-            position: absolute;
-            right: 8px;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 0;
-            border: 0;
-        }
-    }
-
-    @media (max-width: $breakpointMediumMax) and (min-width: $breakpointMedium) {
-        &.blog {
-            justify-content: flex-start;
-        }
-    }
-
-    @media (max-width: $breakpointSmallMax) {
+    @media (max-width: $breakpointTabletPortraitMax) {
         &.events {
-            flex-wrap: wrap;
-        }
-    }
+            flex-direction: column;
+            border: 0;
+            padding: 0 20px;
 
-    @media (max-width: $breakpointSmall) {
-        &.events>li>button {
-            padding-left: 12px;
-            padding-right: 12px;
+            >li {
+                width: 100%;
+
+                &:last-of-type>button {
+                    border-bottom: 1px solid $gray-mid;
+                }
+
+                >button {
+                    border-left: 1px solid $gray-mid;
+                    border-right: 1px solid $gray-mid;
+                    border-top: 1px solid $gray-mid;
+                    width: 100%;
+
+                    svg:last-of-type {
+                        position: absolute;
+                        right: 21px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin: 0;
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
         }
     }
 
@@ -133,23 +132,6 @@
         &:not(.events)>li {
             max-width: 160px;
             width: 100%;
-        }
-
-        &.events>li>button {
-            padding-left: 8px;
-            padding-right: 8px;
-
-            &.label {
-                font-size: 14px;
-            }
-
-            >svg {
-                &:first-of-type {
-                    margin-right: 5px;
-                    width: 12px;
-                    height: 12px;
-                }
-            }
         }
     }
 }

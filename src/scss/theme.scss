@@ -161,10 +161,10 @@
 
 	.uk-grid-column-medium,
 	.uk-grid-medium {
-		margin-left: -60px;
+		margin-left: -40px;
 
 		>* {
-			padding-left: 60px;
+			padding-left: 40px;
 		}
 	}
 
@@ -173,7 +173,7 @@
 	.uk-grid+.uk-grid-row-medium,
 	.uk-grid-medium>.uk-grid-margin,
 	.uk-grid-row-medium>.uk-grid-margin {
-		margin-top: 60px;
+		margin-top: 40px;
 	}
 }
 

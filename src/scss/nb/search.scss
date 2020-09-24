@@ -1,6 +1,9 @@
 .nb-search {
+    padding: 0 20px;
+
     form {
         width: 100%;
+        max-width: 473px;
     }
 
     button[type='submit'] {
@@ -32,5 +35,19 @@
             color: inherit;
             line-height: inherit;
         }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        right: 8px;
+        max-width: 285px;
+        padding: 0;
+
+        form {
+            max-width: 285px;
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        margin-top: 30px;
     }
 }

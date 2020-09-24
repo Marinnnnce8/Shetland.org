@@ -153,23 +153,6 @@
 
     @media (max-width: $breakpointMediumMax) and (min-width: $breakpointTabletPortrait) {
 
-        .uk-grid-column-medium,
-        .uk-grid-medium {
-            margin-left: -40px;
-
-            >* {
-                padding-left: 40px;
-            }
-        }
-
-        *+.uk-grid-margin-medium,
-        .uk-grid+.uk-grid-medium,
-        .uk-grid-medium>.uk-grid-margin,
-        .uk-grid+.uk-grid-row-medium,
-        .uk-grid-row-medium>.uk-grid-margin {
-            margin-top: 40px;
-        }
-
         li.uk-grid-margin.uk-first-column {
             margin-top: 80px;
         }
