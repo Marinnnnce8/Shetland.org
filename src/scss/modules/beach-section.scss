@@ -28,43 +28,79 @@
         }
     }
 
-    .uk-card-body ul,
-    p:last-of-type,
-    .uk-card-title {
-        margin-bottom: 25px;
-    }
-
     .uk-card-body {
 
+        ul {
+            margin-bottom: 0;
+        }
+
         li {
-            &:not(:first-of-type) {
-                margin-left: 20px;
+            margin-bottom: 20px;
+
+            &:not(:last-of-type) {
+                margin-right: 20px;
+            }
+
+            &.label {
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    fill: $blue;
+                    margin-right: 12px;
+                    transition: $nbSec ease-in-out;
+                }
+
+                a {
+                    color: inherit;
+
+                    @include hover {
+                        color: $blue-light;
+
+                        svg {
+                            fill: $blue-light;
+                        }
+                    }
+                }
+            }
+        }
+
+        p {
+            &:first-of-type {
+                margin-top: 5px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 25px;
             }
         }
     }
 
     .uk-card-media-left {
-        min-height: 350px;
+        min-height: 186px;
     }
 
     .uk-card-title {
         line-height: 1.3em;
-        margin-top: 20px;
+        margin-bottom: 15px;
     }
 
     ul {
         list-style-type: none;
     }
 
-    .uk-button-default {
-        border: 2px solid $blue;
-        background-color: $blue;
-        color: $white;
+    @media (min-width: $breakpointSmall) {
+        .uk-card-media-left {
+            min-height: 430px;
+        }
+    }
 
-        @include hover {
-            background-color: transparent;
-            border-color: $blue;
-            color: $blue;
+    @media (min-width: $breakpointTabletPortrait) {
+        .uk-card-title {
+            margin-bottom: 33px;
+        }
+
+        .uk-card-media-left img {
+            top: 22px;
         }
     }
 
@@ -78,65 +114,96 @@
 
         .uk-card-body {
             li {
+                &:not(:last-of-type) {
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        .uk-card-title {
+            margin-top: 20px;
+            margin-bottom: 38px;
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) {
+        .uk-card-body p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: $breakpointMediumMax) and (min-width: $breakpointTabletPortrait) {
+
+        .uk-grid-column-medium,
+        .uk-grid-medium {
+            margin-left: -40px;
+
+            >* {
+                padding-left: 40px;
+            }
+        }
+
+        *+.uk-grid-margin-medium,
+        .uk-grid+.uk-grid-medium,
+        .uk-grid-medium>.uk-grid-margin,
+        .uk-grid+.uk-grid-row-medium,
+        .uk-grid-row-medium>.uk-grid-margin {
+            margin-top: 40px;
+        }
+
+        li.uk-grid-margin.uk-first-column {
+            margin-top: 80px;
+        }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        li.uk-grid-margin.uk-first-column {
+            margin-top: 60px;
+        }
+
+        .uk-card-title {
+            font-size: 26px;
+        }
+
+        .uk-card-body {
+            ul {
+                margin: 0;
+            }
+
+            p {
+                margin-bottom: 15px;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .uk-card-media-left img {
+            max-width: 106px;
+        }
+
+        .nb-filter ul {
+            padding: 0;
+            flex-direction: column;
+
+            li {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .uk-button {
+                    max-width: 280px;
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                }
+
                 &:not(:first-of-type) {
-                    margin-left: 40px;
+                    margin-left: 0;
+                    margin-top: 20px;
                 }
             }
         }
     }
-
-    @media (min-width: $breakpointMedium) {
-        .uk-card-media-left {
-            min-height: 430px;
-        }
-    }
 }
-
-// .beach-filter {
-//     li {
-//         margin-bottom: 10px;
-
-//         &:not(:first-of-type) {
-//             margin-left: 20px;
-//         }
-
-//         .uk-button-default {
-//             background-color: $white;
-//             border-color: $blue;
-//             color: $blue;
-
-//             svg {
-//                 width: 20px;
-//                 height: 20px;
-//                 margin-right: 15px;
-//                 fill: $blue;
-//                 transition: $nbSec;
-//             }
-
-//             @include hover {
-//                 background-color: $blue;
-//                 color: $white;
-
-//                 svg {
-//                     fill: $white;
-//                 }
-//             }
-//         }
-
-//         &.uk-active .uk-button-default {
-//             background-color: $blue;
-//             border: 2px solid $blue;
-//             color: $white;
-
-//             svg {
-//                 fill: $white;
-//             }
-//         }
-//     }
-
-//     @media (min-width: $breakpointLarge) {
-//         li:not(:first-of-type) {
-//             margin-left: 40px;
-//         }
-//     }
-// }
