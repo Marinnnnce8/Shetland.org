@@ -1,6 +1,8 @@
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-    .uk-button, .map-card .uk-button-text {
+
+    .uk-button,
+    .map-card .uk-button-text {
 
         >span:last-of-type::after {
             display: none;
@@ -180,6 +182,16 @@ screen and (-ms-high-contrast: none) {
             left: 50%;
             top: 50%;
         }
+    }
+
+    .walk-filter .uk-button-text {
+        @include hover {
+            color: $blue-light;
+        }
+    }
+
+    .walk-list .uk-card {
+        height: 480px;
     }
 }
 

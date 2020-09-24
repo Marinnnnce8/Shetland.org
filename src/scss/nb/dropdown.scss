@@ -110,7 +110,7 @@
         }
     }
 
-    @media (max-width: $breakpointLarge) and (min-width: $breakpointMedium) {
+    @media (max-width: $breakpointMediumMax) and (min-width: $breakpointMedium) {
         &.blog {
             justify-content: flex-start;
         }

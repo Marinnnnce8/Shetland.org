@@ -17,11 +17,13 @@
         }
     }
 
-    .uk-input {
+    .uk-input:not(.uk-form-danger) {
         border: 2px solid rgba($blue, .1);
         border-radius: 50px;
         background-color: $gray-silk;
         min-height: 44px;
+        line-height: 40px;
+        padding: 0 40px 0 30px;
         width: 100%;
 
         @include placeholder {

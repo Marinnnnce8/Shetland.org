@@ -29,6 +29,10 @@
 	&.explore {
 		margin-bottom: 100px;
 
+		.banner-text {
+			max-width: 100%;
+		}
+
 		h2 {
 			font-size: 67px;
 		}
