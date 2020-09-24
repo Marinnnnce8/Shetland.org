@@ -95,7 +95,7 @@
         }
     }
 
-    @media (max-width: $breakpointTabletPortraitMax) {
+    @media (max-width: $breakpointXsmallMax) {
         &.events {
             flex-direction: column;
             border: 0;

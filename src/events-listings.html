@@ -187,7 +187,7 @@
 
         <div class="explore-section events uk-margin-small-top">
             <div class="uk-container uk-container-large">
-                <ul class="nb-dropdown uk-position-relative events uk-flex uk-flex-center uk-flex-middle uk-margin-small-bottom">
+                <ul class="nb-dropdown uk-visible@s uk-position-relative events uk-flex uk-flex-center uk-flex-middle uk-margin-small-bottom">
                     <li class="nb-filter uk-visible@l events uk-position-center-left">
                         <ul class="uk-list uk-flex uk-flex-middle uk-margin-remove-bottom" data-uk-switcher="connect: .switcher-container">
                             <li class="uk-margin-remove-bottom">
@@ -428,6 +428,296 @@
                                 <use xlink:href="./symbol/icons.svg#chevron-down-thin"></use>
                             </svg></button>
                         <div data-uk-dropdown="mode: click;boundary: .nb-dropdown; boundary-align: true;pos: bottom-justify"
+                            class="uk-margin-remove-top" id="dropdown-events-date">
+                            <button data-uk-toggle="target: #dropdown-events-date" class="dropdown-close-button"
+                                aria-label="Close dropdown menu">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#close"></use>
+                                </svg>
+                            </button>
+                            <ul class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
+                                data-uk-grid>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="all-events-dates"><input class='uk-checkbox'
+                                            type='checkbox' value="all-events-dates" id="all-events-dates"
+                                            name="all-events-dates">All
+                                        Dates
+                                        <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-dates-1276"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-dates-1276" id="events-dates-1276"
+                                            name="events-dates-1276">
+                                        2020 <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="events-dates-1271"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-dates-1271" id="events-dates-1271"
+                                            name="events-dates-1271">
+                                        2021 <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-dates-1275"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-dates-1275" id="events-dates-1275"
+                                            name="events-dates-1275">
+                                        2022 <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="events-dates-1272"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-dates-1272" id="events-dates-1272"
+                                            name="events-dates-1272">
+                                        2023 <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="uk-flex uk-flex-right uk-flex-middle map-select-btns">
+                                <button class="uk-button uk-button-text">
+                                    <img src="./img/button-text-link-small.svg" data-uk-svg alt="image">
+                                    <span>Clear all</span></button>
+                                <button type='button' class='uk-button uk-button-secondary'><span>Apply
+                                        now</span><span role="presentation"><img data-uk-svg
+                                            src="./img/button-arrow-right.svg" alt='image' /></span></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nb-dropdown uk-hidden@s uk-position-relative events uk-flex uk-flex-center uk-flex-middle uk-margin-small-bottom">
+                    <li><button class='label mob-boundary-1 medium alt uk-text-bold'><svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#area"></use>
+                            </svg>Areas<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#chevron-down-thin"></use>
+                            </svg></button>
+                        <div data-uk-dropdown="mode: click;boundary: .mob-boundary-1; boundary-align: true;pos: bottom-justify"
+                            class="uk-margin-remove-top" id="dropdown-events-area">
+                            <button data-uk-toggle="target: #dropdown-events-area" class="dropdown-close-button"
+                                aria-label="Close dropdown menu">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#close"></use>
+                                </svg>
+                            </button>
+                            <ul class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
+                                data-uk-grid>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="all-events-areas"><input class='uk-checkbox'
+                                            type='checkbox' value="all-events-areas" id="all-events-areas"
+                                            name="all-events-areas">All
+                                        Areas
+                                        <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-area-1276"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1276" id="events-area-1276"
+                                            name="events-area-1276">
+                                        South Mainland <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="events-area-1271"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1271" id="events-area-1271"
+                                            name="events-area-1271">
+                                        Unst <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-area-1275"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1275" id="events-area-1275"
+                                            name="events-area-1275">
+                                        Fetlar <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="events-area-1272"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1272" id="events-area-1272"
+                                            name="events-area-1272">
+                                        Yell <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin uk-first-column">
+                                    <label class="nb-checkbox bounce" for="events-area-1335">
+                                        <input type="checkbox" class="uk-checkbox" value="events-area-1335"
+                                            id="events-area-1335" name="events-area-1335">
+                                        Central Mainland <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin uk-first-column">
+                                    <label class="nb-checkbox bounce" for="events-area-1280">
+                                        <input type="checkbox" class="uk-checkbox" value="events-area-1280"
+                                            id="events-area-1280" name="events-area-1280">
+                                        Bressay & Noss <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-area-1285"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1285" id="events-area-1285"
+                                            name="events-area-1285">
+                                        Delting, Lunnasting & Nesting <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-area-1277"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1277" id="events-area-1277"
+                                            name="events-area-1277">
+                                        Westside <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-area-1284"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1284" id="events-area-1284"
+                                            name="events-area-1284">
+                                        Papa Stour <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-area-1278"> <input type="checkbox"
+                                            class="uk-checkbox" value="events-area-1278" id="events-area-1278"
+                                            name="events-area-1278">
+                                        Northmavine <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin uk-first-column">
+                                    <label class="nb-checkbox bounce" for="events-area-1282">
+                                        <input type="checkbox" class="uk-checkbox" value="events-area-1282"
+                                            id="events-area-1282" name="events-area-1282">
+                                        Skerries <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin uk-first-column">
+                                    <label class="nb-checkbox bounce" for="events-area-1283">
+                                        <input type="checkbox" class="uk-checkbox" value="events-area-1283"
+                                            id="events-area-1283" name="events-area-1283">
+                                        Fair Isle <svg viewBox="0 0 512 512">
+                                            <use xlink:href="./symbol/icons.svg#check"></use>
+                                        </svg>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="uk-flex uk-flex-right uk-flex-middle map-select-btns">
+                                <button class="uk-button uk-button-text">
+                                    <img src="./img/button-text-link-small.svg" data-uk-svg alt="image">
+                                    <span>Clear all</span></button>
+                                <button type='button' class='uk-button uk-button-secondary'><span>Apply
+                                        now</span><span role="presentation"><img data-uk-svg
+                                            src="./img/button-arrow-right.svg" alt='image' /></span></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li><button class='label mob-boundary-2 medium alt uk-text-bold'><svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#eye"></use>
+                            </svg>Interests<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#chevron-down-thin"></use>
+                            </svg></button>
+                        <div data-uk-dropdown="mode: click;boundary: .mob-boundary-2; boundary-align: true;pos: bottom-justify"
+                            class="uk-margin-remove-top" id="dropdown-events-interests">
+                            <button data-uk-toggle="target: #dropdown-events-interests" class="dropdown-close-button"
+                                aria-label="Close dropdown menu">
+                                <svg viewBox="0 0 512 512">
+                                    <use xlink:href="./symbol/icons.svg#close"></use>
+                                </svg>
+                            </button>
+                            <ul class="uk-nav uk-dropdown-nav uk-child-width-1-2@s uk-width-1-2@l uk-margin-auto"
+                                data-uk-grid>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="all-events-interests"><input
+                                            class='uk-checkbox' type='checkbox' value="all-events-interests"
+                                            id="all-events-interests" name="all-events-interests">All
+                                        Interests
+                                        <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-interests-1276"> <input
+                                            type="checkbox" class="uk-checkbox" value="events-interests-1276"
+                                            id="events-interests-1276" name="events-interests-1276">
+                                        South Mainland <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="events-interests-1271"> <input
+                                            type="checkbox" class="uk-checkbox" value="events-interests-1271"
+                                            id="events-interests-1271" name="events-interests-1271">
+                                        Unst <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li class="uk-grid-margin">
+                                    <label class="nb-checkbox bounce" for="events-interests-1275"> <input
+                                            type="checkbox" class="uk-checkbox" value="events-interests-1275"
+                                            id="events-interests-1275" name="events-interests-1275">
+                                        Fetlar <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="nb-checkbox bounce" for="events-interests-1272"> <input
+                                            type="checkbox" class="uk-checkbox" value="events-interests-1272"
+                                            id="events-interests-1272" name="events-interests-1272">
+                                        Yell <svg viewBox="0 0 21 21">
+                                            <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                        </svg>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="uk-flex uk-flex-right uk-flex-middle map-select-btns">
+                                <button class="uk-button uk-button-text">
+                                    <img src="./img/button-text-link-small.svg" data-uk-svg alt="image">
+                                    <span>Clear all</span></button>
+                                <button type='button' class='uk-button uk-button-secondary'><span>Apply
+                                        now</span><span role="presentation"><img data-uk-svg
+                                            src="./img/button-arrow-right.svg" alt='image' /></span></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li><button class='label mob-boundary-3 medium alt uk-text-bold'><svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#calendar"></use>
+                            </svg>Date<svg viewBox="0 0 512 512">
+                                <use xlink:href="./symbol/icons.svg#chevron-down-thin"></use>
+                            </svg></button>
+                        <div data-uk-dropdown="mode: click;boundary: .mob-boundary-3; boundary-align: true;pos: bottom-justify"
                             class="uk-margin-remove-top" id="dropdown-events-date">
                             <button data-uk-toggle="target: #dropdown-events-date" class="dropdown-close-button"
                                 aria-label="Close dropdown menu">
