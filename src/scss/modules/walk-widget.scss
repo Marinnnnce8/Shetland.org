@@ -4,13 +4,9 @@
     background-color: $turquise-light;
     position: relative;
 
-    .uk-button-large {
+    .select-walk-wrap .uk-button-large {
         border-radius: 28px;
         border: 2px solid $blue;
-        height: 50px;
-        width: 50px;
-        padding: 0;
-        // top: 19px;
         transition: 256ms ease-in-out;
 
         svg {
@@ -22,15 +18,6 @@
             right: 36px;
             transform: translateY(-50%);
             transition: $nbSec ease-in-out;
-        }
-
-        @include hover {
-            border-color: #08455c;
-
-            // svg {
-            //     color: #08455c;
-            //     fill: #08455c;
-            // }
         }
     }
 
@@ -284,33 +271,6 @@
 
     .select-btns {
         padding: 20px 35px 0;
-
-        // .uk-button-text {
-        //     min-height: 38px;
-        //     padding: 0 23px;
-
-        //     svg {
-        //         width: 100px;
-        //     }
-
-        //     .shape {
-        //         width: 100px;
-        //         stroke-dasharray: 58 402;
-        //         stroke-dashoffset: -584;
-        //     }
-
-        //     >span {
-        //         display: flex;
-        //         flex-direction: row-reverse;
-        //         align-items: center;
-        //         font-weight: $bold;
-        //         margin-left: 0;
-
-        //         &::after {
-        //             display: none;
-        //         }
-        //     }
-        // }
     }
 
     @media (min-width: $breakpointSmall) {
@@ -659,19 +619,6 @@
 
         .label {
             line-height: 1.7em;
-        }
-    }
-
-    .uk-button {
-        background-color: $blue;
-        color: $white;
-        border-color: $blue;
-        width: auto;
-        padding: 16px 30px;
-
-        @include hover {
-            background-color: transparent;
-            color: $blue;
         }
     }
 
