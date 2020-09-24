@@ -52,12 +52,27 @@
 
                 a {
                     color: inherit;
+                    display: inline-block;
+                    width: auto;
+
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        content: '';
+                        height: 2px;
+                        background-color: $green-pastel;
+                        opacity: 1;
+                        transition: $nbSec ease-in-out;
+                        left: 37px;
+                        bottom: 0;
+                        width: calc(100% - 36px);
+                    }
 
                     @include hover {
-                        color: $blue-light;
+                        color: $turquise;
 
-                        svg {
-                            fill: $blue-light;
+                        &::after {
+                            opacity: 1;
                         }
                     }
                 }
@@ -116,6 +131,10 @@
             li {
                 &:not(:last-of-type) {
                     margin-right: 30px;
+                }
+
+                &.label a::after {
+                    opacity: 0;
                 }
             }
         }
