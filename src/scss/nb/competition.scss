@@ -1,7 +1,46 @@
+.nb-competition {
+    margin: 120px 0 100px;
+
+    h2 {
+        margin: 15px 0 0;
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        margin: 130px 0 120px;
+
+        h2 {
+            margin: 15px 0 45px;
+        }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        margin: 0 0 140px;
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+
+        .uk-text-large,
+        h2 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .uk-text-large {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        >.uk-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
 .competition-box {
     background-color: $white-flag;
-    margin: 120px auto 0;
-    padding: 0 117px 75px;
+    margin: 95px auto 0;
+    padding: 0 20px 65px;
     max-width: 1126px;
 
     p:last-of-type {
@@ -10,5 +49,26 @@
 
     img {
         margin-top: -75px;
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        padding: 0 43px 75px;
+        margin: 110px auto 0;
+    }
+
+    @media (min-width: $breakpointMedium) {
+        padding: 0 117px 75px;
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        .uk-text-large {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) {
+        img {
+            border: 4px solid $white-flag;
+        }
     }
 }

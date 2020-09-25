@@ -7,30 +7,96 @@
         display: inline-block;
     }
 
+    .explore-wrap:not(:first-of-type) {
+        margin-top: 80px;
+    }
+
+    &.home h2 {
+        margin: 15px 0 35px;
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        .explore-wrap:not(:first-of-type) {
+            margin-top: 115px;
+        }
+
+        &.home h2 {
+            margin: 40px 0 70px;
+        }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        .explore-wrap:not(:first-of-type) {
+            margin-top: 40px;
+        }
+
+        &.home h2 {
+            margin: 10px 0 70px;
+        }
+    }
+
     @media (max-width: $breakpointMediumMax) {
         &.events .uk-container:first-of-type {
             padding: 0;
         }
     }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        &.home h2 {
+            font-size: 26px;
+        }
+    }
 }
 
 .explore-wrap {
+
+    >.uk-grid>div:nth-of-type(odd) .uk-card-media-top {
+        right: 0;
+    }
+
     .uk-card {
 
         &.large,
         &.medium,
         &.small {
-            padding-top: 210px;
+            padding-top: 200px;
 
             .uk-card-media-top {
-                height: 210px;
+                height: 200px;
             }
+        }
+
+        &.right {
+            left: 0;
+        }
+
+        &.left {
+            right: 0;
         }
 
         .uk-card-media-top {
             position: absolute;
-            width: 100%;
+            width: calc(100vw - 20px);
             top: 0;
+        }
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        .uk-card {
+
+            &.large,
+            &.medium,
+            &.small {
+                padding-top: 487px;
+
+                .uk-card-media-top {
+                    height: 487px;
+                }
+            }
+
+            .uk-card-media-top {
+                width: calc(100vw - 60px);
+            }
         }
     }
 
@@ -38,7 +104,10 @@
         padding-bottom: 40px;
 
         &:nth-of-type(2) {
+            position: relative;
+
             .uk-grid>div {
+
                 &:first-of-type {
                     order: 2;
                 }
@@ -67,10 +136,6 @@
             }
 
             &.right {
-
-                .uk-card-body {
-                    padding-right: 80px;
-                }
 
                 .uk-card-media-top {
                     left: 0;
@@ -107,73 +172,27 @@
                     height: 440px;
                 }
             }
+
+            .uk-card-media-top {
+                width: 100%;
+            }
         }
     }
 
     @media (max-width: $breakpointSmallMax) {
 
-        &:nth-of-type(2) {
-            .uk-grid>div {
-                position: relative;
-
-                &:first-of-type,
-                &:nth-of-type(2) {
-                    right: -30px;
-                }
-            }
-        }
-
-        .uk-first-column:first-of-type .explore-item,
-        .uk-first-column:last-of-type .explore-item {
-            left: 30px;
-        }
-
-        .uk-card {
-            &.right {
-                left: 30px;
-            }
-
-            &.left {
-                right: 30px;
-
-                .uk-card-body {
-                    padding-left: 60px;
-                }
-            }
+        .uk-grid-medium>.uk-grid-margin {
+            margin-top: 60px;
         }
     }
 
-    @media (max-width: $breakpointXsmallMax) {
-
-        &:nth-of-type(2) {
-            .uk-grid>div {
-                position: relative;
-
-                &:first-of-type,
-                &:nth-of-type(2) {
-                    right: -10px;
-                }
-            }
+    @media (max-width: $breakpointTabletPortraitMax) {
+        .uk-card-title {
+            font-size: 26px;
         }
 
-        .uk-first-column:first-of-type .explore-item,
-        .uk-first-column:last-of-type .explore-item {
-            left: 10px;
-        }
-
-        .uk-card {
-
-            &.right {
-                left: 10px;
-            }
-
-            &.left {
-                right: 10px;
-
-                .uk-card-body {
-                    padding-left: 20px;
-                }
-            }
+        .explore-item .uk-card-body .label {
+            margin: 17px 0 10px;
         }
     }
 }

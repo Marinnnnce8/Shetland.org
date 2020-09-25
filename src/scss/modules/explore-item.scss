@@ -108,10 +108,10 @@
 
     .uk-button-text {
         display: inline-block;
-        font-size: 28px;
+        font-size: 21px;
         line-height: 1.3em;
         font-weight: normal;
-        margin-top: 30px;
+        margin-top: 20px;
         padding: 0;
         color: $blue-explore;
 
@@ -173,6 +173,13 @@
             svg {
                 left: 18px;
             }
+        }
+    }
+
+    @media (min-width: $breakpointTabletPortrait) {
+        .uk-button-text {
+            margin-top: 40px;
+            font-size: 28px;
         }
     }
 

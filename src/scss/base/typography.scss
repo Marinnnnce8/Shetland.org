@@ -58,11 +58,15 @@ h6 {
 }
 
 .hero-title {
-	font-size: 74px;
+	font-size: 44px;
 	line-height: 1.1em;
 	color: $blue;
 	font-family: $font-recoleta;
 	margin-bottom: 25px;
+
+	@media (min-width: $breakpointTabletPortrait) {
+		font-size: 74px;
+	}
 }
 
 .uk-card-title {

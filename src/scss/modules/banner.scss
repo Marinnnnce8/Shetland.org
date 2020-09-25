@@ -72,6 +72,85 @@
 	@media (min-width: $breakpointLarge) {
 		padding: 0 40px;
 	}
+
+	@media (max-width: $breakpointMediumMax) {
+		&.explore {
+			padding: 0 60px;
+
+			.banner-inner {
+				padding-top: 410px;
+
+				>.uk-position-cover {
+					bottom: auto;
+					height: 410px;
+				}
+			}
+
+			h2,
+			p {
+				color: $white;
+			}
+
+			h2 {
+				font-size: 44px;
+			}
+
+			.uk-button {
+				background-color: $white;
+
+				>span {
+					color: $blue;
+
+					&:last-of-type {
+						&::after {
+							background-color: $blue;
+						}
+
+						.uk-svg,
+						.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+							fill: $blue;
+						}
+					}
+				}
+			}
+
+			.banner-text {
+				background-color: $blue;
+				padding: 58px 58px 75px;
+			}
+		}
+	}
+
+	@media (max-width: $breakpointTabletPortraitMax) {
+		&.explore {
+			padding: 0;
+
+			.banner-inner {
+				padding-top: 174px;
+
+				>.uk-position-cover {
+					bottom: auto;
+					height: 174px;
+				}
+			}
+
+			.banner-text {
+				padding: 42px 20px 58px;
+			}
+
+			h2 {
+				font-size: 34px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+
+			.uk-button-large {
+				padding: 18px 45px 18px 40px;
+			}
+		}
+	}
 }
 
 .banner-inner {
@@ -141,11 +220,17 @@
 		}
 	}
 
+	@media (min-width: $breakpointMedium) {
+		h1 {
+			font-size: 74px;
+		}
+	}
+
 	@media (min-width: $breakpointTabletPortrait) {
 		padding: 30px 60px 45px;
 
 		h1 {
-			font-size: 74px;
+			font-size: 67px;
 			margin: 23px 0 25px;
 		}
 
@@ -163,6 +248,13 @@
 
 		h1 {
 			margin: 15px 0 25px;
+		}
+	}
+
+	@media (max-width: $breakpointXsmallMax) {
+		.label {
+			font-size: 16px;
+			max-width: 130px;
 		}
 	}
 }
