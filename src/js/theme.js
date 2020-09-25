@@ -10,7 +10,7 @@ var theme = {
 	init: function() {
 		this.blocks();
 		var percentNumber = document.getElementsByClassName('percent-num')[0];
-		var bannerVideo = document.getElementsByClassName('banner-video')[0];
+		// var bannerVideo = document.getElementsByClassName('banner-video')[0];
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
 		var navToggleButton = document.getElementsByClassName('js-navbar-toggle')[0];
 		var printButton = document.getElementsByClassName('js-print-button')[0];
@@ -22,11 +22,11 @@ var theme = {
 			this.addMultiListener(window, 'load scroll', this.scrollPercentage);
 		}
 
-		if(bannerVideo) {
-			this.addMultiListener(window, 'load scroll', this.ifVideoIsPlaying);
-			this.videoPlayToggle();
-			this.videoSoundToggle();
-		}
+		// if(bannerVideo) {
+		// 	this.addMultiListener(window, 'load scroll', this.ifVideoIsPlaying);
+		// 	this.videoPlayToggle();
+		// 	this.videoSoundToggle();
+		// }
 
 		if(campaignSlider) {
 			this.addMultiListener(window, 'load resize', theme.campaignItemSetHeight);
@@ -43,10 +43,6 @@ var theme = {
 		if(navAligned) {
 			this.addMultiListener(window, 'load resize', this.alignNavLinks);
 		}
-
-		// if(downloadButton) {
-		// 	this.downloadButtonEvent();
-		// }
 		
 	},
 
@@ -160,57 +156,57 @@ var theme = {
 	},
 
 	//toggle video button class depending on video pause/play
-	ifVideoIsPlaying: function() {
-		var playToggleBtn = document.getElementsByClassName('js-button-video')[0];
-		var bannerVideo = document.getElementsByClassName('banner-video')[0];
-		var isPlaying = bannerVideo.currentTime > 0 && !bannerVideo.paused && !bannerVideo.ended && bannerVideo.readyState > 2;
+	// ifVideoIsPlaying: function() {
+	// 	var playToggleBtn = document.getElementsByClassName('js-button-video')[0];
+	// 	var bannerVideo = document.getElementsByClassName('banner-video')[0];
+	// 	var isPlaying = bannerVideo.currentTime > 0 && !bannerVideo.paused && !bannerVideo.ended && bannerVideo.readyState > 2;
 
-		if(isPlaying){
-			playToggleBtn.setAttribute('aria-label', 'Pause');
-			playToggleBtn.classList.add('button-video-active');
-		}else {
-			playToggleBtn.setAttribute('aria-label', 'Play');
-			playToggleBtn.classList.remove('button-video-active');
-		}
-	},
+	// 	if(isPlaying){
+	// 		playToggleBtn.setAttribute('aria-label', 'Pause');
+	// 		playToggleBtn.classList.add('button-video-active');
+	// 	}else {
+	// 		playToggleBtn.setAttribute('aria-label', 'Play');
+	// 		playToggleBtn.classList.remove('button-video-active');
+	// 	}
+	// },
 
 	//toggle video
-	videoPlayToggle: function() {
+	// videoPlayToggle: function() {
 
-		var playToggleBtn = document.getElementsByClassName('js-button-video')[0];
-		var bannerVideo = document.getElementsByClassName('banner-video')[0];
+	// 	var playToggleBtn = document.getElementsByClassName('js-button-video')[0];
+	// 	var bannerVideo = document.getElementsByClassName('banner-video')[0];
 
-		playToggleBtn.addEventListener('click', function() {
+	// 	playToggleBtn.addEventListener('click', function() {
 
-			if(bannerVideo.paused) {
-				bannerVideo.play();
-				this.setAttribute('aria-label', 'Pause');
-				this.classList.add('button-video-active');
-			}else {
-				bannerVideo.pause();
-				this.setAttribute('aria-label', 'Play');
-				this.classList.remove('button-video-active');
-			}
-		});
-	},
+	// 		if(bannerVideo.paused) {
+	// 			bannerVideo.play();
+	// 			this.setAttribute('aria-label', 'Pause');
+	// 			this.classList.add('button-video-active');
+	// 		}else {
+	// 			bannerVideo.pause();
+	// 			this.setAttribute('aria-label', 'Play');
+	// 			this.classList.remove('button-video-active');
+	// 		}
+	// 	});
+	// },
 
 	//toggle video sound
-	videoSoundToggle: function() {
-		var soundToggleBtn = document.getElementsByClassName('js-button-sound')[0];
-		var bannerVideo = document.getElementsByClassName('banner-video')[0];
+	// videoSoundToggle: function() {
+	// 	var soundToggleBtn = document.getElementsByClassName('js-button-sound')[0];
+	// 	var bannerVideo = document.getElementsByClassName('banner-video')[0];
 
-		soundToggleBtn.addEventListener('click', function() {
-			if(bannerVideo.muted) {
-				bannerVideo.muted = false;
-				this.setAttribute('aria-label', 'Mute');
-				this.classList.add('button-sound-active');
-			}else {
-				bannerVideo.muted = true;
-				this.setAttribute('aria-label', 'Unmute');
-				this.classList.remove('button-sound-active');
-			}
-		});
-	},
+	// 	soundToggleBtn.addEventListener('click', function() {
+	// 		if(bannerVideo.muted) {
+	// 			bannerVideo.muted = false;
+	// 			this.setAttribute('aria-label', 'Mute');
+	// 			this.classList.add('button-sound-active');
+	// 		}else {
+	// 			bannerVideo.muted = true;
+	// 			this.setAttribute('aria-label', 'Unmute');
+	// 			this.classList.remove('button-sound-active');
+	// 		}
+	// 	});
+	// },
 
 	//set campaign slider item height equal to width 
 	campaignItemSetHeight: function() {
@@ -277,94 +273,6 @@ var theme = {
 			return;
 		}
 	}
-
-	// downloadButtonEvent: function() {
-	// 	document.querySelectorAll('.download-button').forEach(button => {
-
-	// 		let duration = 3000,
-	// 			svg = button.querySelector('svg'),
-	// 			svgPath = new Proxy({
-	// 				y: null,
-	// 				smoothing: null
-	// 			}, {
-	// 				set(target, key, value) {
-	// 					target[key] = value;
-	// 					if(target.y !== null && target.smoothing !== null) {
-	// 						svg.innerHTML = getPath(target.y, target.smoothing, null);
-	// 					}
-	// 					return true;
-	// 				},
-	// 				get(target, key) {
-	// 					return target[key];
-	// 				}
-	// 			});
-		
-	// 		button.style.setProperty('--duration', duration);
-		
-	// 		svgPath.y = 20;
-	// 		svgPath.smoothing = 0;
-		
-	// 		button.addEventListener('click', e => {
-				
-	// 			// e.preventDefault();
-		
-	// 			if(!button.classList.contains('loading')) {
-		
-	// 				button.classList.add('loading');
-		
-	// 				gsap.to(svgPath, {
-	// 					smoothing: .3,
-	// 					duration: duration * .065 / 1000
-	// 				});
-		
-	// 				gsap.to(svgPath, {
-	// 					y: 12,
-	// 					duration: duration * .265 / 1000,
-	// 					delay: duration * .065 / 1000,
-	// 					ease: Elastic.easeOut.config(1.12, .4)
-	// 				});
-		
-	// 				setTimeout(() => {
-	// 					svg.innerHTML = getPath(0, 0, [
-	// 						[3, 14],
-	// 						[8, 19],
-	// 						[21, 6]
-	// 					]);
-	// 				}, duration / 2);
-		
-	// 			}
-		
-	// 		});
-		
-	// 	});
-		
-	// 	function getPoint(point, i, a, smoothing) {
-	// 		let cp = (current, previous, next, reverse) => {
-	// 				let p = previous || current,
-	// 					n = next || current,
-	// 					o = {
-	// 						length: Math.sqrt(Math.pow(n[0] - p[0], 2) + Math.pow(n[1] - p[1], 2)),
-	// 						angle: Math.atan2(n[1] - p[1], n[0] - p[0])
-	// 					},
-	// 					angle = o.angle + (reverse ? Math.PI : 0),
-	// 					length = o.length * smoothing;
-	// 				return [current[0] + Math.cos(angle) * length, current[1] + Math.sin(angle) * length];
-	// 			},
-	// 			cps = cp(a[i - 1], a[i - 2], point, false),
-	// 			cpe = cp(point, a[i - 1], a[i + 1], true);
-	// 		return `C ${cps[0]},${cps[1]} ${cpe[0]},${cpe[1]} ${point[0]},${point[1]}`;
-	// 	}
-		
-	// 	function getPath(update, smoothing, pointsNew) {
-	// 		let points = pointsNew ? pointsNew : [
-	// 				[4, 12],
-	// 				[12, update],
-	// 				[20, 12]
-	// 			],
-	// 			d = points.reduce((acc, point, i, a) => i === 0 ? `M ${point[0]},${point[1]}` : `${acc} ${getPoint(point, i, a, smoothing)}`, '');
-	// 		return `<path d="${d}" />`;
-	// 	}
-	// }
 };
 
 $uk.ready(function() {

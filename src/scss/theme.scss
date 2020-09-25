@@ -91,13 +91,25 @@
 		height: auto;
 		// width: 150px;
 		width: 100%;
+
+		&:last-of-type {
+			display: none;
+		}
 	}
 
-	// @media (min-width: $breakpointMedium) {
-	// 	img {
-	// 		width: 100%;
-	// 	}
-	// }
+	@media (max-width: $breakpointTabletPortraitMax) {
+		img {
+			width: 100%;
+
+			&:first-of-type {
+				display: none;
+			}
+
+			&:last-of-type {
+				display: block;
+			}
+		}
+	}
 }
 
 // uikit/tooltip
