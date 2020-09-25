@@ -2,6 +2,10 @@
     padding-left: 0;
     margin: 0;
 
+    .uk-grid>* {
+        padding-left: 0;
+    }
+
     &.events {
         border-top: 1px solid $gray-warm-alt;
         border-bottom: 1px solid $gray-warm-alt;
@@ -90,12 +94,14 @@
     }
 
     @media (min-width: $breakpointTabletPortrait) {
+
         .uk-dropdown {
             padding: 50px 40px 40px;
         }
     }
 
     @media (max-width: $breakpointXsmallMax) {
+
         &.events {
             flex-direction: column;
             border: 0;
@@ -132,6 +138,18 @@
         &:not(.events)>li {
             max-width: 160px;
             width: 100%;
+        }
+    }
+
+    @media (max-width: $breakpointMobileMin) {
+        &.events .uk-dropdown .uk-flex-right {
+            flex-direction: column;
+            align-items: flex-start;
+
+            button:last-of-type {
+                margin-top: 15px;
+                margin-left: 0;
+            }
         }
     }
 }

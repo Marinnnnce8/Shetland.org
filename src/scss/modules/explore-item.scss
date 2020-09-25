@@ -32,7 +32,29 @@
 
             a {
                 max-width: 100%;
+                position: relative;
                 @include text-truncate;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    height: 2px;
+                    background-color: $green-pastel;
+                    opacity: 1;
+                    transition: $nbSec ease-in-out;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+
+                @include hover {
+                    color: $turquise;
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
             }
 
             .label {
@@ -151,6 +173,12 @@
             svg {
                 left: 18px;
             }
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        .uk-card-body>.uk-list a::after {
+            opacity: 0;
         }
     }
 }
