@@ -16,8 +16,29 @@
             position: absolute;
             top: 50%;
             right: 36px;
-            transform: translateY(-50%);
             transition: $nbSec ease-in-out;
+
+            &:first-of-type {
+                transform: translateY(calc(-50% - 5px));
+            }
+
+            &:last-of-type {
+                transform: translateY(calc(-50% + 5px));
+            }
+        }
+
+        @include hover {
+            svg {
+                fill: $blue-light;
+
+                &:first-of-type {
+                    transform: translateY(calc(-50% - 6px));
+                }
+
+                &:last-of-type {
+                    transform: translateY(calc(-50% + 6px));
+                }
+            }
         }
     }
 
