@@ -15,7 +15,7 @@
             height: 18px;
             position: absolute;
             top: 50%;
-            right: 36px;
+            right: 23px;
             transition: $nbSec ease-in-out;
 
             &:first-of-type {
@@ -29,8 +29,6 @@
 
         @include hover {
             svg {
-                fill: $blue-light;
-
                 &:first-of-type {
                     transform: translateY(calc(-50% - 6px));
                 }
@@ -77,8 +75,6 @@
 
 /* Walk bottom with text */
 .walk-bottom {
-    padding-top: 15px;
-
     span {
         display: block;
         font-weight: normal;
@@ -87,37 +83,25 @@
             display: inline-block;
         }
     }
-
-    @media (max-width: $breakpointSmall) {
-        span {
-            font-size: 16px;
-        }
-    }
 }
 
 
 /* Walk search */
 .walk-search {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 
-    @media (max-width: $breakpointLarge) {
-        >.uk-container {
-            padding-left: 60px;
-            padding-right: 60px;
-        }
+    @media (min-width: $breakpointSmall) {
+        padding-bottom: 40px;
     }
 
-    @media (max-width: 767px) {
-        >.uk-container {
-            padding-left: 35px;
-            padding-right: 35px;
-        }
+    @media (min-width: $breakpointLarge) {
+        padding-bottom: 20px;
     }
 }
 
 /* Walk forms */
 .walk-forms {
-    padding: 20px 0 50px;
+    padding: 20px 0 30px;
 
     >.uk-grid {
         margin-left: -30px;
@@ -178,13 +162,13 @@
             box-shadow: 0 5px 12px rgba($black, .15);
             position: relative;
 
-            >span {
+            >span[role='presentation'] {
                 opacity: 1;
                 transition: 0s;
             }
         }
 
-        >span {
+        >span[role='presentation'] {
             opacity: 0;
             background-color: $white;
             border-left: 2px solid $blue;
@@ -242,9 +226,7 @@
         background-color: $white;
         padding: 11px 0 20px;
         box-shadow: 0 10px 12px rgba($black, .15);
-        max-width: calc(100% - 20px);
         border: 2px solid $blue;
-        min-width: 373px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         border-top-right-radius: 20px;
@@ -274,6 +256,7 @@
         padding: 8px 20px 5px 29px;
         position: relative;
         align-items: center;
+        text-align: left;
 
         >span {
             position: absolute;
@@ -291,40 +274,34 @@
     }
 
     .select-btns {
-        padding: 20px 35px 0;
+        padding: 20px 15px 0;
+        justify-content: space-between;
     }
 
     @media (min-width: $breakpointSmall) {
+        padding: 20px 0 40px;
+
         .uk-button-secondary {
             margin-left: 20px;
         }
+
+        .select-btns {
+            padding: 20px 35px 0;
+        }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 20px 0 60px;
     }
 
     @media (max-width: $breakpointLarge) {
-        >.uk-grid {
-            margin-left: -10px;
-
-            >* {
-                padding-left: 10px;
-            }
-        }
-
-        .uk-button {
-            font-size: 15px;
-
-            &::after {
-                right: 20px;
-            }
-        }
-
-        .uk-dropdown {
-            max-width: 100%;
+        .uk-button>span:not([role='presentation']) {
+            width: 100%;
+            @include text-truncate;
         }
     }
 
-    @media (max-width: 767px) {
-        padding: 20px 0 35px;
-
+    @media (max-width: $breakpointTabletPortraitMax) {
         >.uk-grid {
             flex-direction: column;
             margin-left: 0;
@@ -342,28 +319,27 @@
         }
 
         .uk-button {
-            padding: 13px 25px 15px 60px;
 
-            &::after {
-                right: 17px;
+            >span[role='presentation'] {
+                display: none;
             }
 
-            span {
-                display: none;
+            &.uk-open {
+                border-bottom-color: transparent;
             }
         }
 
         .uk-dropdown {
             min-width: auto;
-            // border-top: 1px solid #e0dbe4;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             margin-top: 0;
+            border-top: 0;
 
-            label {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+            label,
+            .sort-button {
+                @include text-truncate;
+                display: block;
             }
         }
 
@@ -423,17 +399,12 @@
         }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: $breakpointTabletPortraitMax) {
         &:last-of-type .uk-dropdown {
             border-top-left-radius: 0;
         }
     }
 }
-
-/* Walk section */
-// .walk-section {
-//     background-color: #b2e0f1;
-// }
 
 /* Walk results */
 .walk-results {
@@ -461,7 +432,7 @@
         padding-left: 0;
 
         li {
-            margin-bottom: 7px;
+            margin-bottom: 10px;
             // display: none;
             display: block;
 
@@ -469,7 +440,6 @@
                 margin-right: 10px;
 
                 button {
-                    @include text-truncate;
                     position: relative;
                     padding: 9px 45px 9px 23px;
                     border-color: $blue;
@@ -499,16 +469,11 @@
 
     @media (max-width: $breakpointLarge) {
         ul li:not(:last-of-type) button {
-            padding: 10px 13px 10px 25px;
             max-width: 280px;
         }
     }
 
-    @media (max-width: 767px) {
-        span {
-            font-size: 16px;
-        }
-
+    @media (max-width: $breakpointTabletPortraitMax) {
         li {
             &:last-of-type {
                 display: flex;
@@ -517,19 +482,23 @@
                 justify-content: center;
                 margin-top: 10px;
             }
-
-            button {
-                font-size: 13px;
-            }
         }
     }
 }
 
 /* Walk list */
 .walk-list {
+    .uk-button-secondary {
+        margin-top: 30px;
+    }
+
+    *+.uk-grid-margin,
+    .uk-grid+.uk-grid,
+    .uk-grid>.uk-grid-margin {
+        margin-top: 20px;
+    }
 
     .walk-item {
-        margin-bottom: 40px;
 
         &:not(:nth-of-type(-n + 4)) {
             display: none;
@@ -609,7 +578,7 @@
 
     .uk-card-body {
         background-color: $white;
-        padding: 20px 22px 13px 25px;
+        padding: 20px 20px 22px;
     }
 
     .uk-card-title {
@@ -643,24 +612,43 @@
         }
     }
 
-    @media (max-width: $breakpointLarge) {
-        >.uk-container {
-            padding-left: 60px;
-            padding-right: 60px;
+    @media (min-width: $breakpointSmall) {
+        .uk-grid {
+            margin-left: -40px;
+
+            >* {
+                padding-left: 40px;
+            }
+        }
+
+        *+.uk-grid-margin,
+        .uk-grid+.uk-grid,
+        .uk-grid>.uk-grid-margin {
+            margin-top: 40px;
+        }
+
+        .uk-card-body {
+            padding: 20px 22px 23px 20px;
+        }
+
+        .uk-button-secondary {
+            margin-top: 50px;
         }
     }
 
-    @media (max-width: 767px) {
-        padding: 40px 0 75px;
-
-        .walk-item {
-            margin-bottom: 20px;
+    @media (min-width: $breakpointLarge) {
+        .uk-button-secondary {
+            margin-top: 30px;
         }
 
-        >.uk-container {
-            padding-left: 30px;
-            padding-right: 30px;
+        .uk-card-body {
+            background-color: $white;
+            padding: 25px 25px 27px 22px;
         }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+        padding: 0 0 75px;
 
         .uk-card-body {
             padding: 30px 23px 28px 15px;
