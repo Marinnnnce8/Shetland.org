@@ -113,7 +113,7 @@
         font-weight: normal;
         margin-top: 20px;
         padding: 0;
-        color: $blue-explore;
+        color: $blue-light;
 
         &::after {
             position: absolute;
@@ -122,17 +122,17 @@
             height: 4px;
             top: -10px;
             left: 0;
-            background-color: $blue-explore;
+            background-color: $blue-light;
         }
 
         >span:last-of-type {
             &::after {
-                background-color: $blue-explore;
+                background-color: $blue-light;
             }
 
             .uk-svg,
             .uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
-                fill: $blue-explore;
+                fill: $blue-light;
             }
         }
 

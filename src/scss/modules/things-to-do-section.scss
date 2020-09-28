@@ -1,43 +1,45 @@
 .things-to-do-section {
-    padding: 70px 0;
+    padding: 10px 0 100px;
+
+    @media (min-width: $breakpointSmall) {
+        padding: 20px 0 100px;
+    }
+
+    @media (min-width: $breakpointLarge) {
+        padding: 70px 0 100px;
+    }
 }
 
 .things-to-do-wrap {
-    min-height: 430px;
-
-    &:not(:last-of-type) {
-        margin-bottom: 30px;
-    }
-
-    //first option solution
-    // &:nth-of-type(odd) {
-    //     .uk-grid {
-    //         justify-content: flex-end;
-    //     }
-    // }
-
-    // &:nth-of-type(even) {
-    //     .uk-grid {
-    //         justify-content: flex-start;
-    //     }
-    // }
-
-    //second option solution
-    &:nth-of-type(odd) {
-        padding-right: 110px;
-    }
-
-    &:nth-of-type(even) {
-        padding-left: 110px;
+    .image-card {
+        min-height: 407px;
     }
 
     .uk-grid {
         justify-content: flex-start;
     }
 
-    @media (min-width: $breakpointLarge) {
+    @media (min-width: $breakpointSmall) {
+        .image-card {
+            min-height: 344px;
+        }
+    }
+
+    @media (min-width: $breakpointMedium) {
+        &:nth-of-type(odd) {
+            padding-right: 80px;
+        }
+
+        &:nth-of-type(even) {
+            padding-left: 80px;
+        }
+
         &:not(:last-of-type) {
-            margin-bottom: 80px;
+            margin-bottom: 40px;
+        }
+
+        .image-card {
+            min-height: 430px;
         }
 
         .uk-grid-column-medium,
@@ -47,5 +49,74 @@
                 padding-left: 0;
             }
         }
+    }
+
+    @media (min-width: $breakpointLarge) {
+        &:nth-of-type(odd) {
+            padding-right: 110px;
+        }
+
+        &:nth-of-type(even) {
+            padding-left: 110px;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 80px;
+        }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) and (min-width: $breakpointSmall) {
+        >.uk-grid>div {
+            &:nth-of-type(odd) {
+                padding-right: 60px;
+            }
+
+            &:nth-of-type(even) {
+                padding-left: 80px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) and (min-width: $breakpointTabletPortrait) {
+        >.uk-grid>div {
+            &:nth-of-type(odd) {
+                padding-right: 60px;
+            }
+
+            &:nth-of-type(even) {
+                padding-left: 100px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointSmallMax) and (min-width: $breakpointTabletPortraitMax) {
+        >.uk-grid>div {
+            &:nth-of-type(odd) {
+                padding-bottom: 20px;
+            }
+
+            &:nth-of-type(even) {
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointTabletPortraitMax) {
+
+        >.uk-grid>div {
+
+            &:nth-of-type(odd) {
+                padding-bottom: 0;
+            }
+
+            &:nth-of-type(even) {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    @media (max-width: $breakpointXsmallMax) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

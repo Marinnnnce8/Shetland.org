@@ -152,8 +152,12 @@ label,
 .uk-text-lead {
 	font-family: $font-default;
 	color: $blue;
-	font-size: 28px;
+	font-size: 21px;
 	line-height: 1.7em;
+
+	@media (min-width: $breakpointMedium) {
+		font-size: 28px;
+	}
 }
 
 .nb-capital-letter {
