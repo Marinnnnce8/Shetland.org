@@ -1,0 +1,218 @@
+.mega-menu {
+	&:not(:first-of-type) {
+		margin-left: 20px;
+	}
+
+	>button,
+	>a.label {
+		padding-bottom: 22px;
+		position: relative;
+
+		&:not(a)::after {
+			position: absolute;
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 5px 0 5px;
+			left: 0;
+			right: 0;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: $nbSec;
+		}
+
+		&.green::after {
+			border-color: $green-pastel transparent transparent;
+		}
+
+		&.blue::after {
+			border-color: $blue-navy transparent transparent;
+		}
+
+		&.yellow::after {
+			border-color: $orange-mid transparent transparent;
+		}
+
+		&.uk-open {
+			position: relative;
+			z-index: 1021;
+
+			&::after {
+				bottom: -9px;
+				left: 0;
+				transform: translateX(0);
+				height: 4px;
+				width: 100%;
+				border: 0;
+			}
+
+			&.green {
+				color: $turquise;
+
+				&::after {
+					background-color: $green-pastel;
+				}
+			}
+
+			&.blue {
+				color: $blue-bright;
+
+				&::after {
+					background-color: $blue-navy;
+				}
+			}
+
+			&.yellow {
+				color: $yellow;
+
+				&::after {
+					background-color: $orange-mid;
+				}
+			}
+		}
+	}
+
+	.green {
+		color: $turquise;
+	}
+
+	.blue {
+		color: $blue-bright;
+	}
+
+	.yellow {
+		color: $yellow;
+	}
+
+	>.uk-dropdown {
+		box-shadow: 0 15px 30px rgba($blue, .25);
+		padding: 0;
+		border-top: 1px solid $gray-light;
+		width: 100%;
+
+		.dropdown-close-button {
+			position: absolute;
+			top: 10px;
+			right: 25px;
+			z-index: 1;
+		}
+
+		.uk-dropdown-nav {
+			padding: 60px 40px 30px;
+		}
+
+		.uk-grid+.uk-grid-collapse,
+		.uk-grid+.uk-grid-row-collapse,
+		.uk-grid-collapse>.uk-grid-margin,
+		.uk-grid-row-collapse>.uk-grid-margin {
+			margin-top: 50px;
+		}
+
+		span.label.large {
+			display: block;
+			margin-bottom: 35px;
+		}
+
+		span.label.small {
+			display: block;
+			margin-bottom: 20px;
+			line-height: 1.7em;
+		}
+
+		ul li a.label.large {
+			margin-bottom: 20px;
+		}
+
+		ul li a.label.midi {
+			margin-bottom: 15px;
+		}
+	}
+
+	.entry-item {
+		min-height: 200px;
+	}
+
+	.uk-card:not(.entry-item) {
+		padding-right: 15px;
+	}
+
+	.uk-card-body {
+		padding: 0;
+	}
+
+	.uk-card-media-left {
+		width: 90px;
+		min-width: 90px;
+		height: 60px;
+		margin-right: 40px;
+	}
+
+	.uk-card-title,
+	.label {
+		max-width: 100%;
+		white-space: initial;
+	}
+
+	.uk-button-text {
+		margin-bottom: 50px;
+
+		.shape {
+			stroke-dasharray: 108 384;
+			stroke-dashoffset: -720;
+			stroke-width: 2px;
+			width: 180px;
+		}
+
+		&.uk-button-text-left {
+			margin-left: -30px;
+		}
+	}
+
+	.uk-flex-right>.uk-button-text {
+		margin-right: 25px;
+	}
+
+	.nav-search {
+		min-width: 0;
+		padding: 0;
+		margin: 0 0 35px;
+
+		form {
+			max-width: 100%;
+			margin: 0;
+		}
+	}
+
+	@media (min-width: $breakpointLarge) {
+		&:not(:first-of-type) {
+			margin-left: 40px;
+		}
+
+		>button.uk-open {
+			&::after {
+				bottom: -19px;
+			}
+		}
+
+		*+.uk-grid-margin-medium,
+		.uk-grid+.uk-grid-medium,
+		.uk-grid+.uk-grid-row-medium,
+		.uk-grid-medium>.uk-grid-margin,
+		.uk-grid-row-medium>.uk-grid-margin {
+			margin-top: 50px;
+		}
+	}
+
+	@media (max-width: $breakpointSmallMax) and (min-width: $breakpointTabletPortrait) {
+
+		>.label.large {
+			font-size: 17px;
+
+			&.uk-open::after {
+				bottom: -12px;
+			}
+		}
+	}
+}

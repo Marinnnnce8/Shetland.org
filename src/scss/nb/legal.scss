@@ -53,8 +53,7 @@
 		padding-right: 40px;
 	}
 
-	@media (max-width: $breakpointSmall) {//added for version 2
-	// @media (max-width: $breakpointXsmallMax) {//version 1
+	@media (max-width: $breakpointSmall) {
 		.uk-flex {
 			justify-content: center;
 		}

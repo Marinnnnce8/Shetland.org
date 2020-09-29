@@ -32,9 +32,9 @@ var theme = {
 			this.addMultiListener(window, 'load resize', theme.campaignItemSetHeight);
 		}
 
-		if(navToggleButton) {
-			navToggleButton.addEventListener('click', this.toggleButtonClass);
-		}
+		// if(navToggleButton) {
+		// 	navToggleButton.addEventListener('click', this.toggleButtonClass);
+		// }
 
 		if(printButton) {
 			printButton.addEventListener('click', this.printContainer);
@@ -225,15 +225,15 @@ var theme = {
 	},
 
 	//Toggle class on click
-	toggleButtonClass: function() {
-		var activeClass = 'uk-navbar-toggle-open';
+	// toggleButtonClass: function() {
+	// 	var activeClass = 'uk-navbar-toggle-open';
 
-		if(this.classList.contains(activeClass)) {
-			this.classList.remove(activeClass)
-		} else {
-			this.classList.add(activeClass);
-		}
-	},
+	// 	if(this.classList.contains(activeClass)) {
+	// 		this.classList.remove(activeClass)
+	// 	} else {
+	// 		this.classList.add(activeClass);
+	// 	}
+	// },
 
 	//Print button's container
 	printContainer: function() {

@@ -3,7 +3,7 @@
 	a {
 		margin-top: 7px;
 		display: block;
-		text-align: center; //added for version 2
+		text-align: center;
 
 		@include hover {
 			color: $nbRed;
@@ -26,8 +26,7 @@
 		text-align: right;
 
 		a {
-			// display: inline-block;
-			text-align: right; //added for version 2
+			text-align: right;
 		}
 	}
 

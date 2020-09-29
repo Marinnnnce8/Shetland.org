@@ -3,7 +3,6 @@ screen and (-ms-high-contrast: none) {
 
     .uk-button,
     .map-card .uk-button-text {
-
         >span:last-of-type::after {
             display: none;
         }
@@ -49,7 +48,6 @@ screen and (-ms-high-contrast: none) {
     }
 
     .button-sound {
-
         svg {
             stroke: $white;
             stroke-width: 6px;
@@ -139,8 +137,18 @@ screen and (-ms-high-contrast: none) {
         }
     }
 
-    .mega-menu .uk-button-text.uk-button-text-left {
-        margin-left: 0;
+    .mega-menu {
+        >button {
+            overflow: visible;
+
+            &.uk-open::after {
+                bottom: -12px;
+            }
+        }
+
+        .uk-button-text.uk-button-text-left {
+            margin-left: 0;
+        }
     }
 
     .uk-dropdown .entry-item .uk-card-title {
@@ -194,7 +202,6 @@ screen and (-ms-high-contrast: none) {
         height: 480px;
     }
 }
-
 
 //Firefox
 @-moz-document url-prefix() {
