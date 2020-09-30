@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="194x194" href="./favicon/favicon-194x194.png">
     <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
+    <!-- <link rel="manifest" href="./favicon/site.webmanifest"> -->
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#298fc2">
     <link rel="shortcut icon" href="./favicon/favicon.ico">
     <meta name="apple-mobile-web-app-title" content="Shetland.org">
@@ -1642,9 +1642,9 @@
             </span>
         </div>
 
-        <nav class="fixed-nav" id="scrollTarget" data-uk-sticky="bottom: #offset">
+        <nav class="fixed-nav" id="scrollTarget" data-uk-sticky="bottom: #offset; media: @m">
             <div class="fixed-nav-wrap">
-                <ul class="uk-flex uk-flex-bottom">
+                <ul class="uk-flex uk-flex-bottom uk-flex-wrap">
                     <li><a class="lable alt uk-text-bold" href="#findAWalk" data-uk-scroll>Find a Walk</a></li>
                     <li><a class="lable alt uk-text-bold" href="#walkOverview" data-uk-scroll>Overview</a></li>
                     <li><a class="lable alt uk-text-bold" href="#getInspired" data-uk-scroll>Get Inspired</a></li>
@@ -1666,7 +1666,7 @@
                     <li><a href='index.html'>Home</a></li>
                     <li><a href='#'>Visit</a></li>
                     <li><a href='#'>Things to do</a></li>
-                    <li><a href='#'>Outdoors & Adventure</a></li>
+                    <li><a href='#'>Outdoors and adventure</a></li>
                     <li><span>Walk</span></li>
                 </ul>
             </div>
@@ -1692,9 +1692,9 @@
                                 <div><span
                                         class="uk-text-uppercase label opacity-off small alt uk-text-bold">Areas</span>
                                     <div class="select-walk-wrap"><button
-                                            class="uk-button uk-button-large font-pin js-scroll-into"
-                                            aria-expanded="false"><img src="./img/location.svg" data-uk-img
-                                                alt="image"><span>Select Areas</span><svg viewBox="0 0 512 512">
+                                            class="uk-button uk-button-large js-scroll-into" aria-expanded="false"><img
+                                                src="./img/location.svg" data-uk-img alt="image"><span>Select
+                                                Areas</span><svg viewBox="0 0 512 512">
                                                 <use xlink:href="./symbol/icons.svg#select-caret-up"></use>
                                             </svg>
                                             <svg viewBox="0 0 512 512">
@@ -1831,10 +1831,9 @@
                             <div class="select-walk-box">
                                 <div><span class="uk-text-uppercase label opacity-off small alt uk-text-bold">Difficulty
                                         or Time Required</span>
-                                    <div class="select-walk-wrap"><button
-                                            class="uk-button uk-button-large sort-label font-route"
-                                            data-icon="font-route" aria-expanded="false"><img
-                                                src="./img/difficulty-time.svg" data-uk-img alt="image"><span>Select
+                                    <div class="select-walk-wrap"><button class="uk-button uk-button-large sort-label"
+                                            aria-expanded="false"><img src="./img/difficulty-time.svg" data-uk-img
+                                                alt="image"><span>Select
                                                 difficulty or time
                                                 required</span>
                                             <svg viewBox="0 0 512 512">
@@ -1849,27 +1848,26 @@
                                             class="uk-dropdown">
                                             <ul class="uk-nav uk-dropdown-nav">
                                                 <li><button
-                                                        class="sort-button js-sort-button label opacity-off alt medium sort-button-difficulty"
-                                                        data-icon="font-difficulty"><svg viewBox="0 0 512 512">
+                                                        class="sort-button js-sort-button label opacity-off alt medium sort-button-difficulty"><svg
+                                                            viewBox="0 0 512 512">
                                                             <use xlink:href="./symbol/icons.svg#hiking"></use>
                                                         </svg>Difficulty (Easy to
                                                         Hard)</button></li>
                                                 <li><button
-                                                        class="sort-button js-sort-button label opacity-off alt medium sort-button-desc sort-button-difficulty"
-                                                        data-icon="font-difficulty"><svg viewBox="0 0 512 512">
+                                                        class="sort-button js-sort-button label opacity-off alt medium sort-button-desc sort-button-difficulty"><svg
+                                                            viewBox="0 0 512 512">
                                                             <use xlink:href="./symbol/icons.svg#hiking-easy"></use>
                                                         </svg>Difficulty (Hard to
                                                         Easy)</button></li>
                                                 <li><button
                                                         class="sort-button js-sort-button label opacity-off alt medium"
-                                                        id="sort-time-asc" data-icon="font-24-hours"><svg
-                                                            viewBox="0 0 512 512">
+                                                        id="sort-time-asc"><svg viewBox="0 0 512 512">
                                                             <use xlink:href="./symbol/icons.svg#time-short"></use>
                                                         </svg>Time Required (Short to
                                                         Long)</button></li>
                                                 <li><button
-                                                        class="sort-button js-sort-button label opacity-off alt medium sort-button-desc"
-                                                        data-icon="font-24-hours"><svg viewBox="0 0 512 512">
+                                                        class="sort-button js-sort-button label opacity-off alt medium sort-button-desc"><svg
+                                                            viewBox="0 0 512 512">
                                                             <use xlink:href="./symbol/icons.svg#clock"></use>
                                                         </svg>Time Required (Long to
                                                         Short)</button></li>
@@ -1919,7 +1917,7 @@
                     </div>
                 </div>
             </div>
-            <div class="walk-list walk-items font-arrow-go-down">
+            <div class="walk-list walk-items">
                 <div class="uk-container uk-container-large">
                     <ul data-uk-grid class="uk-child-width-1-4@l uk-child-width-1-2@s">
                         <li class="walk-item uk-first-column" data-area="area-1271-" data-difficulty="1"
@@ -2125,7 +2123,7 @@
             id="getInspired">
             <div class="uk-container uk-container-large">
                 <h2 class="uk-text-center uk-padding uk-padding-remove-horizontal">Get inspired</h2>
-                <div class="uk-child-width-1-3 uk-grid-medium" data-uk-grid>
+                <div class="uk-child-width-1-3@l uk-child-width-1-2@s uk-grid-medium" data-uk-grid>
                     <div>
                         <div class="uk-card explore-item">
                             <a class="uk-position-cover" href="#" aria-label="Find out more"></a>
@@ -2596,9 +2594,17 @@
                         </li>
                     </ul>
                     <div class='uk-flex uk-width-1-3@l'>
-                        <button class='uk-button uk-button-default font-news'>Subscribe</button>
-                        <button class='uk-button uk-button-default font-email'>Contact</button>
-                    </div>
+						<button class='uk-button uk-button-default font-news'>Subscribe
+							<svg viewBox="0 0 512 512">
+								<use xlink:href="./symbol/icons.svg#news"></use>
+							</svg>
+						</button>
+						<button class='uk-button uk-button-default font-email'>Contact
+							<svg viewBox="0 0 512 512">
+								<use xlink:href="./symbol/icons.svg#email"></use>
+							</svg>
+						</button>
+					</div>
                     <ul class='uk-flex uk-flex-right uk-width-1-3@l uk-margin-small-bottom'>
                         <li><a href='#' class='label medium alt uk-text-bold'>Brand</a></li>
                         <li><a href='#' class='label medium alt uk-text-bold'>Media</a></li>

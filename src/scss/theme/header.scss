@@ -97,13 +97,6 @@
         }
     }
 
-    .header-boundary {
-        position: absolute;
-        bottom: 100%;
-        width: 100%;
-        left: 0;
-    }
-
     @media (min-width: $breakpointTabletPortrait) {
         padding: 0 0 18px 0;
 
@@ -333,6 +326,16 @@
     }
 
     @media (max-width: $breakpointTabletPortraitMax) {
+        .header-boundary {
+            position: absolute;
+            bottom: 100%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            top: -1px;
+        }
+
         .nav:not(.nav-mob) {
             display: none;
         }
@@ -381,6 +384,7 @@
 
             .uk-navbar-nav {
                 opacity: 0;
+                top: auto;
             }
 
             .uk-navbar-nav,
@@ -421,6 +425,10 @@
 
         .navbar-bottom {
             justify-content: flex-end;
+        }
+
+        .uk-dropdown {
+            margin-top: 0;
         }
 
         .uk-navbar-nav {

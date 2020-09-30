@@ -24,15 +24,15 @@
         padding: 14px 20px 14px 40px;
         margin-top: 57px;
 
-        .font-instagram {
-            &::after {
-                display: none;
-            }
+        span:last-of-type {
+            margin: 0;
+        }
 
-            &::before {
-                font-size: 24px;
-                color: $green-pastel;
-            }
+        svg {
+            fill: $green-pastel;
+            height: 24px;
+            width: 24px;
+            margin-left: 15px;
         }
 
         @include hover {
