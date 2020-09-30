@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-var */
 /**
  * Theme JS
  *
@@ -15,6 +17,7 @@ var theme = {
 		var navToggleButton = document.getElementsByClassName('js-navbar-toggle')[0];
 		var printButton = document.getElementsByClassName('js-print-button')[0];
 		var navAligned = document.getElementsByClassName('js-nav-aligned')[0];
+		var burgerButton = document.getElementsByClassName('js-burger-menu')[0];
 
 		var downloadButton = document.querySelectorAll('download-button');
 
@@ -43,7 +46,11 @@ var theme = {
 		if(navAligned) {
 			this.addMultiListener(window, 'load resize', this.alignNavLinks);
 		}
-		
+
+		if(burgerButton) {
+			burgerButton.addEventListener('click', this.navigateToActivePage);
+		}
+
 	},
 
 	blocks: function() {
@@ -208,7 +215,7 @@ var theme = {
 	// 	});
 	// },
 
-	//set campaign slider item height equal to width 
+	//set campaign slider item height equal to width
 	campaignItemSetHeight: function() {
 		var isDesktopandTablet = window.matchMedia('screen and (min-width: 768px)').matches;
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
@@ -250,13 +257,12 @@ var theme = {
 	},
 
 
-	//align dropdown navigation links with dropdown button 
+	//align dropdown navigation links with dropdown button
 	alignNavLinks: function() {
 		var isDesktop = window.matchMedia('screen and (min-width: 1200px)').matches;
 		var navAligned = document.getElementsByClassName('js-nav-aligned')[0];
 
-		if(isDesktop) {
-			
+		if(isDesktop){
 			var navParent = navAligned.closest('.mega-menu');
 			var navButton = navParent.getElementsByTagName('button')[0];
 
@@ -271,6 +277,15 @@ var theme = {
 			navAligned.style.left = '';
 			navAligned.style.paddingLeft = '';
 			return;
+		}
+	},
+
+	//Navigate to active page when mobile menu opens up
+	navigateToActivePage: function() {
+		var activeNav = document.getElementsByClassName('mob-active-nav');
+
+		for(var x = 0;x < activeNav.length;x++) {
+			activeNav[x].click();
 		}
 	}
 };

@@ -103,13 +103,13 @@
                                 <use xlink:href="./symbol/icons.svg#search"></use>
                             </svg></button>
                     </div>
-                    <button class="burger-menu" aria-label="Open navigation"><span role="presentation"></span></button>
+                    <button class="burger-menu js-burger-menu" aria-label="Open navigation"><span role="presentation"></span></button>
                     <!-- MOBILE MENU -->
                     <div id='navMob' class="nav nav-mob"
-                        data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true;">
+                        data-uk-dropdown="pos: bottom-justify; boundary: .header; boundary-align: true; duration: 5000;">
                         <ul class='uk-navbar-nav'>
                             <li class='uk-active'><button data-uk-toggle="target: #mob-visit"
-                                    class="label xlarge opacity-off">Visit</button>
+                                    class="label xlarge opacity-off mob-active-nav">Visit</button>
                                 <div id='mob-visit' class="nav nav-mob nav-mob-visit"
                                     data-uk-drop="pos: bottom-justify; boundary: .header-boundary; boundary-align: true;">
                                     <button class="uk-navbar-close" data-uk-toggle="target: #mob-visit; animation: true"
@@ -178,7 +178,7 @@
                                             </div>
                                         </li>
                                         <li><button data-uk-toggle="target: #mob-things-to-do"
-                                                class="label xlarge alt opacity-off uk-text-bold">Things To Do
+                                                class="label xlarge alt opacity-off uk-text-bold mob-active-nav">Things To Do
                                                 <svg viewBox="0 0 512 512">
                                                     <use xlink:href="./symbol/icons.svg#caret-right"></use>
                                                 </svg>
@@ -1130,7 +1130,7 @@
                 style="background-image: url('./img/nature-and-wildlife-banner.jpg');">
                 <div class="banner-text">
                     <span class="uk-text-bold">Things to do</span>
-                    <h1>Nature & Wildlife</h1>
+                    <h1>Wildlife and nature</h1>
                 </div>
             </div>
             <span data-uk-tooltip="title: Photo by Photographer Name; pos: top-right">
@@ -1145,7 +1145,7 @@
                 <ul class='uk-breadcrumb'>
                     <li><a href='index.html'>Home</a></li>
                     <li><a href='index.html'>Things to do</a></li>
-                    <li><span>Nature & Wildlife</span></li>
+                    <li><span>Wildlife and nature</span></li>
                 </ul>
             </div>
         </div>
