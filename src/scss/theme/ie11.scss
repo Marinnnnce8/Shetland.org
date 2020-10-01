@@ -22,10 +22,6 @@ screen and (-ms-high-contrast: none) {
         }
     }
 
-    .image-card .uk-button-primary>span:last-of-type svg {
-        left: 0;
-    }
-
     .uk-background-fixed {
         background-attachment: scroll;
     }
@@ -45,62 +41,6 @@ screen and (-ms-high-contrast: none) {
     .uk-button-text>svg,
     .uk-button-text>span:last-of-type::after {
         display: none;
-    }
-
-    .button-sound {
-        svg {
-            stroke: $white;
-            stroke-width: 6px;
-
-            path {
-
-                &:nth-child(2),
-                &:nth-child(3) {
-                    stroke-dashoffset: 1px;
-                }
-            }
-        }
-
-        &:not(.button-sound-active) {
-            svg {
-                path {
-                    &:nth-child(1) {
-                        stroke-dasharray: 59px 47px 184px;
-                        stroke-dashoffset: 17px;
-                    }
-
-                    &:nth-child(2) {
-                        stroke-dasharray: 0 39px 30px 64px;
-                        stroke-dashoffset: 1px;
-                    }
-
-                    &:nth-child(3) {
-                        stroke-dasharray: 0 78px 32px 84px;
-                        stroke-dashoffset: 1px;
-                    }
-                }
-            }
-        }
-
-        &.button-sound-active,
-        &[data-uk-video~='automute: true'] {
-            svg {
-                path {
-                    &:nth-child(1) {
-                        stroke-dasharray: 60px 0 184px;
-                        stroke-dashoffset: 0;
-                    }
-
-                    &:nth-child(2) {
-                        stroke-dasharray: 0 0 30px 64px;
-                    }
-
-                    &:nth-child(3) {
-                        stroke-dasharray: 0 0 50px 84px;
-                    }
-                }
-            }
-        }
     }
 
     .banner-text .label {
@@ -128,6 +68,10 @@ screen and (-ms-high-contrast: none) {
                     top: 63%;
                 }
             }
+        }
+
+        .uk-button-primary>span:last-of-type svg {
+            left: 0;
         }
     }
 
@@ -218,10 +162,6 @@ screen and (-ms-high-contrast: none) {
 
     .nav-search form .uk-input {
         line-height: 44px;
-    }
-
-    .button-video:not(.button-video-active) .left {
-        height: 16px;
     }
 
     .uk-button>span:last-of-type::after,
