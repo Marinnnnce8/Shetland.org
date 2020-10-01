@@ -31,10 +31,6 @@
     }
 }
 
-.visit-seasons {
-    padding: 60px 0 110px;
-}
-
 .visit-inner {
     max-width: 1136px;
 
@@ -45,31 +41,6 @@
     >p:first-of-type {
         margin-top: 0;
         margin-bottom: 50px;
-    }
-
-    .uk-width-3-5 {
-        width: 54.84%;
-
-        .uk-card {
-            height: 306px;
-        }
-    }
-
-    .uk-width-2-5 {
-        width: 45.15%;
-
-        .uk-card {
-            height: 456px;
-        }
-    }
-
-    .uk-width-1-5 {
-        background-color: $white;
-    }
-
-    //check???
-    .entry-item .uk-card-body::after {
-        background-color: rgba($black, 0);
     }
 
     @media (min-width: $breakpointTabletPortrait) {

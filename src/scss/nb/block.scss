@@ -418,7 +418,6 @@
 			}
 
 			.InputfieldRadiosFloated {
-
 				li {
 					padding-right: 1em;
 					width: auto;
@@ -459,7 +458,6 @@
 		}
 
 		label {
-
 			i {
 				margin-right: $nbGutterSmall;
 			}
@@ -475,7 +473,6 @@
 		}
 
 		.uk-radio {
-
 			+span {
 				display: inline-block;
 				margin-left: $nbGutterSmall;
@@ -506,7 +503,6 @@
 		}
 
 		.InputfieldToggle {
-
 			.InputfieldToggleHelper {
 				display: none !important;
 			}
@@ -542,8 +538,4 @@
 			width: 100%;
 		}
 	}
-}
-
-.nb-no-border {
-	border: 0 !important;
 }

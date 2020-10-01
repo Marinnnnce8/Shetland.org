@@ -94,14 +94,12 @@
     }
 
     @media (min-width: $breakpointTabletPortrait) {
-
         .uk-dropdown {
             padding: 50px 40px 40px;
         }
     }
 
     @media (max-width: $breakpointXsmallMax) {
-
         &.events {
             flex-direction: column;
             border: 0;

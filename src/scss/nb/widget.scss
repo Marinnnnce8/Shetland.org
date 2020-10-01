@@ -1,8 +1,6 @@
 .nb-widget-wrap {
     max-width: 140px !important;
     right: 0;
-    z-index: 0;
-    //resolve this when responsive design is done
     z-index: 1;
 }
 
@@ -27,7 +25,6 @@
                 border-radius: 50px;
                 font-weight: $bold;
                 line-height: 1.3em;
-                // padding: 16px 17px 16px 23px;
                 padding: 0;
                 color: transparent;
                 position: relative;

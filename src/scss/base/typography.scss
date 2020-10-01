@@ -312,7 +312,7 @@ blockquote {
 	}
 
 	p,
-	span:not(.quote) {
+	span {
 		color: $blue;
 	}
 
@@ -419,7 +419,6 @@ ol {
 	counter-reset: item;
 
 	>li {
-
 		&:last-of-type {
 			margin-bottom: 25px;
 		}

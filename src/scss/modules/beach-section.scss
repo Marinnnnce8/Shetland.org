@@ -2,7 +2,6 @@
     padding-bottom: 60px;
 
     .uk-card {
-
         >a.uk-position-cover {
             width: calc(100% - 30px);
             left: 30px;
@@ -29,7 +28,6 @@
     }
 
     .uk-card-body {
-
         ul {
             margin-bottom: 0;
         }
@@ -152,7 +150,6 @@
     }
 
     @media (max-width: $breakpointMediumMax) and (min-width: $breakpointTabletPortrait) {
-
         li.uk-grid-margin.uk-first-column {
             margin-top: 80px;
         }

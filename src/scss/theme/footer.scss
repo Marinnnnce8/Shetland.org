@@ -17,9 +17,7 @@
     }
 
     >.uk-flex {
-
         &:nth-child(3) {
-
             a {
                 position: relative;
 
@@ -111,7 +109,6 @@
         padding-bottom: 190px;
 
         >.uk-flex {
-
             &:first-child {
                 order: 2;
             }
@@ -192,7 +189,6 @@
 
     @media (min-width: $breakpointLarge) {
         >div {
-
             &:first-child {
                 order: 2;
             }
