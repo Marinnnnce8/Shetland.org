@@ -10,14 +10,11 @@
 @import 'base/typography.scss';
 
 // Layout / Helpers
-// @import 'layout/_icon-font.scss';
 @import 'helpers/helpers.scss';
 @import 'helpers/keyframes.scss';
 @import 'layout/buttons.scss';
 
 // UIkit
-@import "uikit/base.scss";
-@import "uikit/utility.scss";
 @import "uikit/navbar.scss";
 @import "uikit/breadcrumb.scss";
 @import "uikit/form.scss";
@@ -82,7 +79,6 @@
 @import "theme/print.scss";
 
 
-
 // Template | Remove or Integrate
 
 // uikit/utility
@@ -129,7 +125,6 @@
 
 //uikit/container
 .uk-container {
-
 	@media (max-width: $breakpointMediumMax) {
 		padding-left: 60px;
 		padding-right: 60px;

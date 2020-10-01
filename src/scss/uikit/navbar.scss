@@ -10,6 +10,7 @@
     @media (min-width: $breakpointTabletPortrait) {
         padding-top: 19px;
     }
+
     @media (min-width: $breakpointLarge) {
         max-width: 220px;
     }
@@ -21,7 +22,6 @@
     width: 100%;
 
     .navbar-top {
-
         .uk-navbar-nav {
             padding-top: 0;
         }
@@ -40,7 +40,6 @@
     }
 
     @media (max-width: $breakpointTabletPortraitMax) {
-
         >.navbar-top {
             display: none;
         }

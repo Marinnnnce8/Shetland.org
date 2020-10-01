@@ -169,6 +169,12 @@
                 margin: 0;
             }
 
+            li {
+                &.label a {
+                    padding: 12px 0;
+                }
+            }
+
             p {
                 margin-bottom: 15px;
 
