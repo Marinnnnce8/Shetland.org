@@ -1,11 +1,6 @@
 .nb-author {
-    margin-right: 40px;
-    position: absolute;
-    right: 100%;
-    top: 0;
-    max-width: 300px;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 20px;
 
     * {
         color: $blue;
@@ -26,5 +21,19 @@
         img {
             animation: imagePuls .5s linear forwards;
         }
+    }
+
+    @media (min-width: $breakpointXmedium) {
+        position: absolute;
+        margin-right: 40px;
+        padding-top: 30px;
+        top: 0;
+        max-width: 300px;
+        right: 100%;
+    }
+
+    @media (max-width: $breakpointXmediumMin) {
+        justify-content: flex-start;
+        margin-bottom: 30px;
     }
 }
