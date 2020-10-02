@@ -11,15 +11,10 @@ var theme = {
 
 	init: function() {
 		this.blocks();
-		var percentNumber = document.getElementsByClassName('percent-num')[0];
 		var campaignSlider = document.getElementsByClassName('campaign-slider')[0];
 		var printButton = document.getElementsByClassName('js-print-button')[0];
 		var navAligned = document.getElementsByClassName('js-nav-aligned')[0];
 		var burgerButton = document.getElementsByClassName('js-burger-menu')[0];
-
-		if(percentNumber) {
-			this.addMultiListener(window, 'load scroll', this.scrollPercentage);
-		}
 
 		if(campaignSlider) {
 			this.addMultiListener(window, 'load resize', theme.campaignItemSetHeight);
@@ -122,29 +117,6 @@ var theme = {
 		for (var i=0, iLen=events.length; i<iLen; i++) {
 			element.addEventListener(events[i], listener, false);
 		}
-	},
-
-	//calculating and displaying scroll percentage
-	scrollPercentage: function() {
-		var scrollPage = document.documentElement;
-		var scrollBody = document.body;
-		var	scrollTopOffset = 'scrollTop';
-		var scrollHeight = 'scrollHeight';
-		var percentNumber = document.getElementsByClassName('percent-num')[0];
-		var percentCirclePath = document.getElementsByClassName('circlePath')[0];
-
-		//scroll vertical offset
-		var percent = (scrollPage[scrollTopOffset]||scrollBody[scrollTopOffset]) / ((scrollPage[scrollHeight]||scrollBody[scrollHeight]) - scrollPage.clientHeight) * 100;
-		percent = Math.floor(percent);
-
-		percentNumber.innerHTML = percent + '%';
-
-		//svg circle scroll percentage calculation and display
-		var svgRadius = percentCirclePath.getAttribute('r');
-		var svgCircum = svgRadius * 2 * Math.PI;
-		var svgCurrentAmount = svgCircum * (percent++) / 100;
-
-		percentCirclePath.setAttribute('stroke-dasharray', svgCurrentAmount + ',' + svgCircum);
 	},
 
 	//set campaign slider item height equal to width
