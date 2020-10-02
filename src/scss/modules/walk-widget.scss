@@ -124,6 +124,10 @@
         }
     }
 
+    .uk-button-secondary {
+        margin-left: 10px;
+    }
+
     .uk-button-large {
         background-color: $white;
         height: 56px;
@@ -132,6 +136,7 @@
         color: $blue;
         font-weight: normal;
         position: relative;
+        justify-content: flex-start;
         width: 100%;
 
         &::before,
@@ -274,7 +279,6 @@
 
     .select-btns {
         padding: 20px 15px 0;
-        justify-content: space-between;
     }
 
     @media (min-width: $breakpointSmall) {

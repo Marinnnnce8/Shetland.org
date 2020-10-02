@@ -1,23 +1,6 @@
-// Prevents flicker while loading
-.uk-navbar-nav[data-uk-nb-nav] {
-	max-height: 80px;
-	opacity: 0;
-
-	@media (max-width: $breakpointSmallMax) {
-		max-width: 40px;
-	}
-}
-
 .uk-navbar {
 	padding-left: 20px;
 	padding-right: 15px;
-
-	// Show nav after load
-	.uk-navbar-nav {
-		max-height: none;
-		max-width: none;
-		opacity: 1;
-	}
 
 	.uk-navbar-dropdown {
 		margin-top: 0;

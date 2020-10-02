@@ -39,7 +39,8 @@ screen and (-ms-high-contrast: none) {
     .scroll-button-down,
     .nb-checkbox.bounce:not(.uk-form-danger) svg,
     .uk-button-text>svg,
-    .uk-button-text>span:last-of-type::after {
+    .uk-button-text>span:last-of-type::after,
+    .fixed-nav {
         display: none;
     }
 
@@ -134,11 +135,42 @@ screen and (-ms-high-contrast: none) {
             left: 50%;
             top: 50%;
         }
+
+        svg {
+            top: 50%;
+        }
     }
 
-    .walk-filter .uk-button-text {
-        @include hover {
-            color: $blue-light;
+    .walk-filter {
+        .select-walk-wrap .uk-button-large {
+            svg {
+
+                &:first-of-type {
+                    transform: translateY(-30%);
+                }
+
+                &:last-of-type {
+                    transform: translateY(-70%);
+                }
+            }
+
+            @include hover {
+                svg {
+                    &:first-of-type {
+                        transform: translateY(-25%);
+                    }
+
+                    &:last-of-type {
+                        transform: translateY(-75%);
+                    }
+                }
+            }
+        }
+
+        .uk-button-text {
+            @include hover {
+                color: $blue-light;
+            }
         }
     }
 
