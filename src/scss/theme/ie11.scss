@@ -44,6 +44,18 @@ screen and (-ms-high-contrast: none) {
         display: none;
     }
 
+    .nb-checkbox.bounce:not(.uk-form-danger) {
+        .uk-checkbox {
+            outline: 1px solid transparent;
+        }
+
+        @include hover {
+            .uk-checkbox {
+                outline-color: $blue;
+            }
+        }
+    }
+
     .banner-text .label {
         margin: 15px 0;
     }

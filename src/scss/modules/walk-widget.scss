@@ -275,6 +275,10 @@
             margin-right: 14px;
             fill: $blue;
         }
+
+        @include hover {
+            background-color: rgba($blue, .1);
+        }
     }
 
     .select-btns {
